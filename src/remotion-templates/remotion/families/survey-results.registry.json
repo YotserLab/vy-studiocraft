@@ -1,0 +1,241 @@
+[
+  {
+    "id": "survey-results-question-to-chart",
+    "title": "Question To Chart",
+    "category": "survey-results",
+    "tags": ["survey", "question", "bars", "poll"],
+    "description": "Frames the survey question beside a staggered response distribution so the evidence stays tied to the prompt.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 135,
+    "defaultProps": {
+      "variant": "question-to-chart",
+      "surveyTitle": "The clarity check",
+      "question": "Which part of the experience creates the most value?",
+      "responses": [
+        {"label": "A clear next step", "value": 46},
+        {"label": "Fast setup", "value": 31},
+        {"label": "Helpful context", "value": 14},
+        {"label": "Something else", "value": 9}
+      ],
+      "sampleSize": 842,
+      "methodology": "Single choice · fielded this quarter",
+      "paletteName": "ocean"
+    }
+  },
+  {
+    "id": "survey-results-response-distribution",
+    "title": "Response Distribution",
+    "category": "survey-results",
+    "tags": ["survey", "distribution", "donut", "poll"],
+    "description": "Turns response shares into an animated donut and a readable legend for fast survey readouts.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 135,
+    "defaultProps": {
+      "variant": "response-distribution",
+      "surveyTitle": "How the mix shifted",
+      "question": "How confident are you recommending the workflow?",
+      "responses": [
+        {"label": "Very confident", "value": 48, "color": "#38bdf8"},
+        {"label": "Somewhat confident", "value": 29, "color": "#7dd3fc"},
+        {"label": "Still deciding", "value": 15, "color": "#fb7185"},
+        {"label": "Not confident", "value": 8, "color": "#f59e0b"}
+      ],
+      "sampleSize": 612,
+      "paletteName": "midnight"
+    }
+  },
+  {
+    "id": "survey-results-segment-compare",
+    "title": "Segment Compare",
+    "category": "survey-results",
+    "tags": ["survey", "segments", "comparison", "bars"],
+    "description": "Compares response distributions across audience segments with parallel animated bars.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 145,
+    "defaultProps": {
+      "variant": "segment-compare",
+      "surveyTitle": "Same question, different context",
+      "question": "What would make this a habit?",
+      "labels": ["Simple", "Fast", "Flexible", "Social"],
+      "segments": [
+        {"label": "New users", "values": [38, 29, 21, 12]},
+        {"label": "Returning users", "values": [52, 27, 13, 8]}
+      ],
+      "sampleSize": 1034,
+      "paletteName": "forest"
+    }
+  },
+  {
+    "id": "survey-results-nps-reveal",
+    "title": "NPS Reveal",
+    "category": "survey-results",
+    "tags": ["survey", "nps", "loyalty", "score"],
+    "description": "Builds a net promoter score from promoter, passive, and detractor shares with a measured count-up.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 140,
+    "defaultProps": {
+      "variant": "nps-reveal",
+      "surveyTitle": "Would you recommend it?",
+      "question": "How likely are you to recommend this to a teammate?",
+      "npsScore": 62,
+      "responses": [
+        {"label": "Promoters", "value": 62, "color": "#34d399"},
+        {"label": "Passives", "value": 23, "color": "#fbbf24"},
+        {"label": "Detractors", "value": 15, "color": "#fb7185"}
+      ],
+      "sampleSize": 842,
+      "paletteName": "candy"
+    }
+  },
+  {
+    "id": "survey-results-sentiment-split",
+    "title": "Sentiment Split",
+    "category": "survey-results",
+    "tags": ["survey", "sentiment", "positive", "negative"],
+    "description": "Separates positive, neutral, and negative sentiment into an immediately scannable three-card readout.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 130,
+    "defaultProps": {
+      "variant": "sentiment-split",
+      "surveyTitle": "The emotional read",
+      "question": "How did the new experience make you feel?",
+      "responses": [
+        {"label": "Positive", "value": 58, "color": "#34d399"},
+        {"label": "Neutral", "value": 27, "color": "#fbbf24"},
+        {"label": "Negative", "value": 15, "color": "#fb7185"}
+      ],
+      "sampleSize": 728,
+      "paletteName": "sunset"
+    }
+  },
+  {
+    "id": "survey-results-open-text-wall",
+    "title": "Open Text Wall",
+    "category": "survey-results",
+    "tags": ["survey", "open-text", "quotes", "voices"],
+    "description": "Reveals anonymous open-text responses as a paced wall of respondent voices.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 145,
+    "defaultProps": {
+      "variant": "open-text-wall",
+      "surveyTitle": "In their own words",
+      "question": "What is the one thing you would keep?",
+      "comments": [
+        "It finally feels simple enough to use every week.",
+        "The biggest win is knowing what to do next.",
+        "I can see the value before I learn the whole system.",
+        "The workflow is clear, but still leaves room for my style."
+      ],
+      "sampleSize": 389,
+      "methodology": "Open text · responses lightly edited for length",
+      "paletteName": "paper"
+    }
+  },
+  {
+    "id": "survey-results-response-rate",
+    "title": "Response Rate",
+    "category": "survey-results",
+    "tags": ["survey", "response-rate", "fieldwork", "completion"],
+    "description": "Uses a progress ring and fieldwork notes to give response rate and denominator context together.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 130,
+    "defaultProps": {
+      "variant": "response-rate",
+      "surveyTitle": "Did the audience show up?",
+      "question": "How many invited respondents completed the survey?",
+      "sampleSize": 842,
+      "responseRate": 68,
+      "methodology": "Anonymous online survey · 5 minute completion",
+      "paletteName": "ocean"
+    }
+  },
+  {
+    "id": "survey-results-trend-by-wave",
+    "title": "Trend By Wave",
+    "category": "survey-results",
+    "tags": ["survey", "trend", "waves", "line-chart"],
+    "description": "Shows a survey measure rising or falling across fieldwork waves with labeled points and baseline context.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 145,
+    "defaultProps": {
+      "variant": "trend-by-wave",
+      "surveyTitle": "Confidence over time",
+      "question": "How confident are respondents after each release wave?",
+      "waves": [
+        {"label": "Wave 01", "value": 54},
+        {"label": "Wave 02", "value": 61},
+        {"label": "Wave 03", "value": 67},
+        {"label": "Wave 04", "value": 72},
+        {"label": "Wave 05", "value": 78}
+      ],
+      "sampleSize": 1240,
+      "paletteName": "forest"
+    }
+  },
+  {
+    "id": "survey-results-top-insight",
+    "title": "Top Insight",
+    "category": "survey-results",
+    "tags": ["survey", "insight", "quote", "evidence"],
+    "description": "Elevates one qualified insight while keeping its supporting percentages visible beside it.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 135,
+    "defaultProps": {
+      "variant": "top-insight",
+      "surveyTitle": "What the responses point toward",
+      "question": "What most predicts whether people return?",
+      "insight": "Clarity is the strongest predictor of whether people return.",
+      "responses": [
+        {"label": "Clear next step", "value": 64},
+        {"label": "Helpful context", "value": 47},
+        {"label": "Fast setup", "value": 39}
+      ],
+      "sampleSize": 916,
+      "methodology": "Directional association · not a causal claim",
+      "paletteName": "midnight"
+    }
+  },
+  {
+    "id": "survey-results-survey-recap",
+    "title": "Survey Recap",
+    "category": "survey-results",
+    "tags": ["survey", "recap", "summary", "takeaways"],
+    "description": "Closes a survey story with sample, top signal, and next move cards plus methodology context.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 140,
+    "defaultProps": {
+      "variant": "survey-recap",
+      "surveyTitle": "Three things to carry forward",
+      "question": "What should the team do with this signal?",
+      "responses": [
+        {"label": "selected the lead answer", "value": 46},
+        {"label": "want more context", "value": 31},
+        {"label": "need a simpler path", "value": 23}
+      ],
+      "insight": "Make the first useful moment obvious, then let people explore.",
+      "sampleSize": 842,
+      "methodology": "Read percentages with sample size and question wording in view.",
+      "paletteName": "mono"
+    }
+  }
+]

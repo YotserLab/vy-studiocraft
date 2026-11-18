@@ -1,0 +1,122 @@
+[
+  {
+    "id": "infographics-fact-stack",
+    "title": "Fact Stack",
+    "category": "data-infographic",
+    "tags": ["infographic", "facts", "report", "stats"],
+    "description": "A two-column stack of animated fact cards that makes values, context, and directional change easy to scan.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": { "variant": "fact-stack", "title": "The signals behind the shift.", "subtitle": "A compact readout of the facts worth carrying forward.", "paletteName": "ocean", "source": "Source: quarterly impact report", "footnote": "Illustrative benchmark values." }
+  },
+  {
+    "id": "infographics-icon-stat-grid",
+    "title": "Icon Stat Grid",
+    "category": "data-infographic",
+    "tags": ["infographic", "icon", "kpi", "grid"],
+    "description": "A six-cell icon-led stat grid gives every metric equal weight while staggered entrances create a clear reading rhythm.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": { "variant": "icon-stat-grid", "title": "A system you can measure.", "subtitle": "Six signals, one shared view of momentum.", "paletteName": "midnight", "source": "Source: operations dashboard" }
+  },
+  {
+    "id": "infographics-comparison-infographic",
+    "title": "Comparison Infographic",
+    "category": "data-infographic",
+    "tags": ["infographic", "comparison", "before-after", "bars"],
+    "description": "Paired baseline and outcome panels animate proportional bars so a change in performance reads instantly.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": { "variant": "comparison-infographic", "title": "The difference is visible.", "subtitle": "Compare the baseline with the outcome without losing the human context.", "paletteName": "forest", "accentColor": "#34d399", "source": "Source: pre/post study" }
+  },
+  {
+    "id": "infographics-ranked-infographic",
+    "title": "Ranked Infographic",
+    "category": "data-infographic",
+    "tags": ["infographic", "ranking", "leaderboard", "bars"],
+    "description": "A numbered ranking with animated bars and a highlighted leader turns a list of values into a visual order of importance.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 175,
+    "defaultProps": { "variant": "ranked-infographic", "title": "Where attention compounds.", "subtitle": "Rank the strongest signals and give the top one a moment to land.", "paletteName": "sunset", "source": "Source: ranked response themes" }
+  },
+  {
+    "id": "infographics-process-infographic",
+    "title": "Process Infographic",
+    "category": "data-infographic",
+    "tags": ["infographic", "process", "steps", "journey"],
+    "description": "Five connected stages reveal a narrative process as a luminous route from first signal to final result.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 175,
+    "defaultProps": { "variant": "process-infographic", "title": "From signal to outcome.", "subtitle": "Show the sequence behind the result with one connected visual path.", "paletteName": "candy", "source": "Source: delivery playbook" }
+  },
+  {
+    "id": "infographics-annual-report",
+    "title": "Annual Report",
+    "category": "data-infographic",
+    "tags": ["infographic", "annual", "report", "trend"],
+    "description": "A report-style trend line and KPI rail package year-over-year movement into a polished editorial spread.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "annual-report", "title": "A year in motion.", "subtitle": "One editorial frame for the trend, the context, and the numbers that explain it.", "paletteName": "paper", "source": "Source: annual review" }
+  },
+  {
+    "id": "infographics-one-page-brief",
+    "title": "One Page Brief",
+    "category": "data-infographic",
+    "tags": ["infographic", "brief", "executive", "summary"],
+    "description": "A large takeaway block and four supporting fact modules make a decision-ready one-page brief for a short video.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": { "variant": "one-page-brief", "title": "The short version.", "subtitle": "A decision-ready brief for audiences who need the signal before the detail.", "paletteName": "mono", "source": "Source: executive brief" }
+  },
+  {
+    "id": "infographics-fact-vs-fiction",
+    "title": "Fact Vs Fiction",
+    "category": "data-infographic",
+    "tags": ["infographic", "fact-check", "context", "education"],
+    "description": "Two contrasting columns separate evidence from context so claims can be explained without flattening the nuance.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "fact-vs-fiction", "title": "Separate signal from story.", "subtitle": "Put the evidence on one side and the context that completes it on the other.", "paletteName": "ocean", "source": "Source: reviewed evidence set" }
+  },
+  {
+    "id": "infographics-metric-spotlight",
+    "title": "Metric Spotlight",
+    "category": "data-infographic",
+    "tags": ["infographic", "metric", "hero-number", "kpi"],
+    "description": "A single oversized hero metric anchors three supporting signals for announcements, milestones, and proof points.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": { "variant": "metric-spotlight", "title": "One number changes the frame.", "subtitle": "Lead with the metric, then give the audience the proof to trust it.", "paletteName": "midnight", "accentColor": "#fbbf24", "source": "Source: milestone dashboard" }
+  },
+  {
+    "id": "infographics-infographic-recap",
+    "title": "Infographic Recap",
+    "category": "data-infographic",
+    "tags": ["infographic", "recap", "chapters", "summary"],
+    "description": "Six chapter cards turn a dense report or event into a modular recap with clear numbers and labels.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "infographic-recap", "title": "The recap in six signals.", "subtitle": "A modular end card for the facts your audience should remember.", "paletteName": "sunset", "source": "Source: recap notes", "speed": 0.9 }
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "kpi-reports-monthly-report",
+    "title": "Monthly Report",
+    "category": "data-infographic",
+    "tags": ["kpi", "monthly", "executive", "report"],
+    "description": "An executive monthly snapshot that stages headline metrics, a run-rate sparkline, and supporting signals.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {"variant": "monthly-report", "title": "June performance", "subtitle": "A concise readout of the operating system", "period": "JUN · 2026", "paletteName": "midnight", "unit": "", "metrics": [{"label": "Revenue", "value": 84200, "target": 80000, "previous": 76800, "delta": 9.6}, {"label": "Pipeline", "value": 126, "target": 140, "previous": 108, "delta": 16.7}, {"label": "Activation", "value": 72, "target": 70, "previous": 65, "delta": 10.8, "unit": "%"}, {"label": "Retention", "value": 88, "target": 85, "previous": 83, "delta": 6, "unit": "%"}, {"label": "NPS", "value": 54, "target": 50, "previous": 47, "delta": 14.9}]}
+  },
+  {
+    "id": "kpi-reports-quarterly-review",
+    "title": "Quarterly Review",
+    "category": "data-infographic",
+    "tags": ["kpi", "quarterly", "review", "momentum"],
+    "description": "Four quarter columns compare momentum across periods and land on the current operating result.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 140,
+    "defaultProps": {"variant": "quarterly-review", "title": "Quarterly operating review", "subtitle": "Momentum across the last four quarters", "period": "Q2 · 2026", "paletteName": "ocean", "metrics": [{"label": "Revenue", "value": 84200}]}
+  },
+  {
+    "id": "kpi-reports-target-vs-actual",
+    "title": "Target Vs Actual",
+    "category": "data-infographic",
+    "tags": ["kpi", "target", "actual", "attainment"],
+    "description": "A focused attainment scene that animates actual performance against a target with an unmistakable gauge.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 120,
+    "defaultProps": {"variant": "target-vs-actual", "title": "Bookings target", "subtitle": "Actual performance versus committed plan", "period": "JUNE CLOSE", "paletteName": "forest", "metrics": [{"label": "Bookings", "value": 84200, "target": 90000, "unit": "$"}]}
+  },
+  {
+    "id": "kpi-reports-variance-bridge",
+    "title": "Variance Bridge",
+    "category": "data-infographic",
+    "tags": ["kpi", "variance", "waterfall", "drivers"],
+    "description": "A waterfall-style bridge isolates the positive and negative drivers that moved a KPI from prior to current.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 135,
+    "defaultProps": {"variant": "variance-bridge", "title": "Revenue variance bridge", "subtitle": "What changed from last period to this period", "period": "PERIOD OVER PERIOD", "paletteName": "sunset", "metrics": [{"label": "Revenue", "value": 84200, "previous": 76800, "delta": 9.6}, {"label": "Mix", "value": 8}, {"label": "Volume", "value": 12}, {"label": "Churn", "value": -5}]}
+  },
+  {
+    "id": "kpi-reports-growth-summary",
+    "title": "Growth Summary",
+    "category": "data-infographic",
+    "tags": ["kpi", "growth", "trajectory", "sparkline"],
+    "description": "A spacious trajectory view turns a sequence of KPI periods into a clear growth story.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 130,
+    "defaultProps": {"variant": "growth-summary", "title": "Growth summary", "subtitle": "The trend is compounding in the right direction", "period": "LAST 8 PERIODS", "paletteName": "candy", "metrics": [{"label": "Customers", "value": 12400}, {"label": "Customers", "value": 13700}, {"label": "Customers", "value": 15100}, {"label": "Customers", "value": 17400}, {"label": "Customers", "value": 19800}]}
+  },
+  {
+    "id": "kpi-reports-retention-report",
+    "title": "Retention Report",
+    "category": "data-infographic",
+    "tags": ["kpi", "retention", "cohort", "heatmap"],
+    "description": "A cohort grid makes retention decay and healthy cells legible at a glance.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 135,
+    "defaultProps": {"variant": "retention-report", "title": "Retention by cohort", "subtitle": "Weekly active retention after signup", "period": "COHORTS · MAY 2026", "paletteName": "forest", "metrics": [{"label": "Week 0", "value": 100}, {"label": "Week 1", "value": 72}, {"label": "Week 2", "value": 58}, {"label": "Week 4", "value": 44}, {"label": "Week 8", "value": 31}]}
+  },
+  {
+    "id": "kpi-reports-conversion-report",
+    "title": "Conversion Report",
+    "category": "data-infographic",
+    "tags": ["kpi", "conversion", "funnel", "pipeline"],
+    "description": "A four-stage animated funnel shows volume and loss from visitor through paid conversion.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 125,
+    "defaultProps": {"variant": "conversion-report", "title": "Conversion report", "subtitle": "From first touch to activated customer", "period": "JUNE FUNNEL", "paletteName": "ocean", "metrics": [{"label": "Visitors", "value": 12400}, {"label": "Engaged", "value": 7600}, {"label": "Trial", "value": 2400}, {"label": "Paid", "value": 580}]}
+  },
+  {
+    "id": "kpi-reports-budget-report",
+    "title": "Budget Report",
+    "category": "data-infographic",
+    "tags": ["kpi", "budget", "allocation", "spend"],
+    "description": "Horizontal allocation bars compare spend with plan and flag categories approaching their budget ceiling.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 130,
+    "defaultProps": {"variant": "budget-report", "title": "Budget allocation", "subtitle": "Spend against approved operating plan", "period": "FY26 · YTD", "paletteName": "paper", "metrics": [{"label": "People", "value": 420, "target": 500}, {"label": "Growth", "value": 290, "target": 320}, {"label": "Cloud", "value": 184, "target": 180}, {"label": "Research", "value": 92, "target": 140}, {"label": "Operations", "value": 240, "target": 280}]}
+  },
+  {
+    "id": "kpi-reports-health-score",
+    "title": "Health Score",
+    "category": "data-infographic",
+    "tags": ["kpi", "health", "score", "signals"],
+    "description": "A composite score ring pairs with signal cards to communicate operational health and its contributing metrics.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 145,
+    "defaultProps": {"variant": "health-score", "title": "Business health score", "subtitle": "Five signals, one operating read", "period": "WEEK 26", "paletteName": "midnight", "metrics": [{"label": "Revenue", "value": 92, "target": 100, "unit": "%"}, {"label": "Retention", "value": 88, "target": 90, "unit": "%"}, {"label": "Velocity", "value": 76, "target": 80, "unit": "%"}, {"label": "Quality", "value": 95, "target": 90, "unit": "%"}]}
+  },
+  {
+    "id": "kpi-reports-report-to-action",
+    "title": "Report To Action",
+    "category": "data-infographic",
+    "tags": ["kpi", "actions", "recommendations", "decision"],
+    "description": "The report closes with KPI evidence on the left and prioritized next actions on the right.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 145,
+    "defaultProps": {"variant": "report-to-action", "title": "What happens next", "subtitle": "Turning this period's signal into operating moves", "period": "DECISION BRIEF", "paletteName": "sunset", "notes": ["Protect conversion quality", "Close the activation gap", "Double down on retention"], "metrics": [{"label": "Activation", "value": 72, "target": 75, "unit": "%"}, {"label": "Retention", "value": 88, "target": 85, "unit": "%"}, {"label": "NPS", "value": 54, "target": 50}]}
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "wedding-films-save-the-date",
+    "title": "Save The Date Film Slate",
+    "category": "wedding-films",
+    "tags": ["wedding", "invitation", "date", "cinematic"],
+    "description": "A restrained save-the-date opening with a monogram seal, names, venue, and date.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "save-the-date", "names": "Amelia & Theo", "date": "SEPTEMBER 21, 2025", "venue": "The Rosewood Estate", "quote": "", "subtitle": "A day made for gathering", "monogram": "A&T", "paletteName": "sunset" }
+  },
+  {
+    "id": "wedding-films-names-reveal",
+    "title": "Names Reveal Film Card",
+    "category": "wedding-films",
+    "tags": ["wedding", "names", "reveal", "title"],
+    "description": "A split-screen names reveal that introduces the couple with an elegant ampersand beat.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 170,
+    "defaultProps": { "variant": "names-reveal", "names": "Amelia & Theo", "date": "SEPTEMBER 21, 2025", "venue": "The Rosewood Estate", "quote": "", "subtitle": "A day made for gathering", "monogram": "A&T", "paletteName": "paper" }
+  },
+  {
+    "id": "wedding-films-vow-quote",
+    "title": "Vow Quote Ceremony Card",
+    "category": "wedding-films",
+    "tags": ["wedding", "vows", "quote", "ceremony"],
+    "description": "A calm, centered vow or speech quote card with cinematic typography and breathing room.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 190,
+    "defaultProps": { "variant": "vow-quote", "names": "Amelia & Theo", "date": "SEPTEMBER 21, 2025", "venue": "The Rosewood Estate", "quote": "I choose you, in every season and every ordinary day.", "subtitle": "With all my heart", "monogram": "A&T", "paletteName": "forest" }
+  },
+  {
+    "id": "wedding-films-photo-gallery",
+    "title": "Wedding Photo Gallery",
+    "category": "wedding-films",
+    "tags": ["wedding", "photos", "gallery", "memories"],
+    "description": "A tactile five-frame gallery for portraits, details, and the small moments around the day.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 220,
+    "defaultProps": { "variant": "photo-gallery", "names": "Amelia & Theo", "date": "SEPTEMBER 21, 2025", "venue": "The Rosewood Estate", "quote": "", "subtitle": "The moments between the moments", "monogram": "A&T", "paletteName": "sunset" }
+  },
+  {
+    "id": "wedding-films-venue-card",
+    "title": "Wedding Venue Card",
+    "category": "wedding-films",
+    "tags": ["wedding", "venue", "location", "slate"],
+    "description": "A location-led venue slate with a delicate map mark, date, and place-setting rhythm.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 170,
+    "defaultProps": { "variant": "venue-card", "names": "Amelia & Theo", "date": "SEPTEMBER 21, 2025", "venue": "The Rosewood Estate", "quote": "", "subtitle": "Where the garden meets the sea", "monogram": "A&T", "paletteName": "ocean" }
+  },
+  {
+    "id": "wedding-films-timeline-day",
+    "title": "Wedding Day Timeline",
+    "category": "wedding-films",
+    "tags": ["wedding", "timeline", "schedule", "day"],
+    "description": "A vertical day-of timeline for ceremony, dinner, dances, and the final send-off.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 210,
+    "defaultProps": { "variant": "timeline-day", "names": "Amelia & Theo", "date": "SEPTEMBER 21, 2025", "venue": "The Rosewood Estate", "quote": "", "subtitle": "A day made for gathering", "monogram": "A&T", "paletteName": "paper", "eventTimes": ["CEREMONY", "COCKTAIL HOUR", "DINNER", "FIRST DANCE", "SEND-OFF"] }
+  },
+  {
+    "id": "wedding-films-family-grid",
+    "title": "Family and Friends Grid",
+    "category": "wedding-films",
+    "tags": ["wedding", "family", "friends", "people"],
+    "description": "A warm, editorial grid honoring the people who make the wedding story feel shared.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 190,
+    "defaultProps": { "variant": "family-grid", "names": "Amelia & Theo", "date": "SEPTEMBER 21, 2025", "venue": "The Rosewood Estate", "quote": "", "subtitle": "The people we love", "monogram": "A&T", "paletteName": "forest", "family": ["Mara", "James", "Lena", "Sam", "Rosa", "Eli"] }
+  },
+  {
+    "id": "wedding-films-first-dance",
+    "title": "First Dance Moment",
+    "category": "wedding-films",
+    "tags": ["wedding", "first-dance", "reception", "romance"],
+    "description": "A dark, atmospheric first-dance title with pulsing rings and a centered couple reveal.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 200,
+    "defaultProps": { "variant": "first-dance", "names": "Amelia & Theo", "date": "SEPTEMBER 21, 2025", "venue": "The Rosewood Estate", "quote": "", "subtitle": "One song. One room. One beginning.", "monogram": "A&T", "paletteName": "midnight" }
+  },
+  {
+    "id": "wedding-films-thank-you",
+    "title": "Wedding Thank You Card",
+    "category": "wedding-films",
+    "tags": ["wedding", "thank-you", "outro", "photo"],
+    "description": "A handwritten-feeling thank-you moment paired with a framed memory and a short message.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 190,
+    "defaultProps": { "variant": "thank-you", "names": "Amelia & Theo", "date": "SEPTEMBER 21, 2025", "venue": "The Rosewood Estate", "quote": "", "subtitle": "Thank you for being part of our day.", "story": "Thank you for bringing your laughter, your kindness, and your love to our day.", "monogram": "A&T", "paletteName": "paper" }
+  },
+  {
+    "id": "wedding-films-wedding-finale",
+    "title": "Wedding Film Finale",
+    "category": "wedding-films",
+    "tags": ["wedding", "finale", "hero", "outro"],
+    "description": "A full-bleed cinematic finale that closes on names, venue, date, and a monogram mark.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 240,
+    "defaultProps": { "variant": "wedding-finale", "names": "Amelia & Theo", "date": "SEPTEMBER 21, 2025", "venue": "The Rosewood Estate", "quote": "", "subtitle": "And so the story begins.", "monogram": "A&T", "paletteName": "sunset" }
+  }
+]

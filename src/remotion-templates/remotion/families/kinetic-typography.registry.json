@@ -1,0 +1,212 @@
+[
+  {
+    "id": "kinetic-impact-sting",
+    "title": "Kinetic Impact Sting",
+    "category": "kinetic-typography",
+    "tags": [
+      "opener",
+      "energy",
+      "sting"
+    ],
+    "description": "Word-by-word impact slams with chromatic split, screen shake and speed lines. High-energy opener.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 90,
+    "defaultProps": {
+      "variant": "impact",
+      "headline": "MOVE FAST",
+      "subline": "Built for momentum",
+      "paletteName": "midnight"
+    }
+  },
+  {
+    "id": "kinetic-typewriter-terminal",
+    "title": "Typewriter Terminal",
+    "category": "kinetic-typography",
+    "tags": [
+      "typewriter",
+      "mono",
+      "developer"
+    ],
+    "description": "Monospace typewriter reveal with blinking caret and rule line. Dev-tool and changelog narration.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 120,
+    "defaultProps": {
+      "variant": "typewriter",
+      "headline": "deploy --production",
+      "subline": "shipping since day one",
+      "paletteName": "forest"
+    }
+  },
+  {
+    "id": "kinetic-mask-reveal-editorial",
+    "title": "Mask Reveal Editorial",
+    "category": "kinetic-typography",
+    "tags": [
+      "editorial",
+      "elegant",
+      "reveal"
+    ],
+    "description": "Line-by-line mask reveal with an accent rule that draws underneath. Elegant editorial intro.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 110,
+    "defaultProps": {
+      "variant": "mask-reveal",
+      "headline": "Stories worth telling",
+      "subline": "a design studio",
+      "paletteName": "paper"
+    }
+  },
+  {
+    "id": "kinetic-wave-rhythm",
+    "title": "Wave Rhythm",
+    "category": "kinetic-typography",
+    "tags": [
+      "music",
+      "rhythm",
+      "playful"
+    ],
+    "description": "Per-character sine wave bounce, beat-friendly. Music, fitness and youth-brand energy.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 100,
+    "defaultProps": {
+      "variant": "wave",
+      "headline": "FEEL THE BEAT",
+      "subline": "music video toolkit",
+      "paletteName": "candy"
+    }
+  },
+  {
+    "id": "kinetic-slide-cascade-bold",
+    "title": "Slide Cascade Bold",
+    "category": "kinetic-typography",
+    "tags": [
+      "manifesto",
+      "agency",
+      "bold"
+    ],
+    "description": "Words slide in from off-screen left, alternating solid and outline. Manifesto and agency reels.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 120,
+    "defaultProps": {
+      "variant": "slide-cascade",
+      "headline": "DESIGN BUILD SHIP",
+      "subline": "studio manifest",
+      "paletteName": "mono"
+    }
+  },
+  {
+    "id": "kinetic-focus-pull-cinematic",
+    "title": "Focus Pull Cinematic",
+    "category": "kinetic-typography",
+    "tags": [
+      "cinematic",
+      "focus",
+      "calm"
+    ],
+    "description": "Lens focus-pull: blurred headline sharpens mid-composition then defocuses out. Cinematic title.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 130,
+    "defaultProps": {
+      "variant": "focus-pull",
+      "headline": "Clarity emerges",
+      "subline": "from deep work",
+      "paletteName": "ocean"
+    }
+  },
+  {
+    "id": "kinetic-letter-drop-playful",
+    "title": "Letter Drop Playful",
+    "category": "kinetic-typography",
+    "tags": [
+      "announcement",
+      "playful",
+      "bounce"
+    ],
+    "description": "Letters rain down and settle with springy bounce. Announcements and product launches.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 110,
+    "defaultProps": {
+      "variant": "letter-drop",
+      "headline": "BIG NEWS",
+      "subline": "you asked, we built",
+      "paletteName": "candy"
+    }
+  },
+  {
+    "id": "kinetic-outline-fill-poster",
+    "title": "Outline Fill Poster",
+    "category": "kinetic-typography",
+    "tags": [
+      "poster",
+      "ink",
+      "streetwear"
+    ],
+    "description": "Outlined display type fills bottom-to-top like ink. Poster and streetwear aesthetics.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 110,
+    "defaultProps": {
+      "variant": "outline-fill",
+      "headline": "MAKE IT LOUD",
+      "subline": "poster energy",
+      "paletteName": "sunset"
+    }
+  },
+  {
+    "id": "kinetic-split-flip-premium",
+    "title": "Split Flip Premium",
+    "category": "kinetic-typography",
+    "tags": [
+      "3d",
+      "premium",
+      "reveal"
+    ],
+    "description": "3D flipX word entrances with pill-badged subline. Premium product reveals.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 120,
+    "defaultProps": {
+      "variant": "split-flip",
+      "headline": "Introducing Atlas",
+      "subline": "the new standard",
+      "paletteName": "ocean"
+    }
+  },
+  {
+    "id": "kinetic-marquee-shout-hype",
+    "title": "Marquee Shout Hype",
+    "category": "kinetic-typography",
+    "tags": [
+      "marquee",
+      "hype",
+      "sale"
+    ],
+    "description": "Opposing marquee rows mixing solid and outline type with edge vignette. Hype drops and sales.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 100,
+    "defaultProps": {
+      "variant": "marquee-shout",
+      "headline": "LIMITED DROP",
+      "subline": "this weekend only",
+      "paletteName": "sunset"
+    }
+  }
+]

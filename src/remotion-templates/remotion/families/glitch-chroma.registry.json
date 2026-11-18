@@ -1,0 +1,162 @@
+[
+  {
+    "id": "glitch-rgb-split-jitter",
+    "title": "RGB Split Jitter",
+    "category": "glitch-chroma",
+    "tags": ["rgb", "chromatic", "headline"],
+    "description": "Oversized headline with red/cyan channel separation, deterministic jitter bursts and signal fragments.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 90,
+    "defaultProps": {
+      "headline": "BREAK THE SIGNAL",
+      "paletteName": "midnight",
+      "intensity": 0.9
+    }
+  },
+  {
+    "id": "glitch-datamosh-slices",
+    "title": "Datamosh Slice Displacement",
+    "category": "glitch-chroma",
+    "tags": ["datamosh", "slices", "displacement"],
+    "description": "Horizontal image slices drift, tear and recombine amid block-code artifacts and frame loss telemetry.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 105,
+    "defaultProps": {
+      "headline": "MEMORY LEAK",
+      "paletteName": "sunset",
+      "intensity": 1
+    }
+  },
+  {
+    "id": "glitch-scanline-crt",
+    "title": "Scanline CRT Roll",
+    "category": "glitch-chroma",
+    "tags": ["crt", "scanline", "retro"],
+    "description": "Curved CRT screen with phosphor color fringing, dense scanlines and a vertically rolling sync bar.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 120,
+    "defaultProps": {
+      "headline": "STAY TUNED",
+      "paletteName": "forest",
+      "intensity": 0.72
+    }
+  },
+  {
+    "id": "glitch-digital-rain",
+    "title": "Digital Rain Console",
+    "category": "glitch-chroma",
+    "tags": ["code", "rain", "terminal"],
+    "description": "Deterministic code columns stream behind a dark access console and luminous terminal headline.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "headline": "ENTER THE SYSTEM",
+      "paletteName": "forest",
+      "intensity": 0.78
+    }
+  },
+  {
+    "id": "glitch-vhs-tracking",
+    "title": "VHS Tracking Distortion",
+    "category": "glitch-chroma",
+    "tags": ["vhs", "tracking", "analog"],
+    "description": "Analog tape title with horizontal tracking tears, moving noise band, color bleed and timecode OSD.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 135,
+    "defaultProps": {
+      "headline": "SUMMER ARCHIVE",
+      "paletteName": "candy",
+      "intensity": 0.82
+    }
+  },
+  {
+    "id": "glitch-pixel-sort-streaks",
+    "title": "Pixel Sort Streaks",
+    "category": "glitch-chroma",
+    "tags": ["pixel-sort", "streaks", "abstract"],
+    "description": "Vertical chromatic streaks sort out of a framed image field behind a hard-edged poster headline.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 110,
+    "defaultProps": {
+      "headline": "ORDER FROM NOISE",
+      "paletteName": "ocean",
+      "intensity": 0.92
+    }
+  },
+  {
+    "id": "glitch-scramble-decode",
+    "title": "Scramble Decode",
+    "category": "glitch-chroma",
+    "tags": ["scramble", "decode", "type"],
+    "description": "Encrypted symbols rapidly cycle and lock character-by-character into a clean decoded message.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 120,
+    "defaultProps": {
+      "headline": "IDENTITY VERIFIED",
+      "paletteName": "mono",
+      "intensity": 0.68
+    }
+  },
+  {
+    "id": "glitch-hologram-panel",
+    "title": "Hologram Flicker Panel",
+    "category": "glitch-chroma",
+    "tags": ["hologram", "flicker", "sci-fi"],
+    "description": "Floating perspective display with luminous scan pass, channel ghosts and deterministic stability flickers.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 140,
+    "defaultProps": {
+      "headline": "PROJECT AURORA",
+      "paletteName": "ocean",
+      "intensity": 0.74
+    }
+  },
+  {
+    "id": "glitch-signal-lost",
+    "title": "Signal Lost Restore",
+    "category": "glitch-chroma",
+    "tags": ["static", "logo", "reveal"],
+    "description": "Full-frame broadcast static and NO SIGNAL warning snap into a clean geometric logo reveal.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 100,
+    "defaultProps": {
+      "headline": "CONNECTION RESTORED",
+      "paletteName": "midnight",
+      "intensity": 1.05
+    }
+  },
+  {
+    "id": "glitch-cyberpunk-hud",
+    "title": "Cyberpunk HUD Target",
+    "category": "glitch-chroma",
+    "tags": ["hud", "cyberpunk", "interface"],
+    "description": "Targeting reticle, telemetry grid and corner brackets frame a headline with sharp glitch accents.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 130,
+    "defaultProps": {
+      "headline": "NEON DISTRICT",
+      "paletteName": "candy",
+      "intensity": 0.88
+    }
+  }
+]

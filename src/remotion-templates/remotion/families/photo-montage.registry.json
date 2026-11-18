@@ -1,0 +1,222 @@
+[
+  {
+    "id": "photo-montage-contact-sheet",
+    "title": "Editorial Contact Sheet",
+    "category": "cinematic-photo",
+    "tags": ["photos", "montage", "contact-sheet", "editorial"],
+    "description": "A nine-frame editorial contact sheet that reveals a photo collection in a paced grid.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "contact-sheet",
+      "title": "Summer, Remembered",
+      "subtitle": "A season in twelve frames",
+      "captions": ["Lake house mornings", "The long road north", "Golden hour", "Fireflies at dusk"],
+      "dates": ["JUN 12", "JUN 18", "JUL 04", "AUG 21"],
+      "imageUrls": [],
+      "paletteName": "sunset",
+      "focalPoints": [],
+      "speed": 1
+    }
+  },
+  {
+    "id": "photo-montage-photo-wipe",
+    "title": "Photo Wipe Sequence",
+    "category": "cinematic-photo",
+    "tags": ["photos", "montage", "wipe", "slideshow"],
+    "description": "A cinematic sequence that wipes between full-frame photographs with date and caption beats.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "photo-wipe",
+      "title": "The Road North",
+      "subtitle": "Four stops, one memory",
+      "captions": ["Leaving before sunrise", "The long road north", "A quiet place to stay", "Home by dusk"],
+      "dates": ["JUN 12", "JUN 18", "JUL 04", "AUG 21"],
+      "imageUrls": [],
+      "paletteName": "ocean",
+      "focalPoints": [],
+      "speed": 1
+    }
+  },
+  {
+    "id": "photo-montage-grid-montage",
+    "title": "Asymmetric Grid Montage",
+    "category": "cinematic-photo",
+    "tags": ["photos", "montage", "grid", "collage"],
+    "description": "An asymmetric eight-frame grid with staggered entrances and editorial navigation marks.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "grid-montage",
+      "title": "Collected Light",
+      "subtitle": "Fragments from the archive",
+      "captions": ["Window light", "Open water", "Small rituals", "Late afternoon"],
+      "dates": ["01", "02", "03", "04"],
+      "imageUrls": [],
+      "paletteName": "paper",
+      "focalPoints": [],
+      "speed": 1
+    }
+  },
+  {
+    "id": "photo-montage-memory-flash",
+    "title": "Memory Flash Reel",
+    "category": "cinematic-photo",
+    "tags": ["photos", "montage", "memory", "flash"],
+    "description": "A restrained rapid-memory reel that cycles through photographs with readable captions.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "memory-flash",
+      "title": "Remember This",
+      "subtitle": "A reel of small moments",
+      "captions": ["The first morning", "A familiar street", "Everyone laughing", "The last light"],
+      "dates": ["2019", "2020", "2023", "2025"],
+      "imageUrls": [],
+      "paletteName": "mono",
+      "focalPoints": [],
+      "speed": 1
+    }
+  },
+  {
+    "id": "photo-montage-photo-ribbon",
+    "title": "Moving Photo Ribbon",
+    "category": "cinematic-photo",
+    "tags": ["photos", "montage", "ribbon", "parallax"],
+    "description": "Two drifting photographic ribbons create a layered, continuous album movement.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 210,
+    "defaultProps": {
+      "variant": "photo-ribbon",
+      "title": "On the Move",
+      "subtitle": "A moving album",
+      "captions": ["Platform 4", "Blue hour", "Roadside flowers", "A room with a view"],
+      "dates": ["MAY", "JUN", "JUL", "AUG"],
+      "imageUrls": [],
+      "paletteName": "midnight",
+      "focalPoints": [],
+      "speed": 1
+    }
+  },
+  {
+    "id": "photo-montage-album-turn",
+    "title": "Album Page Turn",
+    "category": "cinematic-photo",
+    "tags": ["photos", "montage", "album", "page-turn"],
+    "description": "A tactile album page turn that presents a single hero photograph like a keepsake.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "album-turn",
+      "title": "A Place We Kept",
+      "subtitle": "From the family album",
+      "captions": ["A place we kept", "The people we met", "The view from upstairs"],
+      "dates": ["1987", "1994", "2001"],
+      "imageUrls": [],
+      "paletteName": "paper",
+      "focalPoints": [],
+      "speed": 1
+    }
+  },
+  {
+    "id": "photo-montage-date-montage",
+    "title": "Date-Led Montage",
+    "category": "cinematic-photo",
+    "tags": ["photos", "montage", "timeline", "dates"],
+    "description": "A date-led vertical timeline that pairs small photographs with concise memory captions.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "date-montage",
+      "title": "Four Days in June",
+      "subtitle": "A short chronology",
+      "captions": ["Arrival", "First walk", "The long lunch", "Departure"],
+      "dates": ["JUN 12", "JUN 13", "JUN 14", "JUN 15"],
+      "imageUrls": [],
+      "paletteName": "forest",
+      "focalPoints": [],
+      "speed": 1
+    }
+  },
+  {
+    "id": "photo-montage-portrait-wall",
+    "title": "Portrait Wall",
+    "category": "cinematic-photo",
+    "tags": ["photos", "montage", "portraits", "gallery"],
+    "description": "A six-panel portrait wall with a gallery-like reveal and a minimal title treatment.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 170,
+    "defaultProps": {
+      "variant": "portrait-wall",
+      "title": "The People Here",
+      "subtitle": "A portrait collection",
+      "captions": ["Mara", "Jon", "Inez", "Theo", "Ari", "Nora"],
+      "dates": ["01", "02", "03", "04", "05", "06"],
+      "imageUrls": [],
+      "paletteName": "candy",
+      "focalPoints": [],
+      "speed": 1
+    }
+  },
+  {
+    "id": "photo-montage-triptych-reel",
+    "title": "Triptych Reel",
+    "category": "cinematic-photo",
+    "tags": ["photos", "montage", "triptych", "reel"],
+    "description": "Three synchronized panels build a clean triptych reel for a short visual story.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 160,
+    "defaultProps": {
+      "variant": "triptych-reel",
+      "title": "Three Views",
+      "subtitle": "One afternoon, three angles",
+      "captions": ["Before noon", "At the table", "After the rain"],
+      "dates": ["12:10", "14:30", "18:45"],
+      "imageUrls": [],
+      "paletteName": "sunset",
+      "focalPoints": [],
+      "speed": 1
+    }
+  },
+  {
+    "id": "photo-montage-photo-finale",
+    "title": "Photo Finale End Card",
+    "category": "cinematic-photo",
+    "tags": ["photos", "montage", "finale", "end-card"],
+    "description": "A dramatic final photograph resolves into a title, caption, and progress-mark end card.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "photo-finale",
+      "title": "Until Next Time",
+      "subtitle": "The story continues",
+      "captions": ["Keep the light", "Take the long way", "Until next time"],
+      "dates": ["2025", "2026", "ALWAYS"],
+      "imageUrls": [],
+      "paletteName": "midnight",
+      "focalPoints": [],
+      "speed": 1
+    }
+  }
+]

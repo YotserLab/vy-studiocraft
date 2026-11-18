@@ -1,0 +1,302 @@
+[
+  {
+    "id": "photo-cinematic-letterbox",
+    "title": "Cinematic Letterbox Sequence",
+    "category": "photo-stories",
+    "tags": [
+      "photos",
+      "memories",
+      "story",
+      "slideshow"
+    ],
+    "description": "Cinematic Letterbox Sequence \u2014 photo-story template using procedural gradient placeholder frames so it works asset-free.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 230,
+    "defaultProps": {
+      "variant": "letterbox",
+      "title": "Summer, Remembered",
+      "subtitle": "A season in twelve frames",
+      "captions": [
+        "Lake house mornings",
+        "The long road north",
+        "Golden hour",
+        "Fireflies at dusk"
+      ],
+      "location": "Big Sur, CA",
+      "year": "2025",
+      "paletteName": "sunset"
+    }
+  },
+  {
+    "id": "photo-crossfade-progress",
+    "title": "Crossfade Slideshow Progress",
+    "category": "photo-stories",
+    "tags": [
+      "photos",
+      "memories",
+      "story",
+      "slideshow"
+    ],
+    "description": "Crossfade Slideshow Progress \u2014 photo-story template using procedural gradient placeholder frames so it works asset-free.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 220,
+    "defaultProps": {
+      "variant": "crossfade",
+      "title": "Summer, Remembered",
+      "subtitle": "A season in twelve frames",
+      "captions": [
+        "Lake house mornings",
+        "The long road north",
+        "Golden hour",
+        "Fireflies at dusk"
+      ],
+      "location": "Big Sur, CA",
+      "year": "2025",
+      "paletteName": "sunset"
+    }
+  },
+  {
+    "id": "photo-diptych-split",
+    "title": "Diptych Split Screen",
+    "category": "photo-stories",
+    "tags": [
+      "photos",
+      "memories",
+      "story",
+      "slideshow"
+    ],
+    "description": "Diptych Split Screen \u2014 photo-story template using procedural gradient placeholder frames so it works asset-free.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 160,
+    "defaultProps": {
+      "variant": "diptych",
+      "title": "Summer, Remembered",
+      "subtitle": "A season in twelve frames",
+      "captions": [
+        "Lake house mornings",
+        "The long road north",
+        "Golden hour",
+        "Fireflies at dusk"
+      ],
+      "location": "Big Sur, CA",
+      "year": "2025",
+      "paletteName": "sunset"
+    }
+  },
+  {
+    "id": "photo-filmstrip-three-column",
+    "title": "Three Column Filmstrip",
+    "category": "photo-stories",
+    "tags": [
+      "photos",
+      "memories",
+      "story",
+      "slideshow"
+    ],
+    "description": "Three Column Filmstrip \u2014 photo-story template using procedural gradient placeholder frames so it works asset-free.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 190,
+    "defaultProps": {
+      "variant": "filmstrip",
+      "title": "Summer, Remembered",
+      "subtitle": "A season in twelve frames",
+      "captions": [
+        "Lake house mornings",
+        "The long road north",
+        "Golden hour",
+        "Fireflies at dusk"
+      ],
+      "location": "Big Sur, CA",
+      "year": "2025",
+      "paletteName": "sunset"
+    }
+  },
+  {
+    "id": "photo-ken-burns-caption",
+    "title": "Ken Burns Caption Frame",
+    "category": "photo-stories",
+    "tags": [
+      "photos",
+      "memories",
+      "story",
+      "slideshow"
+    ],
+    "description": "Ken Burns Caption Frame \u2014 photo-story template using procedural gradient placeholder frames so it works asset-free.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "ken-burns",
+      "title": "Summer, Remembered",
+      "subtitle": "A season in twelve frames",
+      "captions": [
+        "Lake house mornings",
+        "The long road north",
+        "Golden hour",
+        "Fireflies at dusk"
+      ],
+      "location": "Big Sur, CA",
+      "year": "2025",
+      "paletteName": "sunset"
+    }
+  },
+  {
+    "id": "photo-magazine-cover",
+    "title": "Magazine Cover Masthead",
+    "category": "photo-stories",
+    "tags": [
+      "photos",
+      "memories",
+      "story",
+      "slideshow"
+    ],
+    "description": "Magazine Cover Masthead \u2014 photo-story template using procedural gradient placeholder frames so it works asset-free.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "magazine",
+      "title": "Summer, Remembered",
+      "subtitle": "A season in twelve frames",
+      "captions": [
+        "Lake house mornings",
+        "The long road north",
+        "Golden hour",
+        "Fireflies at dusk"
+      ],
+      "location": "Big Sur, CA",
+      "year": "2025",
+      "paletteName": "sunset"
+    }
+  },
+  {
+    "id": "photo-polaroid-stack-drop",
+    "title": "Polaroid Stack Drop",
+    "category": "photo-stories",
+    "tags": [
+      "photos",
+      "memories",
+      "story",
+      "slideshow"
+    ],
+    "description": "Polaroid Stack Drop \u2014 photo-story template using procedural gradient placeholder frames so it works asset-free.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 170,
+    "defaultProps": {
+      "variant": "polaroid-stack",
+      "title": "Summer, Remembered",
+      "subtitle": "A season in twelve frames",
+      "captions": [
+        "Lake house mornings",
+        "The long road north",
+        "Golden hour",
+        "Fireflies at dusk"
+      ],
+      "location": "Big Sur, CA",
+      "year": "2025",
+      "paletteName": "sunset"
+    }
+  },
+  {
+    "id": "photo-scrapbook-collage",
+    "title": "Scrapbook Tilt Collage",
+    "category": "photo-stories",
+    "tags": [
+      "photos",
+      "memories",
+      "story",
+      "slideshow"
+    ],
+    "description": "Scrapbook Tilt Collage \u2014 photo-story template using procedural gradient placeholder frames so it works asset-free.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 200,
+    "defaultProps": {
+      "variant": "scrapbook",
+      "title": "Summer, Remembered",
+      "subtitle": "A season in twelve frames",
+      "captions": [
+        "Lake house mornings",
+        "The long road north",
+        "Golden hour",
+        "Fireflies at dusk"
+      ],
+      "location": "Big Sur, CA",
+      "year": "2025",
+      "paletteName": "sunset"
+    }
+  },
+  {
+    "id": "photo-travel-postcards",
+    "title": "Travel Postcard Stack",
+    "category": "photo-stories",
+    "tags": [
+      "photos",
+      "memories",
+      "story",
+      "slideshow"
+    ],
+    "description": "Travel Postcard Stack \u2014 photo-story template using procedural gradient placeholder frames so it works asset-free.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 190,
+    "defaultProps": {
+      "variant": "postcards",
+      "title": "Summer, Remembered",
+      "subtitle": "A season in twelve frames",
+      "captions": [
+        "Lake house mornings",
+        "The long road north",
+        "Golden hour",
+        "Fireflies at dusk"
+      ],
+      "location": "Big Sur, CA",
+      "year": "2025",
+      "paletteName": "sunset"
+    }
+  },
+  {
+    "id": "photo-year-review-grid",
+    "title": "Year in Review Grid",
+    "category": "photo-stories",
+    "tags": [
+      "photos",
+      "memories",
+      "story",
+      "slideshow"
+    ],
+    "description": "Year in Review Grid \u2014 photo-story template using procedural gradient placeholder frames so it works asset-free.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 210,
+    "defaultProps": {
+      "variant": "year-grid",
+      "title": "Summer, Remembered",
+      "subtitle": "A season in twelve frames",
+      "captions": [
+        "Lake house mornings",
+        "The long road north",
+        "Golden hour",
+        "Fireflies at dusk"
+      ],
+      "location": "Big Sur, CA",
+      "year": "2025",
+      "paletteName": "sunset"
+    }
+  }
+]

@@ -1,0 +1,211 @@
+[
+  {
+    "id": "finance-explainers-budget-flow",
+    "title": "Budget Flow",
+    "category": "explainers-education",
+    "tags": ["finance", "budget", "cash-flow", "education"],
+    "description": "Budget Flow — show monthly income branching into needs, goals, and flexible spending with a clear savings remainder.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "budget-flow",
+      "title": "Build a balanced monthly budget",
+      "subtitle": "A transparent view of where each dollar goes",
+      "paletteName": "ocean",
+      "currency": "$",
+      "income": 5200,
+      "data": [{"label":"Housing","value":1800},{"label":"Living","value":860},{"label":"Goals","value":540},{"label":"Flex","value":300}],
+      "disclaimer": "Illustrative scenario · not financial advice",
+      "assumptions": ["Change income and categories to fit your plan"]
+    }
+  },
+  {
+    "id": "finance-explainers-compound-growth",
+    "title": "Compound Growth",
+    "category": "explainers-education",
+    "tags": ["finance", "compound-interest", "growth", "education"],
+    "description": "Compound Growth — make the effect of time, rate, principal, and recurring contributions legible in one animated curve.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "compound-growth",
+      "title": "Time changes the shape of growth",
+      "subtitle": "An illustrative compound-growth scenario",
+      "paletteName": "forest",
+      "currency": "$",
+      "principal": 1000,
+      "monthlyContribution": 100,
+      "rate": 0.08,
+      "years": 10,
+      "disclaimer": "Illustrative scenario · rates are assumptions, not promises",
+      "assumptions": ["Principal · monthly contribution · annual rate · time"]
+    }
+  },
+  {
+    "id": "finance-explainers-cash-flow",
+    "title": "Cash Flow Bridge",
+    "category": "explainers-education",
+    "tags": ["finance", "cash-flow", "waterfall", "business"],
+    "description": "Cash Flow Bridge — walk from inflows through operating movements to the resulting running balance.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "cash-flow",
+      "title": "From inflow to ending balance",
+      "subtitle": "A simple bridge for explaining movement over a period",
+      "paletteName": "midnight",
+      "currency": "$",
+      "data": [{"label":"Opening","value":4200},{"label":"Sales","value":2600},{"label":"Payroll","value":-1500},{"label":"Tools","value":-420},{"label":"Tax","value":-380},{"label":"Closing","value":4500}],
+      "disclaimer": "Illustrative scenario · verify figures against your books"
+    }
+  },
+  {
+    "id": "finance-explainers-portfolio-mix",
+    "title": "Portfolio Mix",
+    "category": "explainers-education",
+    "tags": ["finance", "allocation", "portfolio", "donut"],
+    "description": "Portfolio Mix — present a configurable allocation as an animated composition of modeled buckets.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 140,
+    "defaultProps": {
+      "variant": "portfolio-mix",
+      "title": "A portfolio is a collection of exposures",
+      "subtitle": "Use neutral labels to explain allocation choices",
+      "paletteName": "sunset",
+      "currency": "$",
+      "data": [{"label":"Cash","value":18},{"label":"Bonds","value":27},{"label":"Equities","value":40},{"label":"Alternatives","value":15}],
+      "disclaimer": "Illustrative allocation · not a recommendation"
+    }
+  },
+  {
+    "id": "finance-explainers-savings-goal",
+    "title": "Savings Goal",
+    "category": "explainers-education",
+    "tags": ["finance", "savings", "goal", "progress"],
+    "description": "Savings Goal — turn a target amount and current balance into a motivating progress story.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 135,
+    "defaultProps": {
+      "variant": "savings-goal",
+      "title": "Make the next milestone visible",
+      "subtitle": "A flexible progress card for a modeled savings target",
+      "paletteName": "ocean",
+      "currency": "$",
+      "principal": 4200,
+      "target": 12000,
+      "disclaimer": "Illustrative scenario · adjust the target and pace",
+      "assumptions": ["Current balance shown against the modeled goal"]
+    }
+  },
+  {
+    "id": "finance-explainers-debt-paydown",
+    "title": "Debt Paydown",
+    "category": "explainers-education",
+    "tags": ["finance", "debt", "paydown", "timeline"],
+    "description": "Debt Paydown — visualize a modeled balance declining as scheduled payments land over time.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 145,
+    "defaultProps": {
+      "variant": "debt-paydown",
+      "title": "Show the balance, not just the payment",
+      "subtitle": "A simple modeled paydown path",
+      "paletteName": "candy",
+      "currency": "$",
+      "debt": 18000,
+      "amounts": [18000,15480,13313,11449,9846,8468],
+      "labels": ["Month 1","Month 2","Month 3","Month 4","Month 5","Month 6"],
+      "disclaimer": "Illustrative scenario · interest and payment terms vary"
+    }
+  },
+  {
+    "id": "finance-explainers-market-cycle",
+    "title": "Market Cycle",
+    "category": "explainers-education",
+    "tags": ["finance", "market", "cycle", "line-chart"],
+    "description": "Market Cycle — use a clearly illustrative curve to explain phases without implying a forecast.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "market-cycle",
+      "title": "Markets move through changing conditions",
+      "subtitle": "An illustrative cycle shape, not a prediction",
+      "paletteName": "midnight",
+      "currency": "$",
+      "disclaimer": "Illustrative shape · past movement does not predict future results"
+    }
+  },
+  {
+    "id": "finance-explainers-unit-economics",
+    "title": "Unit Economics",
+    "category": "explainers-education",
+    "tags": ["finance", "unit-economics", "cac", "ltv"],
+    "description": "Unit Economics — compare acquisition cost, lifetime value, and gross margin as a compact operating model.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 130,
+    "defaultProps": {
+      "variant": "unit-economics",
+      "title": "Three numbers shape the unit story",
+      "subtitle": "A compact model for explaining a customer relationship",
+      "paletteName": "forest",
+      "currency": "$",
+      "data": [{"label":"Acquisition cost","value":120},{"label":"Lifetime value","value":680},{"label":"Gross margin","value":0.42}],
+      "disclaimer": "Illustrative scenario · define each metric consistently"
+    }
+  },
+  {
+    "id": "finance-explainers-revenue-funnel",
+    "title": "Revenue Funnel",
+    "category": "explainers-education",
+    "tags": ["finance", "revenue", "funnel", "conversion"],
+    "description": "Revenue Funnel — make the step-down from audience to revenue visible with configurable stages.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 140,
+    "defaultProps": {
+      "variant": "revenue-funnel",
+      "title": "From attention to revenue",
+      "subtitle": "Explain conversion stages without hiding the drop-off",
+      "paletteName": "sunset",
+      "currency": "$",
+      "data": [{"label":"Visitors","value":10000},{"label":"Leads","value":4200},{"label":"Trials","value":1600},{"label":"Customers","value":620},{"label":"Revenue","value":210}],
+      "disclaimer": "Illustrative funnel · use measured conversion data when available"
+    }
+  },
+  {
+    "id": "finance-explainers-risk-return",
+    "title": "Risk / Return Map",
+    "category": "explainers-education",
+    "tags": ["finance", "risk", "return", "scatter"],
+    "description": "Risk / Return Map — position labeled examples on a two-axis explanation of modeled volatility and return.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 145,
+    "defaultProps": {
+      "variant": "risk-return",
+      "title": "Risk and return are related dimensions",
+      "subtitle": "A neutral map for explaining trade-offs",
+      "paletteName": "ocean",
+      "currency": "$",
+      "data": [{"label":"Cash","value":0.08,"secondary":0.02},{"label":"Balanced","value":0.24,"secondary":0.11},{"label":"Growth","value":0.48,"secondary":0.22},{"label":"Speculative","value":0.72,"secondary":0.41}],
+      "disclaimer": "Illustrative examples · not investment advice"
+    }
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "fashion-editorial-lookbook-cover",
+    "title": "Lookbook Cover",
+    "category": "cinematic-photo",
+    "tags": ["fashion", "lookbook", "cover", "editorial"],
+    "description": "A full-bleed editorial cover with collection typography, season metadata, and a restrained fashion lockup.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": { "variant": "lookbook-cover", "collection": "FORM / 01", "season": "SS26", "designer": "ATELIER NORTH", "product": "Structured wool coat", "paletteName": "midnight", "tagline": "A study in form" }
+  },
+  {
+    "id": "fashion-editorial-look-reveal",
+    "title": "Look Reveal",
+    "category": "cinematic-photo",
+    "tags": ["fashion", "look", "reveal", "portrait"],
+    "description": "A split editorial treatment cycles through looks with a slow image reveal and precise collection labels.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": { "variant": "look-reveal", "collection": "THE NEW LINE", "season": "AW25", "designer": "MARA STUDIO", "product": "Tailored silhouette", "paletteName": "ocean", "lookNames": ["The Line", "Soft Structure", "Night Study", "Volume", "The Fold"] }
+  },
+  {
+    "id": "fashion-editorial-detail-crop",
+    "title": "Detail Crop",
+    "category": "cinematic-photo",
+    "tags": ["fashion", "detail", "crop", "texture"],
+    "description": "A slow macro crop turns a garment detail into an art-directed product statement with configurable focal positioning.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": { "variant": "detail-crop", "collection": "OBJECTS", "season": "SS26", "designer": "NORTH / FORM", "product": "Hand-finished collar", "paletteName": "forest", "crop": "center 38%" }
+  },
+  {
+    "id": "fashion-editorial-collection-grid",
+    "title": "Collection Grid",
+    "category": "cinematic-photo",
+    "tags": ["fashion", "grid", "collection", "lookbook"],
+    "description": "Six staggered image or procedural look tiles assemble into a clean collection overview for a range or drop.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": { "variant": "collection-grid", "collection": "STUDIO / 06", "season": "SS26", "designer": "ELIO", "product": "Collection", "paletteName": "paper", "lookNames": ["01 / Line", "02 / Volume", "03 / Fold", "04 / Light", "05 / Form", "06 / Ease"] }
+  },
+  {
+    "id": "fashion-editorial-material-close",
+    "title": "Material Close",
+    "category": "cinematic-photo",
+    "tags": ["fashion", "material", "fabric", "texture"],
+    "description": "An abstract textile study uses bands, scanning light, and restrained copy to spotlight material and craft.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": { "variant": "material-close", "collection": "MATERIAL INDEX", "season": "AW25", "designer": "ATELIER NORTH", "product": "Brushed cotton / 04", "paletteName": "sunset", "tagline": "Texture, weight, movement." }
+  },
+  {
+    "id": "fashion-editorial-model-card",
+    "title": "Model Card",
+    "category": "cinematic-photo",
+    "tags": ["fashion", "model", "profile", "portrait"],
+    "description": "A profile-card composition pairs a sculptural portrait field with model, product, and collection metadata.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": { "variant": "model-card", "collection": "NEW SHAPES", "season": "SS26", "designer": "SORA HOUSE", "product": "Look 04 / Draped jersey", "model": "Ari / 04", "paletteName": "candy" }
+  },
+  {
+    "id": "fashion-editorial-runway-pulse",
+    "title": "Runway Pulse",
+    "category": "cinematic-photo",
+    "tags": ["fashion", "runway", "pulse", "show"],
+    "description": "A runway-stage treatment adds a moving light sweep and centered silhouette for show openers and collection pulses.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": { "variant": "runway-pulse", "collection": "THE WALK", "season": "AW25", "designer": "MARA STUDIO", "product": "Runway study", "paletteName": "midnight" }
+  },
+  {
+    "id": "fashion-editorial-price-tag",
+    "title": "Price Tag",
+    "category": "cinematic-photo",
+    "tags": ["fashion", "product", "price", "commerce"],
+    "description": "A product image locks against a high-contrast price panel for premium commerce, drop, and product detail edits.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": { "variant": "price-tag", "collection": "OBJECT / 01", "season": "SS26", "designer": "ELIO", "product": "The Essential Coat", "price": "480", "currency": "$", "paletteName": "paper" }
+  },
+  {
+    "id": "fashion-editorial-season-card",
+    "title": "Season Card",
+    "category": "cinematic-photo",
+    "tags": ["fashion", "season", "collection", "title-card"],
+    "description": "A typographic season lockup introduces a collection with palette swatches, metadata, and generous editorial space.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": { "variant": "season-card", "collection": "A QUIET VOLUME", "season": "SS26", "designer": "NORTH / FORM", "product": "Seasonal collection", "paletteName": "ocean" }
+  },
+  {
+    "id": "fashion-editorial-fashion-close",
+    "title": "Fashion Close",
+    "category": "cinematic-photo",
+    "tags": ["fashion", "endcard", "designer", "campaign"],
+    "description": "A cinematic fashion close resolves image, designer, collection, and season into a clean campaign end card.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": { "variant": "fashion-close", "collection": "THE LAST LIGHT", "season": "AW25", "designer": "ATELIER NORTH", "product": "Final look", "paletteName": "forest" }
+  }
+]

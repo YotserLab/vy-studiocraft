@@ -1,0 +1,319 @@
+[
+  {
+    "id": "podcast-episode-card-waveform",
+    "title": "Episode Card Waveform",
+    "category": "podcast-audio",
+    "tags": [
+      "podcast",
+      "waveform",
+      "episode",
+      "card"
+    ],
+    "description": "Centered episode card with a procedural waveform underlay and show branding. Perfect podcast episode announcements.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "episode-card",
+      "showName": "The Deep Work Show",
+      "episodeTitle": "How to Ship Fast Without Breaking Things",
+      "guestName": "",
+      "hostOne": "Alex",
+      "hostTwo": "",
+      "episodeNumber": "042",
+      "topic": "engineering velocity",
+      "chapters": [
+        "Intro",
+        "The problem",
+        "Fixes",
+        "Outro"
+      ],
+      "paletteName": "midnight"
+    }
+  },
+  {
+    "id": "podcast-dual-host-dialogue",
+    "title": "Dual Host Dialogue",
+    "category": "podcast-audio",
+    "tags": [
+      "podcast",
+      "interview",
+      "waveform",
+      "hosts"
+    ],
+    "description": "Two-host interview layout with mirrored procedural waveforms and name plates for both speakers.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "dual-host",
+      "showName": "Signal & Noise",
+      "episodeTitle": "Two Builders, One Roadmap",
+      "guestName": "",
+      "hostOne": "Alex",
+      "hostTwo": "Sam",
+      "episodeNumber": "017",
+      "topic": "product debates",
+      "chapters": [
+        "Hello",
+        "Debate",
+        "Wrap"
+      ],
+      "paletteName": "ocean"
+    }
+  },
+  {
+    "id": "podcast-vinyl-record-spin",
+    "title": "Vinyl Record Spin",
+    "category": "podcast-audio",
+    "tags": [
+      "podcast",
+      "vinyl",
+      "retro",
+      "spin"
+    ],
+    "description": "Spinning vinyl record with tonearm sweep and episode label in the center. Warm analog podcast branding.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 160,
+    "defaultProps": {
+      "variant": "vinyl-record",
+      "showName": "Analog Hours",
+      "episodeTitle": "Side B: The Long Game",
+      "guestName": "",
+      "hostOne": "Alex",
+      "hostTwo": "",
+      "episodeNumber": "008",
+      "topic": "craft",
+      "chapters": [
+        "Needle drop",
+        "Story",
+        "Outro"
+      ],
+      "paletteName": "mono"
+    }
+  },
+  {
+    "id": "podcast-full-bleed-visualizer",
+    "title": "Full Bleed Visualizer",
+    "category": "podcast-audio",
+    "tags": [
+      "podcast",
+      "visualizer",
+      "bars",
+      "energy"
+    ],
+    "description": "Full-bleed procedural audio-visualizer bars with overlaid show title. High-energy audio-first template.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 140,
+    "defaultProps": {
+      "variant": "full-visualizer",
+      "showName": "Frequency",
+      "episodeTitle": "Basslines and Burnout",
+      "guestName": "",
+      "hostOne": "Alex",
+      "hostTwo": "",
+      "episodeNumber": "023",
+      "topic": "creative energy",
+      "chapters": [
+        "Intro",
+        "Deep dive"
+      ],
+      "paletteName": "candy"
+    }
+  },
+  {
+    "id": "podcast-mic-pulse-minimal",
+    "title": "Mic Pulse Minimal",
+    "category": "podcast-audio",
+    "tags": [
+      "podcast",
+      "microphone",
+      "minimal",
+      "pulse"
+    ],
+    "description": "Minimal microphone silhouette with expanding pulse rings and clean typography. Understated and premium.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "mic-pulse",
+      "showName": "Quiet Focus",
+      "episodeTitle": "The Power of One Thing",
+      "guestName": "",
+      "hostOne": "Alex",
+      "hostTwo": "",
+      "episodeNumber": "031",
+      "topic": "focus",
+      "chapters": [
+        "Intro",
+        "Practice"
+      ],
+      "paletteName": "paper"
+    }
+  },
+  {
+    "id": "podcast-giant-episode-ticker",
+    "title": "Giant Episode Ticker",
+    "category": "podcast-audio",
+    "tags": [
+      "podcast",
+      "typography",
+      "episode",
+      "ticker"
+    ],
+    "description": "Giant episode number with a scrolling topic ticker beneath. Bold, poster-like episode announcement.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 140,
+    "defaultProps": {
+      "variant": "episode-number",
+      "showName": "Numbers Game",
+      "episodeTitle": "Why 10x Teams Ship Weekly",
+      "guestName": "",
+      "hostOne": "Alex",
+      "hostTwo": "",
+      "episodeNumber": "100",
+      "topic": "shipping cadence",
+      "chapters": [
+        "Intro",
+        "Data",
+        "Outro"
+      ],
+      "paletteName": "sunset"
+    }
+  },
+  {
+    "id": "podcast-guest-intro-card",
+    "title": "Guest Intro Card",
+    "category": "podcast-audio",
+    "tags": [
+      "podcast",
+      "guest",
+      "intro",
+      "waveform"
+    ],
+    "description": "Guest introduction card with initials avatar, role line and an accent waveform strip.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 140,
+    "defaultProps": {
+      "variant": "guest-intro",
+      "showName": "Makers Radio",
+      "episodeTitle": "Guest Session",
+      "guestName": "Jordan Reyes",
+      "hostOne": "Alex",
+      "hostTwo": "",
+      "episodeNumber": "054",
+      "topic": "design systems",
+      "chapters": [
+        "Welcome",
+        "Story"
+      ],
+      "paletteName": "forest"
+    }
+  },
+  {
+    "id": "podcast-live-level-meter",
+    "title": "Live Level Meter",
+    "category": "podcast-audio",
+    "tags": [
+      "podcast",
+      "live",
+      "meter",
+      "broadcast"
+    ],
+    "description": "LIVE badge with animated audio level meters and show strap. For live recordings and streams.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 120,
+    "defaultProps": {
+      "variant": "live-meter",
+      "showName": "On Air Tonight",
+      "episodeTitle": "Live Q&A: Ask Us Anything",
+      "guestName": "",
+      "hostOne": "Alex",
+      "hostTwo": "Sam",
+      "episodeNumber": "LIVE",
+      "topic": "audience Q&A",
+      "chapters": [
+        "Live"
+      ],
+      "paletteName": "mono"
+    }
+  },
+  {
+    "id": "podcast-chapter-marker-timeline",
+    "title": "Chapter Marker Timeline",
+    "category": "podcast-audio",
+    "tags": [
+      "podcast",
+      "chapters",
+      "timeline",
+      "structure"
+    ],
+    "description": "Episode chapter timeline that reveals each chapter marker in sequence over a waveform spine.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 160,
+    "defaultProps": {
+      "variant": "chapter-timeline",
+      "showName": "The Long Form",
+      "episodeTitle": "Anatomy of a Great Interview",
+      "guestName": "",
+      "hostOne": "Alex",
+      "hostTwo": "",
+      "episodeNumber": "077",
+      "topic": "interview craft",
+      "chapters": [
+        "Cold open",
+        "Origin story",
+        "The method",
+        "Advice",
+        "Outro"
+      ],
+      "paletteName": "midnight"
+    }
+  },
+  {
+    "id": "podcast-cassette-retro-player",
+    "title": "Cassette Retro Player",
+    "category": "podcast-audio",
+    "tags": [
+      "podcast",
+      "cassette",
+      "retro",
+      "player"
+    ],
+    "description": "Retro cassette-tape player with spinning reels and hand-drawn label typography. Nostalgic and playful.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 160,
+    "defaultProps": {
+      "variant": "cassette-player",
+      "showName": "Mixtape Memoirs",
+      "episodeTitle": "Songs We Stole From Our Older Siblings",
+      "guestName": "",
+      "hostOne": "Alex",
+      "hostTwo": "",
+      "episodeNumber": "019",
+      "topic": "music memories",
+      "chapters": [
+        "Side A",
+        "Side B"
+      ],
+      "paletteName": "sunset"
+    }
+  }
+]

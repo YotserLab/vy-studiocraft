@@ -1,0 +1,122 @@
+[
+  {
+    "id": "food-films-ingredient-pour",
+    "title": "Ingredient Pour",
+    "category": "food-films",
+    "tags": ["food", "ingredients", "recipe", "prep"],
+    "description": "A tactile ingredient sequence that introduces the dish through a measured, appetizing list of components.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "ingredient-pour", "dishName": "Herb roasted tomatoes", "subtitle": "Bright ingredients, patiently layered", "ingredients": ["Heirloom tomato", "Basil leaves", "Olive oil", "Sea salt"], "steps": ["Slice", "Season", "Roast", "Finish"], "chef": "Mara Bell", "menu": ["Seasonal starter", "House pasta", "Citrus tart"], "price": "$18", "restaurant": "The Green Table", "location": "12 Market Street", "category": "Today's prep", "caption": "Start with what is in season.", "paletteName": "sunset" }
+  },
+  {
+    "id": "food-films-recipe-steps",
+    "title": "Recipe Steps",
+    "category": "food-films",
+    "tags": ["food", "recipe", "steps", "tutorial"],
+    "description": "A cinematic step-by-step recipe strip with progressive method cards over a rich food field.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 210,
+    "defaultProps": { "variant": "recipe-steps", "dishName": "Charred citrus pasta", "subtitle": "A four-step weeknight ritual", "ingredients": ["Pasta", "Citrus", "Chili", "Herbs"], "steps": ["Boil until just tender", "Bloom the chili", "Toss with citrus", "Finish with herbs"], "chef": "Mara Bell", "menu": ["Pasta", "Salad", "Tart"], "price": "$22", "restaurant": "North Kitchen", "location": "Brooklyn", "category": "Method", "caption": "Keep the finish bright.", "paletteName": "ocean" }
+  },
+  {
+    "id": "food-films-menu-reveal",
+    "title": "Menu Reveal",
+    "category": "food-films",
+    "tags": ["food", "menu", "restaurant", "editorial"],
+    "description": "An elegant menu reveal for a seasonal restaurant, tasting menu, or launch-night service.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 200,
+    "defaultProps": { "variant": "menu-reveal", "dishName": "The autumn table", "subtitle": "A menu in three movements", "ingredients": ["Pear", "Mushroom", "Sage"], "steps": ["Gather", "Cook", "Serve"], "chef": "Mara Bell", "menu": ["Smoked pear / chicory", "Wild mushroom / brown butter", "Cocoa / sea salt"], "price": "$86", "restaurant": "Fallow House", "location": "Open Thursday—Sunday", "category": "Autumn menu", "caption": "A table set by the season.", "paletteName": "forest" }
+  },
+  {
+    "id": "food-films-chef-intro",
+    "title": "Chef Introduction",
+    "category": "food-films",
+    "tags": ["food", "chef", "portrait", "restaurant"],
+    "description": "A bold chef portrait card with a point of view, restaurant context, and editorial craft line.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 190,
+    "defaultProps": { "variant": "chef-intro", "dishName": "The signature plate", "subtitle": "A seasonal point of view, built one plate at a time.", "ingredients": ["Carrot", "Cumin", "Yogurt"], "steps": ["Roast", "Blend", "Plate"], "chef": "Mara Bell", "menu": ["Garden plate", "Fire-roasted fish", "Citrus tart"], "price": "$34", "restaurant": "Fallow House", "location": "North Coast", "category": "Chef profile", "caption": "Craft · season · memory", "paletteName": "sunset" }
+  },
+  {
+    "id": "food-films-texture-close",
+    "title": "Texture Close",
+    "category": "food-films",
+    "tags": ["food", "texture", "macro", "sensory"],
+    "description": "A macro sensory treatment for crisp, glossy, smoky, or melting food details and captions.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 160,
+    "defaultProps": { "variant": "texture-close", "dishName": "The first crackle", "subtitle": "Listen for the finish", "ingredients": ["Caramel", "Butter", "Salt"], "steps": ["Heat", "Fold", "Set"], "chef": "Mara Bell", "menu": ["Caramel tart"], "price": "$12", "restaurant": "The Green Table", "location": "Pastry counter", "category": "Texture study", "caption": "Listen for the crackle, then let the finish linger.", "paletteName": "midnight" }
+  },
+  {
+    "id": "food-films-plating-build",
+    "title": "Plating Build",
+    "category": "food-films",
+    "tags": ["food", "plating", "dish", "process"],
+    "description": "A composed plating diagram that calls out ingredients as the final dish comes together.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 190,
+    "defaultProps": { "variant": "plating-build", "dishName": "Garden plate", "subtitle": "Balance, contrast, and one final herb", "ingredients": ["Roasted carrot", "Tahini", "Pickled onion", "Dill"], "steps": ["Sauce", "Root", "Acid", "Herb"], "chef": "Mara Bell", "menu": ["Garden plate"], "price": "$26", "restaurant": "Fallow House", "location": "Pass kitchen", "category": "Final pass", "caption": "Every element has a place.", "paletteName": "forest" }
+  },
+  {
+    "id": "food-films-restaurant-card",
+    "title": "Restaurant Card",
+    "category": "food-films",
+    "tags": ["food", "restaurant", "location", "dish"],
+    "description": "A location-led restaurant card that pairs a dish, address, category, and price in one memorable frame.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 170,
+    "defaultProps": { "variant": "restaurant-card", "dishName": "Wood-fired peach", "subtitle": "The summer special", "ingredients": ["Peach", "Ricotta", "Basil"], "steps": ["Char", "Whip", "Finish"], "chef": "Mara Bell", "menu": ["Wood-fired peach"], "price": "$16", "restaurant": "North Kitchen", "location": "48 Orchard Lane", "category": "Summer special", "caption": "Walk-ins welcome.", "paletteName": "sunset" }
+  },
+  {
+    "id": "food-films-nutrition-card",
+    "title": "Nutrition Card",
+    "category": "food-films",
+    "tags": ["food", "nutrition", "data", "label"],
+    "description": "A readable nutrition panel that turns serving data into a warm, brandable food story.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "nutrition-card", "dishName": "Citrus grain bowl", "subtitle": "Bright, balanced, ready for lunch", "ingredients": ["Farro", "Citrus", "Greens"], "steps": ["Cook", "Chop", "Toss"], "chef": "Mara Bell", "menu": ["Grain bowl"], "price": "$14", "restaurant": "Daily Table", "location": "Everyday menu", "category": "Per serving", "caption": "Simple food, clearly explained.", "paletteName": "ocean", "nutrition": [{ "label": "Energy", "value": "420 kcal", "amount": 0.72 }, { "label": "Protein", "value": "18 g", "amount": 0.42 }, { "label": "Carbs", "value": "36 g", "amount": 0.58 }] }
+  },
+  {
+    "id": "food-films-dish-carousel",
+    "title": "Dish Carousel",
+    "category": "food-films",
+    "tags": ["food", "carousel", "menu", "dishes"],
+    "description": "A three-card dish carousel for a tasting menu, seasonal collection, or social food reel.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 200,
+    "defaultProps": { "variant": "dish-carousel", "dishName": "Tonight's table", "subtitle": "Three plates, one seasonal idea", "ingredients": ["Pear", "Mushroom", "Cocoa"], "steps": ["Starter", "Main", "Dessert"], "chef": "Mara Bell", "menu": ["Pear / chicory", "Mushroom / butter", "Cocoa / salt"], "price": "$72", "restaurant": "Fallow House", "location": "Autumn service", "category": "Three courses", "caption": "A menu in motion.", "paletteName": "forest" }
+  },
+  {
+    "id": "food-films-food-finale",
+    "title": "Food Film Finale",
+    "category": "food-films",
+    "tags": ["food", "hero", "finale", "brand"],
+    "description": "A full-bleed food hero that closes a recipe, campaign, or restaurant story with a serving cue.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 220,
+    "defaultProps": { "variant": "food-finale", "dishName": "Made for sharing", "subtitle": "Made slowly. Shared generously.", "ingredients": ["Seasonal produce", "Good oil", "Sea salt"], "steps": ["Gather", "Cook", "Share"], "chef": "Mara Bell", "menu": ["The signature plate"], "price": "SERVE WARM", "restaurant": "The Green Table", "location": "Kitchen notes", "category": "A seasonal story", "caption": "Come hungry.", "paletteName": "sunset" }
+  }
+]

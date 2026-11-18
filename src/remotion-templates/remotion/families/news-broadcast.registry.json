@@ -1,0 +1,402 @@
+[
+  {
+    "id": "news-anchor-intro-card",
+    "title": "Anchor Intro Card",
+    "category": "news-broadcast",
+    "tags": [
+      "news",
+      "broadcast",
+      "tv",
+      "strap"
+    ],
+    "description": "Anchor Intro Card \u2014 broadcast-news template with deterministic entrance/hold/exit choreography.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 130,
+    "defaultProps": {
+      "variant": "anchor-intro",
+      "headline": "Market Rally Stalls as Tech Giants Slip",
+      "subheadline": "Investors weigh rate outlook",
+      "label": "BREAKING",
+      "paletteName": "mono",
+      "items": [
+        "Markets close mixed after volatile session",
+        "Central bank signals patience on rates",
+        "Tech sector leads late-day rebound"
+      ],
+      "ticker": [
+        "AAPL +1.2",
+        "MSFT -0.4",
+        "TSLA +3.1",
+        "NVDA +2.7",
+        "AMZN -0.9"
+      ],
+      "name": "Dana Whitfield",
+      "title": "Senior Market Analyst",
+      "location": "New York",
+      "value": "72\u00b0F",
+      "icon": "\u2600"
+    }
+  },
+  {
+    "id": "news-breaking-red-slab",
+    "title": "Breaking News Red Slab",
+    "category": "news-broadcast",
+    "tags": [
+      "news",
+      "broadcast",
+      "tv",
+      "strap"
+    ],
+    "description": "Breaking News Red Slab \u2014 broadcast-news template with deterministic entrance/hold/exit choreography.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 100,
+    "defaultProps": {
+      "variant": "breaking-news",
+      "headline": "Market Rally Stalls as Tech Giants Slip",
+      "subheadline": "Investors weigh rate outlook",
+      "label": "BREAKING",
+      "paletteName": "mono",
+      "items": [
+        "Markets close mixed after volatile session",
+        "Central bank signals patience on rates",
+        "Tech sector leads late-day rebound"
+      ],
+      "ticker": [
+        "AAPL +1.2",
+        "MSFT -0.4",
+        "TSLA +3.1",
+        "NVDA +2.7",
+        "AMZN -0.9"
+      ],
+      "name": "Dana Whitfield",
+      "title": "Senior Market Analyst",
+      "location": "New York",
+      "value": "72\u00b0F",
+      "icon": "\u2600"
+    }
+  },
+  {
+    "id": "news-closing-headlines-list",
+    "title": "Closing Headlines List",
+    "category": "news-broadcast",
+    "tags": [
+      "news",
+      "broadcast",
+      "tv",
+      "strap"
+    ],
+    "description": "Closing Headlines List \u2014 broadcast-news template with deterministic entrance/hold/exit choreography.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 170,
+    "defaultProps": {
+      "variant": "closing-headlines",
+      "headline": "Market Rally Stalls as Tech Giants Slip",
+      "subheadline": "Investors weigh rate outlook",
+      "label": "BREAKING",
+      "paletteName": "mono",
+      "items": [
+        "Markets close mixed after volatile session",
+        "Central bank signals patience on rates",
+        "Tech sector leads late-day rebound"
+      ],
+      "ticker": [
+        "AAPL +1.2",
+        "MSFT -0.4",
+        "TSLA +3.1",
+        "NVDA +2.7",
+        "AMZN -0.9"
+      ],
+      "name": "Dana Whitfield",
+      "title": "Senior Market Analyst",
+      "location": "New York",
+      "value": "72\u00b0F",
+      "icon": "\u2600"
+    }
+  },
+  {
+    "id": "news-election-results-board",
+    "title": "Election Results Board",
+    "category": "news-broadcast",
+    "tags": [
+      "news",
+      "broadcast",
+      "tv",
+      "strap"
+    ],
+    "description": "Election Results Board \u2014 broadcast-news template with deterministic entrance/hold/exit choreography.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 160,
+    "defaultProps": {
+      "variant": "election-results",
+      "headline": "Market Rally Stalls as Tech Giants Slip",
+      "subheadline": "Investors weigh rate outlook",
+      "label": "BREAKING",
+      "paletteName": "mono",
+      "items": [
+        "Markets close mixed after volatile session",
+        "Central bank signals patience on rates",
+        "Tech sector leads late-day rebound"
+      ],
+      "ticker": [
+        "AAPL +1.2",
+        "MSFT -0.4",
+        "TSLA +3.1",
+        "NVDA +2.7",
+        "AMZN -0.9"
+      ],
+      "name": "Dana Whitfield",
+      "title": "Senior Market Analyst",
+      "location": "New York",
+      "value": "72\u00b0F",
+      "icon": "\u2600"
+    }
+  },
+  {
+    "id": "news-lower-third-ticker",
+    "title": "Lower Third Headline Strap",
+    "category": "news-broadcast",
+    "tags": [
+      "news",
+      "broadcast",
+      "tv",
+      "strap"
+    ],
+    "description": "Lower Third Headline Strap \u2014 broadcast-news template with deterministic entrance/hold/exit choreography.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 110,
+    "defaultProps": {
+      "variant": "lower-third",
+      "headline": "Market Rally Stalls as Tech Giants Slip",
+      "subheadline": "Investors weigh rate outlook",
+      "label": "BREAKING",
+      "paletteName": "mono",
+      "items": [
+        "Markets close mixed after volatile session",
+        "Central bank signals patience on rates",
+        "Tech sector leads late-day rebound"
+      ],
+      "ticker": [
+        "AAPL +1.2",
+        "MSFT -0.4",
+        "TSLA +3.1",
+        "NVDA +2.7",
+        "AMZN -0.9"
+      ],
+      "name": "Dana Whitfield",
+      "title": "Senior Market Analyst",
+      "location": "New York",
+      "value": "72\u00b0F",
+      "icon": "\u2600"
+    }
+  },
+  {
+    "id": "news-market-ticker-strip",
+    "title": "Market Ticker Strip",
+    "category": "news-broadcast",
+    "tags": [
+      "news",
+      "broadcast",
+      "tv",
+      "strap"
+    ],
+    "description": "Market Ticker Strip \u2014 broadcast-news template with deterministic entrance/hold/exit choreography.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 120,
+    "defaultProps": {
+      "variant": "market-ticker",
+      "headline": "Market Rally Stalls as Tech Giants Slip",
+      "subheadline": "Investors weigh rate outlook",
+      "label": "BREAKING",
+      "paletteName": "mono",
+      "items": [
+        "Markets close mixed after volatile session",
+        "Central bank signals patience on rates",
+        "Tech sector leads late-day rebound"
+      ],
+      "ticker": [
+        "AAPL +1.2",
+        "MSFT -0.4",
+        "TSLA +3.1",
+        "NVDA +2.7",
+        "AMZN -0.9"
+      ],
+      "name": "Dana Whitfield",
+      "title": "Senior Market Analyst",
+      "location": "New York",
+      "value": "72\u00b0F",
+      "icon": "\u2600"
+    }
+  },
+  {
+    "id": "news-morning-show-segment",
+    "title": "Morning Show Segment Card",
+    "category": "news-broadcast",
+    "tags": [
+      "news",
+      "broadcast",
+      "tv",
+      "strap"
+    ],
+    "description": "Morning Show Segment Card \u2014 broadcast-news template with deterministic entrance/hold/exit choreography.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "morning-show",
+      "headline": "Market Rally Stalls as Tech Giants Slip",
+      "subheadline": "Investors weigh rate outlook",
+      "label": "BREAKING",
+      "paletteName": "mono",
+      "items": [
+        "Markets close mixed after volatile session",
+        "Central bank signals patience on rates",
+        "Tech sector leads late-day rebound"
+      ],
+      "ticker": [
+        "AAPL +1.2",
+        "MSFT -0.4",
+        "TSLA +3.1",
+        "NVDA +2.7",
+        "AMZN -0.9"
+      ],
+      "name": "Dana Whitfield",
+      "title": "Senior Market Analyst",
+      "location": "New York",
+      "value": "72\u00b0F",
+      "icon": "\u2600"
+    }
+  },
+  {
+    "id": "news-press-conference-frame",
+    "title": "Press Conference Frame",
+    "category": "news-broadcast",
+    "tags": [
+      "news",
+      "broadcast",
+      "tv",
+      "strap"
+    ],
+    "description": "Press Conference Frame \u2014 broadcast-news template with deterministic entrance/hold/exit choreography.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 120,
+    "defaultProps": {
+      "variant": "press-conference",
+      "headline": "Market Rally Stalls as Tech Giants Slip",
+      "subheadline": "Investors weigh rate outlook",
+      "label": "BREAKING",
+      "paletteName": "mono",
+      "items": [
+        "Markets close mixed after volatile session",
+        "Central bank signals patience on rates",
+        "Tech sector leads late-day rebound"
+      ],
+      "ticker": [
+        "AAPL +1.2",
+        "MSFT -0.4",
+        "TSLA +3.1",
+        "NVDA +2.7",
+        "AMZN -0.9"
+      ],
+      "name": "Dana Whitfield",
+      "title": "Senior Market Analyst",
+      "location": "New York",
+      "value": "72\u00b0F",
+      "icon": "\u2600"
+    }
+  },
+  {
+    "id": "news-sports-desk-split",
+    "title": "Sports Desk Split Banner",
+    "category": "news-broadcast",
+    "tags": [
+      "news",
+      "broadcast",
+      "tv",
+      "strap"
+    ],
+    "description": "Sports Desk Split Banner \u2014 broadcast-news template with deterministic entrance/hold/exit choreography.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 130,
+    "defaultProps": {
+      "variant": "sports-desk",
+      "headline": "Market Rally Stalls as Tech Giants Slip",
+      "subheadline": "Investors weigh rate outlook",
+      "label": "BREAKING",
+      "paletteName": "mono",
+      "items": [
+        "Markets close mixed after volatile session",
+        "Central bank signals patience on rates",
+        "Tech sector leads late-day rebound"
+      ],
+      "ticker": [
+        "AAPL +1.2",
+        "MSFT -0.4",
+        "TSLA +3.1",
+        "NVDA +2.7",
+        "AMZN -0.9"
+      ],
+      "name": "Dana Whitfield",
+      "title": "Senior Market Analyst",
+      "location": "New York",
+      "value": "72\u00b0F",
+      "icon": "\u2600"
+    }
+  },
+  {
+    "id": "news-weather-big-temp",
+    "title": "Weather Big Temp Panel",
+    "category": "news-broadcast",
+    "tags": [
+      "news",
+      "broadcast",
+      "tv",
+      "strap"
+    ],
+    "description": "Weather Big Temp Panel \u2014 broadcast-news template with deterministic entrance/hold/exit choreography.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 140,
+    "defaultProps": {
+      "variant": "weather-panel",
+      "headline": "Market Rally Stalls as Tech Giants Slip",
+      "subheadline": "Investors weigh rate outlook",
+      "label": "BREAKING",
+      "paletteName": "mono",
+      "items": [
+        "Markets close mixed after volatile session",
+        "Central bank signals patience on rates",
+        "Tech sector leads late-day rebound"
+      ],
+      "ticker": [
+        "AAPL +1.2",
+        "MSFT -0.4",
+        "TSLA +3.1",
+        "NVDA +2.7",
+        "AMZN -0.9"
+      ],
+      "name": "Dana Whitfield",
+      "title": "Senior Market Analyst",
+      "location": "New York",
+      "value": "72\u00b0F",
+      "icon": "\u2600"
+    }
+  }
+]

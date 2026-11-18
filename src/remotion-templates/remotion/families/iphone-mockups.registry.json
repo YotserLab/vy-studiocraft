@@ -1,0 +1,187 @@
+[
+  {
+    "id": "iphone-device-hero",
+    "title": "Device Hero",
+    "category": "iphone-mockups",
+    "tags": ["iphone", "app", "hero", "launch"],
+    "description": "A polished iPhone rises into a spacious product hero while feature pills establish the promise.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "device-hero",
+      "appName": "Northstar",
+      "tagline": "A calmer way to move through your day.",
+      "features": ["One-tap planning", "Private by design", "Works everywhere"],
+      "paletteName": "midnight",
+      "cta": "Try it free"
+    }
+  },
+  {
+    "id": "iphone-screen-carousel",
+    "title": "Screen Carousel",
+    "category": "iphone-mockups",
+    "tags": ["iphone", "carousel", "screens", "onboarding"],
+    "description": "A horizontal carousel sweeps through multiple generated app screens for a fast feature tour.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "screen-carousel",
+      "appName": "Canvas",
+      "tagline": "Every idea gets a place to grow.",
+      "features": ["Infinite boards", "Team comments", "Instant export", "Smart templates"],
+      "paletteName": "candy"
+    }
+  },
+  {
+    "id": "iphone-handoff-flow",
+    "title": "Phone to Desktop Handoff",
+    "category": "iphone-mockups",
+    "tags": ["handoff", "sync", "desktop", "workflow"],
+    "description": "A glowing handoff path connects a mobile task to a desktop workspace with a live-sync readout.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "handoff-flow",
+      "appName": "Relay",
+      "tagline": "Start anywhere. Finish everywhere.",
+      "features": ["Instant handoff", "Live sync", "Shared context"],
+      "paletteName": "ocean"
+    }
+  },
+  {
+    "id": "iphone-notification-demo",
+    "title": "Notification Demo",
+    "category": "iphone-mockups",
+    "tags": ["notification", "alert", "engagement", "mobile"],
+    "description": "A native-looking notification floats above the phone and lands with a tactile, high-contrast entrance.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 135,
+    "defaultProps": {
+      "variant": "notification-demo",
+      "appName": "Pulse",
+      "tagline": "The right update, right when it matters.",
+      "features": ["Instant alerts", "Smart priority", "Quiet hours"],
+      "paletteName": "sunset",
+      "notificationText": "Your weekly focus report is ready"
+    }
+  },
+  {
+    "id": "iphone-dark-light-comparison",
+    "title": "Dark / Light Comparison",
+    "category": "iphone-mockups",
+    "tags": ["dark mode", "light mode", "comparison", "design system"],
+    "description": "A split-screen comparison reveals the same app in dark and light modes with mirrored device choreography.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "dark-light",
+      "appName": "Lumen",
+      "tagline": "Your interface, your atmosphere.",
+      "features": ["Adaptive contrast", "OLED ready", "One-tap theme"],
+      "paletteName": "midnight"
+    }
+  },
+  {
+    "id": "iphone-portrait-reel",
+    "title": "Portrait Reel",
+    "category": "iphone-mockups",
+    "tags": ["portrait", "social", "reel", "feed"],
+    "description": "A phone floats over a drifting strip of portrait content cards, ideal for social and creator-app launches.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "portrait-reel",
+      "appName": "Frame",
+      "tagline": "Make every moment worth sharing.",
+      "features": ["Fast capture", "Remix together", "Creator insights"],
+      "paletteName": "candy"
+    }
+  },
+  {
+    "id": "iphone-tilted-orbit",
+    "title": "Tilted Orbit",
+    "category": "iphone-mockups",
+    "tags": ["orbit", "callouts", "3d", "phone"],
+    "description": "A tilted device anchors a kinetic orbit of benefit labels for a cinematic, premium product reveal.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "tilted-orbit",
+      "appName": "Orbit",
+      "tagline": "A smarter center for everything you do.",
+      "features": ["Smart reminders", "Shared spaces", "Deep focus", "Quick capture", "Zero clutter"],
+      "paletteName": "forest"
+    }
+  },
+  {
+    "id": "iphone-multi-device-lineup",
+    "title": "Multi-Device Lineup",
+    "category": "iphone-mockups",
+    "tags": ["ecosystem", "multi-device", "responsive", "product"],
+    "description": "Three coordinated devices arrive as an ecosystem lineup, each showing a different state of the same product.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "multi-device-lineup",
+      "appName": "Relay OS",
+      "tagline": "One account. Every screen.",
+      "features": ["Seamless sync", "Responsive layouts", "Shared identity"],
+      "paletteName": "ocean"
+    }
+  },
+  {
+    "id": "iphone-feature-callouts",
+    "title": "Feature Callouts",
+    "category": "iphone-mockups",
+    "tags": ["callouts", "annotation", "features", "mobile ui"],
+    "description": "Measured leader lines connect four concise feature annotations directly to the phone interface.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "feature-callouts",
+      "appName": "Signal",
+      "tagline": "Small details. A much better day.",
+      "features": ["Focus inbox", "Actionable nudges", "Beautiful summaries", "Private analytics"],
+      "paletteName": "midnight"
+    }
+  },
+  {
+    "id": "iphone-app-store-showcase",
+    "title": "App Store Showcase",
+    "category": "iphone-mockups",
+    "tags": ["app store", "listing", "launch", "screenshots"],
+    "description": "An app-store listing card pairs with a tilted phone and feature screenshots for a complete launch lockup.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "app-store-showcase",
+      "appName": "Mosaic",
+      "tagline": "Plan less. Make more.",
+      "features": ["Visual planning", "Fast capture", "Shared projects"],
+      "paletteName": "sunset",
+      "rating": "4.9",
+      "price": "Free",
+      "cta": "GET"
+    }
+  }
+]

@@ -1,0 +1,178 @@
+[
+  {
+    "id": "responsive-design-desktop-to-mobile",
+    "title": "Desktop To Mobile",
+    "category": "responsive-design",
+    "tags": ["responsive", "breakpoints", "desktop", "mobile", "product"],
+    "description": "A single interface appears across desktop, tablet, and phone viewports so the responsive system reads as one coherent product.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "desktop-to-mobile",
+      "title": "One system, every screen",
+      "subtitle": "Show how the same product adapts from a wide workspace to a focused phone flow.",
+      "paletteName": "ocean",
+      "breakpointLabels": ["1440px / desktop", "768px / tablet", "390px / mobile"]
+    }
+  },
+  {
+    "id": "responsive-design-fluid-breakpoint",
+    "title": "Fluid Breakpoint",
+    "category": "responsive-design",
+    "tags": ["responsive", "fluid", "viewport", "breakpoint"],
+    "description": "A viewport smoothly narrows along a breakpoint ruler, making fluid interpolation and layout thresholds visible.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "fluid-breakpoint",
+      "title": "Design for the in-between",
+      "subtitle": "Make responsive behavior legible before a breakpoint becomes a bug.",
+      "paletteName": "midnight",
+      "breakpointLabels": ["1440px / desktop", "768px / tablet", "390px / mobile"]
+    }
+  },
+  {
+    "id": "responsive-design-grid-collapse",
+    "title": "Grid Collapse",
+    "category": "responsive-design",
+    "tags": ["responsive", "grid", "cards", "layout"],
+    "description": "A six-card grid collapses from four columns to two and then a readable stack with continuity-preserving motion.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "grid-collapse",
+      "title": "Keep the hierarchy",
+      "subtitle": "Demonstrate how a dense card system preserves priority as available width disappears.",
+      "paletteName": "forest"
+    }
+  },
+  {
+    "id": "responsive-design-nav-to-menu",
+    "title": "Nav To Menu",
+    "category": "responsive-design",
+    "tags": ["responsive", "navigation", "menu", "mobile"],
+    "description": "Full desktop navigation morphs into a compact mobile menu while the brand and page context stay anchored.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "nav-to-menu",
+      "title": "Navigation without compromise",
+      "subtitle": "Show the moment a full navigation system becomes a focused menu affordance.",
+      "paletteName": "candy",
+      "labels": ["Overview", "Activity", "Reports", "Settings"]
+    }
+  },
+  {
+    "id": "responsive-design-card-reflow",
+    "title": "Card Reflow",
+    "category": "responsive-design",
+    "tags": ["responsive", "card", "reflow", "mobile"],
+    "description": "Three content modules move from a horizontal desktop row into a full-width mobile stack without losing their order.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "card-reflow",
+      "title": "Order survives the reflow",
+      "subtitle": "Animate content modules into their narrow-screen reading order with clear spatial continuity.",
+      "paletteName": "sunset"
+    }
+  },
+  {
+    "id": "responsive-design-typography-scale",
+    "title": "Typography Scale",
+    "category": "responsive-design",
+    "tags": ["responsive", "type", "typography", "fluid-scale"],
+    "description": "A hero headline transitions from display-scale desktop type to a compact mobile lockup with an explicit size ruler.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "typography-scale",
+      "title": "Type that fits the moment",
+      "subtitle": "Make fluid type decisions visible, legible, and easy for an agent to reuse.",
+      "paletteName": "paper"
+    }
+  },
+  {
+    "id": "responsive-design-image-art-direction",
+    "title": "Image Art Direction",
+    "category": "responsive-design",
+    "tags": ["responsive", "image", "art-direction", "crop"],
+    "description": "A wide desktop image treatment crossfades into a deliberately art-directed mobile crop rather than simply shrinking.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "image-art-direction",
+      "title": "Choose the right crop",
+      "subtitle": "Show why responsive imagery needs a focal point, not only a smaller box.",
+      "paletteName": "ocean",
+      "highlight": "Focal content"
+    }
+  },
+  {
+    "id": "responsive-design-sidebar-to-drawer",
+    "title": "Sidebar To Drawer",
+    "category": "responsive-design",
+    "tags": ["responsive", "sidebar", "drawer", "dashboard"],
+    "description": "A persistent dashboard sidebar slides away and becomes a compact drawer control while the content canvas expands.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "sidebar-to-drawer",
+      "title": "Give content room",
+      "subtitle": "Demonstrate a navigation rail becoming an overlay drawer on a constrained viewport.",
+      "paletteName": "midnight"
+    }
+  },
+  {
+    "id": "responsive-design-table-to-cards",
+    "title": "Table To Cards",
+    "category": "responsive-design",
+    "tags": ["responsive", "table", "cards", "data"],
+    "description": "A dense desktop data table transforms into readable status cards for a phone-sized viewport.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "table-to-cards",
+      "title": "Data that stays readable",
+      "subtitle": "Show the semantic transformation from columns to compact records instead of forcing a squeeze.",
+      "paletteName": "forest",
+      "rows": ["Northstar", "Atlas", "Orbit", "Harbor"]
+    }
+  },
+  {
+    "id": "responsive-design-responsive-scrub",
+    "title": "Responsive Scrub",
+    "category": "responsive-design",
+    "tags": ["responsive", "scrub", "viewport", "prototype"],
+    "description": "A responsive preview repeatedly travels across widths with a visible scrubber, useful for presenting a design system in motion.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "responsive-scrub",
+      "title": "Scrub the whole system",
+      "subtitle": "A compact viewport journey gives agents a reusable way to present responsive behavior end to end.",
+      "paletteName": "candy",
+      "viewportWidths": [1440, 1024, 768, 390]
+    }
+  }
+]

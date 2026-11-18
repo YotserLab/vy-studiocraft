@@ -1,0 +1,223 @@
+[
+  {
+    "id": "website-browser-hero-reveal",
+    "title": "Browser Hero Reveal",
+    "category": "website-showcase",
+    "tags": ["browser", "hero", "landing-page", "reveal"],
+    "description": "A polished browser window rises into frame to reveal a complete website hero, navigation, call-to-action and product visual.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "browser-hero-reveal",
+      "siteName": "Northstar",
+      "headline": "A clearer way forward.",
+      "subheadline": "Bring your best work into one beautifully focused home.",
+      "cta": "Start free",
+      "navItems": ["Product", "Solutions", "Pricing", "About"],
+      "features": ["Live sync", "Smart views", "Fast exports"],
+      "paletteName": "midnight",
+      "url": "northstar.example"
+    }
+  },
+  {
+    "id": "website-landing-page-tour",
+    "title": "Landing Page Tour",
+    "category": "website-showcase",
+    "tags": ["scroll", "landing-page", "tour", "story"],
+    "description": "A cinematic landing page scrolls from hero to proof section while a progress rail makes the narrative easy to follow.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "landing-page-tour",
+      "siteName": "Fieldwork",
+      "headline": "Make room for momentum.",
+      "subheadline": "A guided scroll story for teams building what comes next.",
+      "cta": "See how it works",
+      "navItems": ["Platform", "Stories", "Pricing", "Contact"],
+      "features": ["Plan", "Create", "Launch", "Grow"],
+      "paletteName": "ocean",
+      "url": "fieldwork.example/launch"
+    }
+  },
+  {
+    "id": "website-feature-section-sequence",
+    "title": "Feature Section Sequence",
+    "category": "website-showcase",
+    "tags": ["features", "sequence", "saas", "benefits"],
+    "description": "Feature sections rotate through a framed product visual with synchronized labels, progress bars and calls to action.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "feature-section-sequence",
+      "siteName": "Orbit OS",
+      "headline": "Every feature earns its place.",
+      "subheadline": "Show the product story one decisive benefit at a time.",
+      "cta": "Explore feature",
+      "navItems": ["Overview", "Capabilities", "Customers"],
+      "features": ["Automate", "Collaborate", "Measure", "Scale"],
+      "paletteName": "forest",
+      "url": "orbit.example/features"
+    }
+  },
+  {
+    "id": "website-responsive-breakpoint",
+    "title": "Responsive Breakpoint Showcase",
+    "category": "website-showcase",
+    "tags": ["responsive", "desktop", "tablet", "mobile"],
+    "description": "Desktop, tablet and mobile browser layouts enter as a coordinated responsive system with active breakpoint emphasis.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 135,
+    "defaultProps": {
+      "variant": "responsive-breakpoint",
+      "siteName": "Common Ground",
+      "headline": "One system. Every screen.",
+      "subheadline": "Make responsive design feel intentional from the first pixel.",
+      "cta": "View system",
+      "navItems": ["Design", "Build", "Scale"],
+      "features": ["Desktop", "Tablet", "Mobile"],
+      "paletteName": "candy",
+      "url": "common.example"
+    }
+  },
+  {
+    "id": "website-tab-switching",
+    "title": "Interactive Tab Switching",
+    "category": "website-showcase",
+    "tags": ["tabs", "interaction", "product-tour", "dashboard"],
+    "description": "A browser product tour switches between feature tabs while the content panel and supporting proof cards update in sync.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "tab-switching",
+      "siteName": "Lattice",
+      "headline": "See the whole picture.",
+      "subheadline": "Make complex product capabilities feel simple to explore.",
+      "cta": "Open workspace",
+      "navItems": ["Workspace", "Teams", "Resources"],
+      "features": ["Overview", "Analytics", "Integrations", "Security"],
+      "paletteName": "midnight",
+      "url": "lattice.example/workspace"
+    }
+  },
+  {
+    "id": "website-ecommerce-product-page",
+    "title": "Ecommerce Product Page",
+    "category": "website-showcase",
+    "tags": ["ecommerce", "product", "shop", "conversion"],
+    "description": "A tactile editorial ecommerce page presents a product image, price, benefit list and animated add-to-bag interaction.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 135,
+    "defaultProps": {
+      "variant": "ecommerce-product-page",
+      "siteName": "Atelier No. 4",
+      "headline": "Objects with a point of view.",
+      "subheadline": "Designed slowly. Made to stay with you.",
+      "cta": "Add to bag",
+      "navItems": ["New arrivals", "Studio", "About"],
+      "features": ["Hand finished", "Ships in 48 hours", "One year warranty"],
+      "paletteName": "paper",
+      "price": "$148",
+      "url": "atelier.example/product"
+    }
+  },
+  {
+    "id": "website-saas-dashboard-tour",
+    "title": "SaaS Dashboard Tour",
+    "category": "website-showcase",
+    "tags": ["saas", "dashboard", "analytics", "data"],
+    "description": "A product analytics dashboard assembles from navigation, KPI cards and a line chart that draws into view.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "saas-dashboard-tour",
+      "siteName": "Signal",
+      "headline": "Know what moves the needle.",
+      "subheadline": "A calm command center for the metrics your team actually uses.",
+      "cta": "View analytics",
+      "navItems": ["Overview", "Reports", "Customers", "Automations"],
+      "features": ["Retention", "Growth", "Active users", "NPS"],
+      "paletteName": "ocean",
+      "url": "signal.example/analytics"
+    }
+  },
+  {
+    "id": "website-portfolio-reel",
+    "title": "Portfolio Reel",
+    "category": "website-showcase",
+    "tags": ["portfolio", "projects", "horizontal-scroll", "creative"],
+    "description": "A horizontal portfolio reel glides through selected work cards with project labels, view affordances and a progress track.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "portfolio-reel",
+      "siteName": "Studio 24",
+      "headline": "Selected work, in motion.",
+      "subheadline": "A portfolio frame for thoughtful identities and useful digital products.",
+      "cta": "See all work",
+      "navItems": ["Work", "Approach", "Journal"],
+      "features": ["Arc / Identity", "Field Notes", "North / Product", "Studio 24"],
+      "paletteName": "sunset",
+      "url": "studio24.example/work"
+    }
+  },
+  {
+    "id": "website-before-after-redesign",
+    "title": "Before / After Redesign",
+    "category": "website-showcase",
+    "tags": ["redesign", "comparison", "before-after", "case-study"],
+    "description": "A draggable-style split reveals an old interface and a polished redesign, making visual improvement immediately legible.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "before-after-redesign",
+      "siteName": "Reframe",
+      "headline": "The same story, better told.",
+      "subheadline": "Show the design decisions that turn a useful site into a memorable one.",
+      "cta": "Read the case study",
+      "navItems": ["Work", "Process", "Contact"],
+      "features": ["Clear hierarchy", "Faster paths", "More confidence"],
+      "paletteName": "mono",
+      "url": "reframe.example/case-study"
+    }
+  },
+  {
+    "id": "website-multi-page-montage",
+    "title": "Multi-Page Montage",
+    "category": "website-showcase",
+    "tags": ["multi-page", "montage", "browser", "brand-site"],
+    "description": "Four browser pages fan into a dimensional website system, giving a brand launch film a complete digital-world payoff.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "multi-page-montage",
+      "siteName": "Aster House",
+      "headline": "A complete digital world.",
+      "subheadline": "Bring the home page, product story and contact path into one memorable reveal.",
+      "cta": "Enter the site",
+      "navItems": ["Home", "Product", "Story", "Contact"],
+      "features": ["Home", "Product", "Story", "Contact"],
+      "paletteName": "candy",
+      "url": "asterhouse.example"
+    }
+  }
+]

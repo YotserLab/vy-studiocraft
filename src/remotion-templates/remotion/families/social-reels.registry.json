@@ -1,0 +1,208 @@
+[
+  {
+    "id": "social-reels-beat-cut-reel",
+    "title": "Beat Cut Reel",
+    "category": "marketing-social",
+    "tags": ["social", "reel", "beat", "short-form", "vertical"],
+    "description": "Beat Cut Reel — rapid editorial cards that snap to configurable beat markers for high-energy short-form edits.",
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "durationInFrames": 110,
+    "defaultProps": {
+      "variant": "beat-cut",
+      "headline": "Make the ordinary electric",
+      "subline": "A fast visual rhythm for your next idea",
+      "handle": "@buildwithatlas",
+      "coverText": "BEAT THE SCROLL",
+      "caption": "One idea. Many ways to move.",
+      "paletteName": "candy",
+      "beatTimes": [0, 18, 36, 54, 72, 90]
+    }
+  },
+  {
+    "id": "social-reels-photo-beat",
+    "title": "Photo Beat",
+    "category": "marketing-social",
+    "tags": ["social", "reel", "photo", "beat", "vertical"],
+    "description": "Photo Beat — a pulsing hero image and progress rail for photo-driven reels with musical timing.",
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "durationInFrames": 110,
+    "defaultProps": {
+      "variant": "photo-beat",
+      "headline": "Frames that carry the feeling",
+      "subline": "Turn a still into a moment",
+      "handle": "@buildwithatlas",
+      "coverText": "PHOTO DROP",
+      "caption": "Make each frame land on the beat.",
+      "paletteName": "sunset",
+      "beatTimes": [0, 22, 44, 66, 88]
+    }
+  },
+  {
+    "id": "social-reels-text-beat",
+    "title": "Text Beat",
+    "category": "marketing-social",
+    "tags": ["social", "reel", "kinetic-type", "captions", "vertical"],
+    "description": "Text Beat — giant word-by-word kinetic type that reveals in short rhythmic bursts.",
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "durationInFrames": 110,
+    "defaultProps": {
+      "variant": "text-beat",
+      "headline": "Make every word move",
+      "subline": "A kinetic caption structure for hooks and punchlines",
+      "handle": "@buildwithatlas",
+      "coverText": "TEXT BEAT",
+      "caption": "Short words. Strong rhythm.",
+      "paletteName": "midnight",
+      "beatTimes": [0, 20, 40, 60, 80, 100]
+    }
+  },
+  {
+    "id": "social-reels-broll-stack",
+    "title": "Broll Stack",
+    "category": "marketing-social",
+    "tags": ["social", "reel", "b-roll", "stack", "vertical"],
+    "description": "Broll Stack — layered, angled media cards that create a tactile cut-stack for product or lifestyle footage.",
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "durationInFrames": 110,
+    "defaultProps": {
+      "variant": "broll-stack",
+      "headline": "Stack the story",
+      "subline": "Layer clips into a tactile sequence",
+      "handle": "@buildwithatlas",
+      "coverText": "B-ROLL STACK",
+      "caption": "Cut / stack / move.",
+      "paletteName": "ocean"
+    }
+  },
+  {
+    "id": "social-reels-listicle-reel",
+    "title": "Listicle Reel",
+    "category": "marketing-social",
+    "tags": ["social", "reel", "listicle", "tips", "vertical"],
+    "description": "Listicle Reel — saveable numbered points that enter in sequence and keep the active tip visually clear.",
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "durationInFrames": 110,
+    "defaultProps": {
+      "variant": "listicle",
+      "headline": "4 ways to make a better reel",
+      "subline": "Save this for your next edit",
+      "handle": "@buildwithatlas",
+      "coverText": "SAVE THIS LIST",
+      "caption": "The best edits feel inevitable.",
+      "captions": ["Hook harder", "Show the proof", "Land the CTA", "Loop the finish"],
+      "paletteName": "forest"
+    }
+  },
+  {
+    "id": "social-reels-split-screen-reel",
+    "title": "Split Screen Reel",
+    "category": "marketing-social",
+    "tags": ["social", "reel", "split-screen", "comparison", "vertical"],
+    "description": "Split Screen Reel — a two-column visual-and-message layout for comparisons, demos, and punchy explanations.",
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "durationInFrames": 110,
+    "defaultProps": {
+      "variant": "split-screen",
+      "headline": "Show the point, not the pitch",
+      "subline": "Pair proof with a message that lands",
+      "handle": "@buildwithatlas",
+      "coverText": "THE POINT",
+      "caption": "Visual proof meets a clear takeaway.",
+      "paletteName": "mono"
+    }
+  },
+  {
+    "id": "social-reels-reaction-reel",
+    "title": "Reaction Reel",
+    "category": "marketing-social",
+    "tags": ["social", "reel", "reaction", "commentary", "vertical"],
+    "description": "Reaction Reel — original content, reaction panel, and a punchline badge arranged for creator commentary.",
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "durationInFrames": 110,
+    "defaultProps": {
+      "variant": "reaction",
+      "headline": "When the proof is this good",
+      "subline": "A reaction layout for commentary and duets",
+      "handle": "@buildwithatlas",
+      "coverText": "THAT PART",
+      "caption": "My honest reaction.",
+      "paletteName": "candy"
+    }
+  },
+  {
+    "id": "social-reels-fast-facts",
+    "title": "Fast Facts",
+    "category": "marketing-social",
+    "tags": ["social", "reel", "facts", "data", "vertical"],
+    "description": "Fast Facts — animated metric bars and terse fact cards for educational, product, or data-led reels.",
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "durationInFrames": 110,
+    "defaultProps": {
+      "variant": "fast-facts",
+      "headline": "The numbers tell the story",
+      "subline": "Turn proof points into a saveable reel",
+      "handle": "@buildwithatlas",
+      "coverText": "FAST FACTS",
+      "caption": "Proof, compressed for the scroll.",
+      "captions": ["3x faster", "82% clearer", "1 simple workflow", "0 busywork"],
+      "paletteName": "ocean"
+    }
+  },
+  {
+    "id": "social-reels-day-in-life",
+    "title": "Day In Life",
+    "category": "marketing-social",
+    "tags": ["social", "reel", "timeline", "lifestyle", "vertical"],
+    "description": "Day In Life — a guided vertical timeline that reveals chapters from morning to night with a moving progress marker.",
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "durationInFrames": 110,
+    "defaultProps": {
+      "variant": "day-in-life",
+      "headline": "A day in the life",
+      "subline": "Chapter a routine into a satisfying journey",
+      "handle": "@buildwithatlas",
+      "coverText": "DAY IN THE LIFE",
+      "caption": "Small moments make the whole story.",
+      "captions": ["07:00 / Start", "09:30 / Make", "13:00 / Ship", "18:30 / Reset", "22:00 / Repeat"],
+      "paletteName": "forest"
+    }
+  },
+  {
+    "id": "social-reels-looping-reel",
+    "title": "Looping Reel",
+    "category": "marketing-social",
+    "tags": ["social", "reel", "loop", "seamless", "vertical"],
+    "description": "Looping Reel — a rotating orbit, central poster, and explicit watch-again cue designed for seamless short-form loops.",
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "durationInFrames": 110,
+    "defaultProps": {
+      "variant": "looping",
+      "headline": "Make the ending point back to the start",
+      "subline": "A seamless loop structure for repeat views",
+      "handle": "@buildwithatlas",
+      "coverText": "WATCH AGAIN",
+      "caption": "The best loop has no last frame.",
+      "paletteName": "midnight"
+    }
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "map-journeys-route-draw",
+    "title": "Route Draw",
+    "category": "explainers-education",
+    "tags": ["map", "route", "journey", "path"],
+    "description": "A route draws across an abstract map from first signal to final destination, making a journey instantly legible.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": { "variant": "route-draw", "title": "A clearer way forward.", "subtitle": "Draw the path from the first step to the moment it matters.", "paletteName": "ocean", "mapStyle": "terrain", "travelTime": "05 STOPS / 01 ROUTE", "showGrid": true, "showLabels": true, "speed": 1 }
+  },
+  {
+    "id": "map-journeys-multi-stop",
+    "title": "Multi Stop",
+    "category": "explainers-education",
+    "tags": ["map", "stops", "itinerary", "travel"],
+    "description": "A numbered multi-stop itinerary reveals each checkpoint in sequence with clear labels and progress.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "multi-stop", "title": "Five stops. One story.", "subtitle": "Turn a long itinerary into a sequence people can follow.", "paletteName": "candy", "mapStyle": "paper", "travelTime": "DAY TRIP / 05 STOPS", "showGrid": true, "showLabels": true, "speed": 0.9 }
+  },
+  {
+    "id": "map-journeys-origin-destination",
+    "title": "Origin Destination",
+    "category": "explainers-education",
+    "tags": ["map", "origin", "destination", "before-after"],
+    "description": "A focused origin-to-destination bridge keeps the start and finish prominent while the route animates between them.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": { "variant": "origin-destination", "title": "From here to there.", "subtitle": "Show the distance, the direction, and the destination in one beat.", "paletteName": "midnight", "mapStyle": "dark", "travelTime": "ORIGIN → DESTINATION", "showGrid": false, "showLabels": true, "speed": 1.15 }
+  },
+  {
+    "id": "map-journeys-branching-route",
+    "title": "Branching Route",
+    "category": "explainers-education",
+    "tags": ["map", "branching", "network", "choices"],
+    "description": "A central hub branches into multiple routes so options, service areas, and diverging journeys can be compared.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "branching-route", "title": "Every route starts here.", "subtitle": "Make choices and service branches visible without losing the main path.", "paletteName": "forest", "mapStyle": "terrain", "travelTime": "01 HUB / 04 BRANCHES", "showGrid": true, "showLabels": true, "speed": 0.8 }
+  },
+  {
+    "id": "map-journeys-day-by-day",
+    "title": "Day By Day",
+    "category": "explainers-education",
+    "tags": ["map", "itinerary", "days", "schedule"],
+    "description": "A day-by-day map itinerary advances one stop at a time with strong day labels and a calm travel rhythm.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 195,
+    "defaultProps": { "variant": "day-by-day", "title": "The long weekend.", "subtitle": "Give every day a place, a pace, and a memorable next step.", "paletteName": "sunset", "mapStyle": "paper", "travelTime": "DAY 01 — DAY 05", "showGrid": true, "showLabels": true, "speed": 0.72 }
+  },
+  {
+    "id": "map-journeys-flight-path",
+    "title": "Flight Path",
+    "category": "explainers-education",
+    "tags": ["map", "flight", "arc", "travel"],
+    "description": "An arcing flight path connects airports with a moving aircraft marker and bright dashed trajectory.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": { "variant": "flight-path", "title": "Across the distance.", "subtitle": "Turn a flight plan into an elegant arc from departure to arrival.", "paletteName": "ocean", "mapStyle": "ocean", "travelTime": "SFO → JFK / 05H 32M", "showGrid": false, "showLabels": true, "speed": 1.25 }
+  },
+  {
+    "id": "map-journeys-delivery-route",
+    "title": "Delivery Route",
+    "category": "explainers-education",
+    "tags": ["map", "delivery", "logistics", "operations"],
+    "description": "A delivery route moves from warehouse to doorstep through operational checkpoints and last-mile handoffs.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "delivery-route", "title": "Right to your door.", "subtitle": "Explain the invisible choreography behind a reliable delivery.", "paletteName": "mono", "mapStyle": "dark", "travelTime": "WAREHOUSE / LAST MILE", "showGrid": true, "showLabels": true, "speed": 1.1 }
+  },
+  {
+    "id": "map-journeys-migration-map",
+    "title": "Migration Map",
+    "category": "explainers-education",
+    "tags": ["map", "migration", "movement", "phases"],
+    "description": "A long, branching movement map visualizes migration, rollout, adoption, or change across several phases.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "migration-map", "title": "Where change takes root.", "subtitle": "Show movement over time as a sequence of connected phases.", "paletteName": "forest", "mapStyle": "terrain", "travelTime": "PHASE 01 → NEW HOME", "showGrid": true, "showLabels": true, "speed": 0.65 }
+  },
+  {
+    "id": "map-journeys-walking-tour",
+    "title": "Walking Tour",
+    "category": "explainers-education",
+    "tags": ["map", "walking", "tour", "locations"],
+    "description": "A friendly walking-tour path reveals neighborhood stops one by one with compact labels and gentle motion.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": { "variant": "walking-tour", "title": "Take the scenic route.", "subtitle": "Lead viewers through a place with stops worth remembering.", "paletteName": "candy", "mapStyle": "paper", "travelTime": "2.4 KM / 05 STOPS", "showGrid": true, "showLabels": true, "speed": 0.7 }
+  },
+  {
+    "id": "map-journeys-map-to-photo",
+    "title": "Map To Photo",
+    "category": "explainers-education",
+    "tags": ["map", "photo", "travel", "story"],
+    "description": "A route builds to a highlighted location and can reveal an optional photo card for a map-to-memory transition.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "map-to-photo", "title": "A place becomes a memory.", "subtitle": "Move from the abstract route to the moment waiting at the destination.", "paletteName": "sunset", "mapStyle": "terrain", "travelTime": "05 PLACES / 01 MEMORY", "showGrid": false, "showLabels": true, "speed": 0.85 }
+  }
+]

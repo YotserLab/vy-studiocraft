@@ -1,0 +1,222 @@
+[
+  {
+    "id": "travel-films-destination-open",
+    "title": "Destination Film Open",
+    "category": "travel-films",
+    "tags": ["travel", "cinematic", "destination", "photo"],
+    "description": "A cinematic destination opener with a slow photo reveal, place name, dates, and field-note lockup.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "destination-open",
+      "title": "A Week Along the Coast",
+      "subtitle": "A field guide in moving pictures",
+      "destination": "Portugal",
+      "dates": "APRIL 14 — 21 / 2026",
+      "paletteName": "sunset",
+      "stops": [{"name":"Lisbon","city":"Portugal","day":"DAY 01","x":16,"y":59},{"name":"Sintra","city":"Portugal","day":"DAY 02","x":37,"y":40},{"name":"Porto","city":"Portugal","day":"DAY 04","x":66,"y":26},{"name":"Douro","city":"Portugal","day":"DAY 06","x":83,"y":64}],
+      "captions": ["The first light", "A small detour", "Lunch in the shade", "The road keeps going"],
+      "imageUrls": [],
+      "photographer": "FIELD NOTES / 2026"
+    }
+  },
+  {
+    "id": "travel-films-route-to-place",
+    "title": "Route To Place Map Film",
+    "category": "travel-films",
+    "tags": ["travel", "route", "map", "cinematic"],
+    "description": "An animated schematic route that draws from origin to destination with labeled stops and travel-film typography.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "route-to-place",
+      "title": "Follow The Line",
+      "subtitle": "Follow the line until the view changes",
+      "destination": "Portugal",
+      "dates": "APRIL 14 — 21 / 2026",
+      "paletteName": "ocean",
+      "stops": [{"name":"Lisbon","city":"Portugal","x":16,"y":59},{"name":"Sintra","city":"Portugal","x":37,"y":40},{"name":"Porto","city":"Portugal","x":66,"y":26},{"name":"Douro","city":"Portugal","x":83,"y":64}],
+      "captions": ["Take the scenic route"],
+      "mapPoints": [],
+      "showRoute": true,
+      "speed": 1
+    }
+  },
+  {
+    "id": "travel-films-day-card",
+    "title": "Travel Day Card",
+    "category": "travel-films",
+    "tags": ["travel", "daily", "place-card", "photo"],
+    "description": "A day-by-day place card pairing a destination name with a moving procedural photo frame and caption.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "day-card",
+      "title": "Days On The Road",
+      "subtitle": "Small places, carefully noticed",
+      "destination": "Portugal",
+      "dates": "DAY 01 — DAY 06",
+      "paletteName": "paper",
+      "stops": [{"name":"Lisbon","city":"Portugal","day":"DAY 01","note":"Tile, tide, and the long way home"},{"name":"Sintra","city":"Portugal","day":"DAY 02","note":"A green detour through the hills"},{"name":"Porto","city":"Portugal","day":"DAY 04","note":"Blue hour by the river"},{"name":"Douro","city":"Portugal","day":"DAY 06","note":"A slow afternoon between vines"}],
+      "captions": ["The first light", "A small detour", "The road keeps going"],
+      "imageUrls": []
+    }
+  },
+  {
+    "id": "travel-films-food-stop",
+    "title": "Food Stop Travel Film",
+    "category": "travel-films",
+    "tags": ["travel", "food", "local", "photo"],
+    "description": "A split-screen food stop with a cinematic photo treatment, local cue, and editorial caption block.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "food-stop",
+      "title": "A Table Worth The Detour",
+      "subtitle": "Local flavor, no reservations required",
+      "destination": "Portugal",
+      "dates": "LUNCH / DAY 04",
+      "paletteName": "sunset",
+      "food": "Grilled sardines by the harbor",
+      "captions": ["Eat where the street gets quiet"],
+      "imageUrls": []
+    }
+  },
+  {
+    "id": "travel-films-landmark-reveal",
+    "title": "Landmark Memory Reveal",
+    "category": "travel-films",
+    "tags": ["travel", "landmark", "reveal", "cinematic"],
+    "description": "A masked landmark reveal that turns an arriving place into a full-frame memory beat.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "landmark-reveal",
+      "title": "A Place Appears",
+      "subtitle": "The view was worth the climb",
+      "destination": "Portugal",
+      "dates": "DAY 02",
+      "paletteName": "ocean",
+      "stops": [{"name":"Lisbon","city":"Portugal","x":16,"y":59},{"name":"Sintra","city":"Portugal","x":37,"y":40}],
+      "captions": ["The view was worth the climb"],
+      "imageUrls": []
+    }
+  },
+  {
+    "id": "travel-films-hotel-card",
+    "title": "Hotel Rest Stop Card",
+    "category": "travel-films",
+    "tags": ["travel", "hotel", "stay", "photo"],
+    "description": "A restrained hotel or lodging card with image frame, stay dates, and a spacious editorial lockup.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 175,
+    "defaultProps": {
+      "variant": "hotel-card",
+      "title": "A Place To Pause",
+      "subtitle": "A soft landing between two long days.",
+      "destination": "Porto",
+      "dates": "CHECK IN / APRIL 18",
+      "paletteName": "forest",
+      "hotel": "The quiet room above the harbor",
+      "imageUrls": []
+    }
+  },
+  {
+    "id": "travel-films-sunset-recap",
+    "title": "Sunset Photo Recap",
+    "category": "travel-films",
+    "tags": ["travel", "recap", "sunset", "montage"],
+    "description": "A warm four-frame sunset recap with drifting photo cards, destination metadata, and a closing count.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 190,
+    "defaultProps": {
+      "variant": "sunset-recap",
+      "title": "The Light We Kept",
+      "subtitle": "Four small reasons to come back",
+      "destination": "Portugal",
+      "dates": "APRIL 14 — 21 / 2026",
+      "paletteName": "sunset",
+      "captions": ["The first light", "A small detour", "Lunch in the shade", "Last light on the water"],
+      "imageUrls": []
+    }
+  },
+  {
+    "id": "travel-films-map-to-memory",
+    "title": "Map To Memory Pairing",
+    "category": "travel-films",
+    "tags": ["travel", "map", "memory", "photo"],
+    "description": "A compact map-to-photo composition that advances through stops while pairing each coordinate with a memory.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 190,
+    "defaultProps": {
+      "variant": "map-to-memory",
+      "title": "Where It Happened",
+      "subtitle": "Every place keeps a picture",
+      "destination": "Portugal",
+      "dates": "A ROUTE IN FOUR STOPS",
+      "paletteName": "midnight",
+      "stops": [{"name":"Lisbon","city":"Portugal","day":"DAY 01","x":16,"y":59,"note":"Tile, tide, and the long way home"},{"name":"Sintra","city":"Portugal","day":"DAY 02","x":37,"y":40,"note":"A green detour through the hills"},{"name":"Porto","city":"Portugal","day":"DAY 04","x":66,"y":26,"note":"Blue hour by the river"},{"name":"Douro","city":"Portugal","day":"DAY 06","x":83,"y":64,"note":"A slow afternoon between vines"}],
+      "captions": ["The first light", "A small detour", "The road keeps going"],
+      "imageUrls": []
+    }
+  },
+  {
+    "id": "travel-films-trip-timeline",
+    "title": "Trip Timeline Scrub",
+    "category": "travel-films",
+    "tags": ["travel", "timeline", "itinerary", "route"],
+    "description": "A clean itinerary timeline with animated progress, day labels, place names, and stop metadata.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "trip-timeline",
+      "title": "The Itinerary",
+      "subtitle": "Six days, one slow route",
+      "destination": "Portugal",
+      "dates": "APRIL 14 — 21 / 2026",
+      "paletteName": "paper",
+      "stops": [{"name":"Lisbon","city":"Portugal","day":"DAY 01"},{"name":"Sintra","city":"Portugal","day":"DAY 02"},{"name":"Porto","city":"Portugal","day":"DAY 04"},{"name":"Douro","city":"Portugal","day":"DAY 06"}],
+      "captions": ["The first light"],
+      "photographer": "TRAVEL NOTES"
+    }
+  },
+  {
+    "id": "travel-films-travel-close",
+    "title": "Travel Film Closing Card",
+    "category": "travel-films",
+    "tags": ["travel", "closing", "outro", "cinematic"],
+    "description": "A quiet travel close with destination, dates, and an editorial final line for the end of a trip film.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 170,
+    "defaultProps": {
+      "variant": "travel-close",
+      "title": "Until The Next Map",
+      "subtitle": "The best souvenirs are the stories that keep moving.",
+      "destination": "Portugal",
+      "dates": "APRIL 14 — 21 / 2026",
+      "paletteName": "midnight",
+      "captions": ["Until the next map"],
+      "imageUrls": []
+    }
+  }
+]

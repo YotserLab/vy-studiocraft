@@ -1,0 +1,197 @@
+[
+  {
+    "id": "lesson-cards-definition-card",
+    "title": "Definition Card",
+    "category": "lesson-cards",
+    "tags": ["lesson", "definition", "concept"],
+    "description": "A focused concept card reveals a memorable definition with a strong hierarchy and accent rule.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 120,
+    "defaultProps": {
+      "variant": "definition-card",
+      "lessonTitle": "Understand the Signal",
+      "concept": "A signal is a meaningful change inside a noisy system.",
+      "paletteName": "ocean",
+      "progress": 24
+    }
+  },
+  {
+    "id": "lesson-cards-formula-card",
+    "title": "Formula Card",
+    "category": "lesson-cards",
+    "tags": ["lesson", "formula", "method"],
+    "description": "A large formula anchors three animated steps that explain how to apply the relationship.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 125,
+    "defaultProps": {
+      "variant": "formula-card",
+      "lessonTitle": "Turn Inputs Into Insight",
+      "concept": "signal",
+      "formula": "signal = change × context",
+      "examples": ["Name the inputs", "Choose the relationship", "Check the result"],
+      "paletteName": "midnight",
+      "progress": 34
+    }
+  },
+  {
+    "id": "lesson-cards-flashcard-flip",
+    "title": "Flashcard Flip",
+    "category": "lesson-cards",
+    "tags": ["lesson", "flashcard", "recall"],
+    "description": "A tactile 3D flashcard pauses on a prompt before flipping to reveal the answer.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 135,
+    "defaultProps": {
+      "variant": "flashcard-flip",
+      "lessonTitle": "Practice Active Recall",
+      "concept": "What makes an example memorable?",
+      "cards": ["What makes an example memorable?", "It connects a new idea to a specific experience."],
+      "paletteName": "candy",
+      "progress": 46
+    }
+  },
+  {
+    "id": "lesson-cards-worked-example",
+    "title": "Worked Example",
+    "category": "lesson-cards",
+    "tags": ["lesson", "example", "steps"],
+    "description": "A question panel and sequential solution steps turn an abstract concept into a guided example.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 145,
+    "defaultProps": {
+      "variant": "worked-example",
+      "lessonTitle": "Make the Method Concrete",
+      "concept": "feedback loops",
+      "question": "How can one small change improve the whole system?",
+      "steps": ["Identify the given information", "Apply the method to the example", "Explain why the result makes sense", "State the answer in context"],
+      "paletteName": "forest",
+      "progress": 52
+    }
+  },
+  {
+    "id": "lesson-cards-three-step-lesson",
+    "title": "Three Step Lesson",
+    "category": "lesson-cards",
+    "tags": ["lesson", "steps", "framework"],
+    "description": "Three spacious cards build a repeatable understand, try, and use learning framework.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 125,
+    "defaultProps": {
+      "variant": "three-step-lesson",
+      "lessonTitle": "Learn By Doing",
+      "concept": "practice",
+      "steps": ["Understand the idea", "Try one example", "Use it yourself"],
+      "paletteName": "sunset",
+      "progress": 58
+    }
+  },
+  {
+    "id": "lesson-cards-mistake-correction",
+    "title": "Mistake Correction",
+    "category": "lesson-cards",
+    "tags": ["lesson", "correction", "feedback"],
+    "description": "Common mistakes enter beside a highlighted correction so learners can contrast the two paths.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 130,
+    "defaultProps": {
+      "variant": "mistake-correction",
+      "lessonTitle": "Catch the Hidden Assumption",
+      "concept": "assumptions",
+      "examples": ["Using the wrong input", "Skipping the middle step"],
+      "correctAnswer": "Name the idea, show the step, then check the result.",
+      "paletteName": "paper",
+      "progress": 63
+    }
+  },
+  {
+    "id": "lesson-cards-quiz-card",
+    "title": "Quiz Card",
+    "category": "lesson-cards",
+    "tags": ["lesson", "quiz", "answer"],
+    "description": "A multiple-choice check staggers options in and reveals the selected answer after a short pause.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 130,
+    "defaultProps": {
+      "variant": "quiz-card",
+      "lessonTitle": "Check Your Understanding",
+      "concept": "context",
+      "question": "Which statement best describes useful context?",
+      "answers": ["More information", "The information that changes the decision", "A longer explanation", "None of these"],
+      "correctAnswer": "The information that changes the decision",
+      "paletteName": "ocean",
+      "progress": 71
+    }
+  },
+  {
+    "id": "lesson-cards-memory-palace",
+    "title": "Memory Palace",
+    "category": "lesson-cards",
+    "tags": ["lesson", "memory", "path"],
+    "description": "A connected sequence of rooms turns four lesson beats into a visual path for recall.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 145,
+    "defaultProps": {
+      "variant": "memory-palace",
+      "lessonTitle": "Give the Idea a Place",
+      "concept": "memory cues",
+      "cards": ["Entrance: name the idea", "Library: connect an example", "Studio: practice the move", "Exit: recall the result"],
+      "paletteName": "midnight",
+      "progress": 77
+    }
+  },
+  {
+    "id": "lesson-cards-recap-grid",
+    "title": "Recap Grid",
+    "category": "lesson-cards",
+    "tags": ["lesson", "recap", "takeaways"],
+    "description": "A staggered takeaway grid compresses a lesson into five memorable cards for the final beat.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 125,
+    "defaultProps": {
+      "variant": "recap-grid",
+      "lessonTitle": "Five Things To Keep",
+      "concept": "recap",
+      "cards": ["Define the concept", "See one example", "Avoid the common mistake", "Try it yourself", "Say it back"],
+      "paletteName": "forest",
+      "progress": 88
+    }
+  },
+  {
+    "id": "lesson-cards-lesson-to-action",
+    "title": "Lesson To Action",
+    "category": "lesson-cards",
+    "tags": ["lesson", "action", "checklist"],
+    "description": "A final call-to-action card turns learning into three concrete tasks with animated completion states.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 135,
+    "defaultProps": {
+      "variant": "lesson-to-action",
+      "lessonTitle": "Take It Into The World",
+      "concept": "deliberate practice",
+      "action": "Now use deliberate practice in one small project.",
+      "steps": ["Write the idea in your own words", "Use it on one real example", "Teach it to someone else"],
+      "paletteName": "sunset",
+      "progress": 94
+    }
+  }
+]

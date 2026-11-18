@@ -1,0 +1,195 @@
+[
+  {
+    "id": "beat-synced-type-word-hit",
+    "title": "Word Hit",
+    "category": "audio-music",
+    "tags": ["music", "typography", "beat", "word", "impact"],
+    "description": "Word-by-word type hits land on supplied beat markers, with deterministic fallback timing and controlled impact scaling.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 120,
+    "defaultProps": {
+      "variant": "word-hit",
+      "text": "MAKE THE MOMENT MOVE",
+      "words": ["MAKE", "THE", "MOMENT", "MOVE"],
+      "beatMarkers": [0, 18, 36, 54],
+      "paletteName": "midnight",
+      "intensity": 1,
+      "alignment": "center"
+    }
+  },
+  {
+    "id": "beat-synced-type-syllable-pulse",
+    "title": "Syllable Pulse",
+    "category": "audio-music",
+    "tags": ["music", "typography", "beat", "pulse", "syllable"],
+    "description": "Individual letters pulse through a phrase like syllables, preserving legibility while adding fine-grained rhythmic motion.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 120,
+    "defaultProps": {
+      "variant": "syllable-pulse",
+      "text": "FEEL EVERY SECOND",
+      "beatMarkers": [0, 12, 24, 36, 48, 60, 72, 84],
+      "paletteName": "candy",
+      "intensity": 0.9,
+      "alignment": "center"
+    }
+  },
+  {
+    "id": "beat-synced-type-type-scale",
+    "title": "Type Scale",
+    "category": "audio-music",
+    "tags": ["music", "typography", "beat", "scale", "build"],
+    "description": "A headline grows from a restrained scale to a full-frame finish while marker pulses keep the build musically grounded.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "type-scale",
+      "text": "BIGGER IDEAS",
+      "beatMarkers": [0, 24, 48, 72, 96, 120],
+      "paletteName": "ocean",
+      "intensity": 1,
+      "alignment": "left"
+    }
+  },
+  {
+    "id": "beat-synced-type-letter-wave",
+    "title": "Letter Wave",
+    "category": "audio-music",
+    "tags": ["music", "typography", "beat", "wave", "letters"],
+    "description": "Characters ride a traveling wave whose phase is re-anchored to beat markers for a playful musical title treatment.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 120,
+    "defaultProps": {
+      "variant": "letter-wave",
+      "text": "RHYTHM IN MOTION",
+      "beatMarkers": [0, 15, 30, 45, 60, 75, 90],
+      "paletteName": "sunset",
+      "intensity": 1.1,
+      "alignment": "center"
+    }
+  },
+  {
+    "id": "beat-synced-type-beat-underline",
+    "title": "Beat Underline",
+    "category": "audio-music",
+    "tags": ["music", "typography", "beat", "underline", "editorial"],
+    "description": "Each word receives a marker-reactive underline, turning a clean editorial lockup into a precise rhythm display.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 120,
+    "defaultProps": {
+      "variant": "beat-underline",
+      "text": "MARK THE MOMENT",
+      "words": ["MARK", "THE", "MOMENT"],
+      "beatMarkers": [0, 20, 40, 60],
+      "paletteName": "paper",
+      "intensity": 0.85,
+      "alignment": "center"
+    }
+  },
+  {
+    "id": "beat-synced-type-stutter-type",
+    "title": "Stutter Type",
+    "category": "audio-music",
+    "tags": ["music", "typography", "beat", "stutter", "glitch"],
+    "description": "Offset echo layers create a controlled stutter on every marker, useful for drops, hooks, and energetic transitions.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 120,
+    "defaultProps": {
+      "variant": "stutter-type",
+      "text": "BREAK THE LOOP",
+      "beatMarkers": [0, 18, 36, 54, 72, 90],
+      "paletteName": "mono",
+      "intensity": 1.2,
+      "alignment": "center"
+    }
+  },
+  {
+    "id": "beat-synced-type-chorus-stack",
+    "title": "Chorus Stack",
+    "category": "audio-music",
+    "tags": ["music", "typography", "beat", "chorus", "stack"],
+    "description": "Four layered copies of a phrase arrive as a graphic chorus, with each line responding to a neighboring beat marker.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 135,
+    "defaultProps": {
+      "variant": "chorus-stack",
+      "text": "SAME SIGNAL NEW ENERGY",
+      "beatMarkers": [0, 22, 44, 66, 88, 110],
+      "paletteName": "forest",
+      "intensity": 0.95,
+      "alignment": "left"
+    }
+  },
+  {
+    "id": "beat-synced-type-percussion-grid",
+    "title": "Percussion Grid",
+    "category": "audio-music",
+    "tags": ["music", "typography", "beat", "grid", "percussion"],
+    "description": "A modular percussion grid lights behind a compact title, giving beat markers an immediately readable visual instrument.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "percussion-grid",
+      "text": "KEEP THE TIME",
+      "beatMarkers": [0, 15, 30, 45, 60, 75, 90, 105, 120],
+      "paletteName": "midnight",
+      "intensity": 1,
+      "alignment": "center"
+    }
+  },
+  {
+    "id": "beat-synced-type-bass-drop",
+    "title": "Bass Drop",
+    "category": "audio-music",
+    "tags": ["music", "typography", "beat", "bass", "drop"],
+    "description": "A final marker becomes a bass-drop payoff with expanding rings, controlled impact scaling, and a clear title lockup.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "bass-drop",
+      "text": "DROP IN",
+      "beatMarkers": [0, 30, 60, 90, 120],
+      "paletteName": "sunset",
+      "intensity": 1.25,
+      "alignment": "center"
+    }
+  },
+  {
+    "id": "beat-synced-type-outro-type",
+    "title": "Outro Type",
+    "category": "audio-music",
+    "tags": ["music", "typography", "beat", "outro", "endcard"],
+    "description": "A calm final type card holds the last phrase, responds gently to the closing markers, and fades with a clean outro rhythm.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "outro-type",
+      "text": "SEE YOU NEXT TIME",
+      "words": ["THANKS", "FOR", "LISTENING"],
+      "beatMarkers": [0, 30, 60, 90, 120],
+      "paletteName": "ocean",
+      "intensity": 0.7,
+      "alignment": "center"
+    }
+  }
+]

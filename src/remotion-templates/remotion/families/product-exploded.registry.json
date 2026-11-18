@@ -1,0 +1,195 @@
+[
+  {
+    "id": "product-exploded-layer-separate",
+    "title": "Layer Separate",
+    "category": "motion-3d-physical",
+    "tags": ["exploded", "layers", "product"],
+    "description": "A polished product assembly separates into clearly labeled layers with controlled depth and connector alignment.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "layer-separate",
+      "productName": "Axiom One",
+      "tagline": "Every layer has a reason to exist.",
+      "parts": ["Outer shell", "Control board", "Power core", "Optical layer", "Seal ring"],
+      "paletteName": "midnight",
+      "spacing": 120
+    }
+  },
+  {
+    "id": "product-exploded-component-callout",
+    "title": "Component Callout",
+    "category": "motion-3d-physical",
+    "tags": ["exploded", "callout", "components"],
+    "description": "An exploded product view isolates one important component while precise callout markers explain the assembly.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "component-callout",
+      "productName": "Nexa Core",
+      "tagline": "The part that makes the whole thing work.",
+      "parts": ["Housing", "Haptic engine", "Logic board", "Battery cell", "Seal"],
+      "paletteName": "ocean",
+      "focusPart": "Logic board",
+      "spacing": 112
+    }
+  },
+  {
+    "id": "product-exploded-assembly-reverse",
+    "title": "Assembly Reverse",
+    "category": "motion-3d-physical",
+    "tags": ["assembly", "reverse", "product"],
+    "description": "A finished product deconstructs into its functional parts, then returns toward an assembled product ending.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "assembly-reverse",
+      "productName": "Northstar",
+      "tagline": "Start with the finished idea. See how it is built.",
+      "parts": ["Casing", "Display stack", "Main board", "Thermal plate", "Battery", "Fasteners"],
+      "paletteName": "forest",
+      "spacing": 105
+    }
+  },
+  {
+    "id": "product-exploded-cutaway-reveal",
+    "title": "Cutaway Reveal",
+    "category": "motion-3d-physical",
+    "tags": ["cutaway", "internal", "reveal"],
+    "description": "Layered shells pull apart to reveal a highlighted translucent internal module and its surrounding structure.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 155,
+    "defaultProps": {
+      "variant": "cutaway-reveal",
+      "productName": "Lumen Sensor",
+      "tagline": "The intelligence is inside.",
+      "parts": ["Outer shell", "Lens cover", "Sensor core", "Signal board", "Mount ring"],
+      "paletteName": "candy",
+      "focusPart": "Sensor core",
+      "spacing": 128
+    }
+  },
+  {
+    "id": "product-exploded-magnetic-snap",
+    "title": "Magnetic Snap",
+    "category": "motion-3d-physical",
+    "tags": ["snap", "assembly", "magnetic"],
+    "description": "Product parts hover in a precise exploded arrangement before snapping together with satisfying magnetic timing.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "magnetic-snap",
+      "productName": "Modu One",
+      "tagline": "Precision you can feel.",
+      "parts": ["Frame", "Core module", "Connector rail", "Cover plate", "Lock ring"],
+      "paletteName": "sunset",
+      "spacing": 118
+    }
+  },
+  {
+    "id": "product-exploded-parts-carousel",
+    "title": "Parts Carousel",
+    "category": "motion-3d-physical",
+    "tags": ["carousel", "parts", "catalog"],
+    "description": "Individual product parts travel through a slow carousel while the complete assembly remains legible as a system.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "parts-carousel",
+      "productName": "Orbit Kit",
+      "tagline": "A system of parts, moving as one.",
+      "parts": ["Shell", "Motor", "Control dial", "Power cell", "Grip", "Badge"],
+      "paletteName": "ocean",
+      "spacing": 96
+    }
+  },
+  {
+    "id": "product-exploded-material-layers",
+    "title": "Material Layers",
+    "category": "motion-3d-physical",
+    "tags": ["materials", "layers", "premium"],
+    "description": "A tactile stack separates to show how contrasting materials and finishes build the final product surface.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 160,
+    "defaultProps": {
+      "variant": "material-layers",
+      "productName": "Form 07",
+      "tagline": "Material choices become the experience.",
+      "parts": ["Ceramic skin", "Soft-touch layer", "Aluminum frame", "Fiber core", "Base seal"],
+      "paletteName": "paper",
+      "spacing": 102
+    }
+  },
+  {
+    "id": "product-exploded-dimension-explode",
+    "title": "Dimension Explode",
+    "category": "motion-3d-physical",
+    "tags": ["dimensions", "technical", "blueprint"],
+    "description": "A technical exploded view adds dimension lines, datum labels and tolerance notes to explain product scale.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "dimension-explode",
+      "productName": "Vector X",
+      "tagline": "Measured down to the last detail.",
+      "parts": ["Chassis", "Drive plate", "Interface", "Power pack", "Back shell"],
+      "paletteName": "mono",
+      "spacing": 138
+    }
+  },
+  {
+    "id": "product-exploded-inside-out",
+    "title": "Inside Out",
+    "category": "motion-3d-physical",
+    "tags": ["inside", "mechanism", "reveal"],
+    "description": "The outer layers move away as inner mechanisms take focus, revealing a product story from the inside out.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 170,
+    "defaultProps": {
+      "variant": "inside-out",
+      "productName": "Pulse Air",
+      "tagline": "A closer look at what drives it.",
+      "parts": ["Skin", "Air channel", "Control core", "Micro fan", "Battery cell", "Rear seal"],
+      "paletteName": "midnight",
+      "focusPart": "Control core",
+      "spacing": 126
+    }
+  },
+  {
+    "id": "product-exploded-assembly-to-hero",
+    "title": "Assembly To Hero",
+    "category": "motion-3d-physical",
+    "tags": ["assembly", "hero", "launch"],
+    "description": "A widely exploded system composes into one confident hero product for a clean launch or end-card moment.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "assembly-to-hero",
+      "productName": "Aether One",
+      "tagline": "Many decisions. One unmistakable form.",
+      "parts": ["Shell", "Lens", "Logic core", "Battery", "Seal ring"],
+      "paletteName": "sunset",
+      "spacing": 132
+    }
+  }
+]

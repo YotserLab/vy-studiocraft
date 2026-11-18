@@ -1,0 +1,162 @@
+[
+  {
+    "id": "countdown-flip-card-digits",
+    "title": "Flip Card Digits",
+    "category": "countdowns-timers",
+    "tags": ["flip", "digits", "countdown"],
+    "description": "Mechanical split-card seconds with dimensional flip transitions and a crisp center hinge.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 120,
+    "defaultProps": {
+      "label": "Starting soon",
+      "totalSeconds": 3,
+      "paletteName": "midnight"
+    }
+  },
+  {
+    "id": "countdown-ring-progress",
+    "title": "Ring Progress Countdown",
+    "category": "countdowns-timers",
+    "tags": ["ring", "progress", "minimal"],
+    "description": "A precise circular progress track surrounds softly rolling countdown numerals.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "label": "Session begins",
+      "totalSeconds": 4,
+      "paletteName": "ocean"
+    }
+  },
+  {
+    "id": "countdown-giant-number-punch",
+    "title": "Giant Number Punch",
+    "category": "countdowns-timers",
+    "tags": ["impact", "bold", "numbers"],
+    "description": "Full-frame numerals punch into place each second while concentric shockwaves burst outward.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 90,
+    "defaultProps": {
+      "label": "Get ready",
+      "totalSeconds": 2,
+      "paletteName": "sunset"
+    }
+  },
+  {
+    "id": "countdown-split-flap-airport",
+    "title": "Airport Split Flap",
+    "category": "countdowns-timers",
+    "tags": ["airport", "split-flap", "mechanical"],
+    "description": "Warm terminal-board styling with vertically cycling split-flap second cards.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "label": "Now boarding",
+      "totalSeconds": 4,
+      "paletteName": "mono"
+    }
+  },
+  {
+    "id": "countdown-thin-caps-hairline",
+    "title": "Thin Caps Hairline",
+    "category": "countdowns-timers",
+    "tags": ["editorial", "minimal", "hairline"],
+    "description": "Restrained thin-weight numerals roll above an exact editorial progress hairline.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 120,
+    "defaultProps": {
+      "label": "Collection opens",
+      "totalSeconds": 3,
+      "paletteName": "paper"
+    }
+  },
+  {
+    "id": "countdown-circular-segment-dial",
+    "title": "Circular Segment Dial",
+    "category": "countdowns-timers",
+    "tags": ["dial", "segments", "technical"],
+    "description": "Forty-eight radial gauge segments drain around a focused central countdown.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "label": "System online",
+      "totalSeconds": 4,
+      "paletteName": "forest"
+    }
+  },
+  {
+    "id": "countdown-neon-glow-digits",
+    "title": "Neon Glow Digits",
+    "category": "countdowns-timers",
+    "tags": ["neon", "glow", "digital"],
+    "description": "Luminous digital timer numerals crossfade through blur over a subtle night grid.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 120,
+    "defaultProps": {
+      "label": "Live in",
+      "totalSeconds": 3,
+      "paletteName": "candy"
+    }
+  },
+  {
+    "id": "countdown-hourglass-particles",
+    "title": "Hourglass Particles",
+    "category": "countdowns-timers",
+    "tags": ["hourglass", "particles", "organic"],
+    "description": "Deterministic grains fall through a sculpted hourglass as the remaining seconds advance.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "label": "Time is moving",
+      "totalSeconds": 4,
+      "paletteName": "sunset"
+    }
+  },
+  {
+    "id": "countdown-boxed-time-segments",
+    "title": "Boxed Time Segments",
+    "category": "countdowns-timers",
+    "tags": ["days", "hours", "segments"],
+    "description": "Responsive day, hour, minute and second blocks with a dedicated rolling seconds cell.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 120,
+    "defaultProps": {
+      "label": "Launch countdown",
+      "totalSeconds": 90061,
+      "paletteName": "ocean"
+    }
+  },
+  {
+    "id": "countdown-radial-finale-reveal",
+    "title": "Radial Finale Reveal",
+    "category": "countdowns-timers",
+    "tags": ["radial", "burst", "finale"],
+    "description": "A draining radial tick field explodes outward into a bold full-frame finale reveal.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "label": "We are live",
+      "totalSeconds": 3,
+      "paletteName": "midnight"
+    }
+  }
+]

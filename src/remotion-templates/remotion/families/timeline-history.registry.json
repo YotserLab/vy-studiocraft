@@ -1,0 +1,194 @@
+[
+  {
+    "id": "timeline-history-horizontal-era",
+    "title": "Horizontal Era",
+    "category": "explainers-education",
+    "tags": ["timeline", "history", "horizontal", "eras"],
+    "description": "A paced horizontal archive line reveals dated eras with alternating editorial labels and focus color.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 130,
+    "defaultProps": {
+      "variant": "horizontal-era",
+      "title": "A Decade in Motion",
+      "subtitle": "The moments that changed the direction of the work.",
+      "paletteName": "midnight",
+      "events": [{"date":"2014","label":"The first sketch"},{"date":"2016","label":"First release"},{"date":"2019","label":"A wider orbit"},{"date":"2022","label":"Built to last"},{"date":"2026","label":"Next chapter"}],
+      "startYear": 2014,
+      "endYear": 2026,
+      "focusIndex": 3
+    }
+  },
+  {
+    "id": "timeline-history-vertical-milestones",
+    "title": "Vertical Milestones",
+    "category": "explainers-education",
+    "tags": ["timeline", "milestones", "vertical", "editorial"],
+    "description": "A central vertical spine alternates milestone cards and enlarges the selected moment.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 130,
+    "defaultProps": {
+      "variant": "vertical-milestones",
+      "title": "The Milestones",
+      "subtitle": "A clear sequence for a founder story, campaign, or historical explainer.",
+      "paletteName": "ocean",
+      "focusIndex": 2,
+      "events": [{"date":"01 / 2018","label":"Prototype"},{"date":"06 / 2019","label":"First team"},{"date":"03 / 2021","label":"Breakthrough"},{"date":"09 / 2023","label":"Global reach"},{"date":"01 / 2026","label":"What is next"}]
+    }
+  },
+  {
+    "id": "timeline-history-zoom-century",
+    "title": "Zoom Century",
+    "category": "explainers-education",
+    "tags": ["timeline", "zoom", "century", "history"],
+    "description": "A wide century scale zooms toward a focus window while dated events resolve along the axis.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 125,
+    "defaultProps": {
+      "variant": "zoom-century",
+      "title": "A Century of Change",
+      "subtitle": "Zoom from the broad arc into the moments worth remembering.",
+      "paletteName": "mono",
+      "startYear": 1920,
+      "endYear": 2020,
+      "focusIndex": 3,
+      "events": [{"date":"1920","label":"The beginning"},{"date":"1945","label":"A new world"},{"date":"1969","label":"New frontier"},{"date":"1989","label":"The network"},{"date":"2020","label":"A new scale"}]
+    }
+  },
+  {
+    "id": "timeline-history-founder-story",
+    "title": "Founder Story",
+    "category": "explainers-education",
+    "tags": ["founder", "origin", "story", "timeline"],
+    "description": "A portrait-like origin anchor sends a founder journey across a concise sequence of turning points.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 140,
+    "defaultProps": {
+      "variant": "founder-story",
+      "title": "From One Small Question",
+      "subtitle": "Every enduring company has a moment when the idea becomes a commitment.",
+      "paletteName": "sunset",
+      "founder": "MAYA / FOUNDING YEAR 2014",
+      "events": [{"date":"2014","label":"The question"},{"date":"2015","label":"The prototype"},{"date":"2017","label":"The first yes"},{"date":"2020","label":"The team"},{"date":"2025","label":"The mission"}]
+    }
+  },
+  {
+    "id": "timeline-history-product-evolution",
+    "title": "Product Evolution",
+    "category": "explainers-education",
+    "tags": ["product", "versions", "evolution", "roadmap"],
+    "description": "Version columns grow across the frame to make product evolution and release history immediately legible.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 135,
+    "defaultProps": {
+      "variant": "product-evolution",
+      "title": "A Product That Kept Learning",
+      "subtitle": "A release story told through the shape of each iteration.",
+      "paletteName": "forest",
+      "productName": "NORTHSTAR",
+      "events": [{"date":"V1 / 2019","label":"The useful core"},{"date":"V2 / 2020","label":"Faster setup"},{"date":"V3 / 2022","label":"Shared workspaces"},{"date":"V4 / 2024","label":"Intelligence"},{"date":"V5 / 2026","label":"The platform"}]
+    }
+  },
+  {
+    "id": "timeline-history-before-during-after",
+    "title": "Before During After",
+    "category": "explainers-education",
+    "tags": ["before-after", "transformation", "stages", "comparison"],
+    "description": "Three contrasting stage panels turn a transformation into a compact then, now, and next narrative.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 120,
+    "defaultProps": {
+      "variant": "before-during-after",
+      "title": "The Transformation",
+      "subtitle": "Show what changed, how it changed, and what the result made possible.",
+      "paletteName": "paper",
+      "events": [{"date":"BEFORE","label":"The old pattern"},{"date":"DURING","label":"The change in motion"},{"date":"AFTER","label":"A better outcome"}]
+    }
+  },
+  {
+    "id": "timeline-history-parallel-timelines",
+    "title": "Parallel Timelines",
+    "category": "explainers-education",
+    "tags": ["parallel", "comparison", "two-track", "timeline"],
+    "description": "Two synchronized timeline lanes compare parallel product, cultural, or personal histories.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 135,
+    "defaultProps": {
+      "variant": "parallel-timelines",
+      "title": "Two Threads, One Moment",
+      "subtitle": "Compare the milestones that converged to make the outcome possible.",
+      "paletteName": "candy",
+      "events": [{"date":"2018","label":"Research begins"},{"date":"2019","label":"First signal"},{"date":"2021","label":"The overlap"},{"date":"2023","label":"Shared momentum"},{"date":"2026","label":"One direction"}]
+    }
+  },
+  {
+    "id": "timeline-history-anniversary-count",
+    "title": "Anniversary Count",
+    "category": "explainers-education",
+    "tags": ["anniversary", "count", "celebration", "history"],
+    "description": "A monumental anniversary counter builds from zero while event markers orbit the central story.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 110,
+    "defaultProps": {
+      "variant": "anniversary-count",
+      "title": "Ten Years of Making",
+      "subtitle": "A compact celebration of the people and moments behind the number.",
+      "paletteName": "paper",
+      "productName": "NORTHSTAR STUDIO",
+      "startYear": 2016,
+      "endYear": 2026,
+      "events": [{"date":"2016","label":"Started"},{"date":"2018","label":"First launch"},{"date":"2020","label":"New chapter"},{"date":"2023","label":"One hundred"},{"date":"2026","label":"Ten years"}]
+    }
+  },
+  {
+    "id": "timeline-history-future-roadmap",
+    "title": "Future Roadmap",
+    "category": "explainers-education",
+    "tags": ["roadmap", "future", "milestones", "planning"],
+    "description": "A rising path connects future milestones with clear labels for an optimistic roadmap reveal.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 140,
+    "defaultProps": {
+      "variant": "future-roadmap",
+      "title": "The Next Horizon",
+      "subtitle": "Turn a plan into a visual path people can remember.",
+      "paletteName": "midnight",
+      "events": [{"date":"Q2 2026","label":"Ship the core"},{"date":"Q4 2026","label":"Open the network"},{"date":"2027","label":"Go global"},{"date":"2028","label":"Build the standard"},{"date":"2030","label":"Change the category"}]
+    }
+  },
+  {
+    "id": "timeline-history-event-scrub",
+    "title": "Event Scrub",
+    "category": "explainers-education",
+    "tags": ["scrub", "index", "events", "focus"],
+    "description": "A moving event index scrubs through a dense history, keeping the current moment in visual focus.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 125,
+    "defaultProps": {
+      "variant": "event-scrub",
+      "title": "Scroll Through the Story",
+      "subtitle": "A focused index is ideal for dense histories, archives, and release logs.",
+      "paletteName": "ocean",
+      "events": [{"date":"JAN 12","label":"The brief"},{"date":"MAR 04","label":"The first test"},{"date":"JUN 18","label":"The breakthrough"},{"date":"SEP 02","label":"The launch"},{"date":"DEC 21","label":"The result"}]
+    }
+  }
+]

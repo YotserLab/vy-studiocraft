@@ -1,0 +1,219 @@
+[
+  {
+    "id": "testimonial-cuts-quote-to-face",
+    "title": "Quote To Face",
+    "category": "marketing-social",
+    "tags": ["testimonial", "portrait", "quote", "speaker"],
+    "description": "A customer quote resolves into a speaker portrait for a human, editorial proof beat.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "quote-to-face",
+      "quote": "We stopped chasing the process and started shipping the work.",
+      "author": "Maya Chen",
+      "role": "Founder",
+      "company": "Northstar",
+      "headline": "A real customer story",
+      "paletteName": "midnight"
+    }
+  },
+  {
+    "id": "testimonial-cuts-proof-metric",
+    "title": "Proof Metric",
+    "category": "marketing-social",
+    "tags": ["testimonial", "metric", "proof", "result"],
+    "description": "A customer quote follows a dramatic proof metric, making the outcome impossible to miss.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 135,
+    "defaultProps": {
+      "variant": "proof-metric",
+      "quote": "The team reclaimed an entire day every week.",
+      "author": "Avery Brooks",
+      "role": "COO",
+      "company": "Frame Labs",
+      "metric": "1 day",
+      "metricLabel": "time reclaimed every week",
+      "paletteName": "ocean"
+    }
+  },
+  {
+    "id": "testimonial-cuts-customer-story",
+    "title": "Customer Story",
+    "category": "marketing-social",
+    "tags": ["testimonial", "story", "before-after", "journey"],
+    "description": "A three-beat customer journey moves from friction through a turning point to momentum.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "customer-story",
+      "quote": "Now the whole team knows what happens next.",
+      "author": "Samir Patel",
+      "role": "Design Director",
+      "company": "Forma",
+      "headline": "From friction to momentum",
+      "subline": "One change made the work feel lighter.",
+      "before": "Manual handoffs",
+      "answer": "One shared workflow",
+      "after": "Confident weekly launches",
+      "paletteName": "forest"
+    }
+  },
+  {
+    "id": "testimonial-cuts-logo-wall",
+    "title": "Logo Wall",
+    "category": "marketing-social",
+    "tags": ["testimonial", "logos", "social-proof", "trust"],
+    "description": "A wall of customer and partner names builds trust before revealing the supporting quote.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "logo-wall",
+      "quote": "The quality jump was immediate, and our clients noticed.",
+      "author": "Zoe Carter",
+      "role": "Creative Director",
+      "company": "Kindred",
+      "headline": "Proof travels further together.",
+      "logos": ["Northstar", "Relay", "Fieldwork", "Arc", "Goodwell", "Signal"],
+      "paletteName": "paper"
+    }
+  },
+  {
+    "id": "testimonial-cuts-rating-reveal",
+    "title": "Rating Reveal",
+    "category": "marketing-social",
+    "tags": ["testimonial", "rating", "review", "stars"],
+    "description": "Stars reveal one at a time before the review and customer attribution land with confidence.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 120,
+    "defaultProps": {
+      "variant": "rating-reveal",
+      "quote": "Worth every minute we invested—and then some.",
+      "author": "Leila Grant",
+      "role": "Head of Marketing",
+      "company": "Amble",
+      "rating": 5,
+      "paletteName": "sunset"
+    }
+  },
+  {
+    "id": "testimonial-cuts-objection-answer",
+    "title": "Objection Answer",
+    "category": "marketing-social",
+    "tags": ["testimonial", "objection", "answer", "sales"],
+    "description": "A customer answer directly resolves a common buying objection in a split-screen proof edit.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 135,
+    "defaultProps": {
+      "variant": "objection-answer",
+      "quote": "We were productive on day one.",
+      "author": "Priya Shah",
+      "role": "Product Lead",
+      "company": "Fieldwork",
+      "objection": "Will this actually fit our team?",
+      "answer": "Yes. We had our first useful workflow running before lunch.",
+      "paletteName": "midnight"
+    }
+  },
+  {
+    "id": "testimonial-cuts-three-voices",
+    "title": "Three Voices",
+    "category": "marketing-social",
+    "tags": ["testimonial", "voices", "grid", "social-proof"],
+    "description": "Three customer voices arrive as a staggered proof wall, each with a distinct role and perspective.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "three-voices",
+      "quote": "It gave us back our Monday mornings.",
+      "author": "Theo Martin",
+      "role": "Founder",
+      "company": "Goodwell",
+      "testimonials": [
+        { "quote": "Our team was productive on day one.", "author": "Sofia Mendes", "role": "GM", "company": "Otherway" },
+        { "quote": "Beautifully focused and incredibly quick.", "author": "Ben Ito", "role": "Designer", "company": "Relay" }
+      ],
+      "paletteName": "candy"
+    }
+  },
+  {
+    "id": "testimonial-cuts-case-study-cut",
+    "title": "Case Study Cut",
+    "category": "marketing-social",
+    "tags": ["testimonial", "case-study", "challenge", "result"],
+    "description": "Challenge, change, and result unfold as a compact case-study edit with a clear evidence arc.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "case-study-cut",
+      "quote": "The workflow finally matches how our team thinks.",
+      "author": "Elena Rossi",
+      "role": "Head of Growth",
+      "company": "Arc",
+      "headline": "A better story in three beats.",
+      "before": "Weekly reporting took days.",
+      "answer": "One source of truth removed the rework.",
+      "result": "Reporting now takes less than an hour.",
+      "paletteName": "ocean"
+    }
+  },
+  {
+    "id": "testimonial-cuts-before-after-result",
+    "title": "Before After Result",
+    "category": "marketing-social",
+    "tags": ["testimonial", "before-after", "transformation", "metric"],
+    "description": "A visual before/after comparison resolves into the customer’s measurable result.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "before-after-result",
+      "quote": "We finally have one clear path from idea to outcome.",
+      "author": "Omar Reed",
+      "role": "Partner",
+      "company": "Signal House",
+      "before": "Scattered work and slow handoffs",
+      "after": "One clear path from idea to outcome",
+      "result": "2× faster",
+      "metricLabel": "reported delivery time",
+      "paletteName": "forest"
+    }
+  },
+  {
+    "id": "testimonial-cuts-testimonial-cta",
+    "title": "Testimonial CTA",
+    "category": "marketing-social",
+    "tags": ["testimonial", "cta", "quote", "conversion"],
+    "description": "A strong customer quote resolves into an animated call to action for the next step.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "testimonial-cta",
+      "quote": "It paid for itself in the first week.",
+      "author": "Ruth Evans",
+      "role": "Finance Lead",
+      "company": "Cedar",
+      "headline": "Ready for the same shift?",
+      "cta": "See how it works",
+      "paletteName": "midnight"
+    }
+  }
+]

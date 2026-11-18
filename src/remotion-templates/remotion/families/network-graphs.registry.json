@@ -1,0 +1,122 @@
+[
+  {
+    "id": "network-graphs-force-network",
+    "title": "Force Network",
+    "category": "data-infographic",
+    "tags": ["network", "force", "relationships", "nodes"],
+    "description": "A deterministic force-inspired network reveals connected entities with softly curved edges, moving signals, and a focused core node.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "force-network", "title": "Everything is connected.", "subtitle": "Trace the relationships behind the result.", "paletteName": "midnight", "focusNode": "node-1", "layoutSeed": 7, "showGrid": true, "showLabels": true }
+  },
+  {
+    "id": "network-graphs-dependency-tree",
+    "title": "Dependency Tree",
+    "category": "data-infographic",
+    "tags": ["network", "dependencies", "tree", "architecture"],
+    "description": "A top-down dependency tree makes parent-child relationships and delivery order immediately legible.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "dependency-tree", "title": "Follow the dependency chain.", "subtitle": "See what has to happen before the next step.", "paletteName": "ocean", "focusNode": "node-3", "showGrid": true, "showLabels": true }
+  },
+  {
+    "id": "network-graphs-hub-spoke",
+    "title": "Hub Spoke",
+    "category": "data-infographic",
+    "tags": ["network", "hub", "spoke", "ecosystem"],
+    "description": "A central hub pulses through its surrounding spokes for platform ecosystems, channels, and single-source stories.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": { "variant": "hub-spoke", "title": "One platform. Many paths.", "subtitle": "Show the surface area of an ecosystem.", "paletteName": "candy", "focusNode": "node-1", "showGrid": false, "showLabels": true }
+  },
+  {
+    "id": "network-graphs-community-clusters",
+    "title": "Community Clusters",
+    "category": "data-infographic",
+    "tags": ["network", "clusters", "communities", "groups"],
+    "description": "Dashed community boundaries and bridge links expose clusters, overlap, and the connectors between groups.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "community-clusters", "title": "Find the communities.", "subtitle": "Clusters form around shared behavior.", "paletteName": "forest", "groups": ["A", "A", "A", "B", "B", "B", "Core", "Core", "A", "B"], "focusNode": "node-7", "showGrid": true, "showLabels": true }
+  },
+  {
+    "id": "network-graphs-flow-network",
+    "title": "Flow Network",
+    "category": "data-infographic",
+    "tags": ["network", "flow", "pipeline", "directed"],
+    "description": "Directed paths and animated particles show how information, work, or resources flow through branching stages.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "flow-network", "title": "Watch the flow.", "subtitle": "Make the handoffs and branches visible.", "paletteName": "ocean", "focusNode": "node-4", "showGrid": true, "showLabels": true }
+  },
+  {
+    "id": "network-graphs-org-chart",
+    "title": "Org Chart",
+    "category": "data-infographic",
+    "tags": ["network", "org", "hierarchy", "people"],
+    "description": "A calm hierarchical org chart reveals reporting lines and teams in a polished executive-ready frame.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "org-chart", "title": "The team behind the work.", "subtitle": "A clear view of ownership and collaboration.", "paletteName": "paper", "focusNode": "node-1", "showGrid": false, "showLabels": true }
+  },
+  {
+    "id": "network-graphs-citation-web",
+    "title": "Citation Web",
+    "category": "data-infographic",
+    "tags": ["network", "citations", "research", "documents"],
+    "description": "A web of document references brings research lineage and supporting evidence into an animated visual map.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "citation-web", "title": "Ideas leave a trail.", "subtitle": "Reveal the sources behind a conclusion.", "paletteName": "sunset", "focusNode": "node-1", "showGrid": true, "showLabels": true }
+  },
+  {
+    "id": "network-graphs-service-mesh",
+    "title": "Service Mesh",
+    "category": "data-infographic",
+    "tags": ["network", "services", "mesh", "systems"],
+    "description": "A service mesh loop animates requests between systems, gateways, and shared infrastructure.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "service-mesh", "title": "The system stays in motion.", "subtitle": "Map services, dependencies, and observability.", "paletteName": "midnight", "focusNode": "node-8", "showGrid": true, "showLabels": true }
+  },
+  {
+    "id": "network-graphs-relationship-reveal",
+    "title": "Relationship Reveal",
+    "category": "data-infographic",
+    "tags": ["network", "relationships", "reveal", "influence"],
+    "description": "A focused relationship story starts at one central entity and progressively reveals its most meaningful connections.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "relationship-reveal", "title": "Start with one connection.", "subtitle": "Then reveal the network around it.", "paletteName": "candy", "focusNode": "node-1", "captions": ["Shared context", "High trust", "New signal"], "showGrid": false, "showLabels": true }
+  },
+  {
+    "id": "network-graphs-network-alert",
+    "title": "Network Alert",
+    "category": "data-infographic",
+    "tags": ["network", "alert", "incident", "monitoring"],
+    "description": "An alert state propagates from a failing node through its affected neighbors for incident and risk storytelling.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "network-alert", "title": "A signal needs attention.", "subtitle": "Show the blast radius before the fix.", "paletteName": "sunset", "focusNode": "node-4", "accentColor": "#ff5263", "showGrid": true, "showLabels": true }
+  }
+]

@@ -1,0 +1,172 @@
+[
+  {
+    "id": "corporate-agenda-reveal",
+    "title": "Corporate Agenda Reveal",
+    "category": "minimal-corporate",
+    "tags": ["agenda", "meeting", "list"],
+    "description": "A numbered meeting agenda revealed row by row with fine rules and generous spacing.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "agenda",
+      "headline": "Today’s conversation",
+      "body": "Market context|Strategic priorities|Execution plan|Decisions and next steps",
+      "paletteName": "paper"
+    }
+  },
+  {
+    "id": "corporate-section-divider",
+    "title": "Numbered Section Divider",
+    "category": "minimal-corporate",
+    "tags": ["section", "divider", "number"],
+    "description": "An oversized section number, vertical hairline, and concise chapter statement.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 120,
+    "defaultProps": {
+      "variant": "section-divider",
+      "headline": "Our strategy",
+      "body": "02|A focused plan for durable, profitable growth.",
+      "paletteName": "paper"
+    }
+  },
+  {
+    "id": "corporate-key-message",
+    "title": "Executive Key Message",
+    "category": "minimal-corporate",
+    "tags": ["statement", "executive", "message"],
+    "description": "A single executive statement balanced by a restrained supporting note and accent rule.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 140,
+    "defaultProps": {
+      "variant": "key-message",
+      "headline": "Sustainable growth starts with fewer, better priorities.",
+      "body": "We are concentrating investment where customer value and long-term advantage reinforce each other.",
+      "paletteName": "paper"
+    }
+  },
+  {
+    "id": "corporate-point-counterpoint",
+    "title": "Point and Counterpoint",
+    "category": "minimal-corporate",
+    "tags": ["comparison", "tradeoff", "columns"],
+    "description": "A balanced two-column layout for presenting an opportunity beside its core consideration.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "point-counterpoint",
+      "headline": "A deliberate choice",
+      "body": "Opportunity: Entering now secures customer mindshare while the category is forming.|Consideration: Focus must remain protected as the operating model scales.",
+      "paletteName": "ocean"
+    }
+  },
+  {
+    "id": "corporate-timeline-milestones",
+    "title": "Horizontal Milestone Timeline",
+    "category": "minimal-corporate",
+    "tags": ["timeline", "roadmap", "milestones"],
+    "description": "Four alternating milestones arranged along a hairline roadmap with measured reveals.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 170,
+    "defaultProps": {
+      "variant": "timeline",
+      "headline": "The path to category leadership",
+      "body": "2024: Build the foundation|2025: Scale the platform|2026: Lead the category|2027: Expand globally",
+      "paletteName": "paper"
+    }
+  },
+  {
+    "id": "corporate-team-grid",
+    "title": "Leadership Team Grid",
+    "category": "minimal-corporate",
+    "tags": ["team", "leadership", "people"],
+    "description": "A four-person leadership grid with deterministic initial avatars and concise role labels.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 160,
+    "defaultProps": {
+      "variant": "team-grid",
+      "headline": "Built by experienced operators",
+      "body": "Maya Chen: Chief Executive Officer|Jon Bell: Chief Product Officer|Nia Okafor: Chief Financial Officer|Leo Martin: Chief Revenue Officer",
+      "paletteName": "paper"
+    }
+  },
+  {
+    "id": "corporate-quote-attribution",
+    "title": "Corporate Quote and Attribution",
+    "category": "minimal-corporate",
+    "tags": ["quote", "testimonial", "leadership"],
+    "description": "A serif leadership quotation paired with a clean name-and-role attribution block.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 140,
+    "defaultProps": {
+      "variant": "quote",
+      "headline": "Clarity is not the absence of complexity. It is the discipline to choose what matters.",
+      "body": "Elena Rossi|Chair, Strategy Committee",
+      "paletteName": "forest"
+    }
+  },
+  {
+    "id": "corporate-process-steps",
+    "title": "Three-Step Corporate Process",
+    "category": "minimal-corporate",
+    "tags": ["process", "steps", "method"],
+    "description": "A connected 1–2–3 process with circular step markers and compact explanations.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "process",
+      "headline": "From signal to sustained impact",
+      "body": "Discover: Align on the opportunity and define success.|Design: Build the focused plan and operating model.|Deliver: Execute, measure, and improve with discipline.",
+      "paletteName": "paper"
+    }
+  },
+  {
+    "id": "corporate-kpi-strip",
+    "title": "Headline KPI Strip",
+    "category": "minimal-corporate",
+    "tags": ["kpi", "metrics", "results"],
+    "description": "A decisive headline followed by a four-column strip of board-ready performance metrics.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 160,
+    "defaultProps": {
+      "variant": "kpi-strip",
+      "headline": "Momentum is translating into durable results.",
+      "body": "42%: Year-over-year revenue growth|91%: Gross revenue retention|3.4×: Pipeline coverage|18 mo: Cash runway",
+      "paletteName": "midnight"
+    }
+  },
+  {
+    "id": "corporate-closing-contact",
+    "title": "Corporate Closing Contact",
+    "category": "minimal-corporate",
+    "tags": ["closing", "contact", "thank-you"],
+    "description": "A confident closing statement divided from a compact, practical contact block.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 130,
+    "defaultProps": {
+      "variant": "closing",
+      "headline": "Let’s build what comes next.",
+      "body": "hello@northstar.co|northstar.co|New York · London",
+      "paletteName": "paper"
+    }
+  }
+]

@@ -1,0 +1,222 @@
+[
+  {
+    "id": "outro-two-thumbnail-pulse",
+    "title": "Two Thumbnail Pulse",
+    "category": "outro-endcards",
+    "tags": ["youtube", "end-screen", "thumbnails"],
+    "description": "Classic two-video end screen with procedural thumbnails, a pulsing primary recommendation, and channel identity.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "two-thumbnail",
+      "channelName": "Northstar Studio",
+      "tagline": "Ideas for people who make things",
+      "primaryLink": "northstar.studio",
+      "secondaryLink": "Creative systems, explained",
+      "nextTitle": "The 7-minute design reset",
+      "socialLinks": ["YouTube|@northstar", "Instagram|@northstar.studio", "X|@northstarhq", "Website|northstar.studio"],
+      "credits": ["Creative Direction|Maya Chen", "Motion Design|Theo Brooks", "Sound|Lina Park", "Produced by|Northstar Studio"],
+      "paletteName": "midnight"
+    }
+  },
+  {
+    "id": "outro-subscribe-bell-morph",
+    "title": "Subscribe Bell Morph",
+    "category": "outro-endcards",
+    "tags": ["subscribe", "bell", "call-to-action"],
+    "description": "A bold subscribe button morphs into its confirmed state while a hand-built notification bell rings beside it.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "subscribe-bell",
+      "channelName": "Field Notes",
+      "tagline": "New stories, every Tuesday.",
+      "primaryLink": "youtube.com/@fieldnotes",
+      "secondaryLink": "Turn on notifications",
+      "nextTitle": "A better way to notice",
+      "socialLinks": ["YouTube|@fieldnotes", "Instagram|@fieldnotes", "TikTok|@fieldnotes", "Web|fieldnotes.video"],
+      "credits": ["Host|Ari Bell", "Director|Sam Rivera", "Editor|Noor Khan", "Music|Field Audio"],
+      "paletteName": "sunset"
+    }
+  },
+  {
+    "id": "outro-thanks-monogram",
+    "title": "Thanks Monogram",
+    "category": "outro-endcards",
+    "tags": ["thanks", "monogram", "editorial"],
+    "description": "Oversized outlined initials anchor an editorial thank-you card with a refined channel signature.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 140,
+    "defaultProps": {
+      "variant": "thanks-monogram",
+      "channelName": "Form & Function",
+      "tagline": "Objects, spaces, and the ideas behind them",
+      "primaryLink": "formandfunction.co",
+      "secondaryLink": "Explore the archive",
+      "nextTitle": "The chair that changed everything",
+      "socialLinks": ["Instagram|@formandfunction", "YouTube|@formfunction", "Pinterest|formfunction", "Web|formandfunction.co"],
+      "credits": ["Editor in Chief|Sofia Ward", "Film|Ravi Shah", "Edit|June Morris", "Publisher|Form & Function"],
+      "paletteName": "paper"
+    }
+  },
+  {
+    "id": "outro-next-episode-teaser",
+    "title": "Next Episode Teaser",
+    "category": "outro-endcards",
+    "tags": ["series", "autoplay", "teaser"],
+    "description": "Split-layout series closer with a live countdown, procedural episode art, and autoplay progress indicator.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "next-episode",
+      "channelName": "Signal Path",
+      "tagline": "Episode 06 · 14 minutes",
+      "primaryLink": "signalpath.fm",
+      "secondaryLink": "Season One",
+      "nextTitle": "When machines begin to listen",
+      "socialLinks": ["YouTube|@signalpath", "Spotify|Signal Path", "Apple|Signal Path", "Web|signalpath.fm"],
+      "credits": ["Host|Nadia Okafor", "Research|Jon Bell", "Producer|Lena Cho", "Studio|Signal Path"],
+      "paletteName": "ocean"
+    }
+  },
+  {
+    "id": "outro-social-links-grid",
+    "title": "Social Links Grid",
+    "category": "outro-endcards",
+    "tags": ["social", "links", "community"],
+    "description": "Four staggered social cards rotate their highlight state for a polished multi-platform sign-off.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "social-grid",
+      "channelName": "Common Thread",
+      "tagline": "Follow along wherever you spend your scroll time.",
+      "primaryLink": "commonthread.design",
+      "secondaryLink": "Join the community",
+      "nextTitle": "More from Common Thread",
+      "socialLinks": ["Instagram|@commonthread", "YouTube|@commonthread", "X|@commonthreadco", "Website|commonthread.design"],
+      "credits": ["Community|Asha Green", "Design|Max Ito", "Video|Ella Stone", "Made by|Common Thread"],
+      "paletteName": "candy"
+    }
+  },
+  {
+    "id": "outro-newsletter-signup",
+    "title": "Newsletter Signup Bar",
+    "category": "outro-endcards",
+    "tags": ["newsletter", "signup", "conversion"],
+    "description": "Email text types into a wide signup bar before the call-to-action resolves into a welcoming success state.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "newsletter",
+      "channelName": "The Useful Edit",
+      "tagline": "A concise field note for curious builders.",
+      "primaryLink": "theusefuledit.com/join",
+      "secondaryLink": "Read a sample issue",
+      "nextTitle": "Issue 042 · Making room for better work",
+      "socialLinks": ["Newsletter|theusefuledit.com", "LinkedIn|The Useful Edit", "X|@usefuledit", "Archive|theusefuledit.com/archive"],
+      "credits": ["Written by|Alex Nwosu", "Edited by|Mae Flores", "Design|Owen Li", "Published by|Useful Press"],
+      "paletteName": "forest"
+    }
+  },
+  {
+    "id": "outro-playlist-stack",
+    "title": "Playlist Stack",
+    "category": "outro-endcards",
+    "tags": ["playlist", "binge", "stack"],
+    "description": "A fanned stack of procedural episode cards pairs with playlist metadata and an animated play-all invitation.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 170,
+    "defaultProps": {
+      "variant": "playlist-stack",
+      "channelName": "Maker Method",
+      "tagline": "Eight practical lessons for building what matters.",
+      "primaryLink": "maker.method/season-one",
+      "secondaryLink": "Save playlist",
+      "nextTitle": "Start with the smallest useful version",
+      "socialLinks": ["YouTube|@makermethod", "Instagram|@maker.method", "Discord|Maker Method", "Web|maker.method"],
+      "credits": ["Creator|Milo Grant", "Director|Kei Morgan", "Animation|Studio Moss", "Produced by|Maker Method"],
+      "paletteName": "sunset"
+    }
+  },
+  {
+    "id": "outro-logo-tagline",
+    "title": "Full Screen Logo & Tagline",
+    "category": "outro-endcards",
+    "tags": ["logo", "brand", "minimal"],
+    "description": "A monogram resolves at center inside orbiting rings before the channel tagline and link fade into place.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 140,
+    "defaultProps": {
+      "variant": "logo-tagline",
+      "channelName": "Arc & Echo",
+      "tagline": "Stories with a longer half-life",
+      "primaryLink": "arcandecho.com",
+      "secondaryLink": "Watch the collection",
+      "nextTitle": "The shape of memory",
+      "socialLinks": ["Vimeo|Arc & Echo", "Instagram|@arcandecho", "YouTube|@arcandecho", "Web|arcandecho.com"],
+      "credits": ["A film by|Arc & Echo", "Creative Director|Leah Moon", "Motion|Tomás Reed", "Sound|Harbor Audio"],
+      "paletteName": "midnight"
+    }
+  },
+  {
+    "id": "outro-credits-roll",
+    "title": "Credits Roll",
+    "category": "outro-endcards",
+    "tags": ["credits", "names", "film"],
+    "description": "A restrained split-screen closer keeps channel identity fixed while role-and-name credits scroll vertically.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 200,
+    "defaultProps": {
+      "variant": "credits-roll",
+      "channelName": "Open Country",
+      "tagline": "Independent films about land, work, and belonging.",
+      "primaryLink": "opencountry.film",
+      "secondaryLink": "Support independent film",
+      "nextTitle": "Winter Water",
+      "socialLinks": ["Vimeo|Open Country", "Instagram|@opencountryfilm", "Letterboxd|Open Country", "Web|opencountry.film"],
+      "credits": ["Directed by|Amara Wells", "Cinematography|Diego Lin", "Edited by|Priya Sen", "Original Music|Ezra Cole", "Color|Mina Ito", "Executive Producer|Ruth James"],
+      "paletteName": "mono"
+    }
+  },
+  {
+    "id": "outro-minimal-watch-more",
+    "title": "Minimal Watch More Arrow",
+    "category": "outro-endcards",
+    "tags": ["minimal", "arrow", "watch-more"],
+    "description": "Oversized solid-and-outline typography leads into a single drawn arrow for an ultra-minimal watch-more card.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 130,
+    "defaultProps": {
+      "variant": "watch-more",
+      "channelName": "Plain Sight",
+      "tagline": "Continue with the next short film",
+      "primaryLink": "plainsight.studio",
+      "secondaryLink": "New films monthly",
+      "nextTitle": "Watch: A quiet hour in Tokyo",
+      "socialLinks": ["YouTube|@plainsight", "Vimeo|Plain Sight", "Instagram|@plain.sight", "Web|plainsight.studio"],
+      "credits": ["Film|Niko Hale", "Edit|Sara Kim", "Music|Mori Fields", "Studio|Plain Sight"],
+      "paletteName": "paper"
+    }
+  }
+]

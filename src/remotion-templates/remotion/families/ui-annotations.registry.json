@@ -1,0 +1,188 @@
+[
+  {
+    "id": "ui-annotations-arrow-callouts",
+    "title": "Arrow Callouts",
+    "category": "ui-annotations",
+    "tags": ["ui", "annotation", "arrows", "explainer"],
+    "description": "Three animated arrows connect concise labels to exact interface targets for a clear product explainer.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "arrow-callouts",
+      "title": "Make the signal obvious",
+      "subtitle": "Point viewers to the controls that matter without losing the interface context.",
+      "paletteName": "ocean",
+      "appName": "workspace.northstar.com",
+      "callouts": ["Primary action", "Live status", "Context menu"]
+    }
+  },
+  {
+    "id": "ui-annotations-bracket-focus",
+    "title": "Bracket Focus",
+    "category": "ui-annotations",
+    "tags": ["ui", "annotation", "brackets", "focus"],
+    "description": "Precision corner brackets assemble around one important screen region, turning a quiet detail into a focal point.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 140,
+    "defaultProps": {
+      "variant": "bracket-focus",
+      "title": "Focus the moment",
+      "subtitle": "Frame one decisive UI state with a technical, editorial highlight.",
+      "paletteName": "midnight",
+      "accentLabel": "KEY REGION"
+    }
+  },
+  {
+    "id": "ui-annotations-magnifier-lens",
+    "title": "Magnifier Lens",
+    "category": "ui-annotations",
+    "tags": ["ui", "annotation", "magnifier", "detail"],
+    "description": "A floating magnifier tracks a screen detail and enlarges it for legibility while the full interface remains visible.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "magnifier-lens",
+      "title": "Zoom into the proof",
+      "subtitle": "Make small controls, metrics, and labels readable at presentation scale.",
+      "paletteName": "forest",
+      "accentLabel": "Magnified detail"
+    }
+  },
+  {
+    "id": "ui-annotations-numbered-steps",
+    "title": "Numbered Steps",
+    "category": "ui-annotations",
+    "tags": ["ui", "annotation", "steps", "tutorial"],
+    "description": "Four numbered action cards reveal in sequence beside a product screen to communicate a guided workflow.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 170,
+    "defaultProps": {
+      "variant": "numbered-steps",
+      "title": "From first click to done",
+      "subtitle": "Turn a complicated workflow into four memorable, composable beats.",
+      "paletteName": "candy",
+      "stepLabels": ["Open workspace", "Choose a view", "Review result", "Share with team"]
+    }
+  },
+  {
+    "id": "ui-annotations-measurement-lines",
+    "title": "Measurement Lines",
+    "category": "ui-annotations",
+    "tags": ["ui", "annotation", "measurement", "design-system"],
+    "description": "Dimension lines and labels expose screen proportions, spacing, and layout decisions in a polished design-review frame.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 145,
+    "defaultProps": {
+      "variant": "measurement-lines",
+      "title": "Design in dimensions",
+      "subtitle": "Explain responsive UI structure with measured, high-contrast guides.",
+      "paletteName": "paper",
+      "lineColor": "#c24502",
+      "accentLabel": "Spacing system"
+    }
+  },
+  {
+    "id": "ui-annotations-tooltip-tour",
+    "title": "Tooltip Tour",
+    "category": "ui-annotations",
+    "tags": ["ui", "annotation", "tooltip", "product-tour"],
+    "description": "An active tooltip hops between interface targets, simulating a guided product tour with clear focus state.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "tooltip-tour",
+      "title": "Guide the first session",
+      "subtitle": "Sequence helpful hints so viewers understand the product before they try it.",
+      "paletteName": "ocean",
+      "callouts": ["Start here", "Filter your view", "Invite your team"]
+    }
+  },
+  {
+    "id": "ui-annotations-spotlight-cutout",
+    "title": "Spotlight Cutout",
+    "category": "ui-annotations",
+    "tags": ["ui", "annotation", "spotlight", "highlight"],
+    "description": "A controlled darkened overlay leaves one luminous cutout over the UI, creating a cinematic attention handoff.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 145,
+    "defaultProps": {
+      "variant": "spotlight-cutout",
+      "title": "Look here",
+      "subtitle": "Use a single spotlight to make the product value instantly legible.",
+      "paletteName": "sunset",
+      "accentLabel": "THE KEY MOMENT"
+    }
+  },
+  {
+    "id": "ui-annotations-redaction-reveal",
+    "title": "Redaction Reveal",
+    "category": "ui-annotations",
+    "tags": ["ui", "annotation", "reveal", "proof"],
+    "description": "Opaque redaction bars slide away to reveal verified product evidence and outcomes line by line.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 160,
+    "defaultProps": {
+      "variant": "redaction-reveal",
+      "title": "Evidence, unlocked",
+      "subtitle": "Turn metrics and customer signals into a deliberate proof reveal.",
+      "paletteName": "midnight",
+      "appName": "Product evidence",
+      "callouts": ["Revenue impact", "Activation rate", "Customer signal"],
+      "accentLabel": "EVIDENCE UNLOCKED"
+    }
+  },
+  {
+    "id": "ui-annotations-error-highlight",
+    "title": "Error Highlight",
+    "category": "ui-annotations",
+    "tags": ["ui", "annotation", "debug", "error-state"],
+    "description": "A pulsing high-contrast outline and warning label isolate a UI error state for a product or debugging walkthrough.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 140,
+    "defaultProps": {
+      "variant": "error-highlight",
+      "title": "Show what needs attention",
+      "subtitle": "Explain a failure state with enough context to make the fix feel immediate.",
+      "paletteName": "mono",
+      "lineColor": "#ff4d67",
+      "accentLabel": "NEEDS ATTENTION",
+      "callouts": ["Resolve this state"]
+    }
+  },
+  {
+    "id": "ui-annotations-feature-badges",
+    "title": "Feature Badges",
+    "category": "ui-annotations",
+    "tags": ["ui", "annotation", "badges", "features"],
+    "description": "Compact feature badges orbit important UI regions and reveal a polished map of product capabilities.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "feature-badges",
+      "title": "Features in context",
+      "subtitle": "Pair capability labels with the exact interface regions where they come alive.",
+      "paletteName": "forest",
+      "callouts": ["Fast setup", "Live sync", "Team-ready"]
+    }
+  }
+]

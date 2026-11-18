@@ -1,0 +1,200 @@
+[
+  {
+    "id": "legal-explainers-contract-anatomy",
+    "title": "Contract Anatomy",
+    "category": "legal-explainers",
+    "tags": ["legal", "contract", "document", "explainer"],
+    "description": "Map the sections of a contract with neutral labels, visible scope, and a persistent information-only disclaimer.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 160,
+    "defaultProps": {
+      "variant": "contract-anatomy",
+      "title": "Read the document in parts",
+      "subtitle": "Separate scope, responsibilities, timing, and exit conditions before making a decision.",
+      "paletteName": "ocean",
+      "sections": ["Parties & scope", "Responsibilities", "Term & renewal", "Exit conditions"],
+      "jurisdiction": "Context-dependent"
+    }
+  },
+  {
+    "id": "legal-explainers-case-timeline",
+    "title": "Case Timeline",
+    "category": "legal-explainers",
+    "tags": ["legal", "timeline", "case", "chronology"],
+    "description": "Reveal a neutral chronology of notices, review points, and next decisions without asserting a legal outcome.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 170,
+    "defaultProps": {
+      "variant": "case-timeline",
+      "title": "Make the sequence visible",
+      "subtitle": "Use dated checkpoints to explain what happened and what still needs review.",
+      "paletteName": "midnight",
+      "dates": ["01 JAN", "15 MAR", "30 JUN", "15 SEP"],
+      "sections": ["Initial notice", "Information gathered", "Review point", "Next decision"],
+      "jurisdiction": "Add applicable context"
+    }
+  },
+  {
+    "id": "legal-explainers-rights-flow",
+    "title": "Rights Flow",
+    "category": "legal-explainers",
+    "tags": ["legal", "rights", "information", "flow"],
+    "description": "Present practical information and record-keeping steps as a clear visual flow, with neutral wording and no fabricated authority.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 160,
+    "defaultProps": {
+      "variant": "rights-flow",
+      "title": "Know the next question",
+      "subtitle": "Turn a rights-related explanation into four calm, reviewable information steps.",
+      "paletteName": "forest",
+      "rights": ["Access information", "Ask for clarification", "Keep a record", "Seek independent advice"],
+      "jurisdiction": "Verify locally"
+    }
+  },
+  {
+    "id": "legal-explainers-terms-highlight",
+    "title": "Terms Highlight",
+    "category": "legal-explainers",
+    "tags": ["legal", "terms", "definitions", "document"],
+    "description": "Cycle through important document terms while keeping the full document context in view.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 160,
+    "defaultProps": {
+      "variant": "terms-highlight",
+      "title": "Slow down at the key terms",
+      "subtitle": "Highlight the words viewers should define before they compare or approve a document.",
+      "paletteName": "paper",
+      "terms": ["Controller", "Consent", "Notice", "Retention"],
+      "sections": ["Purpose", "Choice", "Record", "Review"],
+      "jurisdiction": "Use your source text"
+    }
+  },
+  {
+    "id": "legal-explainers-policy-change",
+    "title": "Policy Change",
+    "category": "legal-explainers",
+    "tags": ["legal", "policy", "change", "before-after"],
+    "description": "Compare a prior and updated policy structure while making the effective context and review prompt explicit.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "policy-change",
+      "title": "Explain what changed",
+      "subtitle": "Make a policy update easier to review without implying that one outcome applies everywhere.",
+      "paletteName": "sunset",
+      "sections": ["Current policy", "What changes", "When it applies", "What to review"],
+      "jurisdiction": "Add effective date"
+    }
+  },
+  {
+    "id": "legal-explainers-dispute-process",
+    "title": "Dispute Process",
+    "category": "legal-explainers",
+    "tags": ["legal", "process", "dispute", "steps"],
+    "description": "Show a configurable dispute or escalation sequence as checkpoints, not a promise of a particular legal remedy.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 175,
+    "defaultProps": {
+      "variant": "dispute-process",
+      "title": "Show the process, not the guess",
+      "subtitle": "Use explicit checkpoints to explain what someone may need to document and review next.",
+      "paletteName": "midnight",
+      "steps": ["Read the document", "Identify the decision", "Check local guidance", "Choose the next step"],
+      "accentLabel": "SEQUENCE VARIES BY CONTEXT",
+      "jurisdiction": "Confirm applicable process"
+    }
+  },
+  {
+    "id": "legal-explainers-privacy-consent",
+    "title": "Privacy Consent",
+    "category": "legal-explainers",
+    "tags": ["legal", "privacy", "consent", "data"],
+    "description": "Explain purpose, choice, access, and retention as a neutral privacy-consent checkpoint with a clear review path.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "privacy-consent",
+      "title": "Make the choice legible",
+      "subtitle": "Describe why information is requested, what choice is available, and where the record lives.",
+      "paletteName": "ocean",
+      "terms": ["Purpose", "Choice", "Access", "Retention"],
+      "jurisdiction": "Use the applicable notice"
+    }
+  },
+  {
+    "id": "legal-explainers-compliance-check",
+    "title": "Compliance Check",
+    "category": "legal-explainers",
+    "tags": ["legal", "compliance", "checklist", "review"],
+    "description": "Check neutral documentation conditions one at a time and finish with a review status rather than a legal conclusion.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 170,
+    "defaultProps": {
+      "variant": "compliance-check",
+      "title": "Review the record",
+      "subtitle": "Turn a compliance conversation into a visible checklist of scope, ownership, retention, and dates.",
+      "paletteName": "forest",
+      "sections": ["Scope is defined", "Owner is identified", "Record is retained", "Review date is set"],
+      "jurisdiction": "Confirm the standard"
+    }
+  },
+  {
+    "id": "legal-explainers-clause-compare",
+    "title": "Clause Compare",
+    "category": "legal-explainers",
+    "tags": ["legal", "clauses", "comparison", "document"],
+    "description": "Place two neutral clause examples side by side so viewers can compare wording, context, and questions for review.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "clause-compare",
+      "title": "Compare the wording",
+      "subtitle": "Show how two possible clauses differ in context without declaring which is appropriate.",
+      "paletteName": "candy",
+      "leftClause": "The first wording describes one possible scope and responsibility.",
+      "rightClause": "The second wording describes another possible scope and responsibility.",
+      "jurisdiction": "Review with applicable context"
+    }
+  },
+  {
+    "id": "legal-explainers-legal-glossary",
+    "title": "Legal Glossary",
+    "category": "legal-explainers",
+    "tags": ["legal", "glossary", "plain-language", "education"],
+    "description": "Translate three document terms into plain-language definitions while keeping the source and context available for review.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "legal-glossary",
+      "title": "Put the terms in plain language",
+      "subtitle": "Give viewers a concise definition, then invite them to check the source document and context.",
+      "paletteName": "paper",
+      "glossary": [
+        { "term": "Notice", "definition": "A clear communication about a change or action." },
+        { "term": "Consent", "definition": "A permission choice recorded with relevant context." },
+        { "term": "Term", "definition": "The period or condition described by the document." }
+      ],
+      "jurisdiction": "Definitions vary by source"
+    }
+  }
+]

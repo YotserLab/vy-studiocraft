@@ -1,0 +1,122 @@
+[
+  {
+    "id": "real-estate-films-property-hero",
+    "title": "Property Hero",
+    "category": "real-estate-films",
+    "tags": ["real-estate", "property", "hero", "listing"],
+    "description": "A cinematic property opening with the home name, address, and guide price over a full-bleed architectural scene.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 210,
+    "defaultProps": { "variant": "property-hero", "propertyName": "The Meridian House", "address": "18 Garden Avenue · North Quarter", "price": "$1.25M", "rooms": "3 bed · 2.5 bath", "area": "2,180 sq ft", "year": "1928", "agent": "Avery Morgan", "contact": "hello@meridian.example", "subtitle": "A considered home for the way you live", "paletteName": "ocean" }
+  },
+  {
+    "id": "real-estate-films-room-tour",
+    "title": "Room Tour",
+    "category": "real-estate-films",
+    "tags": ["real-estate", "room", "tour", "interior"],
+    "description": "A guided room-tour treatment with an image panel, room index, and restrained architectural typography.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 210,
+    "defaultProps": { "variant": "room-tour", "propertyName": "The Meridian House", "address": "18 Garden Avenue", "price": "$1.25M", "rooms": "3 bed · 2.5 bath", "area": "2,180 sq ft", "year": "1928", "agent": "Avery Morgan", "contact": "hello@meridian.example", "subtitle": "A walk through the home", "roomImages": ["", "", ""], "paletteName": "paper" }
+  },
+  {
+    "id": "real-estate-films-floor-plan",
+    "title": "Floor Plan",
+    "category": "real-estate-films",
+    "tags": ["real-estate", "floor-plan", "layout", "architecture"],
+    "description": "A procedural floor-plan reveal that animates the home's rooms as a clear, editable layout diagram.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 210,
+    "defaultProps": { "variant": "floor-plan", "propertyName": "The Meridian House", "address": "18 Garden Avenue", "price": "$1.25M", "rooms": "3 bed / 2.5 bath", "area": "2,180 SQ FT", "year": "1928", "agent": "Avery Morgan", "contact": "hello@meridian.example", "floorPlan": ["ENTRY", "LIVING", "KITCHEN", "BED 01", "BED 02", "BATH"], "paletteName": "mono" }
+  },
+  {
+    "id": "real-estate-films-amenity-grid",
+    "title": "Amenity Grid",
+    "category": "real-estate-films",
+    "tags": ["real-estate", "amenities", "features", "grid"],
+    "description": "A six-panel amenity grid for surfacing the practical and emotional details that sell a property.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 190,
+    "defaultProps": { "variant": "amenity-grid", "propertyName": "The Meridian House", "address": "18 Garden Avenue", "price": "$1.25M", "rooms": "3 bed · 2.5 bath", "area": "2,180 sq ft", "year": "1928", "agent": "Avery Morgan", "contact": "hello@meridian.example", "features": ["Sunlit living", "Chef kitchen", "Private terrace", "Walkable district", "Quiet outlook", "Move-in ready"], "paletteName": "forest" }
+  },
+  {
+    "id": "real-estate-films-location-card",
+    "title": "Location Card",
+    "category": "real-estate-films",
+    "tags": ["real-estate", "location", "neighborhood", "map"],
+    "description": "An abstract neighborhood card with a procedural street map and proximity callouts, requiring no map tiles.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 190,
+    "defaultProps": { "variant": "location-card", "propertyName": "The Meridian House", "address": "18 Garden Avenue · North Quarter", "neighborhood": "North Quarter", "price": "$1.25M", "rooms": "3 bed · 2.5 bath", "area": "2,180 sq ft", "year": "1928", "agent": "Avery Morgan", "contact": "hello@meridian.example", "paletteName": "midnight" }
+  },
+  {
+    "id": "real-estate-films-stats-card",
+    "title": "Property Stats Card",
+    "category": "real-estate-films",
+    "tags": ["real-estate", "stats", "property", "data"],
+    "description": "A clean four-column stats card for bedrooms, baths, area, and build year with an editorial footer.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "stats-card", "propertyName": "The Meridian House", "address": "18 Garden Avenue", "price": "$1.25M", "rooms": "3", "area": "2,180", "year": "1928", "agent": "Avery Morgan", "contact": "hello@meridian.example", "subtitle": "A home with history, updated for now.", "paletteName": "paper" }
+  },
+  {
+    "id": "real-estate-films-before-after-room",
+    "title": "Before After Room",
+    "category": "real-estate-films",
+    "tags": ["real-estate", "renovation", "before-after", "interior"],
+    "description": "A split-screen before-and-after room treatment that supports supplied images or procedural placeholders.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 200,
+    "defaultProps": { "variant": "before-after-room", "propertyName": "The Meridian House", "address": "18 Garden Avenue", "price": "$1.25M", "rooms": "3 bed · 2.5 bath", "area": "2,180 sq ft", "year": "1928", "agent": "Avery Morgan", "contact": "hello@meridian.example", "roomImages": ["", ""], "paletteName": "sunset" }
+  },
+  {
+    "id": "real-estate-films-neighborhood-route",
+    "title": "Neighborhood Route",
+    "category": "real-estate-films",
+    "tags": ["real-estate", "neighborhood", "route", "lifestyle"],
+    "description": "A lifestyle route card connecting the home to nearby parks, markets, and transit through an abstract street grid.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 200,
+    "defaultProps": { "variant": "neighborhood-route", "propertyName": "The Meridian House", "address": "18 Garden Avenue", "neighborhood": "North Quarter", "price": "$1.25M", "rooms": "3 bed · 2.5 bath", "area": "2,180 sq ft", "year": "1928", "agent": "Avery Morgan", "contact": "hello@meridian.example", "paletteName": "ocean" }
+  },
+  {
+    "id": "real-estate-films-price-reveal",
+    "title": "Price Reveal",
+    "category": "real-estate-films",
+    "tags": ["real-estate", "price", "reveal", "listing"],
+    "description": "A cinematic guide-price reveal that pairs the ask with compact property metadata and an optional hero image.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "price-reveal", "propertyName": "The Meridian House", "address": "18 Garden Avenue", "price": "$1.25M", "rooms": "3 bed / 2.5 bath", "area": "2,180 SQ FT", "year": "BUILT 1928", "agent": "Avery Morgan", "contact": "hello@meridian.example", "paletteName": "midnight" }
+  },
+  {
+    "id": "real-estate-films-contact-cta",
+    "title": "Contact CTA",
+    "category": "real-estate-films",
+    "tags": ["real-estate", "agent", "contact", "cta"],
+    "description": "A premium private-viewing end card with agent, contact details, and a clear tour call to action.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "contact-cta", "propertyName": "The Meridian House", "address": "18 Garden Avenue", "price": "$1.25M", "rooms": "3 bed · 2.5 bath", "area": "2,180 sq ft", "year": "1928", "agent": "Avery Morgan", "contact": "hello@meridian.example", "paletteName": "paper" }
+  }
+]

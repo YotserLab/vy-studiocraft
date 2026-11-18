@@ -1,0 +1,198 @@
+[
+  {
+    "id": "cursor-demos-guided-cursor",
+    "title": "Guided Cursor Walkthrough",
+    "category": "cursor-demos",
+    "tags": ["cursor", "tutorial", "product-demo", "guided-flow"],
+    "description": "A deterministic pointer travels through a procedural product surface while a step rail makes every interaction legible.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "guided-cursor",
+      "title": "From click to done",
+      "subtitle": "Turn a complex product flow into a clear, easy-to-follow walkthrough.",
+      "paletteName": "ocean",
+      "cursorLabel": "Choose a view",
+      "labels": ["Open workspace", "Choose a view", "Adjust filters", "Share result"]
+    }
+  },
+  {
+    "id": "cursor-demos-click-ripple",
+    "title": "Click Ripple Response",
+    "category": "cursor-demos",
+    "tags": ["cursor", "click", "ripple", "cta"],
+    "description": "A pointer lands on a primary action and a crisp ripple makes the click-to-response relationship unmistakable.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "click-ripple",
+      "title": "Make the action obvious",
+      "subtitle": "Show the exact moment a user commits an action and the interface acknowledges it.",
+      "paletteName": "candy",
+      "cursorLabel": "Click to publish",
+      "actionLabel": "PUBLISH",
+      "labels": ["Publish", "Audience", "Analytics"]
+    }
+  },
+  {
+    "id": "cursor-demos-drag-and-drop",
+    "title": "Drag and Drop Handoff",
+    "category": "cursor-demos",
+    "tags": ["cursor", "drag", "drop", "workflow"],
+    "description": "A card follows a curved drag path into a highlighted destination with clear source and drop-state feedback.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "drag-and-drop",
+      "title": "Move work forward",
+      "subtitle": "Make a drag-and-drop workflow feel tactile, intentional, and easy to reproduce.",
+      "paletteName": "forest",
+      "cursorLabel": "Drag me",
+      "actionLabel": "DROP HERE",
+      "primaryText": "CARD / 01",
+      "labels": ["Assets", "Canvas", "Layers"]
+    }
+  },
+  {
+    "id": "cursor-demos-hover-reveal",
+    "title": "Hover Reveal Cards",
+    "category": "cursor-demos",
+    "tags": ["cursor", "hover", "feature", "reveal"],
+    "description": "The pointer glides across feature cards, lifting the active card and revealing its contextual action.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "hover-reveal",
+      "title": "Let curiosity lead",
+      "subtitle": "Use hover state choreography to turn a feature grid into a guided discovery sequence.",
+      "paletteName": "sunset",
+      "cursorLabel": "Explore feature",
+      "actionLabel": "LEARN MORE",
+      "labels": ["Instant search", "Shared views", "Smart alerts"]
+    }
+  },
+  {
+    "id": "cursor-demos-multi-cursor",
+    "title": "Multi Cursor Collaboration",
+    "category": "cursor-demos",
+    "tags": ["cursor", "collaboration", "multi-user", "team"],
+    "description": "Three color-coded pointers move through a shared workspace to communicate simultaneous collaboration.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "multi-cursor",
+      "title": "Everyone sees the work",
+      "subtitle": "Make real-time collaboration visible with independent pointers and shared context.",
+      "paletteName": "midnight",
+      "labels": ["Design", "Growth", "Ops", "Shared"]
+    }
+  },
+  {
+    "id": "cursor-demos-keyboard-cursor",
+    "title": "Keyboard Command Cursor",
+    "category": "cursor-demos",
+    "tags": ["cursor", "keyboard", "shortcut", "command-palette"],
+    "description": "A focused command palette pairs a blinking caret with animated shortcut keys for fast keyboard-first product demos.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "keyboard-cursor",
+      "title": "Speed is a feature",
+      "subtitle": "Show how a keyboard shortcut turns intent into an immediate command.",
+      "paletteName": "mono",
+      "cursorLabel": "Focus input",
+      "keyHint": "⌘ K",
+      "primaryText": "Search commands",
+      "actionLabel": "to run"
+    }
+  },
+  {
+    "id": "cursor-demos-cursor-trail",
+    "title": "Cursor Trail Path",
+    "category": "cursor-demos",
+    "tags": ["cursor", "trail", "path", "motion"],
+    "description": "A sequence of ghost pointers traces a curved route so the viewer can read the complete movement, not only its endpoint.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "cursor-trail",
+      "title": "Follow the path",
+      "subtitle": "Expose the route between two interface states with a luminous, deterministic pointer trail.",
+      "paletteName": "ocean",
+      "cursorLabel": "Follow the path"
+    }
+  },
+  {
+    "id": "cursor-demos-spotlight-pointer",
+    "title": "Spotlight Pointer",
+    "category": "cursor-demos",
+    "tags": ["cursor", "spotlight", "focus", "presentation"],
+    "description": "A moving spotlight dims the surrounding interface and keeps one pointer-led region in sharp focus.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "spotlight-pointer",
+      "title": "Look exactly here",
+      "subtitle": "Direct attention to the one piece of proof that should survive the cut.",
+      "paletteName": "midnight",
+      "cursorLabel": "Look here",
+      "labels": ["Signal", "Proof", "Context"]
+    }
+  },
+  {
+    "id": "cursor-demos-selection-drag",
+    "title": "Selection Drag",
+    "category": "cursor-demos",
+    "tags": ["cursor", "selection", "text", "document"],
+    "description": "A cursor drags across document lines and paints a readable text selection for editing and review demos.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "selection-drag",
+      "title": "Select the important part",
+      "subtitle": "Make a text-selection gesture feel deliberate enough to teach a real editing workflow.",
+      "paletteName": "paper",
+      "cursorLabel": "Select text",
+      "actionLabel": "DRAG TO SELECT"
+    }
+  },
+  {
+    "id": "cursor-demos-touch-pointer",
+    "title": "Touch Pointer Swipe",
+    "category": "cursor-demos",
+    "tags": ["cursor", "touch", "mobile", "swipe"],
+    "description": "A large touch indicator travels through a mobile UI with tap ripples and a clear gesture-oriented explanation.",
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "touch-pointer",
+      "title": "Tap. Swipe. Discover.",
+      "subtitle": "Make mobile interaction legible in a single, polished gesture story.",
+      "paletteName": "candy",
+      "cursorLabel": "Swipe to explore",
+      "primaryText": "Tap. Swipe. Discover.",
+      "secondaryText": "Make touch behavior obvious in a single frame.",
+      "labels": ["Home", "Explore", "Saved"]
+    }
+  }
+]

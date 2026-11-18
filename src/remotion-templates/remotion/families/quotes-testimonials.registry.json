@@ -1,0 +1,246 @@
+[
+  {
+    "id": "quote-giant-serif",
+    "title": "Giant Serif Quote",
+    "category": "quotes-testimonials",
+    "tags": ["quote", "serif", "editorial"],
+    "description": "An oversized quotation mark anchors a cinematic serif quote reveal with a procedural author avatar.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "giant-serif",
+      "quote": "The best products feel inevitable once they arrive.",
+      "author": "Maya Chen",
+      "role": "Founder, Northstar",
+      "paletteName": "paper"
+    }
+  },
+  {
+    "id": "quote-centered-minimal",
+    "title": "Centered Minimal Testimonial",
+    "category": "quotes-testimonials",
+    "tags": ["minimal", "centered", "clean"],
+    "description": "A restrained centered quote with a fine accent rule and softly delayed author attribution.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 120,
+    "defaultProps": {
+      "variant": "centered-minimal",
+      "quote": "Simple on the surface. Transformative underneath.",
+      "author": "Noah Williams",
+      "role": "VP Product, Meridian",
+      "paletteName": "mono"
+    }
+  },
+  {
+    "id": "quote-card-stack",
+    "title": "Auto-Advancing Quote Stack",
+    "category": "quotes-testimonials",
+    "tags": ["cards", "stack", "carousel"],
+    "description": "Three dimensional testimonial cards rotate to the front in an automatic three-story sequence.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "card-stack",
+      "quote": "We launched in days instead of months.",
+      "author": "Avery Brooks",
+      "role": "COO, Frame Labs",
+      "paletteName": "midnight",
+      "testimonials": [
+        {
+          "quote": "The workflow finally matches how our team thinks.",
+          "author": "Samir Patel",
+          "role": "Design Director, Forma"
+        },
+        {
+          "quote": "Our weekly reporting now takes less than an hour.",
+          "author": "Elena Rossi",
+          "role": "Head of Growth, Arc"
+        }
+      ]
+    }
+  },
+  {
+    "id": "quote-testimonial-wall",
+    "title": "Testimonial Pop-In Wall",
+    "category": "quotes-testimonials",
+    "tags": ["wall", "grid", "social-proof"],
+    "description": "A six-card wall of customer voices pops into a crisp grid with deterministic stagger and tilt.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "testimonial-wall",
+      "quote": "A rare tool the whole company adopted willingly.",
+      "author": "Jamie Liu",
+      "role": "Operations, Sora",
+      "paletteName": "ocean",
+      "testimonials": [
+        {
+          "quote": "Clear, fast, and genuinely delightful.",
+          "author": "Priya Shah",
+          "role": "Product Lead, Fieldwork"
+        },
+        {
+          "quote": "It gave us back our Monday mornings.",
+          "author": "Theo Martin",
+          "role": "Founder, Goodwell"
+        },
+        {
+          "quote": "The quality jump was immediate.",
+          "author": "Zoe Carter",
+          "role": "Creative Director, Kindred"
+        },
+        {
+          "quote": "Our clients noticed before we told them.",
+          "author": "Omar Reed",
+          "role": "Partner, Signal House"
+        },
+        {
+          "quote": "Everything important is finally in one place.",
+          "author": "Ana Silva",
+          "role": "Chief of Staff, Alto"
+        }
+      ]
+    }
+  },
+  {
+    "id": "quote-tweet-card",
+    "title": "Tweet-Style Customer Card",
+    "category": "quotes-testimonials",
+    "tags": ["social", "tweet", "handle"],
+    "description": "A polished social-post testimonial with generated avatar, handle, timestamp, and engagement row.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 135,
+    "defaultProps": {
+      "variant": "tweet-card",
+      "quote": "Just shipped our biggest update yet. The new workflow made the impossible deadline feel calm.",
+      "author": "Jordan Kim",
+      "role": "Maker, Daylight",
+      "handle": "@jordankbuilds",
+      "paletteName": "ocean"
+    }
+  },
+  {
+    "id": "quote-star-rating",
+    "title": "Five-Star Review Blurb",
+    "category": "quotes-testimonials",
+    "tags": ["rating", "review", "stars"],
+    "description": "Five stars spring on one by one before revealing a centered customer review and byline.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 120,
+    "defaultProps": {
+      "variant": "star-rating",
+      "quote": "Worth every minute we invested—and then some.",
+      "author": "Leila Grant",
+      "role": "Head of Marketing, Amble",
+      "rating": 5,
+      "paletteName": "forest"
+    }
+  },
+  {
+    "id": "quote-editorial-pull",
+    "title": "Editorial Pull Quote",
+    "category": "quotes-testimonials",
+    "tags": ["editorial", "magazine", "rules"],
+    "description": "Magazine-inspired typography framed by strong horizontal rules and a compact source column.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "editorial-pull",
+      "quote": "Good design does not ask for attention. It earns trust, then gets out of the way.",
+      "author": "Imani Foster",
+      "role": "Creative Partner, Edition 12",
+      "paletteName": "paper"
+    }
+  },
+  {
+    "id": "quote-video-frame",
+    "title": "Video Testimonial Frame",
+    "category": "quotes-testimonials",
+    "tags": ["video", "caption", "interview"],
+    "description": "A video-call placeholder with generated initials, play control, quote panel, and caption bar.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "video-frame",
+      "quote": "It gave our small team the confidence and polish of a much larger studio.",
+      "author": "Marcus Green",
+      "role": "Co-founder, Common Thread",
+      "caption": "It gave our small team the confidence and polish of a much larger studio.",
+      "paletteName": "sunset"
+    }
+  },
+  {
+    "id": "quote-rotating-emphasis",
+    "title": "Rotating Word Emphasis",
+    "category": "quotes-testimonials",
+    "tags": ["kinetic", "emphasis", "words"],
+    "description": "A bold testimonial cycles a hand-highlighted accent across individual words over time.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "rotating-emphasis",
+      "quote": "This changed how our entire team creates together.",
+      "author": "Nina Okafor",
+      "role": "Brand Lead, Assembly",
+      "emphasisWord": "entire",
+      "paletteName": "candy"
+    }
+  },
+  {
+    "id": "quote-marquee-row",
+    "title": "Testimonial Marquee Row",
+    "category": "quotes-testimonials",
+    "tags": ["marquee", "reviews", "continuous"],
+    "description": "A continuous edge-faded row carries multiple review cards across the screen in a seamless loop.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "marquee-row",
+      "quote": "The fastest win we had all quarter.",
+      "author": "Caleb Jones",
+      "role": "Revenue Ops, Loopline",
+      "rating": 5,
+      "paletteName": "midnight",
+      "testimonials": [
+        {
+          "quote": "Our team was productive on day one.",
+          "author": "Sofia Mendes",
+          "role": "GM, Otherway",
+          "rating": 5
+        },
+        {
+          "quote": "Beautifully focused and incredibly quick.",
+          "author": "Ben Ito",
+          "role": "Designer, Relay",
+          "rating": 5
+        },
+        {
+          "quote": "It paid for itself in the first week.",
+          "author": "Ruth Evans",
+          "role": "Finance Lead, Cedar",
+          "rating": 5
+        }
+      ]
+    }
+  }
+]

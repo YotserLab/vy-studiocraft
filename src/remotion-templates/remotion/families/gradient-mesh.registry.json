@@ -1,0 +1,222 @@
+[
+  {
+    "id": "gradient-aurora-word",
+    "category": "gradient-mesh",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "aurora-mesh",
+      "headline": "Aurora",
+      "subline": "Color in motion",
+      "paletteName": "aurora"
+    },
+    "title": "Aurora Word",
+    "tags": [
+      "gradient",
+      "mesh",
+      "ambient",
+      "background"
+    ],
+    "description": "Aurora Word \u2014 animated gradient/mesh showcase template with rich color craft, blur layering and blend modes."
+  },
+  {
+    "id": "gradient-duotone-blob",
+    "category": "gradient-mesh",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "duotone-blob",
+      "headline": "Shape the spectrum",
+      "subline": "Two tones. Infinite movement.",
+      "paletteName": "neon"
+    },
+    "title": "Duotone Blob",
+    "tags": [
+      "gradient",
+      "mesh",
+      "ambient",
+      "background"
+    ],
+    "description": "Duotone Blob \u2014 animated gradient/mesh showcase template with rich color craft, blur layering and blend modes."
+  },
+  {
+    "id": "gradient-grain-poster",
+    "category": "gradient-mesh",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 140,
+    "defaultProps": {
+      "variant": "grainy-poster",
+      "headline": "Electric form",
+      "subline": "A study in color and texture",
+      "paletteName": "sunset"
+    },
+    "title": "Grain Poster",
+    "tags": [
+      "gradient",
+      "mesh",
+      "ambient",
+      "background"
+    ],
+    "description": "Grain Poster \u2014 animated gradient/mesh showcase template with rich color craft, blur layering and blend modes."
+  },
+  {
+    "id": "gradient-liquid-waves",
+    "category": "gradient-mesh",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "liquid-waves",
+      "headline": "Flow forward",
+      "subline": "Ideas move like water",
+      "paletteName": "ocean"
+    },
+    "title": "Liquid Waves",
+    "tags": [
+      "gradient",
+      "mesh",
+      "ambient",
+      "background"
+    ],
+    "description": "Liquid Waves \u2014 animated gradient/mesh showcase template with rich color craft, blur layering and blend modes."
+  },
+  {
+    "id": "gradient-glass-card",
+    "category": "gradient-mesh",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 160,
+    "defaultProps": {
+      "variant": "glass-card",
+      "headline": "Clarity, layered",
+      "subline": "A translucent view of what comes next",
+      "paletteName": "aurora"
+    },
+    "title": "Glass Card",
+    "tags": [
+      "gradient",
+      "mesh",
+      "ambient",
+      "background"
+    ],
+    "description": "Glass Card \u2014 animated gradient/mesh showcase template with rich color craft, blur layering and blend modes."
+  },
+  {
+    "id": "gradient-radial-orbit",
+    "category": "gradient-mesh",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 200,
+    "defaultProps": {
+      "variant": "radial-orbit",
+      "headline": "Center of gravity",
+      "subline": "Ideas in orbit",
+      "paletteName": "neon"
+    },
+    "title": "Radial Orbit",
+    "tags": [
+      "gradient",
+      "mesh",
+      "ambient",
+      "background"
+    ],
+    "description": "Radial Orbit \u2014 animated gradient/mesh showcase template with rich color craft, blur layering and blend modes."
+  },
+  {
+    "id": "gradient-vertical-bands",
+    "category": "gradient-mesh",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "vertical-bands",
+      "headline": "Parallel energy",
+      "subline": "Every color has a direction",
+      "paletteName": "sunset"
+    },
+    "title": "Vertical Bands",
+    "tags": [
+      "gradient",
+      "mesh",
+      "ambient",
+      "background"
+    ],
+    "description": "Vertical Bands \u2014 animated gradient/mesh showcase template with rich color craft, blur layering and blend modes."
+  },
+  {
+    "id": "gradient-soft-focus",
+    "category": "gradient-mesh",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "soft-focus",
+      "headline": "Breathe into color",
+      "subline": "Slow light \u00b7 soft edges",
+      "paletteName": "pastel"
+    },
+    "title": "Soft Focus",
+    "tags": [
+      "gradient",
+      "mesh",
+      "ambient",
+      "background"
+    ],
+    "description": "Soft Focus \u2014 animated gradient/mesh showcase template with rich color craft, blur layering and blend modes."
+  },
+  {
+    "id": "gradient-ribbon-sweep",
+    "category": "gradient-mesh",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 140,
+    "defaultProps": {
+      "variant": "ribbon-sweep",
+      "headline": "Make a bright move",
+      "subline": "Momentum made visible",
+      "paletteName": "neon"
+    },
+    "title": "Ribbon Sweep",
+    "tags": [
+      "gradient",
+      "mesh",
+      "ambient",
+      "background"
+    ],
+    "description": "Ribbon Sweep \u2014 animated gradient/mesh showcase template with rich color craft, blur layering and blend modes."
+  },
+  {
+    "id": "gradient-translucent-panes",
+    "category": "gradient-mesh",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 170,
+    "defaultProps": {
+      "variant": "translucent-panes",
+      "headline": "Depth in every layer",
+      "subline": "Light passes through",
+      "paletteName": "ocean"
+    },
+    "title": "Translucent Panes",
+    "tags": [
+      "gradient",
+      "mesh",
+      "ambient",
+      "background"
+    ],
+    "description": "Translucent Panes \u2014 animated gradient/mesh showcase template with rich color craft, blur layering and blend modes."
+  }
+]

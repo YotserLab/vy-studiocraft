@@ -1,0 +1,122 @@
+[
+  {
+    "id": "icon-stories-icon-grid",
+    "category": "branding-identity",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "icon-grid", "icons": ["spark", "arrow", "shield", "heart", "bolt", "globe", "chat", "play"], "labels": ["Discover", "Connect", "Protect", "Delight", "Accelerate", "Explore", "Support", "Create"], "strokeColor": "#F8FAFC", "fillColor": "#5EEAD4", "grid": 4, "highlightIndex": 0, "brandName": "Northstar", "paletteName": "midnight", "headline": "Small marks. Clear stories.", "subline": "A system that scales from feature to feeling.", "speed": 1 },
+    "title": "Icon Grid",
+    "tags": ["icons", "grid", "brand", "features", "system"],
+    "description": "Icon Grid — an animated, labeled icon matrix that assembles into a reusable visual language for product and brand systems."
+  },
+  {
+    "id": "icon-stories-stroke-draw",
+    "category": "branding-identity",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "stroke-draw", "icons": ["spark", "arrow", "shield", "heart", "bolt", "globe"], "labels": ["Spark", "Move", "Guard", "Care", "Power", "World"], "strokeColor": "#F8FAFC", "fillColor": "#5EEAD4", "grid": 4, "highlightIndex": 0, "brandName": "Northstar", "paletteName": "ocean", "headline": "Draw the idea.", "subline": "Every mark begins as a line.", "speed": 1 },
+    "title": "Stroke Draw",
+    "tags": ["icons", "stroke", "draw", "line", "reveal"],
+    "description": "Stroke Draw — a sequential stroke-reveal study that shows how a consistent icon family is built one mark at a time."
+  },
+  {
+    "id": "icon-stories-feature-icons",
+    "category": "branding-identity",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "feature-icons", "icons": ["spark", "arrow", "shield", "heart", "bolt"], "labels": ["Fast setup", "Connected", "Private", "Human", "Powerful"], "strokeColor": "#F8FAFC", "fillColor": "#5EEAD4", "grid": 5, "highlightIndex": 2, "brandName": "Northstar", "paletteName": "aurora", "headline": "Features, made visible.", "subline": "Translate product value into a glance.", "speed": 1 },
+    "title": "Feature Icons",
+    "tags": ["icons", "features", "product", "labels", "value"],
+    "description": "Feature Icons — five animated feature callouts pair a recognizable mark with concise product language and a highlighted priority."
+  },
+  {
+    "id": "icon-stories-icon-to-pattern",
+    "category": "branding-identity",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "icon-to-pattern", "icons": ["spark", "arrow", "shield", "heart", "bolt", "globe", "chat", "play"], "labels": ["Spark", "Move", "Guard", "Care", "Power", "World", "Talk", "Play"], "strokeColor": "#F8FAFC", "fillColor": "#5EEAD4", "grid": 8, "highlightIndex": 0, "brandName": "Northstar", "paletteName": "neon", "headline": "One icon. Infinite rhythm.", "subline": "A compact language becomes a living pattern.", "speed": 1 },
+    "title": "Icon To Pattern",
+    "tags": ["icons", "pattern", "repeat", "motion", "brand"],
+    "description": "Icon To Pattern — a tiled field of procedural icons drifts and pulses into a flexible pattern for backgrounds, transitions, and brand beds."
+  },
+  {
+    "id": "icon-stories-filled-outline",
+    "category": "branding-identity",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "filled-outline", "icons": ["spark", "arrow", "shield", "heart"], "labels": ["Signal", "Direction", "Trust", "Care"], "strokeColor": "#F8FAFC", "fillColor": "#5EEAD4", "grid": 4, "highlightIndex": 1, "brandName": "Northstar", "paletteName": "candy", "headline": "Fill the outline.", "subline": "A single gesture, two weights of expression.", "speed": 1 },
+    "title": "Filled Outline",
+    "tags": ["icons", "filled", "outline", "morph", "style"],
+    "description": "Filled Outline — four icons continuously transition between outline and filled treatments to demonstrate a coherent weight system."
+  },
+  {
+    "id": "icon-stories-icon-family",
+    "category": "branding-identity",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 190,
+    "defaultProps": { "variant": "icon-family", "icons": ["spark", "arrow", "shield", "heart", "bolt", "globe", "chat"], "labels": ["Core", "Move", "Trust", "Care", "Power", "World", "Support"], "strokeColor": "#F8FAFC", "fillColor": "#5EEAD4", "grid": 6, "highlightIndex": 0, "brandName": "Northstar", "paletteName": "forest", "headline": "Many marks. One family.", "subline": "A connected system keeps every moment recognizable.", "speed": 1 },
+    "title": "Icon Family",
+    "tags": ["icons", "family", "system", "network", "identity"],
+    "description": "Icon Family — a central mark connects to supporting icons in a radial family tree, making hierarchy and consistency visible."
+  },
+  {
+    "id": "icon-stories-icon-morph",
+    "category": "branding-identity",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "icon-morph", "icons": ["spark", "arrow", "shield", "heart", "bolt", "globe"], "labels": ["Spark", "Move", "Guard", "Care", "Power", "World"], "strokeColor": "#F8FAFC", "fillColor": "#5EEAD4", "grid": 4, "highlightIndex": 0, "brandName": "Northstar", "paletteName": "sunset", "headline": "Meaning can move.", "subline": "Morph between ideas without losing the language.", "speed": 1 },
+    "title": "Icon Morph",
+    "tags": ["icons", "morph", "transition", "shape", "brand"],
+    "description": "Icon Morph — a hero icon shifts through adjacent semantic marks with a restrained orbit and labeled before/after relationship."
+  },
+  {
+    "id": "icon-stories-navigation-set",
+    "category": "branding-identity",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "navigation-set", "icons": ["spark", "arrow", "chat", "heart"], "labels": ["Home", "Explore", "Inbox", "Profile"], "strokeColor": "#F8FAFC", "fillColor": "#5EEAD4", "grid": 4, "highlightIndex": 0, "brandName": "Northstar", "paletteName": "midnight", "headline": "Navigate with intent.", "subline": "A practical set for every destination.", "speed": 1 },
+    "title": "Navigation Set",
+    "tags": ["icons", "navigation", "app", "tabs", "ui"],
+    "description": "Navigation Set — an app-like shell cycles active navigation states to demonstrate selected, quiet, and labeled icon behavior."
+  },
+  {
+    "id": "icon-stories-service-icons",
+    "category": "branding-identity",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "service-icons", "icons": ["spark", "arrow", "shield", "heart", "bolt", "globe"], "labels": ["Automation", "Integrations", "Security", "Support", "Speed", "Global"], "strokeColor": "#F8FAFC", "fillColor": "#5EEAD4", "grid": 3, "highlightIndex": 2, "brandName": "Northstar", "paletteName": "ocean", "headline": "The service layer.", "subline": "Turn invisible capabilities into a clear map.", "speed": 1 },
+    "title": "Service Icons",
+    "tags": ["icons", "services", "platform", "capabilities", "grid"],
+    "description": "Service Icons — a six-card capability grid reveals service areas with status labels and one highlighted system priority."
+  },
+  {
+    "id": "icon-stories-icon-lockup",
+    "category": "branding-identity",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "icon-lockup", "icons": ["spark"], "labels": ["Northstar"], "strokeColor": "#F8FAFC", "fillColor": "#5EEAD4", "grid": 1, "highlightIndex": 0, "brandName": "Northstar", "paletteName": "aurora", "headline": "A mark with a voice.", "subline": "Lock up the icon, name, and promise.", "speed": 1 },
+    "title": "Icon Lockup",
+    "tags": ["icons", "logo", "lockup", "brand", "identity"],
+    "description": "Icon Lockup — a polished icon-and-wordmark reveal resolves into a reusable brand lockup with a quiet supporting promise."
+  }
+]

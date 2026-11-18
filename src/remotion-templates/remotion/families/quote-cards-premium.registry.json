@@ -1,0 +1,193 @@
+[
+  {
+    "id": "quote-cards-premium-kinetic-quote",
+    "title": "Kinetic Quote",
+    "category": "broadcast-editorial",
+    "tags": ["quote", "kinetic", "editorial"],
+    "description": "A cinematic word-by-word quotation reveal with an authored byline and voice-note framing.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "kinetic-quote",
+      "quote": "The work becomes clear when the noise has somewhere to go.",
+      "author": "Maya Chen",
+      "source": "Field Notes, Issue 04",
+      "paletteName": "midnight"
+    }
+  },
+  {
+    "id": "quote-cards-premium-paper-quote",
+    "title": "Paper Quote",
+    "category": "broadcast-editorial",
+    "tags": ["quote", "paper", "print"],
+    "description": "A tactile paper-card quotation with editorial rules, soft rotation, and a print-inspired reveal.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "paper-quote",
+      "quote": "A good sentence leaves room for the reader to arrive.",
+      "author": "Nora Williams",
+      "source": "The Sunday Review",
+      "paletteName": "paper"
+    }
+  },
+  {
+    "id": "quote-cards-premium-typewriter-quote",
+    "title": "Typewriter Quote",
+    "category": "broadcast-editorial",
+    "tags": ["quote", "typewriter", "transcript"],
+    "description": "A monospaced transcript types on one character at a time before the source line appears.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "typewriter-quote",
+      "quote": "We stopped chasing speed and started designing for momentum.",
+      "author": "Ari Okafor",
+      "source": "Studio Interview",
+      "paletteName": "forest"
+    }
+  },
+  {
+    "id": "quote-cards-premium-split-quote",
+    "title": "Split Quote",
+    "category": "broadcast-editorial",
+    "tags": ["quote", "split-screen", "portrait"],
+    "description": "A portrait or procedural color field balances a large editorial quotation and attribution panel.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "split-quote",
+      "quote": "The strongest point of view is the one you can explain simply.",
+      "author": "Elena Rossi",
+      "source": "Northstar Journal",
+      "paletteName": "ocean"
+    }
+  },
+  {
+    "id": "quote-cards-premium-quote-over-photo",
+    "title": "Quote Over Photo",
+    "category": "broadcast-editorial",
+    "tags": ["quote", "photo", "cinematic"],
+    "description": "A full-bleed image or procedural gradient carries a high-contrast cinematic quote and source.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "quote-over-photo",
+      "quote": "Attention is a form of care.",
+      "author": "Imani Foster",
+      "source": "Longform / 12",
+      "paletteName": "sunset"
+    }
+  },
+  {
+    "id": "quote-cards-premium-quote-wall",
+    "title": "Quote Wall",
+    "category": "broadcast-editorial",
+    "tags": ["quote", "grid", "voices"],
+    "description": "Six staggered quotation cards form a premium wall of short voices for a montage or roundup.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "quote-wall",
+      "quote": "Clarity is a competitive advantage.",
+      "author": "Jamie Liu",
+      "source": "Sora Quarterly",
+      "paletteName": "candy",
+      "quotes": [
+        { "quote": "Make the important thing visible.", "author": "Priya Shah", "source": "Fieldwork" },
+        { "quote": "A smaller surface can hold a bigger idea.", "author": "Theo Martin", "source": "Goodwell" },
+        { "quote": "The details carry the trust.", "author": "Zoe Carter", "source": "Kindred" },
+        { "quote": "Build for the next conversation.", "author": "Omar Reed", "source": "Signal House" },
+        { "quote": "Good work leaves evidence behind.", "author": "Ana Silva", "source": "Alto" }
+      ]
+    }
+  },
+  {
+    "id": "quote-cards-premium-source-reveal",
+    "title": "Source Reveal",
+    "category": "broadcast-editorial",
+    "tags": ["quote", "citation", "reveal"],
+    "description": "A centered quote holds in silence before its author, source, and citation resolve beneath a rule.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "source-reveal",
+      "quote": "The source changes how the sentence lands.",
+      "author": "Ruth Evans",
+      "source": "The Making Of",
+      "citation": "Episode 08",
+      "paletteName": "mono"
+    }
+  },
+  {
+    "id": "quote-cards-premium-quote-underline",
+    "title": "Quote Underline",
+    "category": "broadcast-editorial",
+    "tags": ["quote", "emphasis", "underline"],
+    "description": "A restrained quote treatment draws a deliberate underline beneath its key word before attribution.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "quote-underline",
+      "quote": "The most useful ideas are the ones people can carry forward.",
+      "author": "Caleb Jones",
+      "source": "Assembly Letters",
+      "emphasisWord": "carry",
+      "paletteName": "forest"
+    }
+  },
+  {
+    "id": "quote-cards-premium-longform-pullquote",
+    "title": "Longform Pullquote",
+    "category": "broadcast-editorial",
+    "tags": ["quote", "longform", "magazine"],
+    "description": "A magazine-like pull quote sits beside supporting copy and a visible source note for longform edits.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "longform-pullquote",
+      "quote": "A point of view becomes useful when it survives contact with the work.",
+      "author": "Sofia Mendes",
+      "source": "The Practice",
+      "body": "The sentence is short, but the work around it is not. Give the supporting context a quiet column, then let the pull quote do what it does best: create a memorable handle for the idea.",
+      "citation": "Vol. 03 · Editorial desk",
+      "paletteName": "paper"
+    }
+  },
+  {
+    "id": "quote-cards-premium-quote-to-logo",
+    "title": "Quote To Logo",
+    "category": "broadcast-editorial",
+    "tags": ["quote", "logo", "endcard"],
+    "description": "A final quotation recedes into a clean source or logo lockup for an editorial end card.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "quote-to-logo",
+      "quote": "Make the work memorable, then make it useful.",
+      "author": "Nina Okafor",
+      "source": "Assembly",
+      "paletteName": "midnight"
+    }
+  }
+]

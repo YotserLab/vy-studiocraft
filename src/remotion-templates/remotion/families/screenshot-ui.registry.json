@@ -1,0 +1,189 @@
+[
+  {
+    "id": "screenshot-browser-frame",
+    "title": "Browser Frame Reveal",
+    "category": "screenshot-ui",
+    "tags": ["screenshot", "browser", "saas", "product-tour"],
+    "description": "A polished browser frame rises beside concise positioning copy, ready for a real product screenshot or procedural UI fallback.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "browser-frame",
+      "title": "See the whole picture",
+      "subtitle": "Turn a product screenshot into a confident, editorial product moment.",
+      "paletteName": "midnight",
+      "url": "https://app.northstar.com/overview",
+      "accentLabel": "OVERVIEW",
+      "callouts": ["Primary action", "Live status", "Context menu"],
+      "steps": ["Open", "Explore", "Share"],
+      "metric": "+42% clarity"
+    }
+  },
+  {
+    "id": "screenshot-app-device",
+    "title": "App Device Showcase",
+    "category": "screenshot-ui",
+    "tags": ["screenshot", "mobile", "app", "phone"],
+    "description": "A dimensional phone device rotates into view with an app screen, interaction chips, and a clean feature narrative.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "app-screenshot",
+      "title": "Your work, in motion",
+      "subtitle": "Present an app screen as a tactile product reveal with a clear three-step story.",
+      "paletteName": "ocean",
+      "url": "https://mobile.example.com",
+      "steps": ["Open workspace", "Review activity", "Share result"]
+    }
+  },
+  {
+    "id": "screenshot-annotation-callouts",
+    "title": "Annotation Callouts",
+    "category": "screenshot-ui",
+    "tags": ["screenshot", "annotation", "callouts", "explainer"],
+    "description": "Three numbered annotation callouts point into a browser screenshot to explain the important UI controls without clutter.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "annotation-callouts",
+      "title": "Make every control legible",
+      "subtitle": "Use numbered callouts to explain product behavior at a glance.",
+      "paletteName": "candy",
+      "url": "https://app.example.com/editor",
+      "callouts": ["Primary action", "Live status", "Context menu"]
+    }
+  },
+  {
+    "id": "screenshot-before-after-wipe",
+    "title": "Before After Wipe",
+    "category": "screenshot-ui",
+    "tags": ["screenshot", "comparison", "before-after", "redesign"],
+    "description": "A moving split wipe compares a muted before state with a vivid after state and a measurable outcome badge.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "before-after",
+      "title": "A clearer experience",
+      "subtitle": "Show the payoff of a UI redesign with a strong, readable comparison.",
+      "paletteName": "sunset",
+      "metric": "+42% clarity"
+    }
+  },
+  {
+    "id": "screenshot-focus-zoom",
+    "title": "Focus Zoom Detail",
+    "category": "screenshot-ui",
+    "tags": ["screenshot", "zoom", "detail", "focus"],
+    "description": "A full interface slowly pushes into a highlighted detail region, making a small interaction feel important and cinematic.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "focus-zoom",
+      "title": "Find the signal",
+      "subtitle": "Guide attention from the complete interface into one decisive detail.",
+      "paletteName": "forest",
+      "accentLabel": "KEY MOMENT"
+    }
+  },
+  {
+    "id": "screenshot-cursor-walkthrough",
+    "title": "Cursor Walkthrough",
+    "category": "screenshot-ui",
+    "tags": ["screenshot", "cursor", "tutorial", "walkthrough"],
+    "description": "A deterministic cursor travels through a browser UI while a compact step rail labels each action in sequence.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "cursor-walkthrough",
+      "title": "From click to done",
+      "subtitle": "Turn a product flow into a simple, easy-to-follow tutorial.",
+      "paletteName": "ocean",
+      "cursorLabel": "Choose a view",
+      "steps": ["Open workspace", "Choose a view", "Adjust filters", "Share result"]
+    }
+  },
+  {
+    "id": "screenshot-stacked-screens",
+    "title": "Stacked Screens",
+    "category": "screenshot-ui",
+    "tags": ["screenshot", "stack", "screens", "sequence"],
+    "description": "Three browser screens fan into a dimensional stack beside a concise workflow narrative for multi-state product stories.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "stacked-screens",
+      "title": "One flow, every state",
+      "subtitle": "Layer multiple screenshots to show how a workflow evolves from start to finish.",
+      "paletteName": "midnight",
+      "steps": ["Capture", "Review", "Ship"]
+    }
+  },
+  {
+    "id": "screenshot-window-chrome",
+    "title": "Window Chrome Cascade",
+    "category": "screenshot-ui",
+    "tags": ["screenshot", "window", "desktop", "context"],
+    "description": "Overlapping desktop-style browser windows cascade into place to establish product context and hierarchy.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "window-chrome",
+      "title": "Context is a feature",
+      "subtitle": "Show the surrounding windows that make an interface feel real and connected.",
+      "paletteName": "paper",
+      "url": "https://app.example.com/dashboard"
+    }
+  },
+  {
+    "id": "screenshot-evidence-spotlight",
+    "title": "Evidence Spotlight",
+    "category": "screenshot-ui",
+    "tags": ["screenshot", "spotlight", "evidence", "highlight"],
+    "description": "A pulsing spotlight isolates the key region of a screenshot and labels it as the moment viewers should remember.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "evidence-spotlight",
+      "title": "The moment that matters",
+      "subtitle": "Use a controlled spotlight to make proof, status, or a result impossible to miss.",
+      "paletteName": "sunset",
+      "accentLabel": "KEY MOMENT"
+    }
+  },
+  {
+    "id": "screenshot-ui-flow-map",
+    "title": "UI Flow Map",
+    "category": "screenshot-ui",
+    "tags": ["screenshot", "flow", "journey", "states"],
+    "description": "Four screenshot states connect into an animated interaction map that communicates a complete user journey.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "ui-flow-map",
+      "title": "The path is the product",
+      "subtitle": "Map a multi-screen journey into four clear states with directional handoffs.",
+      "paletteName": "forest",
+      "steps": ["Sign in", "Choose project", "Review screen", "Publish"]
+    }
+  }
+]

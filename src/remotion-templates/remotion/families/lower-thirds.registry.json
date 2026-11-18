@@ -1,0 +1,172 @@
+[
+  {
+    "id": "lower-third-bar-rule",
+    "title": "Broadcast Bar Rule",
+    "category": "lower-thirds",
+    "tags": ["broadcast", "news", "strap"],
+    "description": "A solid broadcast slab slides open from an accent rule, followed by independent name and role wipes.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 100,
+    "defaultProps": {
+      "variant": "bar-rule",
+      "name": "Maya Chen",
+      "role": "Senior Correspondent",
+      "paletteName": "ocean"
+    }
+  },
+  {
+    "id": "lower-third-pill-stack",
+    "title": "On-Air Pill Stack",
+    "category": "lower-thirds",
+    "tags": ["interview", "pill", "modern"],
+    "description": "A spring-loaded on-air pill connects to a crisp floating name and title stack for modern interviews.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 105,
+    "defaultProps": {
+      "variant": "pill-stack",
+      "name": "Jordan Ellis",
+      "role": "Product Design Lead",
+      "paletteName": "candy"
+    }
+  },
+  {
+    "id": "lower-third-side-tab",
+    "title": "Profile Side Tab",
+    "category": "lower-thirds",
+    "tags": ["profile", "documentary", "tab"],
+    "description": "A vertical profile tab rises first, then unlocks a dark telescoping identity panel from its side.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 110,
+    "defaultProps": {
+      "variant": "side-tab",
+      "name": "Amara Okafor",
+      "role": "Climate Researcher",
+      "paletteName": "forest"
+    }
+  },
+  {
+    "id": "lower-third-underline-kicker",
+    "title": "Editorial Underline Kicker",
+    "category": "lower-thirds",
+    "tags": ["editorial", "kicker", "elegant"],
+    "description": "An editorial role kicker and masked name reveal settle over a precision gradient underline sweep.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 120,
+    "defaultProps": {
+      "variant": "underline-kicker",
+      "name": "Sofia Laurent",
+      "role": "Culture Editor",
+      "paletteName": "sunset"
+    }
+  },
+  {
+    "id": "lower-third-corner-card",
+    "title": "Corner Bracket ID",
+    "category": "lower-thirds",
+    "tags": ["documentary", "card", "brackets"],
+    "description": "Four animated corner brackets assemble around a restrained glass identity card with an indexed detail.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 125,
+    "defaultProps": {
+      "variant": "corner-card",
+      "name": "Dr. Elias Monroe",
+      "role": "Astrophysicist",
+      "paletteName": "midnight"
+    }
+  },
+  {
+    "id": "lower-third-minimal-hairline",
+    "title": "Minimal Hairline Locator",
+    "category": "lower-thirds",
+    "tags": ["minimal", "corporate", "hairline"],
+    "description": "A locator dot draws a single hairline before quiet, container-free typography rises into place.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 90,
+    "defaultProps": {
+      "variant": "minimal-hairline",
+      "name": "Nina Patel",
+      "role": "Chief Strategy Officer",
+      "paletteName": "mono"
+    }
+  },
+  {
+    "id": "lower-third-edge-glow",
+    "title": "Gradient Edge Glow",
+    "category": "lower-thirds",
+    "tags": ["technology", "glow", "glass"],
+    "description": "A luminous multi-color edge grows around a dark glass panel with a live status beacon.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 130,
+    "defaultProps": {
+      "variant": "edge-glow",
+      "name": "Theo Ramirez",
+      "role": "AI Systems Architect",
+      "paletteName": "ocean"
+    }
+  },
+  {
+    "id": "lower-third-dual-divider",
+    "title": "Dual Panel Divider",
+    "category": "lower-thirds",
+    "tags": ["panel", "guest", "divider"],
+    "description": "Two offset information panels arrive on separate beats and lock around a central accent divider.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 115,
+    "defaultProps": {
+      "variant": "dual-divider",
+      "name": "Leila Morgan",
+      "role": "Founder, Northstar Labs",
+      "paletteName": "candy"
+    }
+  },
+  {
+    "id": "lower-third-diagonal-ribbon",
+    "title": "Diagonal Live Ribbon",
+    "category": "lower-thirds",
+    "tags": ["sports", "news", "ribbon"],
+    "description": "A clipped live ribbon races on with a diagonal nose, high-contrast channel block, and trailing chevrons.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 100,
+    "defaultProps": {
+      "variant": "diagonal-ribbon",
+      "name": "Marcus Reed",
+      "role": "Match Analyst",
+      "paletteName": "sunset"
+    }
+  },
+  {
+    "id": "lower-third-signal-cascade",
+    "title": "Signal Dot Cascade",
+    "category": "lower-thirds",
+    "tags": ["podcast", "signal", "cascade"],
+    "description": "A pulsing three-dot signal icon cues staggered spring cascades for the name and role lines.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "signal-cascade",
+      "name": "Avery Brooks",
+      "role": "Host, The Daily Signal",
+      "paletteName": "forest"
+    }
+  }
+]

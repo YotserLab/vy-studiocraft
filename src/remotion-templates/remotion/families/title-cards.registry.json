@@ -1,0 +1,182 @@
+[
+  {
+    "id": "title-card-centered-serif-drama",
+    "title": "Centered Serif Drama",
+    "category": "title-cards",
+    "tags": ["cinematic", "serif", "drama"],
+    "description": "A centered high-contrast serif title with expanding tracking, fine rules, and an understated theatrical credit line.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "centered-serif",
+      "title": "The Last Horizon",
+      "subtitle": "A motion picture",
+      "credit": "Written and directed by Mira Vale",
+      "paletteName": "midnight"
+    }
+  },
+  {
+    "id": "title-card-left-indie-credits",
+    "title": "Left Indie Credits",
+    "category": "title-cards",
+    "tags": ["independent-film", "asymmetric", "credits"],
+    "description": "An asymmetric independent-film card with a vertical rule, staggered word stack, and compact production credits.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "indie-credits",
+      "title": "Quiet City Nights",
+      "subtitle": "A North Window film",
+      "credit": "Featuring Ana Reed · Music by S. Ito · 2026",
+      "paletteName": "paper"
+    }
+  },
+  {
+    "id": "title-card-letterboxed-widescreen",
+    "title": "Letterboxed Widescreen",
+    "category": "title-cards",
+    "tags": ["letterbox", "widescreen", "cinematic"],
+    "description": "Widescreen bars settle around slowly zooming title typography before closing into a composed cinematic exit.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "letterboxed",
+      "title": "Beyond the Divide",
+      "subtitle": "An epic in three movements",
+      "credit": "Autumn 2026",
+      "paletteName": "ocean"
+    }
+  },
+  {
+    "id": "title-card-chapter-roman",
+    "title": "Chapter Roman",
+    "category": "title-cards",
+    "tags": ["chapter", "roman-numeral", "editorial"],
+    "description": "A monumental outlined chapter numeral anchors a refined editorial title and chapter descriptor.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "chapter-roman",
+      "title": "The Shape of Memory",
+      "subtitle": "Chapter four",
+      "credit": "IV",
+      "paletteName": "sunset"
+    }
+  },
+  {
+    "id": "title-card-documentary-profile",
+    "title": "Documentary Profile",
+    "category": "title-cards",
+    "tags": ["documentary", "lower-profile", "identity"],
+    "description": "A low-profile documentary identifier with restrained recording metadata, kicker, subject title, and location credit.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 145,
+    "defaultProps": {
+      "variant": "documentary-profile",
+      "title": "Guardians of the Tundra",
+      "subtitle": "Field notes · Northern range",
+      "credit": "Svalbard, Norway · 2026",
+      "paletteName": "forest"
+    }
+  },
+  {
+    "id": "title-card-arthouse-vertical",
+    "title": "Art-House Vertical",
+    "category": "title-cards",
+    "tags": ["art-house", "vertical-type", "gallery"],
+    "description": "Vertical serif typography intersects spare circular geometry and a compact curatorial credit block.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "arthouse-vertical",
+      "title": "Afterimage",
+      "subtitle": "Studies in light and absence",
+      "credit": "Collection 07 · R. Aoki",
+      "paletteName": "paper"
+    }
+  },
+  {
+    "id": "title-card-scifi-scanline",
+    "title": "Sci-Fi Scanline",
+    "category": "title-cards",
+    "tags": ["science-fiction", "scanline", "thin-caps"],
+    "description": "Wide-set thin caps assemble beneath technical guides while a controlled luminance scan crosses the frame.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "scifi-scanline",
+      "title": "Signal Origin",
+      "subtitle": "Deep-space relay established",
+      "credit": "A-2049",
+      "paletteName": "ocean"
+    }
+  },
+  {
+    "id": "title-card-period-ornament",
+    "title": "Period Ornament",
+    "category": "title-cards",
+    "tags": ["period-piece", "ornament", "heritage"],
+    "description": "A double-line period frame draws around an elegant serif title, ornamental dividers, and formal production credit.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "period-ornament",
+      "title": "The House at Bellweather",
+      "subtitle": "From the journals of Eliza Hart",
+      "credit": "London · 1897",
+      "paletteName": "sunset"
+    }
+  },
+  {
+    "id": "title-card-streaming-credit-stack",
+    "title": "Streaming Credit Stack",
+    "category": "title-cards",
+    "tags": ["streaming", "series", "credit-stack"],
+    "description": "A contemporary episodic opener with staggered title rows, indexed dividers, and a sharp original-series credit rail.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 155,
+    "defaultProps": {
+      "variant": "streaming-stack",
+      "title": "No One Leaves Quietly",
+      "subtitle": "A Meridian original",
+      "credit": "Created by Lena Moss · 2026",
+      "paletteName": "mono"
+    }
+  },
+  {
+    "id": "title-card-auteur-minimal",
+    "title": "Auteur Minimal",
+    "category": "title-cards",
+    "tags": ["auteur", "minimal", "slow-cinema"],
+    "description": "A single serif line emerges from soft focus, held by near-silent rules and a spare auteur credit.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 135,
+    "defaultProps": {
+      "variant": "auteur-minimal",
+      "title": "A Small Measure of Sky",
+      "subtitle": "A film by Inez Mora",
+      "credit": "MMXXVI",
+      "paletteName": "paper"
+    }
+  }
+]

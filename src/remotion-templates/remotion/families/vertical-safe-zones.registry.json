@@ -1,0 +1,122 @@
+[
+  {
+    "id": "vertical-safe-zones-safe-zone-grid",
+    "title": "Safe Zone Grid",
+    "category": "accessibility-production",
+    "tags": ["vertical", "safe-zone", "grid", "production", "overlay"],
+    "description": "Safe Zone Grid — a responsive 9:16 production guide that marks shared content, top chrome, bottom controls, and side buffers.",
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "durationInFrames": 120,
+    "defaultProps": { "variant": "safe-zone-grid", "platform": "ALL PLATFORMS", "aspectRatio": "9:16", "content": "The center stays visible after every crop.", "title": "Keep the important part here", "subtitle": "Safe areas are part of the design.", "brand": "STUDIO", "paletteName": "midnight", "safeInsets": { "top": 9, "right": 7, "bottom": 14, "left": 7 }, "captions": ["Keep captions inside the safe area."], "overlays": ["Like", "Comment", "Share"], "showLabels": true, "cta": "Learn more" }
+  },
+  {
+    "id": "vertical-safe-zones-caption-safe",
+    "title": "Caption Safe",
+    "category": "accessibility-production",
+    "tags": ["vertical", "captions", "subtitles", "readability", "safe-area"],
+    "description": "Caption Safe — a caption-aware vertical composition that preserves readable subtitle space without covering the visual message.",
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "durationInFrames": 120,
+    "defaultProps": { "variant": "caption-safe", "platform": "REELS", "aspectRatio": "9:16", "content": "The caption never covers the message.", "title": "Design for the subtitle", "subtitle": "Readable copy belongs inside the frame.", "brand": "STUDIO", "paletteName": "ocean", "safeInsets": { "top": 9, "right": 7, "bottom": 17, "left": 7 }, "captions": ["Keep captions inside the safe area.", "Readable on every platform.", "Never cover the subject."], "overlays": ["Like", "Comment", "Share"], "showLabels": true, "cta": "Learn more" }
+  },
+  {
+    "id": "vertical-safe-zones-notch-safe",
+    "title": "Notch Safe",
+    "category": "accessibility-production",
+    "tags": ["vertical", "notch", "camera", "device", "safe-area"],
+    "description": "Notch Safe — a device-aware vertical layout reserving the top camera and status region before placing titles or essential copy.",
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "durationInFrames": 110,
+    "defaultProps": { "variant": "notch-safe", "platform": "SHORTS", "aspectRatio": "9:16", "content": "The top edge is reserved for device chrome.", "title": "Leave room for the camera", "subtitle": "Device-safe by default.", "brand": "STUDIO", "paletteName": "forest", "safeInsets": { "top": 12, "right": 7, "bottom": 14, "left": 7 }, "captions": ["Camera-safe layout."], "overlays": ["Status", "Camera", "Controls"], "showLabels": true, "cta": "Continue" }
+  },
+  {
+    "id": "vertical-safe-zones-platform-compare",
+    "title": "Platform Compare",
+    "category": "accessibility-production",
+    "tags": ["vertical", "TikTok", "Reels", "Shorts", "comparison"],
+    "description": "Platform Compare — a side-by-side production reference showing how interaction chrome changes across TikTok, Reels, and Shorts.",
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "durationInFrames": 125,
+    "defaultProps": { "variant": "platform-compare", "platform": "TIKTOK · REELS · SHORTS", "aspectRatio": "9:16", "content": "Keep essential copy in the shared center.", "title": "Platform-safe by default", "subtitle": "One source, three exports.", "brand": "STUDIO", "paletteName": "candy", "safeInsets": { "top": 9, "right": 7, "bottom": 14, "left": 7 }, "captions": ["Shared center safe."], "overlays": ["TikTok", "Reels", "Shorts"], "showLabels": true, "cta": "Compare" }
+  },
+  {
+    "id": "vertical-safe-zones-center-crop",
+    "title": "Center Crop",
+    "category": "accessibility-production",
+    "tags": ["vertical", "crop", "9:16", "responsive", "composition"],
+    "description": "Center Crop — a responsive crop simulator showing how a landscape source becomes a vertical composition while protecting the subject.",
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "durationInFrames": 110,
+    "defaultProps": { "variant": "center-crop", "platform": "VERTICAL EXPORT", "aspectRatio": "16:9 → 9:16", "content": "The subject stays inside the target crop.", "title": "Keep the subject centered", "subtitle": "Crop the canvas, not the story.", "brand": "STUDIO", "paletteName": "sunset", "safeInsets": { "top": 9, "right": 7, "bottom": 14, "left": 7 }, "captions": ["Center the subject."], "overlays": ["Crop", "Subject", "Target"], "showLabels": true, "cta": "Preview" }
+  },
+  {
+    "id": "vertical-safe-zones-top-bottom-reserve",
+    "title": "Top Bottom Reserve",
+    "category": "accessibility-production",
+    "tags": ["vertical", "top", "bottom", "controls", "reserve"],
+    "description": "Top Bottom Reserve — clearly separated story, status, control, and CTA reserves for predictable vertical platform exports.",
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "durationInFrames": 120,
+    "defaultProps": { "variant": "top-bottom-reserve", "platform": "STORIES", "aspectRatio": "9:16", "content": "Reserve space before placing text or graphics.", "title": "Protect the story window", "subtitle": "The message gets the middle.", "brand": "STUDIO", "paletteName": "midnight", "safeInsets": { "top": 10, "right": 7, "bottom": 18, "left": 7 }, "captions": ["Story window."], "overlays": ["Status", "Controls", "CTA"], "showLabels": true, "cta": "Open" }
+  },
+  {
+    "id": "vertical-safe-zones-side-rail-safe",
+    "title": "Side Rail Safe",
+    "category": "accessibility-production",
+    "tags": ["vertical", "side-rail", "interaction", "overlay", "safe-area"],
+    "description": "Side Rail Safe — a vertical layout that gives interaction icons and overlay rails their own lane beside the protected message.",
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "durationInFrames": 115,
+    "defaultProps": { "variant": "side-rail-safe", "platform": "REELS", "aspectRatio": "9:16", "content": "Keep the message clear of interaction chrome.", "title": "Give overlays their own lane", "subtitle": "The subject stays unobstructed.", "brand": "STUDIO", "paletteName": "ocean", "safeInsets": { "top": 9, "right": 8, "bottom": 14, "left": 8 }, "captions": ["Avoid the interaction rail."], "overlays": ["Like", "Comment", "Share"], "showLabels": true, "cta": "See guide" }
+  },
+  {
+    "id": "vertical-safe-zones-vertical-title",
+    "title": "Vertical Title",
+    "category": "accessibility-production",
+    "tags": ["vertical", "title", "type", "editorial", "responsive"],
+    "description": "Vertical Title — a vertical-first title treatment with safe typography lanes and a compact supporting message.",
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "durationInFrames": 120,
+    "defaultProps": { "variant": "vertical-title", "platform": "EDITORIAL", "aspectRatio": "9:16", "content": "A title can move with the format instead of fighting it.", "title": "Vertical story", "subtitle": "Safe on every screen", "brand": "STUDIO", "paletteName": "paper", "safeInsets": { "top": 9, "right": 8, "bottom": 14, "left": 8 }, "captions": ["Vertical-first type."], "overlays": ["Title", "Chapter", "Story"], "showLabels": true, "cta": "Read more" }
+  },
+  {
+    "id": "vertical-safe-zones-cta-safe",
+    "title": "CTA Safe",
+    "category": "accessibility-production",
+    "tags": ["vertical", "CTA", "conversion", "bottom-safe", "social"],
+    "description": "CTA Safe — a conversion-ready vertical end card that anchors its action above platform controls and captions.",
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "durationInFrames": 110,
+    "defaultProps": { "variant": "cta-safe", "platform": "SHORTS", "aspectRatio": "9:16", "content": "A clear action without covering the subject.", "title": "Put the CTA where thumbs can find it", "subtitle": "A clear action without covering the subject.", "brand": "STUDIO", "paletteName": "forest", "safeInsets": { "top": 9, "right": 7, "bottom": 18, "left": 7 }, "captions": ["Tap to learn more."], "overlays": ["Like", "Comment", "Share"], "showLabels": true, "cta": "Learn more" }
+  },
+  {
+    "id": "vertical-safe-zones-safe-zone-audit",
+    "title": "Safe Zone Audit",
+    "category": "accessibility-production",
+    "tags": ["vertical", "audit", "preflight", "quality", "production"],
+    "description": "Safe Zone Audit — a preflight checklist for crop, captions, top chrome, and CTA coverage before a vertical render ships.",
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "durationInFrames": 130,
+    "defaultProps": { "variant": "safe-zone-audit", "platform": "ALL PLATFORMS", "aspectRatio": "9:16", "content": "A quick audit before the render leaves the timeline.", "title": "Ship a safe vertical export", "subtitle": "Check the frame before you publish.", "brand": "STUDIO", "paletteName": "mono", "safeInsets": { "top": 9, "right": 7, "bottom": 16, "left": 7 }, "captions": ["Audit complete."], "overlays": ["Crop", "Captions", "Chrome", "CTA"], "showLabels": true, "cta": "Approve" }
+  }
+]

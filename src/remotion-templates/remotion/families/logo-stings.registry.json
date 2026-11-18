@@ -1,0 +1,182 @@
+[
+  {
+    "id": "logo-sting-orbit-draw",
+    "title": "Orbit Draw Emblem",
+    "category": "logo-stings",
+    "tags": ["logo", "svg", "shape-draw", "geometric"],
+    "description": "A hexagonal emblem drafts itself through concentric SVG strokes before its triangular core locks into place.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 100,
+    "defaultProps": {
+      "variant": "shape-draw",
+      "brandName": "Northstar",
+      "tagline": "Find your direction",
+      "paletteName": "ocean",
+      "monogram": "NS"
+    }
+  },
+  {
+    "id": "logo-sting-prism-sweep",
+    "title": "Prism Light Sweep",
+    "category": "logo-stings",
+    "tags": ["logo", "shine", "prism", "premium"],
+    "description": "An angular prism rises into frame and catches a crisp travelling highlight for a polished brand reveal.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 95,
+    "defaultProps": {
+      "variant": "light-sweep",
+      "brandName": "Velocity",
+      "tagline": "Engineered to move",
+      "paletteName": "midnight",
+      "monogram": "VL"
+    }
+  },
+  {
+    "id": "logo-sting-particle-forge",
+    "title": "Particle Forge Assembly",
+    "category": "logo-stings",
+    "tags": ["logo", "particles", "assembly", "technology"],
+    "description": "Seeded luminous fragments converge from every edge and forge a radial hex-core crest without random render drift.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 110,
+    "defaultProps": {
+      "variant": "particle-assemble",
+      "brandName": "Quanta",
+      "tagline": "Ideas become matter",
+      "paletteName": "candy",
+      "monogram": "QT"
+    }
+  },
+  {
+    "id": "logo-sting-signal-wipe",
+    "title": "Signal Mask Wipe",
+    "category": "logo-stings",
+    "tags": ["logo", "mask", "scanner", "signal"],
+    "description": "A bright scanner drives a hard-edged matte across a procedural signal tile and its stepped bars.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 90,
+    "defaultProps": {
+      "variant": "mask-wipe",
+      "brandName": "Signal House",
+      "tagline": "Make it resonate",
+      "paletteName": "forest",
+      "monogram": "SH"
+    }
+  },
+  {
+    "id": "logo-sting-facet-flip",
+    "title": "Dimensional Facet Flip",
+    "category": "logo-stings",
+    "tags": ["logo", "3d", "facets", "diamond"],
+    "description": "Four colored SVG facets hinge independently through 3D space and settle into a dimensional diamond mark.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 105,
+    "defaultProps": {
+      "variant": "facet-flip",
+      "brandName": "Vertex",
+      "tagline": "Every angle matters",
+      "paletteName": "sunset",
+      "monogram": "VX"
+    }
+  },
+  {
+    "id": "logo-sting-ribbon-trace",
+    "title": "Luminous Ribbon Trace",
+    "category": "logo-stings",
+    "tags": ["logo", "stroke", "ribbon", "elegant"],
+    "description": "A continuous glowing ribbon and secondary echo trace an expressive abstract signature before sealing at a live node.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 115,
+    "defaultProps": {
+      "variant": "stroke-trace",
+      "brandName": "Continuum",
+      "tagline": "Made without limits",
+      "paletteName": "ocean",
+      "monogram": "CO"
+    }
+  },
+  {
+    "id": "logo-sting-ripple-punch",
+    "title": "Ripple Punch Badge",
+    "category": "logo-stings",
+    "tags": ["logo", "impact", "ripple", "badge"],
+    "description": "A checked diamond badge punches into place with spring overshoot, radial speed rays, and three timed shock rings.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 85,
+    "defaultProps": {
+      "variant": "ripple-punch",
+      "brandName": "Approved",
+      "tagline": "Ready when you are",
+      "paletteName": "mono",
+      "monogram": "OK"
+    }
+  },
+  {
+    "id": "logo-sting-split-unveil",
+    "title": "Split Panel Unveil",
+    "category": "logo-stings",
+    "tags": ["logo", "panels", "unveil", "cinematic"],
+    "description": "Mirrored color curtains part as two bracket forms travel inward and join around a precise central lock.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 100,
+    "defaultProps": {
+      "variant": "split-panel",
+      "brandName": "Openframe",
+      "tagline": "A wider point of view",
+      "paletteName": "midnight",
+      "monogram": "OF"
+    }
+  },
+  {
+    "id": "logo-sting-aurora-bloom",
+    "title": "Aurora Glow Bloom",
+    "category": "logo-stings",
+    "tags": ["logo", "glow", "bloom", "organic"],
+    "description": "Ten luminous petals bloom in staggered radial symmetry around a layered, softly pulsing aurora core.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 120,
+    "defaultProps": {
+      "variant": "glow-bloom",
+      "brandName": "Luma Botanics",
+      "tagline": "Nature in a new light",
+      "paletteName": "candy",
+      "monogram": "LB"
+    }
+  },
+  {
+    "id": "logo-sting-monogram-grid",
+    "title": "Architect Monogram Grid",
+    "category": "logo-stings",
+    "tags": ["logo", "monogram", "grid", "editorial"],
+    "description": "A custom two-letter monogram resolves from opposing directions inside a drafted modular grid and rotating frame.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 110,
+    "defaultProps": {
+      "variant": "monogram",
+      "brandName": "Atelier Nord",
+      "tagline": "Identity by design",
+      "paletteName": "paper",
+      "monogram": "AN"
+    }
+  }
+]

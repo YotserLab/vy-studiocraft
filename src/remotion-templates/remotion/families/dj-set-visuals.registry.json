@@ -1,0 +1,222 @@
+[
+  {
+    "id": "dj-set-visuals-deck-intro",
+    "title": "Deck Intro",
+    "category": "audio-music",
+    "tags": ["dj", "club", "decks", "intro", "music"],
+    "description": "A polished live-set opener that pairs spinning decks, a perspective grid, BPM metadata, and a restrained waveform bed.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "deck-intro",
+      "artist": "NIGHT SIGNAL",
+      "track": "Afterglow Protocol",
+      "bpm": 124,
+      "setlist": ["Afterglow Protocol", "Low Orbit", "Final Signal"],
+      "beatMarkers": [0, 15, 30, 45, 60, 75, 90, 105, 120, 135, 150, 165],
+      "paletteName": "midnight",
+      "logo": "NS / LIVE",
+      "intensity": 0.62
+    }
+  },
+  {
+    "id": "dj-set-visuals-bpm-pulse",
+    "title": "BPM Pulse",
+    "category": "audio-music",
+    "tags": ["dj", "bpm", "pulse", "waveform", "club"],
+    "description": "A centered track identity with expanding rings and smooth BPM-responsive pulse motion for a clean audio interstitial.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "bpm-pulse",
+      "artist": "Mira Vale",
+      "track": "Pulse Theory",
+      "bpm": 128,
+      "setlist": ["Pulse Theory", "Blue Room", "Signal Bloom"],
+      "beatMarkers": [0, 15, 30, 45, 60, 75, 90, 105, 120, 135],
+      "paletteName": "ocean",
+      "logo": "MV",
+      "intensity": 0.58
+    }
+  },
+  {
+    "id": "dj-set-visuals-track-change",
+    "title": "Track Change",
+    "category": "audio-music",
+    "tags": ["dj", "track change", "crossfade", "transition", "music"],
+    "description": "A readable previous-to-next track handoff with a crossfade progress bar and live BPM metadata.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 140,
+    "defaultProps": {
+      "variant": "track-change",
+      "artist": "Aster Circuit",
+      "track": "New Coordinates",
+      "bpm": 126,
+      "setlist": ["Previous Frequency", "New Coordinates", "Soft Landing"],
+      "beatMarkers": [0, 15, 30, 45, 60, 75, 90, 105, 120],
+      "paletteName": "sunset",
+      "logo": "AC / MIX 04",
+      "intensity": 0.55
+    }
+  },
+  {
+    "id": "dj-set-visuals-drop-impact",
+    "title": "Drop Impact",
+    "category": "audio-music",
+    "tags": ["dj", "drop", "impact", "energy", "club"],
+    "description": "A controlled drop moment with radial energy, directional rays, and large kinetic track typography without rapid strobing.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "drop-impact",
+      "artist": "Vector Bloom",
+      "track": "DROP STATE",
+      "bpm": 132,
+      "setlist": ["DROP STATE", "Pressure Line", "Exit Velocity"],
+      "beatMarkers": [0, 15, 30, 45, 60, 75, 90, 105, 120, 135],
+      "paletteName": "candy",
+      "logo": "VB",
+      "intensity": 0.68
+    }
+  },
+  {
+    "id": "dj-set-visuals-mix-progress",
+    "title": "Mix Progress",
+    "category": "audio-music",
+    "tags": ["dj", "mix", "progress", "waveform", "set"],
+    "description": "A full-screen mix dashboard with elapsed progress, three set phases, animated bars, and clear artist hierarchy.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "mix-progress",
+      "artist": "Static Motion",
+      "track": "Night Drive Session",
+      "bpm": 120,
+      "setlist": ["Warmup", "Night Drive Session", "Peak Signal", "Outro"],
+      "beatMarkers": [0, 15, 30, 45, 60, 75, 90, 105, 120, 135, 150, 165],
+      "paletteName": "mono",
+      "logo": "SM / 48 MIN",
+      "intensity": 0.5
+    }
+  },
+  {
+    "id": "dj-set-visuals-laser-grid",
+    "title": "Laser Grid",
+    "category": "audio-music",
+    "tags": ["dj", "laser", "grid", "club", "perspective"],
+    "description": "A perspective laser floor and slow sweeping beams create a dimensional club bed around the current track.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 160,
+    "defaultProps": {
+      "variant": "laser-grid",
+      "artist": "Chrome Garden",
+      "track": "Parallel Rooms",
+      "bpm": 126,
+      "setlist": ["Parallel Rooms", "Mirror Lake", "Exit Bloom"],
+      "beatMarkers": [0, 15, 30, 45, 60, 75, 90, 105, 120, 135, 150],
+      "paletteName": "ocean",
+      "logo": "CG / LIVE",
+      "intensity": 0.6
+    }
+  },
+  {
+    "id": "dj-set-visuals-crowd-card",
+    "title": "Crowd Card",
+    "category": "audio-music",
+    "tags": ["dj", "crowd", "live", "festival", "artist"],
+    "description": "A silhouetted crowd field with gently swaying figures and a strong live-now artist card for festival screens.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 160,
+    "defaultProps": {
+      "variant": "crowd-card",
+      "artist": "Golden Hour FM",
+      "track": "Open Air",
+      "bpm": 118,
+      "setlist": ["Open Air", "Sunline", "After Midnight"],
+      "beatMarkers": [0, 15, 30, 45, 60, 75, 90, 105, 120, 135, 150],
+      "paletteName": "sunset",
+      "logo": "LIVE / STAGE B",
+      "intensity": 0.55
+    }
+  },
+  {
+    "id": "dj-set-visuals-setlist-scroll",
+    "title": "Setlist Scroll",
+    "category": "audio-music",
+    "tags": ["dj", "setlist", "scroll", "tracklist", "typography"],
+    "description": "A paced setlist scroll that keeps every title readable while cycling the current sequence and BPM details.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "setlist-scroll",
+      "artist": "Northbound Audio",
+      "track": "Afterglow Protocol",
+      "bpm": 124,
+      "setlist": ["Afterglow Protocol", "Low Orbit", "Night Drive", "Soft Landing", "Final Signal"],
+      "beatMarkers": [0, 15, 30, 45, 60, 75, 90, 105, 120, 135, 150, 165],
+      "paletteName": "midnight",
+      "logo": "NB / SET 07",
+      "intensity": 0.48
+    }
+  },
+  {
+    "id": "dj-set-visuals-artist-id",
+    "title": "Artist ID",
+    "category": "audio-music",
+    "tags": ["dj", "artist", "logo", "identity", "stinger"],
+    "description": "A premium artist identity stinger with orbiting rings, monogram badge, and restrained track metadata.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 145,
+    "defaultProps": {
+      "variant": "artist-id",
+      "artist": "Mira Vale",
+      "track": "Signal Bloom",
+      "bpm": 128,
+      "setlist": ["Signal Bloom", "Blue Room", "Pulse Theory"],
+      "beatMarkers": [0, 15, 30, 45, 60, 75, 90, 105, 120, 135],
+      "paletteName": "candy",
+      "logo": "MV",
+      "intensity": 0.52
+    }
+  },
+  {
+    "id": "dj-set-visuals-set-close",
+    "title": "Set Close",
+    "category": "audio-music",
+    "tags": ["dj", "outro", "closing", "thank you", "music"],
+    "description": "A graceful set closer that fades a final artist lockup over a soft waveform bed and thank-you message.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "set-close",
+      "artist": "Night Signal",
+      "track": "Final Frequency",
+      "bpm": 122,
+      "setlist": ["Warmup", "Peak Signal", "Final Frequency"],
+      "beatMarkers": [0, 15, 30, 45, 60, 75, 90, 105, 120, 135, 150, 165],
+      "paletteName": "midnight",
+      "logo": "SEE YOU NEXT TIME",
+      "intensity": 0.42
+    }
+  }
+]

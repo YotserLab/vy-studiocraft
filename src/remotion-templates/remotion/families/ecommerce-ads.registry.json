@@ -1,0 +1,222 @@
+[
+  {
+    "id": "ecommerce-ads-product-spin",
+    "title": "Product Spin",
+    "category": "marketing-social",
+    "tags": ["ecommerce", "product", "spin", "hero"],
+    "description": "A dimensional product rotates into a commerce-ready hero with price and a direct shop CTA.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "product-spin",
+      "productName": "Aster Bottle",
+      "tagline": "The everyday essential, elevated.",
+      "price": "$48",
+      "compareAt": "$64",
+      "rating": 4.9,
+      "reviewCount": "1,284 reviews",
+      "shipping": "Free shipping over $50",
+      "cta": "Shop now",
+      "paletteName": "ocean",
+      "features": ["Leakproof", "Refillable", "Built for daily use"]
+    }
+  },
+  {
+    "id": "ecommerce-ads-price-drop",
+    "title": "Price Drop",
+    "category": "marketing-social",
+    "tags": ["ecommerce", "sale", "price", "offer"],
+    "description": "A tactile price-drop badge swings in beside the product while the discounted price takes focus.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 135,
+    "defaultProps": {
+      "variant": "price-drop",
+      "productName": "Daily Dew",
+      "tagline": "Hydration that fits your routine.",
+      "price": "$24",
+      "compareAt": "$40",
+      "shipping": "Ships free today",
+      "cta": "Claim the deal",
+      "paletteName": "sunset",
+      "features": ["Derm tested", "Vegan formula", "30-day supply"]
+    }
+  },
+  {
+    "id": "ecommerce-ads-variant-swatch",
+    "title": "Variant Swatch",
+    "category": "marketing-social",
+    "tags": ["ecommerce", "swatches", "variants", "color"],
+    "description": "A product finish cycles through animated swatches with a clear selected state and purchase details.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "variant-swatch",
+      "productName": "Studio Carryall",
+      "tagline": "One silhouette. Five ways to make it yours.",
+      "price": "$118",
+      "variants": ["Dawn", "Ocean", "Berry", "Sand", "Night"],
+      "shipping": "Ships in 24h",
+      "cta": "Choose your finish",
+      "paletteName": "candy",
+      "features": ["Soft structure", "Laptop sleeve", "Travel ready"]
+    }
+  },
+  {
+    "id": "ecommerce-ads-review-burst",
+    "title": "Review Burst",
+    "category": "marketing-social",
+    "tags": ["ecommerce", "reviews", "social-proof", "rating"],
+    "description": "A verified-customer quote, star rating and floating proof chips turn social proof into a product moment.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "review-burst",
+      "productName": "Cloud Knit",
+      "tagline": "The layer customers keep talking about.",
+      "price": "$86",
+      "rating": 4.8,
+      "reviewCount": "2,031 reviews",
+      "shipping": "Free returns",
+      "cta": "Try it yourself",
+      "paletteName": "forest",
+      "features": ["Soft handle", "All-season weight", "Easy care"]
+    }
+  },
+  {
+    "id": "ecommerce-ads-bundle-offer",
+    "title": "Bundle Offer",
+    "category": "marketing-social",
+    "tags": ["ecommerce", "bundle", "offer", "product-set"],
+    "description": "Three product silhouettes assemble into a bundle offer with a strong save-more CTA.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "bundle-offer",
+      "productName": "Ritual Set",
+      "tagline": "The full routine, beautifully simplified.",
+      "price": "$72",
+      "compareAt": "$104",
+      "shipping": "Save 30% as a set",
+      "cta": "Get the bundle",
+      "paletteName": "sunset",
+      "features": ["Cleanser", "Serum", "Moisturizer"]
+    }
+  },
+  {
+    "id": "ecommerce-ads-shipping-proof",
+    "title": "Shipping Proof",
+    "category": "marketing-social",
+    "tags": ["ecommerce", "shipping", "fulfillment", "trust"],
+    "description": "An animated fulfillment timeline makes packing, dispatch and delivery promises concrete and legible.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "shipping-proof",
+      "productName": "Weekend Kit",
+      "tagline": "From our studio to your doorstep.",
+      "price": "$64",
+      "shipping": "Carbon-neutral delivery in 2–4 days",
+      "cta": "Shop with confidence",
+      "paletteName": "ocean",
+      "features": ["Packed with care", "Tracked delivery", "Easy returns"]
+    }
+  },
+  {
+    "id": "ecommerce-ads-cart-add",
+    "title": "Cart Add",
+    "category": "marketing-social",
+    "tags": ["ecommerce", "cart", "add-to-cart", "conversion"],
+    "description": "A product flies into a dimensional cart to make the add-to-cart action unmistakably visual.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 135,
+    "defaultProps": {
+      "variant": "cart-add",
+      "productName": "Everyday Mug",
+      "tagline": "The little upgrade your morning deserves.",
+      "price": "$28",
+      "shipping": "Free pickup or delivery",
+      "cta": "Add to cart",
+      "paletteName": "paper",
+      "features": ["Hand finished", "Dishwasher safe", "12 oz"]
+    }
+  },
+  {
+    "id": "ecommerce-ads-size-guide",
+    "title": "Size Guide",
+    "category": "marketing-social",
+    "tags": ["ecommerce", "size", "fit", "fashion"],
+    "description": "A crisp size chart highlights the recommended fit while preserving product, price and CTA context.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "size-guide",
+      "productName": "Form Tee",
+      "tagline": "A better fit starts with better information.",
+      "price": "$52",
+      "shipping": "Free exchanges",
+      "cta": "View full guide",
+      "paletteName": "mono",
+      "features": ["Relaxed fit", "Organic cotton", "Pre-shrunk"]
+    }
+  },
+  {
+    "id": "ecommerce-ads-limited-stock",
+    "title": "Limited Stock",
+    "category": "marketing-social",
+    "tags": ["ecommerce", "urgency", "limited", "stock"],
+    "description": "A restrained urgency treatment pairs remaining-stock messaging with a product hero and progress bar.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 135,
+    "defaultProps": {
+      "variant": "limited-stock",
+      "productName": "Field Jacket",
+      "tagline": "Made once. Worn for years.",
+      "price": "$168",
+      "stock": 17,
+      "shipping": "Final sizes available",
+      "cta": "Get it before it's gone",
+      "paletteName": "forest",
+      "features": ["Waxed canvas", "Brass hardware", "Lifetime repair"]
+    }
+  },
+  {
+    "id": "ecommerce-ads-shop-now",
+    "title": "Shop Now",
+    "category": "marketing-social",
+    "tags": ["ecommerce", "hero", "shop", "conversion"],
+    "description": "A full-bleed commerce hero combines product drift, price, delivery reassurance and a direct shop CTA.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "shop-now",
+      "productName": "Aether Speaker",
+      "tagline": "Sound that changes the room.",
+      "price": "$220",
+      "compareAt": "$260",
+      "shipping": "Free delivery and 30-day returns",
+      "cta": "Shop now",
+      "paletteName": "midnight",
+      "features": ["Room-filling sound", "12-hour battery", "Made to last"]
+    }
+  }
+]

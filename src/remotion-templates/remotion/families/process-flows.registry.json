@@ -1,0 +1,122 @@
+[
+  {
+    "id": "process-flows-linear-process",
+    "title": "Linear Process",
+    "category": "explainers-education",
+    "tags": ["process", "workflow", "linear", "operations"],
+    "description": "A clean left-to-right process path that reveals intake, transformation, review, and delivery as a reusable operational story.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": { "variant": "linear-process", "title": "From brief to shipped.", "subtitle": "Make the path from request to result impossible to miss.", "paletteName": "ocean", "highlightStep": "build", "speed": 1 }
+  },
+  {
+    "id": "process-flows-branching-process",
+    "title": "Branching Process",
+    "category": "explainers-education",
+    "tags": ["process", "decision", "branch", "flowchart"],
+    "description": "A decision tree sends work down visibly labeled yes/no paths so exceptions and alternate outcomes stay legible.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "branching-process", "title": "Every choice has a path.", "subtitle": "Show the decision that changes what happens next.", "paletteName": "midnight", "highlightStep": "review", "speed": 0.9 }
+  },
+  {
+    "id": "process-flows-swimlane-flow",
+    "title": "Swimlane Flow",
+    "category": "explainers-education",
+    "tags": ["process", "swimlane", "ownership", "handoff"],
+    "description": "A lane-based process assigns each step to its owner while the route crosses teams and keeps handoffs visible.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "swimlane-flow", "title": "Who owns the next move?", "subtitle": "Map the work across teams without losing the sequence.", "paletteName": "forest", "highlightStep": "build", "speed": 0.75 }
+  },
+  {
+    "id": "process-flows-automation-pipeline",
+    "title": "Automation Pipeline",
+    "category": "explainers-education",
+    "tags": ["process", "automation", "pipeline", "systems"],
+    "description": "A glowing pipeline makes automated stages, throughput, and the active machine handoff feel immediate and technical.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": { "variant": "automation-pipeline", "title": "The system keeps moving.", "subtitle": "Turn invisible automation into a sequence people can follow.", "paletteName": "candy", "highlightStep": "build", "showMetrics": true, "speed": 1.2 }
+  },
+  {
+    "id": "process-flows-approval-loop",
+    "title": "Approval Loop",
+    "category": "explainers-education",
+    "tags": ["process", "approval", "loop", "governance"],
+    "description": "A circular control loop shows review, revision, and approval as a repeatable cycle rather than a dead end.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "approval-loop", "title": "Good work gets better.", "subtitle": "Make the revise-and-approve loop a visible part of the process.", "paletteName": "sunset", "highlightStep": "review", "speed": 0.8 }
+  },
+  {
+    "id": "process-flows-error-retry",
+    "title": "Error Retry",
+    "category": "explainers-education",
+    "tags": ["process", "error", "retry", "recovery"],
+    "description": "A recovery path drops into a retry loop, making failure handling and resilient operations easy to explain.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "error-retry", "title": "Failures are part of flow.", "subtitle": "Show the safe path back when a step does not pass.", "paletteName": "mono", "highlightStep": "review", "speed": 1 }
+  },
+  {
+    "id": "process-flows-handoff-chain",
+    "title": "Handoff Chain",
+    "category": "explainers-education",
+    "tags": ["process", "handoff", "teams", "chain"],
+    "description": "A linked chain of owners turns cross-functional handoffs into a confident, paced sequence with clear responsibility.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": { "variant": "handoff-chain", "title": "Pass the work with confidence.", "subtitle": "Name every owner between first touch and final delivery.", "paletteName": "ocean", "highlightStep": "approve", "speed": 0.95 }
+  },
+  {
+    "id": "process-flows-service-blueprint",
+    "title": "Service Blueprint",
+    "category": "explainers-education",
+    "tags": ["process", "service", "blueprint", "frontstage"],
+    "description": "A frontstage/backstage blueprint separates what customers see from the systems and teams that make it happen.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "service-blueprint", "title": "The experience has a backstage.", "subtitle": "Connect customer moments to the systems behind them.", "paletteName": "forest", "highlightStep": "review", "speed": 0.7 }
+  },
+  {
+    "id": "process-flows-checklist-flow",
+    "title": "Checklist Flow",
+    "category": "explainers-education",
+    "tags": ["process", "checklist", "steps", "execution"],
+    "description": "A focused vertical checklist marks completed work, the active step, and what remains without visual noise.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": { "variant": "checklist-flow", "title": "Nothing slips through.", "subtitle": "A calm execution view for launches, reviews, and repeatable routines.", "paletteName": "paper", "highlightStep": "build", "speed": 1 }
+  },
+  {
+    "id": "process-flows-process-metrics",
+    "title": "Process Metrics",
+    "category": "explainers-education",
+    "tags": ["process", "metrics", "operations", "kpi"],
+    "description": "A process path paired with cycle time, throughput, and pass-rate cards connects workflow mechanics to measurable outcomes.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "process-metrics", "title": "Measure the motion.", "subtitle": "Make operational performance part of the story, not an afterthought.", "paletteName": "midnight", "highlightStep": "ship", "showMetrics": true, "speed": 0.9 }
+  }
+]

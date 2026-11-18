@@ -1,0 +1,216 @@
+[
+  {
+    "id": "3d-device-stages-turntable-hero",
+    "title": "Turntable Hero",
+    "category": "3d-device-stages",
+    "tags": ["3d", "device", "turntable", "hero"],
+    "description": "A depth-aware device rotates into a premium product hero with a grounded light pool and feature-led copy.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "turntable-hero",
+      "deviceName": "Aperture",
+      "tagline": "A sharper view of what comes next.",
+      "features": ["Depth-aware design", "Instant clarity", "Built to move"],
+      "paletteName": "midnight",
+      "material": "aluminum",
+      "cameraAngle": 0,
+      "lightColor": "#00e0ff",
+      "speed": 1
+    }
+  },
+  {
+    "id": "3d-device-stages-floating-stack",
+    "title": "Floating Stack",
+    "category": "3d-device-stages",
+    "tags": ["3d", "device", "stack", "ecosystem"],
+    "description": "Three synchronized device surfaces float in a layered perspective stack for an ecosystem or responsive product reveal.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "floating-stack",
+      "deviceName": "Relay OS",
+      "tagline": "One system. Every surface.",
+      "features": ["Shared context", "Seamless sync", "Responsive by default"],
+      "paletteName": "ocean",
+      "material": "aluminum",
+      "lightColor": "#7dd3fc",
+      "speed": 0.9
+    }
+  },
+  {
+    "id": "3d-device-stages-glass-stage",
+    "title": "Glass Stage",
+    "category": "3d-device-stages",
+    "tags": ["3d", "glass", "premium", "refraction"],
+    "description": "A translucent glass stage frames a floating device with refraction-inspired gradients and a controlled rise-in.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "glass-stage",
+      "deviceName": "Prism",
+      "tagline": "Make the invisible feel tangible.",
+      "features": ["Crystal surfaces", "Soft refraction", "Quiet confidence"],
+      "paletteName": "candy",
+      "material": "glass",
+      "lightColor": "#fde047",
+      "speed": 0.7
+    }
+  },
+  {
+    "id": "3d-device-stages-wireframe-device",
+    "title": "Wireframe Device",
+    "category": "3d-device-stages",
+    "tags": ["3d", "wireframe", "hud", "futuristic"],
+    "description": "A technical wireframe device scans into view over a perspective grid with camera, mesh, and depth readouts.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "wireframe-device",
+      "deviceName": "Vector",
+      "tagline": "See the system beneath the surface.",
+      "features": ["Mesh geometry", "Live telemetry", "Precision control"],
+      "paletteName": "mono",
+      "material": "carbon",
+      "cameraAngle": 6,
+      "lightColor": "#ffd400",
+      "speed": 1.2
+    }
+  },
+  {
+    "id": "3d-device-stages-light-sweep",
+    "title": "Light Sweep",
+    "category": "3d-device-stages",
+    "tags": ["3d", "light", "sweep", "product"],
+    "description": "A moving specular beam sweeps across a tilted device while concise benefit labels establish the product promise.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "light-sweep",
+      "deviceName": "Halo",
+      "tagline": "The detail is in the way it catches light.",
+      "features": ["Tactile finish", "Measured motion", "Made to last"],
+      "paletteName": "sunset",
+      "material": "pearl",
+      "lightColor": "#fff8f0",
+      "speed": 1.4
+    }
+  },
+  {
+    "id": "3d-device-stages-shadow-box",
+    "title": "Shadow Box",
+    "category": "3d-device-stages",
+    "tags": ["3d", "shadow", "spotlight", "cinematic"],
+    "description": "A cinematic shadow box reveals a device through a narrow moving beam for a high-contrast launch moment.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "shadow-box",
+      "deviceName": "Noir",
+      "tagline": "A bold object in a quieter room.",
+      "features": ["Focused form", "Deep contrast", "Zero distraction"],
+      "paletteName": "midnight",
+      "material": "carbon",
+      "lightColor": "#ff3d81",
+      "shadow": "0 55px 110px #000d",
+      "speed": 0.8
+    }
+  },
+  {
+    "id": "3d-device-stages-shelf-display",
+    "title": "Shelf Display",
+    "category": "3d-device-stages",
+    "tags": ["3d", "shelf", "multi-device", "responsive"],
+    "description": "A product shelf arranges desktop, tablet, and mobile surfaces into a dimensional responsive lineup.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "shelf-display",
+      "deviceName": "Everywhere",
+      "tagline": "One experience, tuned for every screen.",
+      "features": ["Desktop ready", "Tablet fluid", "Mobile native"],
+      "paletteName": "forest",
+      "material": "aluminum",
+      "lightColor": "#a7f3d0",
+      "speed": 0.85
+    }
+  },
+  {
+    "id": "3d-device-stages-macro-detail",
+    "title": "Macro Detail",
+    "category": "3d-device-stages",
+    "tags": ["3d", "macro", "detail", "zoom"],
+    "description": "A close-up device push-in turns interface texture and material detail into the main product story.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 135,
+    "defaultProps": {
+      "variant": "macro-detail",
+      "deviceName": "Trace",
+      "tagline": "Small surfaces. Big signals.",
+      "features": ["Precision glass", "Haptic response", "Edge-to-edge"],
+      "paletteName": "ocean",
+      "material": "glass",
+      "cameraAngle": 4,
+      "lightColor": "#38bdf8",
+      "speed": 1.1
+    }
+  },
+  {
+    "id": "3d-device-stages-orbiting-screens",
+    "title": "Orbiting Screens",
+    "category": "3d-device-stages",
+    "tags": ["3d", "orbit", "screens", "carousel"],
+    "description": "A central device anchors a rotating orbit of companion screens to show feature states and product breadth.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "orbiting-screens",
+      "deviceName": "Constellation",
+      "tagline": "Every workflow finds its orbit.",
+      "features": ["Connected views", "Fast handoffs", "One source of truth"],
+      "paletteName": "midnight",
+      "material": "aluminum",
+      "lightColor": "#7c5cff",
+      "speed": 1.1
+    }
+  },
+  {
+    "id": "3d-device-stages-portal-device",
+    "title": "Portal Device",
+    "category": "3d-device-stages",
+    "tags": ["3d", "portal", "reveal", "launch"],
+    "description": "A glowing portal opens behind a device as it rises into a dimensional launch lockup with feature chips.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "portal-device",
+      "deviceName": "Threshold",
+      "tagline": "Step into the next version of possible.",
+      "features": ["New perspective", "Instant momentum", "Ready when you are"],
+      "paletteName": "sunset",
+      "material": "pearl",
+      "lightColor": "#ff6b35",
+      "speed": 1
+    }
+  }
+]

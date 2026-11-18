@@ -1,0 +1,122 @@
+[
+  {
+    "id": "production-overlays-timecode-overlay",
+    "title": "Timecode Overlay",
+    "category": "accessibility-production",
+    "tags": ["production", "timecode", "review", "burn-in"],
+    "description": "A legible advancing SMPTE-style timecode burn-in with project, version, and review watermark context.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "timecode-overlay", "project": "NORTH STAR / SPOT 01", "version": "V07", "timecode": "01:02:14:12", "notes": ["CHECK AUDIO SYNC"], "guides": ["ACTION SAFE 90%", "TITLE SAFE 80%"], "watermark": "INTERNAL REVIEW", "deliverySpec": "1920 × 1080|30 FPS|H.264", "colors": ["#f4f4f4", "#f4cc28", "#45b7e8", "#4fbe74", "#e65252", "#2d318f", "#111111"], "caption": "Timecode overlay preview", "chapter": "CHAPTER 01 / OPENING", "operator": "EDITORIAL", "status": "IN REVIEW", "paletteName": "midnight", "showTimecode": true, "showWatermark": true, "frameRate": 30 }
+  },
+  {
+    "id": "production-overlays-slate-card",
+    "title": "Slate Card",
+    "category": "accessibility-production",
+    "tags": ["production", "slate", "metadata", "clap"],
+    "description": "A centered production slate for project, scene, version, operator, and concise sync or take notes.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": { "variant": "slate-card", "project": "NORTH STAR / SPOT 01", "version": "V07", "timecode": "01:02:14:12", "notes": ["TAKE 07", "SYNC SLATE", "24MM / 5600K", "CLIENT REVIEW"], "guides": ["ACTION SAFE 90%", "TITLE SAFE 80%"], "watermark": "INTERNAL REVIEW", "deliverySpec": "1920 × 1080|30 FPS|H.264", "colors": ["#f4f4f4", "#f4cc28", "#45b7e8"], "caption": "Slate card preview", "chapter": "SCENE 01 / EXT. ROOFTOP", "operator": "M. RIVERA", "status": "TAKE 07 / GOOD", "paletteName": "mono", "showTimecode": true, "showWatermark": true, "frameRate": 30 }
+  },
+  {
+    "id": "production-overlays-frame-guides",
+    "title": "Frame Guides",
+    "category": "accessibility-production",
+    "tags": ["production", "guides", "safe-area", "calibration"],
+    "description": "Action-safe, title-safe, center, and format guides for composing graphics over a review frame.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "frame-guides", "project": "NORTH STAR / GUIDE PASS", "version": "V03", "timecode": "00:12:08:04", "notes": ["KEEP LOGO INSIDE TITLE SAFE"], "guides": ["ACTION SAFE 90%", "TITLE SAFE 80%"], "watermark": "GUIDE PASS", "deliverySpec": "16:9|1920 × 1080|CENTER SAFE", "colors": ["#f4f4f4", "#f4cc28", "#45b7e8"], "caption": "Safe-area guide", "chapter": "GUIDES / 16:9", "operator": "DESIGN", "status": "CALIBRATION", "paletteName": "midnight", "showTimecode": true, "showWatermark": false, "frameRate": 30 }
+  },
+  {
+    "id": "production-overlays-color-bars",
+    "title": "Color Bars",
+    "category": "accessibility-production",
+    "tags": ["production", "calibration", "color", "bars"],
+    "description": "A clean calibration slate with configurable color bars, status, and delivery context for technical review.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 120,
+    "defaultProps": { "variant": "color-bars", "project": "NORTH STAR / MASTER", "version": "V07", "timecode": "00:00:00:00", "notes": ["CHECK LEVELS"], "guides": ["ACTION SAFE 90%", "TITLE SAFE 80%"], "watermark": "CALIBRATION", "deliverySpec": "REC.709|100 IRE|48KHZ", "colors": ["#f4f4f4", "#f4cc28", "#45b7e8", "#4fbe74", "#e65252", "#2d318f", "#111111"], "caption": "Color bars preview", "chapter": "CALIBRATION", "operator": "ONLINE", "status": "CALIBRATION", "paletteName": "mono", "showTimecode": true, "showWatermark": false, "frameRate": 30 }
+  },
+  {
+    "id": "production-overlays-review-notes",
+    "title": "Review Notes",
+    "category": "accessibility-production",
+    "tags": ["production", "review", "notes", "client"],
+    "description": "A paced review-note stack that highlights the current item while keeping completed and pending notes visible.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 210,
+    "defaultProps": { "variant": "review-notes", "project": "NORTH STAR / SOCIAL CUT", "version": "V05", "timecode": "00:00:18:12", "notes": ["Tighten opening by 3 frames", "Confirm supers legibility", "Lower music under VO", "Client sign-off pending"], "guides": ["ACTION SAFE 90%", "TITLE SAFE 80%"], "watermark": "CLIENT REVIEW", "deliverySpec": "1080 × 1920|H.264|STEREO", "colors": ["#f4f4f4", "#f4cc28", "#45b7e8"], "caption": "Review note preview", "chapter": "REVIEW / PASS 02", "operator": "A. PARK", "status": "IN REVIEW", "reviewStatus": "PASS 02 / CLIENT NOTES", "paletteName": "ocean", "showTimecode": true, "showWatermark": true, "frameRate": 30 }
+  },
+  {
+    "id": "production-overlays-version-stamp",
+    "title": "Version Stamp",
+    "category": "accessibility-production",
+    "tags": ["production", "version", "stamp", "review"],
+    "description": "A high-contrast diagonal version stamp for clearly separating internal cuts, approvals, and delivery candidates.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": { "variant": "version-stamp", "project": "NORTH STAR / HERO FILM", "version": "V07.3", "timecode": "00:04:21:08", "notes": ["INTERNAL ONLY"], "guides": ["ACTION SAFE 90%", "TITLE SAFE 80%"], "watermark": "NOT FINAL", "deliverySpec": "PRORES 422 HQ|4K MASTER", "colors": ["#f4f4f4", "#f4cc28", "#45b7e8"], "caption": "Version stamp preview", "chapter": "CUT / V07.3", "operator": "POST", "status": "INTERNAL REVIEW", "paletteName": "sunset", "showTimecode": true, "showWatermark": true, "frameRate": 30 }
+  },
+  {
+    "id": "production-overlays-watermark-toggle",
+    "title": "Watermark Toggle",
+    "category": "accessibility-production",
+    "tags": ["production", "watermark", "preview", "toggle"],
+    "description": "A non-destructive preview watermark treatment with an explicit ON or OFF state and restrained opacity.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "watermark-toggle", "project": "NORTH STAR / CLIENT PREVIEW", "version": "V04", "timecode": "00:01:12:18", "notes": ["WATERMARK ENABLED"], "guides": ["ACTION SAFE 90%", "TITLE SAFE 80%"], "watermark": "NORTH STAR / PREVIEW", "deliverySpec": "CLIENT PREVIEW|CLEAN MASTER AVAILABLE", "colors": ["#f4f4f4", "#f4cc28", "#45b7e8"], "caption": "Watermark state", "chapter": "PREVIEW", "operator": "PRODUCER", "status": "WATERMARK ON", "paletteName": "midnight", "showTimecode": true, "showWatermark": true, "frameRate": 30 }
+  },
+  {
+    "id": "production-overlays-burn-in-caption",
+    "title": "Burn In Caption",
+    "category": "accessibility-production",
+    "tags": ["production", "caption", "burn-in", "accessibility"],
+    "description": "A readable caption burn-in with speaker label, progress accent, version, and timecode context.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "burn-in-caption", "project": "NORTH STAR / INTERVIEW", "version": "V02", "timecode": "00:02:04:16", "notes": ["VERIFY CAPTION TIMING"], "guides": ["ACTION SAFE 90%", "TITLE SAFE 80%"], "watermark": "CAPTION REVIEW", "deliverySpec": "608 CAPTIONS|WHITE ON BLACK|SRT", "colors": ["#f4f4f4", "#f4cc28", "#45b7e8"], "caption": "We built the workflow around the moment a customer says yes.", "chapter": "INTERVIEW / CUSTOMER STORY", "operator": "JORDAN LEE", "status": "CAPTION REVIEW", "paletteName": "mono", "showTimecode": true, "showWatermark": true, "frameRate": 30 }
+  },
+  {
+    "id": "production-overlays-chapter-marker",
+    "title": "Chapter Marker",
+    "category": "accessibility-production",
+    "tags": ["production", "chapter", "marker", "timeline"],
+    "description": "A chapter transition card with a strong marker line, chapter name, and timeline progress for editorial exports.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "chapter-marker", "project": "NORTH STAR / CASE STUDY", "version": "V06", "timecode": "00:03:10:02", "notes": ["CHAPTER TRANSITION"], "guides": ["ACTION SAFE 90%", "TITLE SAFE 80%"], "watermark": "EDITORIAL", "deliverySpec": "CHAPTER 02|MASTER TIMELINE", "colors": ["#f4f4f4", "#f4cc28", "#45b7e8"], "caption": "Chapter marker", "chapter": "CHAPTER 02 / THE TURN", "operator": "EDIT", "status": "LOCKED", "paletteName": "forest", "showTimecode": true, "showWatermark": false, "frameRate": 30 }
+  },
+  {
+    "id": "production-overlays-delivery-card",
+    "title": "Delivery Card",
+    "category": "accessibility-production",
+    "tags": ["production", "delivery", "specification", "master"],
+    "description": "A final delivery card that turns format, audio, color, and status specifications into a readable handoff frame.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "delivery-card", "project": "NORTH STAR / HERO FILM", "version": "MASTER V01", "timecode": "00:04:30:00", "notes": ["FINAL HANDOFF"], "guides": ["ACTION SAFE 90%", "TITLE SAFE 80%"], "watermark": "DELIVERY MASTER", "deliverySpec": "1920 × 1080|23.976 FPS|PRORES 422 HQ|REC.709|STEREO / 48KHZ|FULL MIX + M&E", "colors": ["#f4f4f4", "#f4cc28", "#45b7e8"], "caption": "Delivery specification", "chapter": "DELIVERY / MASTER", "operator": "POST PRODUCTION", "status": "READY FOR DELIVERY", "paletteName": "ocean", "showTimecode": true, "showWatermark": false, "frameRate": 30 }
+  }
+]

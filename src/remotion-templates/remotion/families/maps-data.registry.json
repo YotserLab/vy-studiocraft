@@ -1,0 +1,122 @@
+[
+  {
+    "id": "maps-data-choropleth-grid",
+    "title": "Choropleth Grid",
+    "category": "data-infographic",
+    "tags": ["map", "choropleth", "regions", "intensity"],
+    "description": "A tile-based regional map shades areas by value so geographic intensity reads instantly without external map assets.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": { "variant": "choropleth-grid", "title": "Where the signal is strongest.", "subtitle": "Compare regional intensity on one steady visual field.", "paletteName": "ocean", "mapShape": "grid", "legend": ["Low", "Medium", "High"], "colorScale": ["#dbeafe", "#60a5fa", "#2563eb", "#1e1b4b"], "unit": "%", "source": "SOURCE / REGIONAL INDEX" }
+  },
+  {
+    "id": "maps-data-bubble-map",
+    "title": "Bubble Map",
+    "category": "data-infographic",
+    "tags": ["map", "bubbles", "scale", "locations"],
+    "description": "Scaled bubbles anchor quantitative values to locations, making concentration and outliers easy to compare.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": { "variant": "bubble-map", "title": "Scale tells the story.", "subtitle": "Let each location grow in proportion to its contribution.", "paletteName": "candy", "mapShape": "contour", "unit": "K", "source": "SOURCE / LOCATION VOLUME" }
+  },
+  {
+    "id": "maps-data-heat-route",
+    "title": "Heat Route",
+    "category": "data-infographic",
+    "tags": ["map", "heat", "route", "activity"],
+    "description": "A glowing route sweeps across an abstract map to show movement, demand, or activity through connected places.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "heat-route", "title": "Follow the active path.", "subtitle": "Reveal where movement and demand accumulate over time.", "paletteName": "sunset", "mapShape": "contour", "unit": " pts", "source": "SOURCE / ROUTE ACTIVITY" }
+  },
+  {
+    "id": "maps-data-regional-bars",
+    "title": "Regional Bars",
+    "category": "data-infographic",
+    "tags": ["map", "regions", "bars", "comparison"],
+    "description": "A regional map pairs location context with compact bars for direct geographic comparison.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "regional-bars", "title": "Compare every region.", "subtitle": "Keep geography visible while ranking the numbers beside it.", "paletteName": "forest", "mapShape": "grid", "unit": "%", "source": "SOURCE / REGIONAL PERFORMANCE" }
+  },
+  {
+    "id": "maps-data-migration-arcs",
+    "title": "Migration Arcs",
+    "category": "data-infographic",
+    "tags": ["map", "migration", "arcs", "movement"],
+    "description": "Dashed arcs connect regions in sequence to visualize migration, rollout, or population movement.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "migration-arcs", "title": "Movement has a shape.", "subtitle": "Show where a population, product, or idea travels next.", "paletteName": "midnight", "mapShape": "contour", "unit": " people", "source": "SOURCE / MOVEMENT STUDY" }
+  },
+  {
+    "id": "maps-data-coverage-map",
+    "title": "Coverage Map",
+    "category": "data-infographic",
+    "tags": ["map", "coverage", "service", "reach"],
+    "description": "Concentric coverage rings turn a central service area into an immediate visual of reach and availability.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": { "variant": "coverage-map", "title": "See how far it reaches.", "subtitle": "Make service coverage and expansion boundaries obvious.", "paletteName": "ocean", "mapShape": "contour", "unit": " km", "source": "SOURCE / COVERAGE MODEL" }
+  },
+  {
+    "id": "maps-data-density-cells",
+    "title": "Density Cells",
+    "category": "data-infographic",
+    "tags": ["map", "density", "cells", "heatmap"],
+    "description": "Cellular density fields and bubbles show clusters, gaps, and concentration without relying on a live map.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "density-cells", "title": "Find the concentration.", "subtitle": "Turn scattered observations into a readable density field.", "paletteName": "sunset", "mapShape": "hex", "unit": " / km²", "source": "SOURCE / DENSITY SAMPLE" }
+  },
+  {
+    "id": "maps-data-map-legend",
+    "title": "Map Legend",
+    "category": "data-infographic",
+    "tags": ["map", "legend", "key", "explanation"],
+    "description": "A map-first composition pairs every highlighted region with a clear legend and value callout.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": { "variant": "map-legend", "title": "Make the color legible.", "subtitle": "Give viewers the key they need to read a geographic visual.", "paletteName": "paper", "mapShape": "grid", "legend": ["0–25", "26–50", "51–75", "76–100"], "unit": "%", "source": "SOURCE / MAP LEGEND" }
+  },
+  {
+    "id": "maps-data-geo-ranking",
+    "title": "Geo Ranking",
+    "category": "data-infographic",
+    "tags": ["map", "ranking", "regions", "leaderboard"],
+    "description": "A ranked region list sits beside a map so geographic leaders and laggards can be scanned together.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "geo-ranking", "title": "Who is leading the map?", "subtitle": "Rank regions without losing their place in the story.", "paletteName": "forest", "mapShape": "contour", "unit": " pts", "source": "SOURCE / GEO RANKING" }
+  },
+  {
+    "id": "maps-data-map-callout",
+    "title": "Map Callout",
+    "category": "data-infographic",
+    "tags": ["map", "callout", "focus", "annotation"],
+    "description": "A focused location callout pins the important number or note directly to its region on the map.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": { "variant": "map-callout", "title": "One region changes the picture.", "subtitle": "Direct attention to the location that deserves the next sentence.", "paletteName": "midnight", "mapShape": "contour", "focusRegion": "Central", "notes": "Use focusRegion to pin the narrative to one place.", "unit": "%", "source": "SOURCE / FEATURED REGION" }
+  }
+]

@@ -1,0 +1,212 @@
+[
+  {
+    "id": "bg-loop-aurora-bands",
+    "title": "Drifting Aurora Bands",
+    "category": "background-loops",
+    "tags": [
+      "aurora",
+      "gradient",
+      "ambient"
+    ],
+    "description": "Soft blurred aurora ribbons drift through one master cycle over 240 frames; each ribbon uses an integer phase harmonic for a mathematically closed loop.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 240,
+    "defaultProps": {
+      "variant": "aurora-bands",
+      "paletteName": "midnight",
+      "speed": 1,
+      "intensity": 0.78
+    }
+  },
+  {
+    "id": "bg-loop-soft-bokeh",
+    "title": "Floating Soft Bokeh",
+    "category": "background-loops",
+    "tags": [
+      "bokeh",
+      "soft",
+      "lights"
+    ],
+    "description": "Defocused color circles orbit and breathe through one master cycle over 240 frames, with integer one-to-three-cycle harmonics that close together.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 240,
+    "defaultProps": {
+      "variant": "soft-bokeh",
+      "paletteName": "candy",
+      "speed": 1,
+      "intensity": 0.7
+    }
+  },
+  {
+    "id": "bg-loop-topographic-contours",
+    "title": "Flowing Topographic Contours",
+    "category": "background-loops",
+    "tags": [
+      "topographic",
+      "contours",
+      "svg"
+    ],
+    "description": "Seventeen restrained SVG contour paths flow through one master cycle over 240 frames; secondary ridges complete exactly two cycles.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 240,
+    "defaultProps": {
+      "variant": "topographic-contours",
+      "paletteName": "forest",
+      "speed": 1,
+      "intensity": 0.72
+    }
+  },
+  {
+    "id": "bg-loop-starfield-parallax",
+    "title": "Slow Starfield Parallax",
+    "category": "background-loops",
+    "tags": [
+      "stars",
+      "parallax",
+      "space"
+    ],
+    "description": "Three toroidally wrapped star depths drift through one master cycle over 240 frames; every layer travels an integer wrapped distance and returns exactly.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 240,
+    "defaultProps": {
+      "variant": "starfield-parallax",
+      "paletteName": "ocean",
+      "speed": 1,
+      "intensity": 0.72
+    }
+  },
+  {
+    "id": "bg-loop-wave-layers",
+    "title": "Undulating Wave Layers",
+    "category": "background-loops",
+    "tags": [
+      "waves",
+      "layers",
+      "calm"
+    ],
+    "description": "Four translucent SVG wave fills undulate through one master cycle over 240 frames, using integer one-to-four-cycle temporal harmonics.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 240,
+    "defaultProps": {
+      "variant": "wave-layers",
+      "paletteName": "ocean",
+      "speed": 1,
+      "intensity": 0.75
+    }
+  },
+  {
+    "id": "bg-loop-conic-sheen",
+    "title": "Rotating Conic Sheen",
+    "category": "background-loops",
+    "tags": [
+      "conic",
+      "sheen",
+      "premium"
+    ],
+    "description": "A diffused conic sheen makes one full rotation over 240 frames while its scale completes exactly two breathing cycles.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 240,
+    "defaultProps": {
+      "variant": "conic-sheen",
+      "paletteName": "mono",
+      "speed": 1,
+      "intensity": 0.68
+    }
+  },
+  {
+    "id": "bg-loop-rising-bubbles",
+    "title": "Rising Ambient Bubbles",
+    "category": "background-loops",
+    "tags": [
+      "bubbles",
+      "rise",
+      "organic"
+    ],
+    "description": "Translucent bubbles rise on wrapped lanes through one master cycle over 240 frames; lane rates complete one, two, or three exact cycles.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 240,
+    "defaultProps": {
+      "variant": "rising-bubbles",
+      "paletteName": "ocean",
+      "speed": 1,
+      "intensity": 0.7
+    }
+  },
+  {
+    "id": "bg-loop-duotone-geometry",
+    "title": "Breathing Duotone Geometry",
+    "category": "background-loops",
+    "tags": [
+      "duotone",
+      "geometry",
+      "minimal"
+    ],
+    "description": "Minimal duotone shapes rotate and breathe through one master cycle over 240 frames, with every shape completing an integer number of turns.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 240,
+    "defaultProps": {
+      "variant": "duotone-geometry",
+      "paletteName": "sunset",
+      "speed": 1,
+      "intensity": 0.68
+    }
+  },
+  {
+    "id": "bg-loop-cloud-parallax",
+    "title": "Drifting Cloud Parallax",
+    "category": "background-loops",
+    "tags": [
+      "clouds",
+      "parallax",
+      "atmosphere"
+    ],
+    "description": "Blurred cloud blobs cross three wrapped depth planes in one master cycle over 240 frames; vertical drift uses integer one-to-three-cycle harmonics.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 240,
+    "defaultProps": {
+      "variant": "cloud-parallax",
+      "paletteName": "ocean",
+      "speed": 1,
+      "intensity": 0.65
+    }
+  },
+  {
+    "id": "bg-loop-diagonal-stripes",
+    "title": "Subtle Diagonal Stripe Flow",
+    "category": "background-loops",
+    "tags": [
+      "stripes",
+      "diagonal",
+      "subtle"
+    ],
+    "description": "Fine diagonal stripes shift by exactly one 72-pixel pattern cycle over 240 frames while the low-contrast sheen breathes twice.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 240,
+    "defaultProps": {
+      "variant": "diagonal-stripes",
+      "paletteName": "midnight",
+      "speed": 1,
+      "intensity": 0.62
+    }
+  }
+]

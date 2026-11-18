@@ -1,0 +1,122 @@
+[
+  {
+    "id": "math-visuals-function-plot",
+    "title": "Function Plot",
+    "category": "explainers-education",
+    "tags": ["math", "function", "plot", "equation", "graph"],
+    "description": "An animated function plot draws a smooth equation curve over measured axes with an equation label and moving point.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": { "variant": "function-plot", "title": "Function Plot", "subtitle": "Trace the relationship", "equation": "f(x) = x² − 2 sin x", "paletteName": "ocean", "speed": 1 }
+  },
+  {
+    "id": "math-visuals-geometry-proof",
+    "title": "Geometry Proof",
+    "category": "explainers-education",
+    "tags": ["math", "geometry", "proof", "triangle", "theorem"],
+    "description": "A clean triangle construction reveals vertices, a right-angle marker, and a proof statement in measured stages.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": { "variant": "geometry-proof", "title": "Geometry Proof", "subtitle": "Build the theorem", "equation": "a² + b² = c²", "paletteName": "midnight", "annotations": ["Right angle preserved"] }
+  },
+  {
+    "id": "math-visuals-fraction-build",
+    "title": "Fraction Build",
+    "category": "explainers-education",
+    "tags": ["math", "fraction", "parts", "lesson", "arithmetic"],
+    "description": "A fraction becomes tangible as a numerator and denominator assemble beside a partitioned grid of shaded parts.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 135,
+    "defaultProps": { "variant": "fraction-build", "title": "Fraction Build", "subtitle": "Parts make a whole", "values": [8, 3], "paletteName": "candy" }
+  },
+  {
+    "id": "math-visuals-vector-field",
+    "title": "Vector Field",
+    "category": "explainers-education",
+    "tags": ["math", "vectors", "field", "calculus", "flow"],
+    "description": "A deterministic vector field animates direction arrows around a central attractor for calculus and physics explainers.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 170,
+    "defaultProps": { "variant": "vector-field", "title": "Vector Field", "subtitle": "Direction at every point", "equation": "v(x,y) = (−y, x)", "paletteName": "neon", "speed": 1 }
+  },
+  {
+    "id": "math-visuals-area-under-curve",
+    "title": "Area Under Curve",
+    "category": "explainers-education",
+    "tags": ["math", "integral", "area", "calculus", "curve"],
+    "description": "A curve and its bounded region reveal accumulated area with boundary guides and an integral label.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 155,
+    "defaultProps": { "variant": "area-under-curve", "title": "Area Under Curve", "subtitle": "Accumulation becomes visible", "equation": "∫ f(x) dx", "paletteName": "aurora" }
+  },
+  {
+    "id": "math-visuals-probability-bars",
+    "title": "Probability Bars",
+    "category": "explainers-education",
+    "tags": ["math", "probability", "bars", "statistics", "outcomes"],
+    "description": "Probability outcomes rise as labeled bars with percentages, making distributions easy to scan in a lesson or explainer.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 145,
+    "defaultProps": { "variant": "probability-bars", "title": "Probability Bars", "subtitle": "Compare possible outcomes", "values": [3, 7, 5, 9, 2, 6], "labels": ["A", "B", "C", "D", "E", "F"], "paletteName": "ocean" }
+  },
+  {
+    "id": "math-visuals-matrix-transform",
+    "title": "Matrix Transform",
+    "category": "explainers-education",
+    "tags": ["math", "matrix", "transform", "linear-algebra", "grid"],
+    "description": "A point lattice continuously transforms under a labeled matrix so rotation and scale can be understood spatially.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": { "variant": "matrix-transform", "title": "Matrix Transform", "subtitle": "Move a coordinate system", "equation": "[ 0.75  −0.50 ]", "paletteName": "midnight" }
+  },
+  {
+    "id": "math-visuals-number-line",
+    "title": "Number Line",
+    "category": "explainers-education",
+    "tags": ["math", "number-line", "integers", "coordinates", "points"],
+    "description": "Animated markers land on a labeled number line with guide lines and optional point names for arithmetic or coordinates.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 130,
+    "defaultProps": { "variant": "number-line", "title": "Number Line", "subtitle": "Place the values", "range": { "min": -5, "max": 5 }, "points": [{ "x": -2, "label": "−2" }, { "x": 1, "label": "+1" }, { "x": 3, "label": "+3" }], "paletteName": "forest" }
+  },
+  {
+    "id": "math-visuals-sequence-growth",
+    "title": "Sequence Growth",
+    "category": "explainers-education",
+    "tags": ["math", "sequence", "growth", "series", "pattern"],
+    "description": "A sequence of rising bars and a connecting guide line makes discrete growth patterns legible frame by frame.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": { "variant": "sequence-growth", "title": "Sequence Growth", "subtitle": "See the pattern emerge", "equation": "aₙ = 2ⁿ", "values": [1, 2, 4, 6, 8, 10, 12, 14], "paletteName": "sunset" }
+  },
+  {
+    "id": "math-visuals-equation-solve",
+    "title": "Equation Solve",
+    "category": "explainers-education",
+    "tags": ["math", "equation", "solve", "algebra", "steps"],
+    "description": "A three-step algebra transformation presents an equation, the balancing operation, and the final solution as stacked cards.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 155,
+    "defaultProps": { "variant": "equation-solve", "title": "Equation Solve", "subtitle": "Balance both sides", "equation": "3x + 4 = 19", "annotations": ["Apply the same operation to both sides"], "paletteName": "candy" }
+  }
+]

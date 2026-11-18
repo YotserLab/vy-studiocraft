@@ -1,0 +1,204 @@
+[
+  {
+    "id": "onboarding-tutorials-first-run",
+    "title": "First Run",
+    "category": "onboarding-tutorials",
+    "tags": ["onboarding", "tutorial", "first-run", "product"],
+    "description": "A welcoming first-run sequence pairs a clear first action with a live product surface and an animated hotspot.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "first-run",
+      "productName": "Northstar",
+      "headline": "Start with one clear step",
+      "subtitle": "A friendly first-run tutorial that makes the product feel easy to enter.",
+      "paletteName": "midnight",
+      "accentLabel": "01 / FIRST RUN",
+      "ctaLabel": "Start tutorial"
+    }
+  },
+  {
+    "id": "onboarding-tutorials-setup-wizard",
+    "title": "Setup Wizard",
+    "category": "onboarding-tutorials",
+    "tags": ["onboarding", "wizard", "setup", "steps"],
+    "description": "A guided setup wizard reveals one focused task at a time with a persistent step rail and save-and-continue action.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "setup-wizard",
+      "productName": "Northstar",
+      "headline": "Build your starting point",
+      "subtitle": "Break setup into small, legible actions so progress never feels mysterious.",
+      "paletteName": "ocean",
+      "steps": ["Choose a workspace", "Create your first item", "Invite a teammate"],
+      "accentLabel": "02 / SETUP WIZARD"
+    }
+  },
+  {
+    "id": "onboarding-tutorials-three-actions",
+    "title": "Three Actions",
+    "category": "onboarding-tutorials",
+    "tags": ["onboarding", "actions", "quickstart", "tutorial"],
+    "description": "Three sequential action cards teach the shortest path from opening a product to sharing a useful result.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "three-actions",
+      "productName": "Northstar",
+      "headline": "The first three moves",
+      "subtitle": "Teach the minimum sequence that gets a new user to a meaningful outcome.",
+      "paletteName": "candy",
+      "steps": ["Create", "Customize", "Share"],
+      "accentLabel": "03 / THREE ACTIONS"
+    }
+  },
+  {
+    "id": "onboarding-tutorials-task-complete",
+    "title": "Task Complete",
+    "category": "onboarding-tutorials",
+    "tags": ["onboarding", "checklist", "task", "progress"],
+    "description": "A checklist tutorial turns a sequence of product actions into visible progress and a clear completion state.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "task-complete",
+      "productName": "Northstar",
+      "headline": "Complete the first useful task",
+      "subtitle": "Show each action, its result, and the moment the user is ready to continue alone.",
+      "paletteName": "forest",
+      "steps": ["Open your workspace", "Create a project", "Share the result", "Return for the next win"],
+      "accentLabel": "04 / TASK COMPLETE",
+      "ctaLabel": "Open workspace"
+    }
+  },
+  {
+    "id": "onboarding-tutorials-guided-tour",
+    "title": "Guided Tour",
+    "category": "onboarding-tutorials",
+    "tags": ["onboarding", "guided-tour", "hotspot", "ui"],
+    "description": "A guided tour moves a glowing hotspot across a product workspace to explain the most important controls in context.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "guided-tour",
+      "productName": "Northstar",
+      "headline": "See the product in context",
+      "subtitle": "Use focused callouts to explain where the important actions live without covering the interface.",
+      "paletteName": "midnight",
+      "highlights": ["Navigation", "Primary action", "Activity panel", "Help menu"],
+      "accentLabel": "05 / GUIDED TOUR"
+    }
+  },
+  {
+    "id": "onboarding-tutorials-shortcut-teach",
+    "title": "Shortcut Teach",
+    "category": "onboarding-tutorials",
+    "tags": ["onboarding", "shortcut", "keyboard", "power-user"],
+    "description": "A tactile key-by-key reveal teaches a shortcut and pairs it with the result it unlocks.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 135,
+    "defaultProps": {
+      "variant": "shortcut-teach",
+      "productName": "Northstar",
+      "headline": "Teach the fast path",
+      "subtitle": "Make one power-user shortcut memorable with a clear keystroke rhythm and payoff.",
+      "paletteName": "mono",
+      "shortcut": "⌘ K",
+      "accentLabel": "06 / SHORTCUT TEACH"
+    }
+  },
+  {
+    "id": "onboarding-tutorials-role-based-start",
+    "title": "Role Based Start",
+    "category": "onboarding-tutorials",
+    "tags": ["onboarding", "personalization", "roles", "paths"],
+    "description": "Role cards show how a personalized starting path helps each kind of user find the right first action.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "role-based-start",
+      "productName": "Northstar",
+      "headline": "Start from what you do",
+      "subtitle": "Let role-based choices turn a broad product into a focused first session.",
+      "paletteName": "sunset",
+      "role": "Product builder",
+      "accentLabel": "07 / ROLE-BASED START"
+    }
+  },
+  {
+    "id": "onboarding-tutorials-empty-to-populated",
+    "title": "Empty To Populated",
+    "category": "onboarding-tutorials",
+    "tags": ["onboarding", "empty-state", "activation", "before-after"],
+    "description": "A before-and-after tutorial shows how one small setup action transforms a blank workspace into a useful home.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "empty-to-populated",
+      "productName": "Northstar",
+      "headline": "See the payoff before you begin",
+      "subtitle": "Make the first useful state visible so onboarding actions have an obvious reason.",
+      "paletteName": "ocean",
+      "accentLabel": "08 / EMPTY TO POPULATED"
+    }
+  },
+  {
+    "id": "onboarding-tutorials-recovery-step",
+    "title": "Recovery Step",
+    "category": "onboarding-tutorials",
+    "tags": ["onboarding", "recovery", "error", "guidance"],
+    "description": "A recovery tutorial turns an interrupted task into a calm next-step explanation instead of a dead end.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "recovery-step",
+      "productName": "Northstar",
+      "headline": "Keep moving when setup gets stuck",
+      "subtitle": "Name the blocker, explain the fix, and guide the user back into the flow.",
+      "paletteName": "sunset",
+      "errorText": "We need one more detail",
+      "accentLabel": "09 / RECOVERY STEP",
+      "ctaLabel": "Continue"
+    }
+  },
+  {
+    "id": "onboarding-tutorials-completion-celebration",
+    "title": "Completion Celebration",
+    "category": "onboarding-tutorials",
+    "tags": ["onboarding", "completion", "celebration", "activation"],
+    "description": "A celebratory completion card uses deterministic confetti, a readiness metric, and a final handoff into the product.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "completion-celebration",
+      "productName": "Northstar",
+      "headline": "You are ready to make progress",
+      "subtitle": "Close the tutorial with a confident handoff and a clear next destination.",
+      "paletteName": "candy",
+      "metric": "100% ready",
+      "accentLabel": "10 / COMPLETION CELEBRATION",
+      "ctaLabel": "Open workspace"
+    }
+  }
+]

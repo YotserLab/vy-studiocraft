@@ -1,0 +1,122 @@
+[
+  {
+    "id": "film-trailers-teaser-escalation",
+    "title": "Teaser Escalation",
+    "category": "film-trailers",
+    "tags": ["trailer", "teaser", "cinematic", "escalation"],
+    "description": "Escalates a sequence of teaser beats from a quiet first look into a cinematic promise.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "teaser-escalation", "title": "The Last Signal", "logline": "Every answer changes the question.", "tagline": "A story begins in the silence.", "reviews": ["A breathtaking new vision."], "characters": ["THE SEEKER", "THE WITNESS", "THE UNKNOWN"], "releaseDate": "THIS FALL", "credits": "A FILM BY NORTH STAR PICTURES", "shots": ["A signal arrives in the dark.", "The door was never meant to open.", "Everyone has a version of what happened.", "The truth is closer than it looks."], "paletteName": "midnight" }
+  },
+  {
+    "id": "film-trailers-three-act-trailer",
+    "title": "Three Act Trailer",
+    "category": "film-trailers",
+    "tags": ["trailer", "three-act", "story", "cinematic"],
+    "description": "A three-panel trailer structure that reveals setup, pressure, and consequence as separate acts.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 210,
+    "defaultProps": { "variant": "three-act-trailer", "title": "The Long Way Home", "logline": "Three choices. One way forward.", "tagline": "The journey changes everyone.", "reviews": ["Beautifully made."], "characters": ["THE BEGINNING", "THE TURN", "THE RETURN"], "releaseDate": "COMING SOON", "credits": "AN ORIGINAL MOTION PICTURE", "shots": ["Before the beginning.", "Then everything changed.", "There is no going back."], "paletteName": "ocean" }
+  },
+  {
+    "id": "film-trailers-review-burst",
+    "title": "Review Burst",
+    "category": "film-trailers",
+    "tags": ["reviews", "press", "quote", "trailer"],
+    "description": "Staggers three press quotes into a bold review wall before landing on the film title.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 190,
+    "defaultProps": { "variant": "review-burst", "title": "After the Rain", "logline": "A city remembers.", "tagline": "A film about what remains.", "reviews": ["A breathtaking new vision.", "Beautifully made and impossible to forget.", "A story that stays with you."], "characters": ["MARA", "ELI", "THE CITY"], "releaseDate": "OCTOBER 18", "credits": "A NORTH STAR PICTURES RELEASE", "paletteName": "sunset" }
+  },
+  {
+    "id": "film-trailers-character-intro",
+    "title": "Character Intro",
+    "category": "film-trailers",
+    "tags": ["characters", "cast", "portraits", "trailer"],
+    "description": "Introduces three characters in cinematic portrait columns with paced entrances and role labels.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 200,
+    "defaultProps": { "variant": "character-intro", "title": "The Others", "logline": "No one gets out unchanged.", "tagline": "Every story has more than one side.", "reviews": ["A remarkable ensemble."], "characters": ["THE SEEKER", "THE WITNESS", "THE UNKNOWN"], "releaseDate": "IN THEATRES", "credits": "CAST / CREW", "paletteName": "forest" }
+  },
+  {
+    "id": "film-trailers-mystery-cut",
+    "title": "Mystery Cut",
+    "category": "film-trailers",
+    "tags": ["mystery", "logline", "suspense", "trailer"],
+    "description": "Uses an obscured image field and centered logline to create a high-tension mystery beat.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 170,
+    "defaultProps": { "variant": "mystery-cut", "title": "The Unseen", "logline": "The truth is closer than it looks.", "tagline": "Some questions should stay buried.", "reviews": ["A masterclass in tension."], "characters": ["THE WITNESS", "THE STRANGER", "THE SIGNAL"], "releaseDate": "SOON", "credits": "A FILM BY NORTH STAR PICTURES", "paletteName": "midnight" }
+  },
+  {
+    "id": "film-trailers-release-date",
+    "title": "Release Date",
+    "category": "film-trailers",
+    "tags": ["release", "date", "announcement", "trailer"],
+    "description": "A clean announcement card that makes the release date the trailer's central payoff.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 160,
+    "defaultProps": { "variant": "release-date", "title": "Northbound", "logline": "The road remembers every mile.", "tagline": "ONLY IN THEATRES", "reviews": ["An unforgettable journey."], "characters": ["THE DRIVER", "THE PASSENGER", "THE ROAD"], "releaseDate": "NOVEMBER 07", "credits": "A NORTH STAR PICTURES RELEASE", "paletteName": "ocean" }
+  },
+  {
+    "id": "film-trailers-title-impact",
+    "title": "Title Impact",
+    "category": "film-trailers",
+    "tags": ["title", "impact", "typography", "cinematic"],
+    "description": "A large-scale kinetic title hit with cinematic background texture and a restrained tagline.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": { "variant": "title-impact", "title": "AFTERLIGHT", "logline": "When the lights go out, the story begins.", "tagline": "A NEW MOTION PICTURE", "reviews": ["A visual knockout."], "characters": ["THE LAST LIGHT", "THE CITY", "THE DAWN"], "releaseDate": "2026", "credits": "NORTH STAR PICTURES", "paletteName": "mono" }
+  },
+  {
+    "id": "film-trailers-ensemble-grid",
+    "title": "Ensemble Grid",
+    "category": "film-trailers",
+    "tags": ["ensemble", "grid", "cast", "trailer"],
+    "description": "Builds a cast mosaic from four image fields with synchronized character labels.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 190,
+    "defaultProps": { "variant": "ensemble-grid", "title": "The Four Corners", "logline": "Four lives. One night.", "tagline": "Everyone is carrying something.", "reviews": ["A stunning ensemble piece."], "characters": ["MARA", "ELI", "JUNE", "NOAH"], "releaseDate": "THIS WINTER", "credits": "AN ORIGINAL MOTION PICTURE", "paletteName": "sunset" }
+  },
+  {
+    "id": "film-trailers-final-lockup",
+    "title": "Final Lockup",
+    "category": "film-trailers",
+    "tags": ["lockup", "endcard", "release", "credits"],
+    "description": "A polished final title lockup for release, tagline, date, and compact credit information.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "final-lockup", "title": "THE SHAPE OF WATER", "logline": "A story carried by the tide.", "tagline": "EVERY JOURNEY LEAVES A TRACE", "reviews": ["An extraordinary film."], "characters": ["THE SHORE", "THE TIDE", "THE RETURN"], "releaseDate": "IN THEATRES OCTOBER 18", "credits": "A NORTH STAR PICTURES RELEASE / 2026", "paletteName": "ocean" }
+  },
+  {
+    "id": "film-trailers-trailer-loop",
+    "title": "Trailer Loop",
+    "category": "film-trailers",
+    "tags": ["loop", "trailer", "teaser", "replay"],
+    "description": "A looping title-and-shot treatment designed to replay cleanly in a gallery, feed, or display.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "trailer-loop", "title": "ECHOES", "logline": "Listen closely.", "tagline": "A FILM IN MOTION", "reviews": ["Hypnotic and precise."], "characters": ["THE VOICE", "THE ROOM", "THE ECHO"], "releaseDate": "COMING SOON", "credits": "NORTH STAR PICTURES", "shots": ["The room remembers.", "A voice crosses the distance.", "Nothing stays still."], "paletteName": "midnight" }
+  }
+]

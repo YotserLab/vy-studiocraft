@@ -1,0 +1,208 @@
+[
+  {
+    "id": "app-onboarding-welcome-flow",
+    "title": "Welcome Flow",
+    "category": "app-onboarding",
+    "tags": ["onboarding", "welcome", "mobile", "app-launch"],
+    "description": "A tactile app welcome screen rises into frame with a four-step progress rail and a clear first action.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "welcome-flow",
+      "appName": "Northstar",
+      "headline": "Start with a better first step",
+      "subline": "A warm, focused welcome sequence that makes a new product feel easy to enter.",
+      "paletteName": "midnight",
+      "stepLabels": ["Welcome", "Personalize", "Explore", "Ready"],
+      "ctaLabel": "Get started",
+      "accentLabel": "01 / WELCOME FLOW"
+    }
+  },
+  {
+    "id": "app-onboarding-permission-steps",
+    "title": "Permission Steps",
+    "category": "app-onboarding",
+    "tags": ["onboarding", "permissions", "setup", "mobile"],
+    "description": "Permission cards sequence beside a device mockup, making setup requirements feel transparent rather than interruptive.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "permission-steps",
+      "appName": "Northstar",
+      "headline": "Give your workspace the right context",
+      "subline": "Explain each permission in sequence so people know why the product is asking.",
+      "paletteName": "ocean",
+      "permissions": ["Notifications", "Calendar access", "Workspace profile"],
+      "accentLabel": "02 / PERMISSION STEPS"
+    }
+  },
+  {
+    "id": "app-onboarding-profile-setup",
+    "title": "Profile Setup",
+    "category": "app-onboarding",
+    "tags": ["onboarding", "profile", "personalization", "form"],
+    "description": "A polished profile form animates its completion state while the surrounding copy explains the personalization payoff.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "profile-setup",
+      "appName": "Northstar",
+      "headline": "Make the workspace yours",
+      "subline": "Collect just enough context to make every next screen feel relevant.",
+      "paletteName": "forest",
+      "userName": "Alex Morgan",
+      "steps": ["Name", "Role", "Photo"],
+      "accentLabel": "03 / PROFILE SETUP",
+      "ctaLabel": "Save profile"
+    }
+  },
+  {
+    "id": "app-onboarding-feature-tour",
+    "title": "Feature Tour",
+    "category": "app-onboarding",
+    "tags": ["onboarding", "feature-tour", "product", "carousel"],
+    "description": "A paced horizontal feature tour introduces one product capability at a time with progress dots and clear next actions.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "feature-tour",
+      "appName": "Northstar",
+      "headline": "A product tour with momentum",
+      "subline": "Give each capability its own beat, then end with an invitation to explore.",
+      "paletteName": "candy",
+      "features": ["A calmer workspace", "Smart activity signals", "One-tap collaboration"],
+      "accentLabel": "04 / FEATURE TOUR"
+    }
+  },
+  {
+    "id": "app-onboarding-checklist-complete",
+    "title": "Checklist Complete",
+    "category": "app-onboarding",
+    "tags": ["onboarding", "checklist", "activation", "progress"],
+    "description": "A checklist fills one item at a time beside a radial completion meter, turning onboarding into visible progress.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "checklist-complete",
+      "appName": "Northstar",
+      "headline": "Turn setup into momentum",
+      "subline": "Show the path to first value and make every completed step feel earned.",
+      "paletteName": "sunset",
+      "steps": ["Create your workspace", "Invite a teammate", "Add your first project", "Ship a result"],
+      "accentLabel": "05 / CHECKLIST COMPLETE",
+      "ctaLabel": "Open workspace"
+    }
+  },
+  {
+    "id": "app-onboarding-empty-state-to-value",
+    "title": "Empty State To Value",
+    "category": "app-onboarding",
+    "tags": ["onboarding", "empty-state", "activation", "before-after"],
+    "description": "A split transformation moves from a quiet empty state to a useful first workspace, clarifying the activation payoff.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "empty-state-to-value",
+      "appName": "Northstar",
+      "headline": "From blank canvas to first win",
+      "subline": "Make the value of completing onboarding visible before the user has to imagine it.",
+      "paletteName": "ocean",
+      "accentLabel": "06 / EMPTY STATE TO VALUE"
+    }
+  },
+  {
+    "id": "app-onboarding-signup-to-dashboard",
+    "title": "Signup To Dashboard",
+    "category": "app-onboarding",
+    "tags": ["onboarding", "signup", "dashboard", "flow"],
+    "description": "Three connected states carry the viewer from account creation through verification into the product dashboard.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "signup-to-dashboard",
+      "appName": "Northstar",
+      "headline": "The shortest path to useful",
+      "subline": "Show account creation as a connected handoff, not a disconnected form sequence.",
+      "paletteName": "midnight",
+      "accentLabel": "07 / SIGNUP TO DASHBOARD"
+    }
+  },
+  {
+    "id": "app-onboarding-paywall-preview",
+    "title": "Paywall Preview",
+    "category": "app-onboarding",
+    "tags": ["onboarding", "paywall", "pricing", "upgrade"],
+    "description": "A premium plan card rises into view with benefit-by-benefit reveals and a low-friction upgrade invitation.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "paywall-preview",
+      "appName": "Northstar",
+      "headline": "Preview the next level",
+      "subline": "Frame an upgrade as a clear extension of the value the user has already seen.",
+      "paletteName": "sunset",
+      "planName": "Pro workspace",
+      "price": "$12",
+      "benefits": ["Unlimited projects", "Faster workflows", "Priority support"],
+      "accentLabel": "08 / PAYWALL PREVIEW",
+      "ctaLabel": "Start free trial"
+    }
+  },
+  {
+    "id": "app-onboarding-activation-milestones",
+    "title": "Activation Milestones",
+    "category": "app-onboarding",
+    "tags": ["onboarding", "activation", "milestones", "journey"],
+    "description": "A milestone rail advances through meaningful activation moments, making the onboarding journey feel like a measurable story.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "activation-milestones",
+      "appName": "Northstar",
+      "headline": "Every step compounds",
+      "subline": "Connect setup actions to the moments that prove a product is becoming useful.",
+      "paletteName": "forest",
+      "metrics": ["First project", "Invite a teammate", "Complete a workflow", "Make it yours"],
+      "accentLabel": "09 / ACTIVATION MILESTONES"
+    }
+  },
+  {
+    "id": "app-onboarding-handoff-to-home",
+    "title": "Handoff To Home",
+    "category": "app-onboarding",
+    "tags": ["onboarding", "handoff", "home", "completion"],
+    "description": "An onboarding phone slides cleanly into a populated home dashboard, giving the sequence a satisfying end state.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "handoff-to-home",
+      "appName": "Northstar",
+      "headline": "Ready for the real work",
+      "subline": "End onboarding with a clear handoff into the home experience and its first useful view.",
+      "paletteName": "midnight",
+      "userName": "Alex",
+      "accentLabel": "10 / HANDOFF TO HOME",
+      "ctaLabel": "Open my workspace"
+    }
+  }
+]

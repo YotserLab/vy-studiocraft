@@ -1,0 +1,220 @@
+[
+  {
+    "id": "editorial-headlines-headline-stack",
+    "title": "Headline Stack",
+    "category": "editorial-headlines",
+    "tags": ["editorial", "magazine", "headline", "typography"],
+    "description": "A layered editorial headline with source rail, subhead, and restrained magazine pacing.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 110,
+    "defaultProps": {
+      "variant": "headline-stack",
+      "headline": "The Quiet Shift Reshaping Modern Work",
+      "subhead": "A closer look at the ideas moving from the margins to the mainstream.",
+      "source": "THE WEEKLY REVIEW",
+      "section": "FEATURE",
+      "paletteName": "paper",
+      "timestamp": "VOL. 04 · NO. 12"
+    }
+  },
+  {
+    "id": "editorial-headlines-section-break",
+    "title": "Section Break",
+    "category": "editorial-headlines",
+    "tags": ["editorial", "section", "transition", "typography"],
+    "description": "A bold section transition with oversized condensed type and a directional sweep.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 90,
+    "defaultProps": {
+      "variant": "section-break",
+      "headline": "The New Geography of Attention",
+      "subhead": "Signals, stories, and the systems behind the shift.",
+      "source": "FIELD NOTES",
+      "section": "CULTURE",
+      "paletteName": "midnight",
+      "timestamp": "SECTION 02"
+    }
+  },
+  {
+    "id": "editorial-headlines-pull-quote",
+    "title": "Pull Quote",
+    "category": "editorial-headlines",
+    "tags": ["editorial", "quote", "interview", "magazine"],
+    "description": "A large typographic pull quote with author attribution and supporting context.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 120,
+    "defaultProps": {
+      "variant": "pull-quote",
+      "headline": "Design is not decoration; it is the shape of the decision.",
+      "subhead": "A short context line for the quote.",
+      "source": "MAYA CHEN",
+      "section": "INTERVIEW",
+      "author": "Maya Chen · Editor",
+      "pullQuote": "Design is not decoration; it is the shape of the decision.",
+      "body": "From our conversation on making complex products feel inevitable.",
+      "paletteName": "paper"
+    }
+  },
+  {
+    "id": "editorial-headlines-source-card",
+    "title": "Source Card",
+    "category": "editorial-headlines",
+    "tags": ["editorial", "source", "evidence", "research"],
+    "description": "A dark evidence card that makes source attribution and verification the visual hero.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 110,
+    "defaultProps": {
+      "variant": "source-card",
+      "headline": "The signal appears across three independent studies",
+      "subhead": "The evidence is strongest where the methods overlap.",
+      "source": "RESEARCH DESK",
+      "section": "DATA",
+      "timestamp": "DOCUMENTED / VERIFIED",
+      "paletteName": "ocean"
+    }
+  },
+  {
+    "id": "editorial-headlines-five-stories",
+    "title": "Five Stories",
+    "category": "editorial-headlines",
+    "tags": ["editorial", "list", "roundup", "news"],
+    "description": "A clean five-story index with staggered rows, sections, and a magazine contents rhythm.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "five-stories",
+      "headline": "Five ideas worth carrying forward",
+      "subhead": "The short list from this week's desk.",
+      "source": "THE EDIT",
+      "section": "ROUNDUP",
+      "paletteName": "paper",
+      "stories": [
+        "Small teams, sharper instruments::FEATURE",
+        "The case for slower launches::OPINION",
+        "A map of the new creative stack::REPORT",
+        "What the next interface sounds like::DESIGN",
+        "One question to take into Monday::NOTE"
+      ]
+    }
+  },
+  {
+    "id": "editorial-headlines-editorial-cover",
+    "title": "Editorial Cover",
+    "category": "editorial-headlines",
+    "tags": ["editorial", "cover", "magazine", "feature"],
+    "description": "A magazine-cover composition with oversized type, issue metadata, and optional image backdrop.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 120,
+    "defaultProps": {
+      "variant": "editorial-cover",
+      "headline": "The Future Is More Human Than We Think",
+      "subhead": "Inside the choices shaping the next decade.",
+      "source": "COVER STORY",
+      "section": "QUARTERLY",
+      "author": "THE EDITORIAL DESK",
+      "timestamp": "SPRING ISSUE",
+      "paletteName": "sunset"
+    }
+  },
+  {
+    "id": "editorial-headlines-breaking-strip",
+    "title": "Breaking Strip",
+    "category": "editorial-headlines",
+    "tags": ["editorial", "breaking", "strip", "broadcast"],
+    "description": "A high-impact breaking strip that combines a color slab, moving headline, and timestamp.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 100,
+    "defaultProps": {
+      "variant": "breaking-strip",
+      "headline": "A New Chapter Opens Across the Industry",
+      "subhead": "Developing story from the editorial desk.",
+      "source": "LIVE DESK",
+      "section": "BREAKING",
+      "timestamp": "JUST NOW",
+      "paletteName": "midnight"
+    }
+  },
+  {
+    "id": "editorial-headlines-opinion-frame",
+    "title": "Opinion Frame",
+    "category": "editorial-headlines",
+    "tags": ["editorial", "opinion", "column", "essay"],
+    "description": "An opinion-column frame with an assertive serif headline, author credit, and column marker.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 130,
+    "defaultProps": {
+      "variant": "opinion-frame",
+      "headline": "We should make room for the unfinished idea",
+      "subhead": "A point of view on process, patience, and useful uncertainty.",
+      "source": "OPINION DESK",
+      "section": "ESSAY",
+      "author": "Jordan Ellis",
+      "body": "The strongest work often begins before it has a defensible shape.",
+      "timestamp": "04",
+      "paletteName": "paper"
+    }
+  },
+  {
+    "id": "editorial-headlines-fact-check",
+    "title": "Fact Check",
+    "category": "editorial-headlines",
+    "tags": ["editorial", "fact-check", "evidence", "verification"],
+    "description": "A verification card with claim, evidence panel, source label, and animated supported mark.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 115,
+    "defaultProps": {
+      "variant": "fact-check",
+      "headline": "Claim: The pattern is growing faster than the market",
+      "subhead": "The available evidence supports the direction, with caveats.",
+      "source": "RESEARCH DESK",
+      "section": "VERIFICATION",
+      "body": "Three comparable datasets show the same directional change over the measured period.",
+      "paletteName": "ocean"
+    }
+  },
+  {
+    "id": "editorial-headlines-closing-index",
+    "title": "Closing Index",
+    "category": "editorial-headlines",
+    "tags": ["editorial", "index", "closing", "contents"],
+    "description": "A closing contents index that resolves an editorial sequence into numbered page-like entries.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 140,
+    "defaultProps": {
+      "variant": "closing-index",
+      "headline": "In this issue",
+      "subhead": "A final index of the ideas in motion.",
+      "source": "THE WEEKLY REVIEW",
+      "section": "CONTENTS",
+      "timestamp": "INDEX",
+      "paletteName": "forest",
+      "stories": [
+        "The quiet shift reshaping modern work",
+        "A map of the new creative stack",
+        "The interface after the interface",
+        "How teams learn in public",
+        "One question to carry forward"
+      ]
+    }
+  }
+]

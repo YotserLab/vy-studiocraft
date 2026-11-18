@@ -1,0 +1,222 @@
+[
+  {
+    "id": "object-turntables-slow-spin",
+    "title": "Slow Spin",
+    "category": "object-turntables",
+    "tags": ["turntable", "product", "rotation", "hero"],
+    "description": "A calm, continuous object rotation on a softly lit studio plinth for premium product introductions.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "slow-spin",
+      "objectLabel": "FORM / 01",
+      "objectShape": "bottle",
+      "colors": ["#7c5cff", "#00e0ff", "#ff3d81"],
+      "paletteName": "midnight",
+      "camera": "front",
+      "rotationTurns": 1,
+      "lightDirection": 30,
+      "subtitle": "A considered form, shown from every angle."
+    }
+  },
+  {
+    "id": "object-turntables-snap-turn",
+    "title": "Snap Turn",
+    "category": "object-turntables",
+    "tags": ["snap", "tactile", "hardware", "rotation"],
+    "description": "A tactile stepped rotation jumps between exact quarter turns with a technical readout.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "snap-turn",
+      "objectLabel": "AXIS / 02",
+      "objectShape": "cube",
+      "colors": ["#34d399", "#a7f3d0", "#fbbf24"],
+      "paletteName": "forest",
+      "camera": "front",
+      "rotationTurns": 1,
+      "lightDirection": 45,
+      "subtitle": "A precise form with a satisfying mechanical cadence."
+    }
+  },
+  {
+    "id": "object-turntables-quarter-turn",
+    "title": "Quarter Turn",
+    "category": "object-turntables",
+    "tags": ["profile", "detail", "comparison", "rotation"],
+    "description": "A single quarter turn transitions a product from its front face into a clean profile view.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 135,
+    "defaultProps": {
+      "variant": "quarter-turn",
+      "objectLabel": "PROFILE / 03",
+      "objectShape": "package",
+      "colors": ["#ff6b35", "#f7c59f", "#ff3d81"],
+      "paletteName": "sunset",
+      "camera": "front",
+      "rotationTurns": 0.25,
+      "lightDirection": 20,
+      "subtitle": "Front, profile, and the details between them."
+    }
+  },
+  {
+    "id": "object-turntables-top-down-turn",
+    "title": "Top Down Turn",
+    "category": "object-turntables",
+    "tags": ["top-down", "diagram", "camera", "rotation"],
+    "description": "A top-down camera study rotates the silhouette against concentric measurement rings.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "top-down-turn",
+      "objectLabel": "PLAN / 04",
+      "objectShape": "disc",
+      "colors": ["#38bdf8", "#7dd3fc", "#fb7185"],
+      "paletteName": "ocean",
+      "camera": "top",
+      "rotationTurns": 1,
+      "lightDirection": 90,
+      "subtitle": "A different angle reveals a different system."
+    }
+  },
+  {
+    "id": "object-turntables-tilt-spin",
+    "title": "Tilt Spin",
+    "category": "object-turntables",
+    "tags": ["tilt", "cinematic", "camera", "premium"],
+    "description": "A subtle camera tilt and roll adds cinematic dimensionality to a continuous object spin.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "tilt-spin",
+      "objectLabel": "MOTION / 05",
+      "objectShape": "bottle",
+      "colors": ["#e879f9", "#67e8f9", "#fde047"],
+      "paletteName": "candy",
+      "camera": "orbit",
+      "rotationTurns": 1,
+      "lightDirection": 35,
+      "subtitle": "A little movement makes the silhouette feel alive."
+    }
+  },
+  {
+    "id": "object-turntables-multi-object-spin",
+    "title": "Multi Object Spin",
+    "category": "object-turntables",
+    "tags": ["collection", "orbit", "set", "ecosystem"],
+    "description": "Three related objects orbit in a synchronized product-set composition with a clear hero center.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "multi-object-spin",
+      "objectLabel": "COLLECTION / 06",
+      "objectShape": "cube",
+      "colors": ["#7c5cff", "#00e0ff", "#ff3d81"],
+      "paletteName": "midnight",
+      "camera": "orbit",
+      "rotationTurns": 1,
+      "lightDirection": 25,
+      "subtitle": "One system, three forms, perfectly in sync."
+    }
+  },
+  {
+    "id": "object-turntables-material-swap",
+    "title": "Material Swap",
+    "category": "object-turntables",
+    "tags": ["material", "gloss", "matte", "metal"],
+    "description": "A turning object cycles through gloss, matte, and metal treatments with an explicit material rail.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "material-swap",
+      "objectLabel": "SURFACE / 07",
+      "objectShape": "orb",
+      "colors": ["#ffffff", "#888888", "#ffd400"],
+      "paletteName": "mono",
+      "camera": "front",
+      "rotationTurns": 1,
+      "lightDirection": 40,
+      "subtitle": "Same geometry. A completely different material story."
+    }
+  },
+  {
+    "id": "object-turntables-light-rig-turn",
+    "title": "Light Rig Turn",
+    "category": "object-turntables",
+    "tags": ["lighting", "studio", "specular", "cinematic"],
+    "description": "Moving key lights sweep across a metallic object while the form rotates through a studio rig.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "light-rig-turn",
+      "objectLabel": "LIT / 08",
+      "objectShape": "cube",
+      "colors": ["#38bdf8", "#7dd3fc", "#fb7185"],
+      "paletteName": "ocean",
+      "camera": "front",
+      "rotationTurns": 1,
+      "lightDirection": 20,
+      "subtitle": "Light is part of the object story."
+    }
+  },
+  {
+    "id": "object-turntables-shadow-turn",
+    "title": "Shadow Turn",
+    "category": "object-turntables",
+    "tags": ["shadow", "silhouette", "studio", "depth"],
+    "description": "A strong directional shadow travels beneath a rotating silhouette for a graphic studio study.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "shadow-turn",
+      "objectLabel": "FORM / 09",
+      "objectShape": "bottle",
+      "colors": ["#1a1a1a", "#8a8577", "#c24502"],
+      "paletteName": "paper",
+      "camera": "low",
+      "rotationTurns": 1,
+      "lightDirection": 10,
+      "subtitle": "The silhouette says as much as the surface."
+    }
+  },
+  {
+    "id": "object-turntables-360-reveal",
+    "title": "360 Reveal",
+    "category": "object-turntables",
+    "tags": ["360", "reveal", "hero", "rotation"],
+    "description": "A spring-led full rotation resolves into a complete 360-degree product reveal with a dial readout.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "360-reveal",
+      "objectLabel": "ORIGIN / 10",
+      "objectShape": "package",
+      "colors": ["#34d399", "#a7f3d0", "#fbbf24"],
+      "paletteName": "forest",
+      "camera": "orbit",
+      "rotationTurns": 2,
+      "lightDirection": 35,
+      "subtitle": "Every face, one continuous reveal."
+    }
+  }
+]

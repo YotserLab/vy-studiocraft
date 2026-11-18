@@ -1,0 +1,262 @@
+[
+  {
+    "id": "social-confetti-edge-banner",
+    "title": "Confetti Edge Banner",
+    "category": "social-announcements",
+    "tags": [
+      "social",
+      "announcement",
+      "landscape",
+      "cta"
+    ],
+    "description": "Confetti Edge Banner \u2014 social-media announcement template with crafted entrance, hold and exit motion.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 110,
+    "defaultProps": {
+      "variant": "confetti-edge-banner",
+      "headline": "We just launched something new",
+      "subline": "Tap the link to try it free",
+      "handle": "@buildwithatlas",
+      "url": "atlas.dev/launch",
+      "value": "1,000,000",
+      "actionLabel": "Follow",
+      "paletteName": "candy"
+    }
+  },
+  {
+    "id": "social-dm-chat-bubble-reveal",
+    "title": "DM Chat Bubble Reveal",
+    "category": "social-announcements",
+    "tags": [
+      "social",
+      "announcement",
+      "landscape",
+      "cta"
+    ],
+    "description": "DM Chat Bubble Reveal \u2014 social-media announcement template with crafted entrance, hold and exit motion.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 120,
+    "defaultProps": {
+      "variant": "dm-chat-bubble-reveal",
+      "headline": "We just launched something new",
+      "subline": "Tap the link to try it free",
+      "handle": "@buildwithatlas",
+      "url": "atlas.dev/launch",
+      "value": "1,000,000",
+      "actionLabel": "Follow",
+      "paletteName": "candy"
+    }
+  },
+  {
+    "id": "social-follow-cta-handle-slide",
+    "title": "Follow CTA Handle Slide",
+    "category": "social-announcements",
+    "tags": [
+      "social",
+      "announcement",
+      "landscape",
+      "cta"
+    ],
+    "description": "Follow CTA Handle Slide \u2014 social-media announcement template with crafted entrance, hold and exit motion.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 110,
+    "defaultProps": {
+      "variant": "follow-cta-handle-slide",
+      "headline": "We just launched something new",
+      "subline": "Tap the link to try it free",
+      "handle": "@buildwithatlas",
+      "url": "atlas.dev/launch",
+      "value": "1,000,000",
+      "actionLabel": "Follow",
+      "paletteName": "candy"
+    }
+  },
+  {
+    "id": "social-follower-milestone-thanks",
+    "title": "Follower Milestone Thanks",
+    "category": "social-announcements",
+    "tags": [
+      "social",
+      "announcement",
+      "landscape",
+      "cta"
+    ],
+    "description": "Follower Milestone Thanks \u2014 social-media announcement template with crafted entrance, hold and exit motion.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 130,
+    "defaultProps": {
+      "variant": "follower-milestone-thanks",
+      "headline": "We just launched something new",
+      "subline": "Tap the link to try it free",
+      "handle": "@buildwithatlas",
+      "url": "atlas.dev/launch",
+      "value": "1,000,000",
+      "actionLabel": "Follow",
+      "paletteName": "candy"
+    }
+  },
+  {
+    "id": "social-giveaway-prize-pop",
+    "title": "Giveaway Prize Pop",
+    "category": "social-announcements",
+    "tags": [
+      "social",
+      "announcement",
+      "landscape",
+      "cta"
+    ],
+    "description": "Giveaway Prize Pop \u2014 social-media announcement template with crafted entrance, hold and exit motion.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 120,
+    "defaultProps": {
+      "variant": "giveaway-prize-pop",
+      "headline": "We just launched something new",
+      "subline": "Tap the link to try it free",
+      "handle": "@buildwithatlas",
+      "url": "atlas.dev/launch",
+      "value": "1,000,000",
+      "actionLabel": "Follow",
+      "paletteName": "candy"
+    }
+  },
+  {
+    "id": "social-link-in-bio-url-pill",
+    "title": "Link-in-Bio URL Pill",
+    "category": "social-announcements",
+    "tags": [
+      "social",
+      "announcement",
+      "landscape",
+      "cta"
+    ],
+    "description": "Link-in-Bio URL Pill \u2014 social-media announcement template with crafted entrance, hold and exit motion.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 130,
+    "defaultProps": {
+      "variant": "link-in-bio-url-pill",
+      "headline": "We just launched something new",
+      "subline": "Tap the link to try it free",
+      "handle": "@buildwithatlas",
+      "url": "atlas.dev/launch",
+      "value": "1,000,000",
+      "actionLabel": "Follow",
+      "paletteName": "candy"
+    }
+  },
+  {
+    "id": "social-new-post-notification-pop",
+    "title": "New Post Notification Pop",
+    "category": "social-announcements",
+    "tags": [
+      "social",
+      "announcement",
+      "landscape",
+      "cta"
+    ],
+    "description": "New Post Notification Pop \u2014 social-media announcement template with crafted entrance, hold and exit motion.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 100,
+    "defaultProps": {
+      "variant": "new-post-notification-pop",
+      "headline": "We just launched something new",
+      "subline": "Tap the link to try it free",
+      "handle": "@buildwithatlas",
+      "url": "atlas.dev/launch",
+      "value": "1,000,000",
+      "actionLabel": "Follow",
+      "paletteName": "candy"
+    }
+  },
+  {
+    "id": "social-profile-card-stats",
+    "title": "Profile Card Stats",
+    "category": "social-announcements",
+    "tags": [
+      "social",
+      "announcement",
+      "landscape",
+      "cta"
+    ],
+    "description": "Profile Card Stats \u2014 social-media announcement template with crafted entrance, hold and exit motion.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 140,
+    "defaultProps": {
+      "variant": "profile-card-stats",
+      "headline": "We just launched something new",
+      "subline": "Tap the link to try it free",
+      "handle": "@buildwithatlas",
+      "url": "atlas.dev/launch",
+      "value": "1,000,000",
+      "actionLabel": "Follow",
+      "paletteName": "candy"
+    }
+  },
+  {
+    "id": "social-share-prompt-icon-orbit",
+    "title": "Share Prompt Icon Orbit",
+    "category": "social-announcements",
+    "tags": [
+      "social",
+      "announcement",
+      "landscape",
+      "cta"
+    ],
+    "description": "Share Prompt Icon Orbit \u2014 social-media announcement template with crafted entrance, hold and exit motion.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 130,
+    "defaultProps": {
+      "variant": "share-prompt-icon-orbit",
+      "headline": "We just launched something new",
+      "subline": "Tap the link to try it free",
+      "handle": "@buildwithatlas",
+      "url": "atlas.dev/launch",
+      "value": "1,000,000",
+      "actionLabel": "Follow",
+      "paletteName": "candy"
+    }
+  },
+  {
+    "id": "social-story-vertical-frame-swipe-hint",
+    "title": "Story Vertical Frame Swipe Hint",
+    "category": "social-announcements",
+    "tags": [
+      "social",
+      "announcement",
+      "portrait",
+      "cta"
+    ],
+    "description": "Story Vertical Frame Swipe Hint \u2014 social-media announcement template with crafted entrance, hold and exit motion.",
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "durationInFrames": 120,
+    "defaultProps": {
+      "variant": "story-vertical-frame-swipe-hint",
+      "headline": "We just launched something new",
+      "subline": "Tap the link to try it free",
+      "handle": "@buildwithatlas",
+      "url": "atlas.dev/launch",
+      "value": "1,000,000",
+      "actionLabel": "Follow",
+      "paletteName": "candy"
+    }
+  }
+]

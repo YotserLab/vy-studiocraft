@@ -1,0 +1,642 @@
+[
+  {
+    "id": "pricing-before-after-slash",
+    "title": "Before After Price Slash",
+    "category": "pricing-comparison",
+    "tags": [
+      "pricing",
+      "plans",
+      "saas",
+      "conversion"
+    ],
+    "description": "Before After Price Slash \u2014 pricing/comparison template with eased count-ups, wipe reveals and highlight choreography.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 130,
+    "defaultProps": {
+      "variant": "before-after",
+      "eyebrow": "PRICING",
+      "headline": "Simple plans that scale",
+      "subline": "Start free, upgrade when you grow",
+      "currency": "$",
+      "paletteName": "midnight",
+      "plans": [
+        {
+          "name": "Starter",
+          "price": 19,
+          "period": "/mo",
+          "features": [
+            "3 projects",
+            "Community support",
+            "Basic analytics"
+          ],
+          "highlight": false
+        },
+        {
+          "name": "Pro",
+          "price": 49,
+          "period": "/mo",
+          "features": [
+            "Unlimited projects",
+            "Priority support",
+            "Advanced analytics",
+            "Custom domains"
+          ],
+          "highlight": true
+        },
+        {
+          "name": "Team",
+          "price": 99,
+          "period": "/mo",
+          "features": [
+            "Everything in Pro",
+            "SSO & audit logs",
+            "Dedicated success manager"
+          ],
+          "highlight": false
+        }
+      ],
+      "beforePrice": 79,
+      "afterPrice": 49,
+      "monthlyLabel": "Monthly",
+      "yearlyLabel": "Yearly"
+    }
+  },
+  {
+    "id": "pricing-bundle-stack-pop",
+    "title": "Bundle Stack Pop",
+    "category": "pricing-comparison",
+    "tags": [
+      "pricing",
+      "plans",
+      "saas",
+      "conversion"
+    ],
+    "description": "Bundle Stack Pop \u2014 pricing/comparison template with eased count-ups, wipe reveals and highlight choreography.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 140,
+    "defaultProps": {
+      "variant": "bundle-stack",
+      "eyebrow": "PRICING",
+      "headline": "Simple plans that scale",
+      "subline": "Start free, upgrade when you grow",
+      "currency": "$",
+      "paletteName": "midnight",
+      "plans": [
+        {
+          "name": "Starter",
+          "price": 19,
+          "period": "/mo",
+          "features": [
+            "3 projects",
+            "Community support",
+            "Basic analytics"
+          ],
+          "highlight": false
+        },
+        {
+          "name": "Pro",
+          "price": 49,
+          "period": "/mo",
+          "features": [
+            "Unlimited projects",
+            "Priority support",
+            "Advanced analytics",
+            "Custom domains"
+          ],
+          "highlight": true
+        },
+        {
+          "name": "Team",
+          "price": 99,
+          "period": "/mo",
+          "features": [
+            "Everything in Pro",
+            "SSO & audit logs",
+            "Dedicated success manager"
+          ],
+          "highlight": false
+        }
+      ],
+      "beforePrice": 79,
+      "afterPrice": 49,
+      "monthlyLabel": "Monthly",
+      "yearlyLabel": "Yearly"
+    }
+  },
+  {
+    "id": "pricing-comparison-table-wipes",
+    "title": "Comparison Table Row Wipes",
+    "category": "pricing-comparison",
+    "tags": [
+      "pricing",
+      "plans",
+      "saas",
+      "conversion"
+    ],
+    "description": "Comparison Table Row Wipes \u2014 pricing/comparison template with eased count-ups, wipe reveals and highlight choreography.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 160,
+    "defaultProps": {
+      "variant": "comparison-table",
+      "eyebrow": "PRICING",
+      "headline": "Simple plans that scale",
+      "subline": "Start free, upgrade when you grow",
+      "currency": "$",
+      "paletteName": "midnight",
+      "plans": [
+        {
+          "name": "Starter",
+          "price": 19,
+          "period": "/mo",
+          "features": [
+            "3 projects",
+            "Community support",
+            "Basic analytics"
+          ],
+          "highlight": false
+        },
+        {
+          "name": "Pro",
+          "price": 49,
+          "period": "/mo",
+          "features": [
+            "Unlimited projects",
+            "Priority support",
+            "Advanced analytics",
+            "Custom domains"
+          ],
+          "highlight": true
+        },
+        {
+          "name": "Team",
+          "price": 99,
+          "period": "/mo",
+          "features": [
+            "Everything in Pro",
+            "SSO & audit logs",
+            "Dedicated success manager"
+          ],
+          "highlight": false
+        }
+      ],
+      "beforePrice": 79,
+      "afterPrice": 49,
+      "monthlyLabel": "Monthly",
+      "yearlyLabel": "Yearly"
+    }
+  },
+  {
+    "id": "pricing-competitive-matrix-dots",
+    "title": "Competitive Matrix Dots",
+    "category": "pricing-comparison",
+    "tags": [
+      "pricing",
+      "plans",
+      "saas",
+      "conversion"
+    ],
+    "description": "Competitive Matrix Dots \u2014 pricing/comparison template with eased count-ups, wipe reveals and highlight choreography.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 160,
+    "defaultProps": {
+      "variant": "competitive-matrix",
+      "eyebrow": "PRICING",
+      "headline": "Simple plans that scale",
+      "subline": "Start free, upgrade when you grow",
+      "currency": "$",
+      "paletteName": "midnight",
+      "plans": [
+        {
+          "name": "Starter",
+          "price": 19,
+          "period": "/mo",
+          "features": [
+            "3 projects",
+            "Community support",
+            "Basic analytics"
+          ],
+          "highlight": false
+        },
+        {
+          "name": "Pro",
+          "price": 49,
+          "period": "/mo",
+          "features": [
+            "Unlimited projects",
+            "Priority support",
+            "Advanced analytics",
+            "Custom domains"
+          ],
+          "highlight": true
+        },
+        {
+          "name": "Team",
+          "price": 99,
+          "period": "/mo",
+          "features": [
+            "Everything in Pro",
+            "SSO & audit logs",
+            "Dedicated success manager"
+          ],
+          "highlight": false
+        }
+      ],
+      "beforePrice": 79,
+      "afterPrice": 49,
+      "monthlyLabel": "Monthly",
+      "yearlyLabel": "Yearly"
+    }
+  },
+  {
+    "id": "pricing-enterprise-contact",
+    "title": "Enterprise Contact Card",
+    "category": "pricing-comparison",
+    "tags": [
+      "pricing",
+      "plans",
+      "saas",
+      "conversion"
+    ],
+    "description": "Enterprise Contact Card \u2014 pricing/comparison template with eased count-ups, wipe reveals and highlight choreography.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 130,
+    "defaultProps": {
+      "variant": "enterprise",
+      "eyebrow": "PRICING",
+      "headline": "Simple plans that scale",
+      "subline": "Start free, upgrade when you grow",
+      "currency": "$",
+      "paletteName": "midnight",
+      "plans": [
+        {
+          "name": "Starter",
+          "price": 19,
+          "period": "/mo",
+          "features": [
+            "3 projects",
+            "Community support",
+            "Basic analytics"
+          ],
+          "highlight": false
+        },
+        {
+          "name": "Pro",
+          "price": 49,
+          "period": "/mo",
+          "features": [
+            "Unlimited projects",
+            "Priority support",
+            "Advanced analytics",
+            "Custom domains"
+          ],
+          "highlight": true
+        },
+        {
+          "name": "Team",
+          "price": 99,
+          "period": "/mo",
+          "features": [
+            "Everything in Pro",
+            "SSO & audit logs",
+            "Dedicated success manager"
+          ],
+          "highlight": false
+        }
+      ],
+      "beforePrice": 79,
+      "afterPrice": 49,
+      "monthlyLabel": "Monthly",
+      "yearlyLabel": "Yearly"
+    }
+  },
+  {
+    "id": "pricing-feature-checklist-reveal",
+    "title": "Feature Checklist Reveal",
+    "category": "pricing-comparison",
+    "tags": [
+      "pricing",
+      "plans",
+      "saas",
+      "conversion"
+    ],
+    "description": "Feature Checklist Reveal \u2014 pricing/comparison template with eased count-ups, wipe reveals and highlight choreography.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 140,
+    "defaultProps": {
+      "variant": "feature-checklist",
+      "eyebrow": "PRICING",
+      "headline": "Simple plans that scale",
+      "subline": "Start free, upgrade when you grow",
+      "currency": "$",
+      "paletteName": "midnight",
+      "plans": [
+        {
+          "name": "Starter",
+          "price": 19,
+          "period": "/mo",
+          "features": [
+            "3 projects",
+            "Community support",
+            "Basic analytics"
+          ],
+          "highlight": false
+        },
+        {
+          "name": "Pro",
+          "price": 49,
+          "period": "/mo",
+          "features": [
+            "Unlimited projects",
+            "Priority support",
+            "Advanced analytics",
+            "Custom domains"
+          ],
+          "highlight": true
+        },
+        {
+          "name": "Team",
+          "price": 99,
+          "period": "/mo",
+          "features": [
+            "Everything in Pro",
+            "SSO & audit logs",
+            "Dedicated success manager"
+          ],
+          "highlight": false
+        }
+      ],
+      "beforePrice": 79,
+      "afterPrice": 49,
+      "monthlyLabel": "Monthly",
+      "yearlyLabel": "Yearly"
+    }
+  },
+  {
+    "id": "pricing-monthly-yearly-toggle",
+    "title": "Monthly Yearly Toggle Flip",
+    "category": "pricing-comparison",
+    "tags": [
+      "pricing",
+      "plans",
+      "saas",
+      "conversion"
+    ],
+    "description": "Monthly Yearly Toggle Flip \u2014 pricing/comparison template with eased count-ups, wipe reveals and highlight choreography.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 140,
+    "defaultProps": {
+      "variant": "billing-toggle",
+      "eyebrow": "PRICING",
+      "headline": "Simple plans that scale",
+      "subline": "Start free, upgrade when you grow",
+      "currency": "$",
+      "paletteName": "midnight",
+      "plans": [
+        {
+          "name": "Starter",
+          "price": 19,
+          "period": "/mo",
+          "features": [
+            "3 projects",
+            "Community support",
+            "Basic analytics"
+          ],
+          "highlight": false
+        },
+        {
+          "name": "Pro",
+          "price": 49,
+          "period": "/mo",
+          "features": [
+            "Unlimited projects",
+            "Priority support",
+            "Advanced analytics",
+            "Custom domains"
+          ],
+          "highlight": true
+        },
+        {
+          "name": "Team",
+          "price": 99,
+          "period": "/mo",
+          "features": [
+            "Everything in Pro",
+            "SSO & audit logs",
+            "Dedicated success manager"
+          ],
+          "highlight": false
+        }
+      ],
+      "beforePrice": 79,
+      "afterPrice": 49,
+      "monthlyLabel": "Monthly",
+      "yearlyLabel": "Yearly"
+    }
+  },
+  {
+    "id": "pricing-single-plan-spotlight",
+    "title": "Single Plan Spotlight",
+    "category": "pricing-comparison",
+    "tags": [
+      "pricing",
+      "plans",
+      "saas",
+      "conversion"
+    ],
+    "description": "Single Plan Spotlight \u2014 pricing/comparison template with eased count-ups, wipe reveals and highlight choreography.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 140,
+    "defaultProps": {
+      "variant": "spotlight",
+      "eyebrow": "PRICING",
+      "headline": "Simple plans that scale",
+      "subline": "Start free, upgrade when you grow",
+      "currency": "$",
+      "paletteName": "midnight",
+      "plans": [
+        {
+          "name": "Starter",
+          "price": 19,
+          "period": "/mo",
+          "features": [
+            "3 projects",
+            "Community support",
+            "Basic analytics"
+          ],
+          "highlight": false
+        },
+        {
+          "name": "Pro",
+          "price": 49,
+          "period": "/mo",
+          "features": [
+            "Unlimited projects",
+            "Priority support",
+            "Advanced analytics",
+            "Custom domains"
+          ],
+          "highlight": true
+        },
+        {
+          "name": "Team",
+          "price": 99,
+          "period": "/mo",
+          "features": [
+            "Everything in Pro",
+            "SSO & audit logs",
+            "Dedicated success manager"
+          ],
+          "highlight": false
+        }
+      ],
+      "beforePrice": 79,
+      "afterPrice": 49,
+      "monthlyLabel": "Monthly",
+      "yearlyLabel": "Yearly"
+    }
+  },
+  {
+    "id": "pricing-three-tier-highlight",
+    "title": "Three Tier Cards",
+    "category": "pricing-comparison",
+    "tags": [
+      "pricing",
+      "plans",
+      "saas",
+      "conversion"
+    ],
+    "description": "Three Tier Cards \u2014 pricing/comparison template with eased count-ups, wipe reveals and highlight choreography.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "three-tier",
+      "eyebrow": "PRICING",
+      "headline": "Simple plans that scale",
+      "subline": "Start free, upgrade when you grow",
+      "currency": "$",
+      "paletteName": "midnight",
+      "plans": [
+        {
+          "name": "Starter",
+          "price": 19,
+          "period": "/mo",
+          "features": [
+            "3 projects",
+            "Community support",
+            "Basic analytics"
+          ],
+          "highlight": false
+        },
+        {
+          "name": "Pro",
+          "price": 49,
+          "period": "/mo",
+          "features": [
+            "Unlimited projects",
+            "Priority support",
+            "Advanced analytics",
+            "Custom domains"
+          ],
+          "highlight": true
+        },
+        {
+          "name": "Team",
+          "price": 99,
+          "period": "/mo",
+          "features": [
+            "Everything in Pro",
+            "SSO & audit logs",
+            "Dedicated success manager"
+          ],
+          "highlight": false
+        }
+      ],
+      "beforePrice": 79,
+      "afterPrice": 49,
+      "monthlyLabel": "Monthly",
+      "yearlyLabel": "Yearly"
+    }
+  },
+  {
+    "id": "pricing-tier-ladder-steps",
+    "title": "Tier Ladder Steps",
+    "category": "pricing-comparison",
+    "tags": [
+      "pricing",
+      "plans",
+      "saas",
+      "conversion"
+    ],
+    "description": "Tier Ladder Steps \u2014 pricing/comparison template with eased count-ups, wipe reveals and highlight choreography.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "tier-ladder",
+      "eyebrow": "PRICING",
+      "headline": "Simple plans that scale",
+      "subline": "Start free, upgrade when you grow",
+      "currency": "$",
+      "paletteName": "midnight",
+      "plans": [
+        {
+          "name": "Starter",
+          "price": 19,
+          "period": "/mo",
+          "features": [
+            "3 projects",
+            "Community support",
+            "Basic analytics"
+          ],
+          "highlight": false
+        },
+        {
+          "name": "Pro",
+          "price": 49,
+          "period": "/mo",
+          "features": [
+            "Unlimited projects",
+            "Priority support",
+            "Advanced analytics",
+            "Custom domains"
+          ],
+          "highlight": true
+        },
+        {
+          "name": "Team",
+          "price": 99,
+          "period": "/mo",
+          "features": [
+            "Everything in Pro",
+            "SSO & audit logs",
+            "Dedicated success manager"
+          ],
+          "highlight": false
+        }
+      ],
+      "beforePrice": 79,
+      "afterPrice": 49,
+      "monthlyLabel": "Monthly",
+      "yearlyLabel": "Yearly"
+    }
+  }
+]

@@ -1,0 +1,222 @@
+[
+  {
+    "id": "browser-chrome-minimal-window",
+    "title": "Minimal Window",
+    "category": "ui-product-evidence",
+    "tags": ["browser", "chrome", "window", "minimal"],
+    "description": "A clean browser window enters with restrained chrome, a focused hero message, and an asset-free product surface.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "minimal-window",
+      "siteName": "Northstar",
+      "url": "northstar.example",
+      "headline": "A clearer way forward.",
+      "subheadline": "Bring the important details into one focused browser experience.",
+      "tabs": ["Overview", "Product", "Pricing", "About"],
+      "lines": ["A clearer way to show your product.", "Bring the important details forward.", "Make every interaction feel intentional."],
+      "paletteName": "midnight",
+      "cta": "Start free"
+    }
+  },
+  {
+    "id": "browser-chrome-macos-window",
+    "title": "Macos Window",
+    "category": "ui-product-evidence",
+    "tags": ["browser", "macos", "product-tour", "dashboard"],
+    "description": "A polished macOS-style browser frame presents a dashboard surface with a headline and measured product-tour entrance.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "macos-window",
+      "siteName": "Signal",
+      "url": "signal.example/workspace",
+      "headline": "A familiar frame, made cinematic.",
+      "subheadline": "Show the workspace, metrics, and workflow without distracting chrome.",
+      "tabs": ["Workspace", "Reports", "Customers", "Settings"],
+      "lines": ["Live workspace", "Shared context", "Clear actions"],
+      "paletteName": "ocean",
+      "cta": "Open workspace"
+    }
+  },
+  {
+    "id": "browser-chrome-tab-switch",
+    "title": "Tab Switch",
+    "category": "ui-product-evidence",
+    "tags": ["browser", "tabs", "interaction", "tour"],
+    "description": "Browser tabs cycle through hero and dashboard states so a product tour can explain multiple surfaces in one continuous shot.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "tab-switch",
+      "siteName": "Lattice",
+      "url": "lattice.example/workspace",
+      "headline": "See the whole picture.",
+      "subheadline": "Switch between product surfaces while the browser context stays constant.",
+      "tabs": ["Overview", "Analytics", "Integrations", "Security"],
+      "lines": ["One view for every team.", "Shared context across the work.", "A calmer way to explore."],
+      "paletteName": "forest",
+      "cta": "Explore"
+    }
+  },
+  {
+    "id": "browser-chrome-address-bar-zoom",
+    "title": "Address Bar Zoom",
+    "category": "ui-product-evidence",
+    "tags": ["browser", "zoom", "url", "documentation"],
+    "description": "A browser frame smoothly zooms from the address bar into a documentation surface, making the destination and detail both legible.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "address-bar-zoom",
+      "siteName": "Atlas Docs",
+      "url": "docs.atlas.example/getting-started",
+      "headline": "Start with the right context.",
+      "subheadline": "Use a focused zoom to move from destination to detail.",
+      "tabs": ["Getting started", "Guides", "API", "Changelog"],
+      "lines": ["Install the workspace.", "Connect your first source.", "Ship the first workflow."],
+      "paletteName": "candy",
+      "cta": "Read guide"
+    }
+  },
+  {
+    "id": "browser-chrome-window-stack",
+    "title": "Window Stack",
+    "category": "ui-product-evidence",
+    "tags": ["browser", "stack", "layers", "multi-window"],
+    "description": "Three browser windows rise and fan into a dimensional stack, useful for showing related product surfaces or a sequence of evidence.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "window-stack",
+      "siteName": "Orbit OS",
+      "url": "orbit.example/product",
+      "headline": "Every surface, working together.",
+      "subheadline": "Stack the product story without losing the browser frame.",
+      "tabs": ["Home", "Product", "Stories", "Contact"],
+      "lines": ["Plan in one place.", "Collaborate in context.", "Measure what matters."],
+      "paletteName": "sunset",
+      "cta": "View product"
+    }
+  },
+  {
+    "id": "browser-chrome-browser-popover",
+    "title": "Browser Popover",
+    "category": "ui-product-evidence",
+    "tags": ["browser", "popover", "menu", "interaction"],
+    "description": "A contextual browser popover reveals quick actions over a stable page, clarifying a click-driven interaction without external UI assets.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "browser-popover",
+      "siteName": "Relay",
+      "url": "relay.example/share",
+      "headline": "Small actions, clear momentum.",
+      "subheadline": "Reveal the next useful action exactly where the user expects it.",
+      "tabs": ["Workspace", "Activity", "Share"],
+      "lines": ["Share this page", "Copy link", "Open in new tab"],
+      "paletteName": "ocean",
+      "cta": "Continue"
+    }
+  },
+  {
+    "id": "browser-chrome-split-browser",
+    "title": "Split Browser",
+    "category": "ui-product-evidence",
+    "tags": ["browser", "split-screen", "compare", "responsive"],
+    "description": "Two browser windows enter side by side to compare a marketing surface and an analytics surface in a single frame.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "split-browser",
+      "siteName": "Common Ground",
+      "url": "common.example/compare",
+      "headline": "Compare the story in motion.",
+      "subheadline": "Pair two browser states to make change and contrast immediately legible.",
+      "tabs": ["Marketing", "Product", "Analytics", "Support"],
+      "lines": ["The public promise.", "The working product.", "The proof underneath."],
+      "paletteName": "midnight",
+      "cta": "Compare"
+    }
+  },
+  {
+    "id": "browser-chrome-incognito-mode",
+    "title": "Incognito Mode",
+    "category": "ui-product-evidence",
+    "tags": ["browser", "dark-mode", "incognito", "privacy"],
+    "description": "A dark incognito browser frame gives a privacy, security, or hidden-state story a distinct visual treatment.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "incognito-mode",
+      "siteName": "Private Room",
+      "url": "private.example/session",
+      "headline": "Keep the session yours.",
+      "subheadline": "A dark browser state for privacy, security, and quiet focus.",
+      "tabs": ["Private session", "Vault", "Settings"],
+      "lines": ["Nothing saved to history.", "Local context stays local.", "Close when you are done."],
+      "paletteName": "midnight",
+      "cta": "Enter privately"
+    }
+  },
+  {
+    "id": "browser-chrome-devtools-drawer",
+    "title": "Devtools Drawer",
+    "category": "ui-product-evidence",
+    "tags": ["browser", "devtools", "code", "debugging"],
+    "description": "A browser product surface opens into a stylized devtools drawer with source markup, ideal for technical product stories.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "devtools-drawer",
+      "siteName": "Builder",
+      "url": "builder.example/preview",
+      "headline": "Inspect the story.",
+      "subheadline": "Show the product and the implementation detail in one technical reveal.",
+      "tabs": ["Preview", "Components", "Network", "Docs"],
+      "lines": ["main.product-shell", "h1 headline", "section state ready"],
+      "paletteName": "forest",
+      "cta": "Inspect"
+    }
+  },
+  {
+    "id": "browser-chrome-full-bleed-tab",
+    "title": "Full Bleed Tab",
+    "category": "ui-product-evidence",
+    "tags": ["browser", "full-bleed", "scroll", "landing-page"],
+    "description": "Browser chrome compresses into a slim top bar while a full-bleed landing surface scrolls through a cinematic product statement.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "full-bleed-tab",
+      "siteName": "Aster House",
+      "url": "asterhouse.example",
+      "headline": "A complete digital world.",
+      "subheadline": "Let the page become the scene while the browser context stays visible.",
+      "tabs": ["Home", "Product", "Story", "Contact"],
+      "lines": ["A stronger first impression.", "A clearer path through the story.", "A page worth returning to."],
+      "paletteName": "candy",
+      "cta": "Enter experience"
+    }
+  }
+]

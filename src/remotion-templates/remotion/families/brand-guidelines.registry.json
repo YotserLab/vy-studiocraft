@@ -1,0 +1,194 @@
+[
+  {
+    "id": "brand-guidelines-logo-rules",
+    "title": "Logo Rules",
+    "category": "branding-identity",
+    "tags": ["brand", "logo", "identity", "rules"],
+    "description": "A polished logo-system card showing approved lockups, compact use, and monochrome guidance.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "logo-rules",
+      "brandName": "Northstar",
+      "title": "Make recognition effortless",
+      "subtitle": "The mark is the shortest path to recognition. Keep it clear, consistent, and unmistakably yours.",
+      "paletteName": "midnight"
+    }
+  },
+  {
+    "id": "brand-guidelines-clearspace-demo",
+    "title": "Clearspace Demo",
+    "category": "branding-identity",
+    "tags": ["brand", "logo", "clearspace", "measurement"],
+    "description": "A measured logo lockup demonstrates protected area and minimum clearspace with animated guides.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 145,
+    "defaultProps": {
+      "variant": "clearspace-demo",
+      "brandName": "Northstar",
+      "title": "Give the mark room",
+      "subtitle": "Clearspace keeps recognition intact when the context gets busy.",
+      "paletteName": "ocean"
+    }
+  },
+  {
+    "id": "brand-guidelines-dont-use-grid",
+    "title": "Dont Use Grid",
+    "category": "branding-identity",
+    "tags": ["brand", "logo", "do-dont", "misuse"],
+    "description": "A side-by-side do and don't grid makes logo misuse immediately legible for internal and client-facing guidance.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "dont-use-grid",
+      "brandName": "Northstar",
+      "title": "Protect the shape",
+      "subtitle": "A good rule is easy to see: preserve the mark, its proportions, and its breathing room.",
+      "paletteName": "paper",
+      "doDont": { "do": ["Protect the mark"], "dont": ["Never distort the mark"] }
+    }
+  },
+  {
+    "id": "brand-guidelines-color-do-dont",
+    "title": "Color Do Dont",
+    "category": "branding-identity",
+    "tags": ["brand", "color", "palette", "do-dont"],
+    "description": "Approved color swatches and a deliberately noisy counterexample turn palette rules into a visual decision.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "color-do-dont",
+      "brandName": "Northstar",
+      "title": "Color carries the signal",
+      "subtitle": "Use contrast with intention, then let the system stay recognizable across every surface.",
+      "paletteName": "sunset",
+      "colors": ["#171717", "#f5f1e8", "#e85d3f", "#4f6d7a", "#f2c14e"]
+    }
+  },
+  {
+    "id": "brand-guidelines-type-rules",
+    "title": "Type Rules",
+    "category": "branding-identity",
+    "tags": ["brand", "typography", "type-scale", "hierarchy"],
+    "description": "A living type specimen exposes display, title, body, and metadata roles in one compact hierarchy card.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 155,
+    "defaultProps": {
+      "variant": "type-rules",
+      "brandName": "Northstar",
+      "title": "One voice, many sizes",
+      "subtitle": "A type system gives every message the right amount of emphasis.",
+      "paletteName": "forest",
+      "fonts": { "heading": "Inter", "body": "Helvetica Neue", "mono": "SFMono-Regular" },
+      "notes": ["One voice. Many useful sizes."]
+    }
+  },
+  {
+    "id": "brand-guidelines-photography-rules",
+    "title": "Photography Rules",
+    "category": "branding-identity",
+    "tags": ["brand", "photography", "imagery", "mood"],
+    "description": "A paired imagery board contrasts a textured point of view with generic visual noise.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 160,
+    "defaultProps": {
+      "variant": "photography-rules",
+      "brandName": "Northstar",
+      "title": "Show the point of view",
+      "subtitle": "Choose imagery with texture, humanity, and enough room for the message to land.",
+      "paletteName": "ocean",
+      "examples": ["Clear over clever", "Warm, direct, useful", "Make the next step obvious"]
+    }
+  },
+  {
+    "id": "brand-guidelines-motion-rules",
+    "title": "Motion Rules",
+    "category": "branding-identity",
+    "tags": ["brand", "motion", "timing", "easing"],
+    "description": "An animated timing curve turns restraint, reveal, and settle into a memorable motion principle.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 155,
+    "defaultProps": {
+      "variant": "motion-rules",
+      "brandName": "Northstar",
+      "title": "Motion earns attention",
+      "subtitle": "Use a clear entrance, one meaningful emphasis, and a calm landing.",
+      "paletteName": "midnight",
+      "notes": ["Motion earns attention; it does not demand it."]
+    }
+  },
+  {
+    "id": "brand-guidelines-icon-rules",
+    "title": "Icon Rules",
+    "category": "branding-identity",
+    "tags": ["brand", "icons", "stroke", "system"],
+    "description": "A procedural icon grid communicates consistent stroke, optical weight, and one-idea-per-icon rules.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "icon-rules",
+      "brandName": "Northstar",
+      "title": "One stroke. One idea.",
+      "subtitle": "Consistent icons make the system feel considered at every scale.",
+      "paletteName": "candy",
+      "notes": ["Keep optical weight consistent.", "Let icons breathe at every size."]
+    }
+  },
+  {
+    "id": "brand-guidelines-voice-card",
+    "title": "Voice Card",
+    "category": "branding-identity",
+    "tags": ["brand", "voice", "tone", "copy"],
+    "description": "A two-column voice card makes the brand's preferred tone and its anti-patterns easy to reuse.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "voice-card",
+      "brandName": "Northstar",
+      "title": "Sound like a useful human",
+      "subtitle": "Tone is a system too: clear, warm, direct, and never louder than the idea.",
+      "paletteName": "forest",
+      "doDont": {
+        "do": ["Use plain, active language", "Lead with the human benefit", "Be warm without being vague"],
+        "dont": ["Hide behind jargon", "Overpromise the outcome", "Sound like a script"]
+      }
+    }
+  },
+  {
+    "id": "brand-guidelines-guidelines-close",
+    "title": "Guidelines Close",
+    "category": "branding-identity",
+    "tags": ["brand", "summary", "close", "identity"],
+    "description": "A cinematic closing card gathers the logo, core principles, and next-use prompts into one reusable lockup.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 170,
+    "defaultProps": {
+      "variant": "guidelines-close",
+      "brandName": "Northstar",
+      "title": "Build the recognizable thing",
+      "subtitle": "A living system for every place the brand shows up.",
+      "paletteName": "ocean",
+      "examples": ["Clear over clever", "Warm, direct, useful", "Make the next step obvious"]
+    }
+  }
+]

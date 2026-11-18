@@ -1,0 +1,192 @@
+[
+  {
+    "id": "product-laptop-screen-reveal",
+    "title": "Laptop Screen Reveal",
+    "category": "product-showcase",
+    "tags": ["laptop", "saas", "interface"],
+    "description": "A procedural laptop opens into a polished UI dashboard while benefit chips settle below.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "laptop-reveal",
+      "productName": "Northstar",
+      "tagline": "Your entire workflow, finally in focus.",
+      "features": ["Live sync", "Smart views", "One-click reports"],
+      "paletteName": "midnight",
+      "price": "$29"
+    }
+  },
+  {
+    "id": "product-phone-orbit-callouts",
+    "title": "Phone Orbit Callouts",
+    "category": "product-showcase",
+    "tags": ["phone", "app", "callouts"],
+    "description": "A CSS phone rotates into view as three feature callouts orbit around the device.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "phone-orbit",
+      "productName": "Pulse",
+      "tagline": "Everything important, one tap away.",
+      "features": ["Instant alerts", "Private by design", "Works offline"],
+      "paletteName": "ocean",
+      "price": "$12"
+    }
+  },
+  {
+    "id": "product-browser-scroll-tour",
+    "title": "Browser Scroll Tour",
+    "category": "product-showcase",
+    "tags": ["browser", "scroll", "product-tour"],
+    "description": "A procedural browser window scrolls through a complete landing-page product tour.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "browser-scroll",
+      "productName": "Canvas",
+      "tagline": "Turn rough ideas into remarkable work.",
+      "features": ["Infinite boards", "Team comments", "Fast exports"],
+      "paletteName": "candy",
+      "price": "$18"
+    }
+  },
+  {
+    "id": "product-unboxing-lid-lift",
+    "title": "Unboxing Lid Lift",
+    "category": "product-showcase",
+    "tags": ["unboxing", "package", "launch"],
+    "description": "A dimensional package lid lifts away before a bottle rises dramatically from the box.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "unboxing",
+      "productName": "Luma",
+      "tagline": "A brighter ritual begins here.",
+      "features": ["Plant based", "Refillable", "Made in small batches"],
+      "paletteName": "sunset",
+      "price": "$48"
+    }
+  },
+  {
+    "id": "product-feature-chip-stack",
+    "title": "Feature Chip Stack",
+    "category": "product-showcase",
+    "tags": ["features", "icons", "list"],
+    "description": "Alternating icon chips slide into a crisp, highly legible product-benefit stack.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 135,
+    "defaultProps": {
+      "variant": "feature-chips",
+      "productName": "Orbit OS",
+      "tagline": "Less busywork. More forward motion.",
+      "features": ["Automated planning", "Shared timelines", "Focus mode", "Deep analytics", "Custom workflows"],
+      "paletteName": "forest",
+      "price": "$24"
+    }
+  },
+  {
+    "id": "product-turntable-sheen",
+    "title": "Turntable Sheen",
+    "category": "product-showcase",
+    "tags": ["turntable", "bottle", "premium"],
+    "description": "A procedural bottle turns above a reflective plinth while a controlled sheen crosses its surface.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "turntable",
+      "productName": "Form No. 7",
+      "tagline": "Precision, bottled.",
+      "features": ["Clean formula", "All-day finish", "Signature scent"],
+      "paletteName": "mono",
+      "price": "$72"
+    }
+  },
+  {
+    "id": "product-spec-sheet-blueprint",
+    "title": "Spec Sheet Blueprint",
+    "category": "product-showcase",
+    "tags": ["technical", "blueprint", "specifications"],
+    "description": "Technical construction lines draw into a blueprint-style product specification sheet.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "spec-sheet",
+      "productName": "Vector One",
+      "tagline": "Engineered past the expected.",
+      "features": ["42 hour battery", "Titanium shell", "IP68 rated", "148 grams"],
+      "paletteName": "ocean",
+      "price": "$399"
+    }
+  },
+  {
+    "id": "product-price-tag-swing",
+    "title": "Price Tag Swing",
+    "category": "product-showcase",
+    "tags": ["price", "offer", "retail"],
+    "description": "A tactile price tag swings down beside a procedural product silhouette for offer-led launches.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 135,
+    "defaultProps": {
+      "variant": "price-tag",
+      "productName": "Daily Dew",
+      "tagline": "Everyday hydration, without the markup.",
+      "features": ["Derm tested", "Vegan", "30-day supply"],
+      "paletteName": "paper",
+      "price": "$24"
+    }
+  },
+  {
+    "id": "product-ab-split-winner",
+    "title": "A/B Split Winner",
+    "category": "product-showcase",
+    "tags": ["comparison", "before-after", "winner"],
+    "description": "A moving A/B split pits the old experience against the product and stamps a winner badge.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "ab-winner",
+      "productName": "Nova Mobile",
+      "tagline": "The upgrade you can actually feel.",
+      "features": ["2× faster", "40% lighter", "All-day power"],
+      "paletteName": "candy",
+      "price": "$699"
+    }
+  },
+  {
+    "id": "product-hero-silhouette-parallax",
+    "title": "Hero Silhouette Parallax",
+    "category": "product-showcase",
+    "tags": ["hero", "parallax", "cinematic"],
+    "description": "A full-bleed product silhouette drifts through layered light, geometry and deterministic particles.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "hero-parallax",
+      "productName": "Aether",
+      "tagline": "Not just made. Considered.",
+      "features": ["Iconic form", "Low-impact materials", "Limited edition"],
+      "paletteName": "midnight",
+      "price": "$120"
+    }
+  }
+]

@@ -1,0 +1,122 @@
+[
+  {
+    "id": "documentary-frames-chapter-card",
+    "title": "Documentary Chapter Card",
+    "category": "documentary-frames",
+    "tags": ["documentary", "chapter", "editorial", "title"],
+    "description": "A restrained chapter card with serif hierarchy and a quiet editorial entrance.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "chapter-card", "title": "The Long Way Home", "subtitle": "What happened after the decision", "chapter": "CHAPTER 01", "location": "North Coast", "date": "1987", "quote": "The evidence was there, but nobody was looking.", "source": "FIELD NOTES", "paletteName": "midnight" }
+  },
+  {
+    "id": "documentary-frames-archival-caption",
+    "title": "Archival Caption Record",
+    "category": "documentary-frames",
+    "tags": ["documentary", "archival", "caption", "history"],
+    "description": "An archival image treatment with source, date, and caption hierarchy for historical evidence.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 170,
+    "defaultProps": { "variant": "archival-caption", "title": "The first survey", "subtitle": "A photograph recovered from the municipal archive", "chapter": "ARCHIVE 04", "location": "Riverside Works", "date": "12 OCT 1968", "quote": "", "source": "CITY ARCHIVE / BOX 14", "paletteName": "paper" }
+  },
+  {
+    "id": "documentary-frames-location-date",
+    "title": "Location and Date Slate",
+    "category": "documentary-frames",
+    "tags": ["documentary", "location", "date", "slate"],
+    "description": "A cinematic location/date slate that establishes where and when the next scene takes place.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": { "variant": "location-date", "title": "", "subtitle": "The morning after the storm", "chapter": "CHAPTER 02", "location": "Port of Halifax", "date": "MARCH 14, 1972", "quote": "", "source": "LOCATION RECORD", "paletteName": "ocean" }
+  },
+  {
+    "id": "documentary-frames-voiceover-quote",
+    "title": "Voiceover Quote Card",
+    "category": "documentary-frames",
+    "tags": ["documentary", "quote", "voiceover", "interview"],
+    "description": "A centered quote card for an interview pull quote or voiceover beat.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 190,
+    "defaultProps": { "variant": "voiceover-quote", "title": "", "subtitle": "", "chapter": "TESTIMONY", "location": "", "date": "", "quote": "You could hear the whole city holding its breath.", "source": "MARA ELLIS / RESIDENT", "paletteName": "forest" }
+  },
+  {
+    "id": "documentary-frames-map-chapter",
+    "title": "Map Chapter Field Notes",
+    "category": "documentary-frames",
+    "tags": ["documentary", "map", "chapter", "field-notes"],
+    "description": "A procedural map chapter with an origin, field site, and next-stop route for investigative travel.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 210,
+    "defaultProps": { "variant": "map-chapter", "title": "Across the watershed", "subtitle": "Following the line from source to shore", "chapter": "THE ROUTE", "location": "", "date": "SUMMER 1994", "quote": "", "source": "FIELD NOTES", "paletteName": "ocean" }
+  },
+  {
+    "id": "documentary-frames-photo-caption",
+    "title": "Photograph Caption Frame",
+    "category": "documentary-frames",
+    "tags": ["documentary", "photo", "caption", "archive"],
+    "description": "A framed photograph and caption pairing for people, places, and recovered visual evidence.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "photo-caption", "title": "At the edge of the yard", "subtitle": "The last house before the rail line", "chapter": "IMAGE 12", "location": "East Junction", "date": "1978", "quote": "", "source": "PRIVATE COLLECTION", "paletteName": "sunset" }
+  },
+  {
+    "id": "documentary-frames-document-title",
+    "title": "Document Title Page",
+    "category": "documentary-frames",
+    "tags": ["documentary", "document", "title", "editorial"],
+    "description": "A tactile document/title page with source metadata and a long-form story description.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 200,
+    "defaultProps": { "variant": "document-title", "title": "A Quiet Revolution", "subtitle": "", "chapter": "DOSSIER 07", "location": "", "date": "1981—1989", "quote": "", "source": "THE MUNICIPAL RECORD", "body": "A record of the people, places, and decisions that shaped what came next.", "paletteName": "paper" }
+  },
+  {
+    "id": "documentary-frames-reconstruction-card",
+    "title": "Reconstruction Card",
+    "category": "documentary-frames",
+    "tags": ["documentary", "reconstruction", "evidence", "scene"],
+    "description": "A bold reconstruction marker for a dramatized sequence that keeps editorial context visible.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 175,
+    "defaultProps": { "variant": "reconstruction-card", "title": "The decision", "subtitle": "The following sequence is a visual reconstruction based on witness accounts.", "chapter": "RECONSTRUCTION 01", "location": "Room 4B", "date": "NOVEMBER 3, 1991", "quote": "", "source": "BASED ON RECORDED TESTIMONY", "paletteName": "midnight" }
+  },
+  {
+    "id": "documentary-frames-end-chapter",
+    "title": "End of Chapter Slate",
+    "category": "documentary-frames",
+    "tags": ["documentary", "chapter", "outro", "editorial"],
+    "description": "A quiet end-of-chapter slate for breathing room between documentary sections.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 160,
+    "defaultProps": { "variant": "end-chapter", "title": "", "subtitle": "The story continues", "chapter": "CHAPTER 03", "location": "", "date": "", "quote": "", "source": "", "paletteName": "mono" }
+  },
+  {
+    "id": "documentary-frames-documentary-open",
+    "title": "Documentary Opening Frame",
+    "category": "documentary-frames",
+    "tags": ["documentary", "opening", "title", "cinematic"],
+    "description": "A full-bleed documentary open with archival texture, title, place, and chapter metadata.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 240,
+    "defaultProps": { "variant": "documentary-open", "title": "The Shape of Water", "subtitle": "An investigation in three parts", "chapter": "PART ONE", "location": "The Great Lakes", "date": "2025", "quote": "", "source": "A DOCUMENTARY FILM", "paletteName": "ocean" }
+  }
+]

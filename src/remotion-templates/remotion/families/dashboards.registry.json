@@ -1,0 +1,225 @@
+[
+  {
+    "id": "dashboards-kpi-wall",
+    "title": "KPI Wall",
+    "category": "data-infographic",
+    "tags": ["dashboard", "kpi", "analytics", "executive"],
+    "description": "A coordinated KPI wall that reveals four headline metrics before resolving into a trailing performance trend.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "kpi-wall",
+      "title": "Growth command center",
+      "subtitle": "A live view of the metrics that move the business",
+      "paletteName": "midnight",
+      "period": "Overview / Q3 2025",
+      "units": "",
+      "status": "Healthy",
+      "metrics": [
+        {"label": "Active users", "value": 12840, "delta": 12.4, "status": "good"},
+        {"label": "Conversion", "value": 7.8, "unit": "%", "delta": 1.8, "status": "good"},
+        {"label": "Open tickets", "value": 43, "delta": -8, "status": "warn"},
+        {"label": "Net revenue", "value": 84200, "unit": "$", "delta": 6.2, "status": "good"}
+      ],
+      "panels": [],
+      "series": [{"label": "Current", "values": [31, 38, 34, 46, 43, 55, 61, 68], "color": "primary"}, {"label": "Previous", "values": [25, 30, 33, 35, 37, 41, 44, 48], "color": "secondary"}],
+      "focusPanel": "Active users"
+    }
+  },
+  {
+    "id": "dashboards-dashboard-drilldown",
+    "title": "Dashboard Drilldown",
+    "category": "data-infographic",
+    "tags": ["dashboard", "drilldown", "analytics", "focus"],
+    "description": "A navigation-led dashboard story that highlights one panel and expands its trend without losing the surrounding context.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "dashboard-drilldown",
+      "title": "Regional performance",
+      "subtitle": "Select a segment to inspect its trajectory",
+      "paletteName": "ocean",
+      "period": "Explore / Regions",
+      "metrics": [],
+      "panels": [{"label": "North America", "value": 68, "subtitle": "of target", "status": "good", "trend": [32, 38, 35, 49, 52, 61, 68]}, {"label": "Europe", "value": 54, "subtitle": "of target", "status": "warn", "trend": [28, 42, 37, 44, 41, 48, 54]}, {"label": "Asia Pacific", "value": 42, "subtitle": "of target", "status": "neutral", "trend": [18, 22, 31, 29, 34, 39, 42]}, {"label": "Enterprise", "value": 81, "subtitle": "of target", "status": "good", "trend": [42, 48, 50, 61, 67, 75, 81]}],
+      "series": [],
+      "focusPanel": "Europe"
+    }
+  },
+  {
+    "id": "dashboards-executive-summary",
+    "title": "Executive Summary",
+    "category": "data-infographic",
+    "tags": ["dashboard", "executive", "summary", "briefing"],
+    "description": "A boardroom-ready executive summary combining headline KPIs, a concise insight paragraph, and a ranked regional pulse.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "executive-summary",
+      "title": "Quarterly business review",
+      "subtitle": "The few signals worth carrying into the next decision",
+      "paletteName": "paper",
+      "period": "Board brief / Q3",
+      "metrics": [{"label": "ARR", "value": 4.2, "unit": "M", "delta": 14.2, "status": "good"}, {"label": "Gross margin", "value": 72.4, "unit": "%", "delta": 2.1, "status": "good"}, {"label": "Runway", "value": 14.2, "unit": " mo", "delta": -1.2, "status": "warn"}],
+      "panels": [{"label": "North America", "value": 82}, {"label": "Europe", "value": 67}, {"label": "Asia Pacific", "value": 49}, {"label": "Partners", "value": 61}],
+      "series": []
+    }
+  },
+  {
+    "id": "dashboards-operations-monitor",
+    "title": "Operations Monitor",
+    "category": "data-infographic",
+    "tags": ["dashboard", "operations", "monitoring", "status"],
+    "description": "A live operations monitor with status-coded service panels and a scrolling event stream for reliability storytelling.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "operations-monitor",
+      "title": "Platform operations",
+      "subtitle": "Service health across the production surface",
+      "paletteName": "midnight",
+      "period": "Operations / Live",
+      "status": "99.98% uptime",
+      "metrics": [],
+      "panels": [{"label": "API gateway", "value": 98, "status": "good"}, {"label": "Queue latency", "value": 76, "status": "good"}, {"label": "Worker pool", "value": 84, "status": "good"}, {"label": "Data sync", "value": 63, "status": "warn"}, {"label": "Search index", "value": 92, "status": "good"}, {"label": "Billing", "value": 39, "status": "bad"}],
+      "series": []
+    }
+  },
+  {
+    "id": "dashboards-product-analytics",
+    "title": "Product Analytics",
+    "category": "data-infographic",
+    "tags": ["dashboard", "product", "funnel", "retention"],
+    "description": "A product analytics view pairing a staged activation funnel with a drawn retention curve and compact KPI strip.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "product-analytics",
+      "title": "Product growth loop",
+      "subtitle": "From first session to retained habit",
+      "paletteName": "candy",
+      "period": "Product / Last 30 days",
+      "metrics": [{"label": "New users", "value": 18420, "delta": 18.1, "status": "good"}, {"label": "Activation", "value": 31, "unit": "%", "delta": 4.2, "status": "good"}, {"label": "D30 retention", "value": 18, "unit": "%", "delta": -1.4, "status": "warn"}, {"label": "Sessions / user", "value": 4.8, "delta": 8.6, "status": "good"}],
+      "panels": [],
+      "series": [{"label": "Current cohort", "values": [100, 74, 52, 39, 31, 24, 18], "color": "secondary"}, {"label": "Prior cohort", "values": [100, 69, 47, 34, 27, 21, 15], "color": "primary"}]
+    }
+  },
+  {
+    "id": "dashboards-marketing-dashboard",
+    "title": "Marketing Dashboard",
+    "category": "data-infographic",
+    "tags": ["dashboard", "marketing", "campaigns", "channels"],
+    "description": "A campaign dashboard that animates channel reach, progress bars, and a compact media-mix composition.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "marketing-dashboard",
+      "title": "Demand generation mix",
+      "subtitle": "Where attention is turning into qualified pipeline",
+      "paletteName": "sunset",
+      "period": "Marketing / Campaign pulse",
+      "metrics": [],
+      "panels": [{"label": "Brand search", "value": 86}, {"label": "Partner launch", "value": 72}, {"label": "Lifecycle email", "value": 64}, {"label": "Paid social", "value": 51}, {"label": "Content syndication", "value": 38}],
+      "series": []
+    }
+  },
+  {
+    "id": "dashboards-finance-dashboard",
+    "title": "Finance Dashboard",
+    "category": "data-infographic",
+    "tags": ["dashboard", "finance", "cashflow", "forecast"],
+    "description": "A finance dashboard with animated cash-flow bars and a readable set of forecast guardrails.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "finance-dashboard",
+      "title": "Financial control room",
+      "subtitle": "Cash, margin, and the forecast guardrails",
+      "paletteName": "forest",
+      "period": "Finance / Forecast",
+      "units": "$",
+      "metrics": [{"label": "Cash balance", "value": 8420000, "unit": "$", "delta": 6.2, "status": "good"}, {"label": "Gross margin", "value": 72.4, "unit": "%", "delta": 2.1, "status": "good"}, {"label": "Burn multiple", "value": 1.8, "unit": "x", "delta": -4.2, "status": "warn"}],
+      "panels": [],
+      "series": []
+    }
+  },
+  {
+    "id": "dashboards-health-dashboard",
+    "title": "Health Dashboard",
+    "category": "data-infographic",
+    "tags": ["dashboard", "health", "vitals", "rings"],
+    "description": "A calm health dashboard that turns four status values into animated rings and a longitudinal vitals trace.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "health-dashboard",
+      "title": "Team health pulse",
+      "subtitle": "A measured view of the systems supporting the team",
+      "paletteName": "ocean",
+      "period": "Health / Weekly",
+      "metrics": [],
+      "panels": [{"label": "Energy", "value": 82, "status": "good"}, {"label": "Focus", "value": 68, "status": "good"}, {"label": "Load", "value": 43, "status": "neutral"}, {"label": "Recovery", "value": 76, "status": "good"}],
+      "series": [{"label": "Weekly pulse", "values": [56, 61, 58, 66, 64, 72, 76], "color": "primary"}]
+    }
+  },
+  {
+    "id": "dashboards-real-time-grid",
+    "title": "Real-Time Grid",
+    "category": "data-infographic",
+    "tags": ["dashboard", "real-time", "grid", "monitoring"],
+    "description": "A dense real-time telemetry grid with compact cards, a syncing clock, and a pulsing activity matrix.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "real-time-grid",
+      "title": "Realtime signal grid",
+      "subtitle": "The last 60 seconds across every active stream",
+      "paletteName": "midnight",
+      "period": "Telemetry / Now",
+      "status": "Streaming",
+      "metrics": [{"label": "Events / sec", "value": 842, "delta": 12.4, "status": "good"}, {"label": "P95 latency", "value": 184, "unit": "ms", "delta": -8, "status": "good"}, {"label": "Active streams", "value": 126, "delta": 4.2, "status": "good"}, {"label": "Dropped", "value": 3, "delta": -21, "status": "good"}],
+      "panels": [],
+      "series": []
+    }
+  },
+  {
+    "id": "dashboards-dashboard-alert",
+    "title": "Dashboard Alert",
+    "category": "data-infographic",
+    "tags": ["dashboard", "alert", "incident", "recovery"],
+    "description": "An incident-oriented dashboard with an attention banner, alert queue, status-coded items, and recovery trajectory.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "dashboard-alert",
+      "title": "Threshold review",
+      "subtitle": "A clear path from signal to resolution",
+      "paletteName": "sunset",
+      "period": "Incident / Review",
+      "alertText": "Billing latency crossed the operating threshold; the recovery plan is in motion.",
+      "metrics": [],
+      "panels": [{"label": "Billing latency", "value": 87, "status": "bad"}, {"label": "Queue depth", "value": 61, "status": "warn"}, {"label": "Worker recovery", "value": 74, "status": "good"}, {"label": "Customer impact", "value": "Low", "status": "neutral"}],
+      "series": [{"label": "Recovery", "values": [91, 86, 83, 79, 72, 61, 48], "color": "accent"}]
+    }
+  }
+]

@@ -1,0 +1,183 @@
+[
+  {
+    "id": "scroll-page-smooth-tour",
+    "title": "Smooth Page Scroll Tour",
+    "category": "scroll-effects",
+    "tags": ["browser", "page", "tour", "smooth-scroll"],
+    "description": "A polished browser viewport glides through stacked page sections with a progress rail, section rhythm, and readable landing-page choreography.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "page-scroll",
+      "headline": "Move through the story",
+      "subline": "A calm, guided product tour",
+      "paletteName": "midnight",
+      "items": ["The first impression", "A clearer workflow", "Built for momentum", "Made to scale", "Start today"],
+      "accentLabel": "SCROLL TO EXPLORE"
+    }
+  },
+  {
+    "id": "scroll-section-snap-editorial",
+    "title": "Section Snap Editorial",
+    "category": "scroll-effects",
+    "tags": ["snap", "editorial", "sections", "viewport"],
+    "description": "Full viewport sections resolve into intentional snap points, with an active chapter rail and spring-settled content card.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "section-snap",
+      "headline": "Every section lands",
+      "subline": "Turn scroll input into a deliberate sequence",
+      "paletteName": "ocean",
+      "items": ["Discover", "Compose", "Collaborate", "Refine", "Launch"]
+    }
+  },
+  {
+    "id": "scroll-parallax-depth-layers",
+    "title": "Parallax Depth Layers",
+    "category": "scroll-effects",
+    "tags": ["parallax", "depth", "cinematic", "layers"],
+    "description": "Three depth-separated light layers drift at different speeds to create a cinematic parallax field around a focused message.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "parallax-layers",
+      "headline": "Depth changes everything",
+      "subline": "Layer motion behind the message, not over it",
+      "paletteName": "sunset",
+      "accentLabel": "MOVE THROUGH DEPTH"
+    }
+  },
+  {
+    "id": "scroll-horizontal-gallery-swipe",
+    "title": "Horizontal Gallery Swipe",
+    "category": "scroll-effects",
+    "tags": ["gallery", "horizontal", "swipe", "cards"],
+    "description": "A wide card gallery advances horizontally with staggered card offsets, active framing, and a tactile progress track.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "horizontal-gallery",
+      "headline": "A wider point of view",
+      "subline": "Browse the moments that matter",
+      "paletteName": "candy",
+      "items": ["Signal", "Motion", "Systems", "People", "Ideas", "Outcomes"]
+    }
+  },
+  {
+    "id": "scroll-infinite-ticker-loop",
+    "title": "Infinite Ticker Loop",
+    "category": "scroll-effects",
+    "tags": ["ticker", "marquee", "loop", "announcement"],
+    "description": "A seamless, endlessly translating ticker repeats a set of messages without a visible seam, ideal for launches and editorial headers.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "infinite-ticker",
+      "headline": "Keep the signal moving",
+      "subline": "A continuous rhythm for ideas in motion",
+      "paletteName": "mono",
+      "items": ["NEW DROP", "OPEN SOURCE", "BUILT TO MOVE", "NOW SHIPPING"]
+    }
+  },
+  {
+    "id": "scroll-chat-feed-auto-follow",
+    "title": "Chat Feed Auto-Follow",
+    "category": "scroll-effects",
+    "tags": ["chat", "feed", "messages", "live"],
+    "description": "Conversational bubbles enter in sequence inside a live thread, alternating sides with timing, metadata, and a typing state.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "chat-feed",
+      "headline": "The conversation keeps going",
+      "subline": "Show collaboration as it happens",
+      "paletteName": "forest",
+      "items": ["Can you share the latest cut?", "It is in the new workspace.", "Found it — the pacing feels right.", "Perfect. Shipping this afternoon.", "I will send the handoff notes."]
+    }
+  },
+  {
+    "id": "scroll-code-editor-walkthrough",
+    "title": "Code Editor Walkthrough",
+    "category": "scroll-effects",
+    "tags": ["code", "developer", "editor", "highlight"],
+    "description": "A dark code editor scrolls through implementation lines while an active-line highlight and execution readout follow the viewport.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "code-scroll",
+      "headline": "Motion, made explicit",
+      "subline": "Walk through the implementation one line at a time",
+      "paletteName": "midnight",
+      "codeLines": ["const timeline = createScrollTimeline({", "  duration: 420,", "  easing: easeInOutQuint,", "});", "", "timeline.on(\"progress\", ({ value }) => {", "  viewport.style.transform = `translateY(${value}px)`;", "});", "", "export default timeline;"]
+    }
+  },
+  {
+    "id": "scroll-document-highlight-follow",
+    "title": "Document Highlight Follow",
+    "category": "scroll-effects",
+    "tags": ["document", "reading", "highlight", "editorial"],
+    "description": "An editorial document advances line by line as a luminous highlight follows the reader, with section numbering and progress.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "document-highlight",
+      "headline": "Read the important parts",
+      "subline": "Guide attention through a long-form idea",
+      "paletteName": "paper",
+      "items": ["Begin with the user", "Make the first step obvious", "Let the system breathe", "Show the result early", "Leave room to continue"]
+    }
+  },
+  {
+    "id": "scroll-timeline-milestone-reveal",
+    "title": "Timeline Milestone Reveal",
+    "category": "scroll-effects",
+    "tags": ["timeline", "milestones", "roadmap", "progress"],
+    "description": "A vertical roadmap draws its progress path as milestones activate, complete, and reveal the next step in sequence.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "timeline-scroll",
+      "headline": "Progress you can see",
+      "subline": "Turn a roadmap into a moment of momentum",
+      "paletteName": "ocean",
+      "items": ["Research", "Prototype", "Build", "Test", "Launch", "Learn"]
+    }
+  },
+  {
+    "id": "scroll-mobile-feed-swipe",
+    "title": "Mobile Feed Swipe",
+    "category": "scroll-effects",
+    "tags": ["mobile", "feed", "swipe", "social"],
+    "description": "A framed phone feed moves through thumb-first stories with swipe momentum, page indicators, content cards, and a persistent navigation bar.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "mobile-feed-swipe",
+      "headline": "Designed for the thumb",
+      "subline": "Make every swipe feel like a new beginning",
+      "paletteName": "candy",
+      "items": ["A better way to begin", "Small details, big feeling", "The next idea is here", "Made to be shared", "Keep exploring"]
+    }
+  }
+]

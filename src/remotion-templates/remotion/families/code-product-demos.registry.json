@@ -1,0 +1,208 @@
+[
+  {
+    "id": "code-product-demos-terminal-command",
+    "title": "Terminal Command",
+    "category": "ui-product-evidence",
+    "tags": ["code", "terminal", "developer", "command"],
+    "description": "A command types into a polished terminal while structured output arrives line by line, ideal for CLI and developer-tool launches.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "terminal-command",
+      "title": "Ship from the command line",
+      "subtitle": "Turn a single command into a clear, cinematic developer-product moment.",
+      "paletteName": "midnight",
+      "command": "npm run build:preview",
+      "output": ["✓ connected to workflow runtime", "✓ compiled 12 modules", "done in 1.42s"],
+      "accentLabel": "CLI / READY"
+    }
+  },
+  {
+    "id": "code-product-demos-code-type-on",
+    "title": "Code Type On",
+    "category": "ui-product-evidence",
+    "tags": ["code", "typing", "editor", "tutorial"],
+    "description": "A focused editor reveals a code sample line by line with syntax contrast and stable line-number choreography.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "code-type-on",
+      "title": "Make the idea executable",
+      "subtitle": "Reveal the smallest useful code path with a deliberate, readable typing cadence.",
+      "paletteName": "ocean",
+      "language": "TypeScript",
+      "codeLines": ["const result = await workflow.run({", "  input: \"campaign-brief\",", "  retries: 2,", "});", "return result.output;"],
+      "highlights": [2, 4],
+      "lineNumbers": true,
+      "accentLabel": "SOURCE / LIVE"
+    }
+  },
+  {
+    "id": "code-product-demos-diff-review",
+    "title": "Diff Review",
+    "category": "ui-product-evidence",
+    "tags": ["code", "diff", "review", "before-after"],
+    "description": "A red-and-green side-by-side diff makes a product improvement or engineering change easy to compare at a glance.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "diff-review",
+      "title": "Every change has a reason",
+      "subtitle": "Show the before and after state without losing the detail that makes the improvement credible.",
+      "paletteName": "forest",
+      "language": "CONFIG",
+      "codeLines": ["const result = await workflow.run({", "  input: \"campaign-brief\",", "  retries: 2,", "});", "return result.output;"],
+      "highlights": [3],
+      "accentLabel": "REVIEW / APPROVED"
+    }
+  },
+  {
+    "id": "code-product-demos-error-to-fix",
+    "title": "Error To Fix",
+    "category": "ui-product-evidence",
+    "tags": ["code", "error", "debug", "resolution"],
+    "description": "A highlighted code error resolves into a green passing state, turning debugging into an understandable product story.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "error-to-fix",
+      "title": "From blocked to building",
+      "subtitle": "Make the fix visible: surface the failure, apply the change, and prove that the build is healthy.",
+      "paletteName": "sunset",
+      "language": "TypeScript",
+      "error": "TypeError: property is missing from the input contract",
+      "codeLines": ["const result = await workflow.run({", "  input: undefined,", "  retries: 2,", "});", "return result.output;"],
+      "highlights": [2, 3],
+      "accentLabel": "DEBUG / RESOLVE"
+    }
+  },
+  {
+    "id": "code-product-demos-api-response",
+    "title": "API Response",
+    "category": "ui-product-evidence",
+    "tags": ["code", "api", "json", "response"],
+    "description": "A request label resolves into a paced JSON response panel with status, request metadata, and structured values.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "api-response",
+      "title": "Proof in the payload",
+      "subtitle": "Present an API response as a confident, legible handoff from request to usable result.",
+      "paletteName": "candy",
+      "command": "render",
+      "output": ["status: 200", "requestId: req_8f3a", "duration: 142ms", "items: 24"],
+      "accentLabel": "API / RESPONSE"
+    }
+  },
+  {
+    "id": "code-product-demos-log-stream",
+    "title": "Log Stream",
+    "category": "ui-product-evidence",
+    "tags": ["code", "logs", "runtime", "observability"],
+    "description": "A live-looking runtime log scrolls through deterministic events with an illuminated active line and technical context.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "log-stream",
+      "title": "See the system working",
+      "subtitle": "Give invisible runtime behavior a readable visual rhythm with logs that stay grounded in the story.",
+      "paletteName": "mono",
+      "output": ["15:42:01  INFO   booting preview server", "15:42:02  INFO   loaded 12 composition modules", "15:42:03  DEBUG  compiling responsive layout", "15:42:04  INFO   assets resolved from local cache", "15:42:05  WARN   fallback font selected", "15:42:06  INFO   render completed successfully", "15:42:07  INFO   ready on localhost:3000"],
+      "accentLabel": "RUNTIME / LIVE"
+    }
+  },
+  {
+    "id": "code-product-demos-split-editor",
+    "title": "Split Editor",
+    "category": "ui-product-evidence",
+    "tags": ["code", "editor", "preview", "developer-tool"],
+    "description": "Code and a live procedural preview share the frame, making the relationship between implementation and outcome immediately clear.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "split-editor",
+      "title": "Write it. See it.",
+      "subtitle": "Pair implementation detail with its visual result for a direct developer-to-product explanation.",
+      "paletteName": "ocean",
+      "language": "React",
+      "codeLines": ["export const Card = ({ title }) => (", "  <article className=\"card\">", "    <h2>{title}</h2>", "  </article>", ");"],
+      "highlights": [2, 3],
+      "accentLabel": "EDITOR / PREVIEW"
+    }
+  },
+  {
+    "id": "code-product-demos-test-pass",
+    "title": "Test Pass",
+    "category": "ui-product-evidence",
+    "tags": ["code", "tests", "quality", "verification"],
+    "description": "A test suite checks off one contract at a time until the full product surface is visibly green and ready to ship.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "test-pass",
+      "title": "Confidence is a feature",
+      "subtitle": "Turn invisible quality work into a sequence of explicit checks that viewers can trust.",
+      "paletteName": "forest",
+      "language": "REMOTION",
+      "steps": ["renders default props", "accepts custom palette", "keeps timing deterministic", "exports composition"],
+      "accentLabel": "QUALITY / VERIFIED"
+    }
+  },
+  {
+    "id": "code-product-demos-deploy-pipeline",
+    "title": "Deploy Pipeline",
+    "category": "ui-product-evidence",
+    "tags": ["code", "deploy", "pipeline", "release"],
+    "description": "Commit, build, verify, and deploy move through a connected release pipeline with clear completion states.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "deploy-pipeline",
+      "title": "From commit to customer",
+      "subtitle": "Make the release path feel calm and intentional with a simple sequence of proven stages.",
+      "paletteName": "midnight",
+      "command": "main → production",
+      "steps": ["COMMIT", "BUILD", "VERIFY", "DEPLOY"],
+      "accentLabel": "RELEASE / READY"
+    }
+  },
+  {
+    "id": "code-product-demos-code-to-preview",
+    "title": "Code To Preview",
+    "category": "ui-product-evidence",
+    "tags": ["code", "preview", "build", "product"],
+    "description": "A source component and a live preview enter together to show how a few lines of code become a finished product surface.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "code-to-preview",
+      "title": "Ideas become interfaces",
+      "subtitle": "Close the gap between source and experience with a clear code-to-preview transformation.",
+      "paletteName": "sunset",
+      "language": "TSX",
+      "codeLines": ["export const Hero = () => (", "  <section className=\"hero\">", "    <h1>Move with clarity</h1>", "  </section>", ");"],
+      "highlights": [3],
+      "accentLabel": "BUILD / PREVIEW"
+    }
+  }
+]

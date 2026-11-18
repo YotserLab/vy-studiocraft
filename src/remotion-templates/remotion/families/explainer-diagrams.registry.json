@@ -1,0 +1,122 @@
+[
+  {
+    "id": "explainer-diagrams-system-overview",
+    "title": "System Overview",
+    "category": "explainers-education",
+    "tags": ["diagram", "system", "network", "overview"],
+    "description": "A camera-ready system map reveals the major nodes and animated connections in reading order, ideal for product and platform overviews.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "system-overview", "title": "The system, in one view.", "subtitle": "Trace the signal from source to outcome.", "paletteName": "midnight", "cameraPath": "drift", "focusNode": "node-3", "showGrid": true }
+  },
+  {
+    "id": "explainer-diagrams-layered-architecture",
+    "title": "Layered Architecture",
+    "category": "explainers-education",
+    "tags": ["diagram", "architecture", "layers", "stack"],
+    "description": "A vertical architecture stack animates layer by layer so infrastructure, product surfaces, and dependencies stay easy to follow.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "layered-architecture", "title": "Built in layers.", "subtitle": "Every surface has a job in the stack.", "paletteName": "ocean", "cameraPath": "wide", "focusNode": "node-4", "showGrid": true }
+  },
+  {
+    "id": "explainer-diagrams-input-output",
+    "title": "Input Output",
+    "category": "explainers-education",
+    "tags": ["diagram", "input", "output", "pipeline"],
+    "description": "A left-to-right pipeline connects raw inputs to a clear output through animated processing stages and handoff labels.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": { "variant": "input-output", "title": "From input to impact.", "subtitle": "Make the transformation visible.", "paletteName": "forest", "cameraPath": "drift", "focusNode": "node-4", "showGrid": true }
+  },
+  {
+    "id": "explainer-diagrams-zoom-into-node",
+    "title": "Zoom Into Node",
+    "category": "explainers-education",
+    "tags": ["diagram", "zoom", "focus", "detail"],
+    "description": "A broad network settles into a highlighted node as the camera drifts inward, useful for explaining one critical capability in context.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "zoom-into-node", "title": "Look closer.", "subtitle": "The detail that powers the whole system.", "paletteName": "candy", "cameraPath": "focus", "focusNode": "node-4", "notes": ["Core capability"], "showGrid": true }
+  },
+  {
+    "id": "explainer-diagrams-cycle-diagram",
+    "title": "Cycle Diagram",
+    "category": "explainers-education",
+    "tags": ["diagram", "cycle", "loop", "process"],
+    "description": "A circular diagram pulses through recurring stages to communicate feedback loops, operating rhythms, and continuous improvement.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "cycle-diagram", "title": "Always getting better.", "subtitle": "A loop with momentum at every stage.", "paletteName": "sunset", "cameraPath": "drift", "focusNode": "node-2", "showGrid": false }
+  },
+  {
+    "id": "explainer-diagrams-before-after-system",
+    "title": "Before After System",
+    "category": "explainers-education",
+    "tags": ["diagram", "before", "after", "transformation"],
+    "description": "Two compact systems converge through a central transition and resolve into a cleaner after state for transformation stories.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "before-after-system", "title": "The system changed.", "subtitle": "Show the difference, not just the promise.", "paletteName": "paper", "cameraPath": "wide", "focusNode": "node-7", "showGrid": true }
+  },
+  {
+    "id": "explainer-diagrams-callout-network",
+    "title": "Callout Network",
+    "category": "explainers-education",
+    "tags": ["diagram", "callouts", "network", "annotation"],
+    "description": "A central system anchors labeled callouts around it, giving feature tours and technical explanations a strong visual hierarchy.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "callout-network", "title": "Everything has a place.", "subtitle": "Name the pieces that make the product work.", "paletteName": "midnight", "cameraPath": "drift", "focusNode": "node-1", "notes": ["Fast", "Reliable", "Visible"], "showGrid": false }
+  },
+  {
+    "id": "explainer-diagrams-component-assembly",
+    "title": "Component Assembly",
+    "category": "explainers-education",
+    "tags": ["diagram", "assembly", "components", "product"],
+    "description": "Separate components animate toward a central assembled result to explain modular products, systems, and reusable building blocks.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "component-assembly", "title": "Made from the right parts.", "subtitle": "A modular system that comes together cleanly.", "paletteName": "ocean", "cameraPath": "focus", "focusNode": "node-1", "showGrid": true }
+  },
+  {
+    "id": "explainer-diagrams-decision-tree",
+    "title": "Decision Tree",
+    "category": "explainers-education",
+    "tags": ["diagram", "decision", "tree", "logic"],
+    "description": "A branching decision tree reveals choices and outcomes in sequence, with route labels that make logic readable at a glance.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "decision-tree", "title": "Choose the right path.", "subtitle": "Turn complex logic into a sequence people can act on.", "paletteName": "forest", "cameraPath": "wide", "focusNode": "node-2", "showGrid": true }
+  },
+  {
+    "id": "explainer-diagrams-concept-map",
+    "title": "Concept Map",
+    "category": "explainers-education",
+    "tags": ["diagram", "concept", "mindmap", "relationships"],
+    "description": "A radial concept map builds relationships around one central idea, useful for education, strategy, and narrative framing.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "concept-map", "title": "The idea in context.", "subtitle": "Show the relationships that make the insight useful.", "paletteName": "candy", "cameraPath": "drift", "focusNode": "node-1", "showGrid": false }
+  }
+]

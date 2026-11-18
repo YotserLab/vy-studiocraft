@@ -1,0 +1,182 @@
+[
+  {
+    "id": "intro-geometric-assembly",
+    "title": "Geometric Mark Assembly",
+    "category": "channel-intros",
+    "tags": ["logo", "geometry", "technology"],
+    "description": "Independent geometric fragments converge into a procedural emblem before the channel name and tagline settle below it.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "geometric-assembly",
+      "channelName": "NORTHSTAR",
+      "tagline": "Ideas in motion",
+      "paletteName": "midnight",
+      "seed": 11
+    }
+  },
+  {
+    "id": "intro-light-streak-wordmark",
+    "title": "Light Streak Wordmark",
+    "category": "channel-intros",
+    "tags": ["light", "wordmark", "cinematic"],
+    "description": "Luminous streaks rush in from both sides, converge at center, and resolve into a glowing channel wordmark.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "light-streaks",
+      "channelName": "LUMEN",
+      "tagline": "See what is next",
+      "paletteName": "ocean",
+      "seed": 23
+    }
+  },
+  {
+    "id": "intro-glitch-letter-build",
+    "title": "Glitch Letter Build",
+    "category": "channel-intros",
+    "tags": ["glitch", "digital", "letters"],
+    "description": "Chromatic letter fragments jitter into position character by character, then lock into a clean digital identity.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "glitch-letters",
+      "channelName": "SIGNAL/NOISE",
+      "tagline": "Digital culture decoded",
+      "paletteName": "candy",
+      "seed": 37
+    }
+  },
+  {
+    "id": "intro-orbit-system",
+    "title": "Orbit System Identity",
+    "category": "channel-intros",
+    "tags": ["orbit", "science", "system"],
+    "description": "Three orbital systems assemble around a procedural core while satellites slow into a balanced channel lockup.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 195,
+    "defaultProps": {
+      "variant": "orbit-system",
+      "channelName": "APOGEE",
+      "tagline": "Explore beyond",
+      "paletteName": "midnight",
+      "seed": 41
+    }
+  },
+  {
+    "id": "intro-ink-splash",
+    "title": "Ink Splash Reveal",
+    "category": "channel-intros",
+    "tags": ["ink", "organic", "art"],
+    "description": "Deterministic ink droplets and runs bloom into a bold silhouette that reveals the channel identity within.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "ink-splash",
+      "channelName": "BLACK INK",
+      "tagline": "Make your mark",
+      "paletteName": "paper",
+      "seed": 59
+    }
+  },
+  {
+    "id": "intro-line-draw-emblem",
+    "title": "Minimal Line-Draw Emblem",
+    "category": "channel-intros",
+    "tags": ["minimal", "line", "premium"],
+    "description": "A precise procedural emblem draws itself in one continuous visual gesture before a restrained editorial name reveal.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "line-draw",
+      "channelName": "FORM",
+      "tagline": "Architecture and objects",
+      "paletteName": "paper",
+      "seed": 67
+    }
+  },
+  {
+    "id": "intro-retro-badge",
+    "title": "Retro Badge Spin-In",
+    "category": "channel-intros",
+    "tags": ["retro", "badge", "vintage"],
+    "description": "A scalloped procedural badge spins forward with spring weight, then settles as a classic stamped channel seal.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "retro-badge",
+      "channelName": "FIELD NOTES",
+      "tagline": "Stories from the road",
+      "paletteName": "sunset",
+      "seed": 73
+    }
+  },
+  {
+    "id": "intro-audio-equalizer",
+    "title": "Audio Equalizer Intro",
+    "category": "channel-intros",
+    "tags": ["audio", "equalizer", "music"],
+    "description": "Forty-two deterministic equalizer bars pulse at varied frequencies, collapse to a line, and expose the channel name.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "audio-equalizer",
+      "channelName": "FREQUENCY",
+      "tagline": "Sound without limits",
+      "paletteName": "candy",
+      "seed": 89
+    }
+  },
+  {
+    "id": "intro-spotlight-stage",
+    "title": "Spotlight Stage Sweep",
+    "category": "channel-intros",
+    "tags": ["spotlight", "stage", "cinematic"],
+    "description": "A theatrical beam travels across a dark stage, illuminating the channel wordmark before holding on the final title.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": {
+      "variant": "spotlight-stage",
+      "channelName": "ENCORE",
+      "tagline": "The show starts here",
+      "paletteName": "mono",
+      "seed": 101
+    }
+  },
+  {
+    "id": "intro-cube-emblem",
+    "title": "Cube Rotate Emblem",
+    "category": "channel-intros",
+    "tags": ["cube", "3d", "emblem"],
+    "description": "A six-sided CSS cube tumbles toward camera, presents a procedural emblem, and shifts into a dimensional name lockup.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 195,
+    "defaultProps": {
+      "variant": "cube-rotate",
+      "channelName": "VERTEX",
+      "tagline": "Build another dimension",
+      "paletteName": "forest",
+      "seed": 97
+    }
+  }
+]

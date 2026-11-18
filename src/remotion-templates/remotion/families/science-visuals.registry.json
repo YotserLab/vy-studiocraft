@@ -1,0 +1,122 @@
+[
+  {
+    "id": "science-visuals-cell-zoom",
+    "title": "Cell Zoom",
+    "category": "explainers-education",
+    "tags": ["science", "cell", "biology", "zoom", "diagram"],
+    "description": "A procedural cell cross-section grows into view with membrane, nucleus, and signal callouts for calm biology explainers.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": { "variant": "cell-zoom", "title": "Inside the signal.", "subtitle": "A clear visual model for structures, boundaries, and change.", "paletteName": "ocean", "labels": ["membrane", "nucleus", "signal"], "caption": "BIOLOGY / CELL MODEL" }
+  },
+  {
+    "id": "science-visuals-particle-collision",
+    "title": "Particle Collision",
+    "category": "explainers-education",
+    "tags": ["science", "particles", "collision", "energy", "physics"],
+    "description": "Two deterministic particle streams converge and burst into an abstract energy-transfer event.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": { "variant": "particle-collision", "title": "When systems meet.", "subtitle": "Show momentum, impact, and the result of a measurable interaction.", "paletteName": "midnight", "speed": 1, "caption": "PHYSICS / COLLISION MODEL" }
+  },
+  {
+    "id": "science-visuals-wave-interference",
+    "title": "Wave Interference",
+    "category": "explainers-education",
+    "tags": ["science", "waves", "interference", "signal", "physics"],
+    "description": "Two animated sine waves combine into a larger resultant field with legible source labels.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "wave-interference", "title": "Signals in combination.", "subtitle": "Make overlapping patterns visible without relying on footage.", "paletteName": "candy", "speed": 0.9, "caption": "WAVE / INTERFERENCE MODEL" }
+  },
+  {
+    "id": "science-visuals-orbit-model",
+    "title": "Orbit Model",
+    "category": "explainers-education",
+    "tags": ["science", "orbit", "space", "system", "motion"],
+    "description": "A central body and three animated elliptical paths turn orbital relationships into a clean hero diagram.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "orbit-model", "title": "A system in motion.", "subtitle": "Use orbital paths to frame relationships, cycles, and dependencies.", "paletteName": "midnight", "speed": 0.8, "caption": "ASTRONOMY / ORBIT MODEL" }
+  },
+  {
+    "id": "science-visuals-ecosystem-web",
+    "title": "Ecosystem Web",
+    "category": "explainers-education",
+    "tags": ["science", "ecosystem", "network", "nodes", "biology"],
+    "description": "A central ecosystem node connects configurable surrounding species, inputs, or dependencies in a web.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": { "variant": "ecosystem-web", "title": "Nothing exists alone.", "subtitle": "Map the relationships that keep a system balanced and alive.", "paletteName": "forest", "labels": ["water", "soil", "sun", "pollinator", "seed", "forest", "air", "life"], "caption": "ECOLOGY / SYSTEM WEB" }
+  },
+  {
+    "id": "science-visuals-lab-protocol",
+    "title": "Lab Protocol",
+    "category": "explainers-education",
+    "tags": ["science", "lab", "protocol", "steps", "experiment"],
+    "description": "Four glass-like procedural vessels activate in sequence to present an experiment or repeatable protocol.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "lab-protocol", "title": "Test the hypothesis.", "subtitle": "Turn a complex procedure into four visible, memorable moves.", "paletteName": "ocean", "labels": ["prepare", "measure", "observe", "record"], "caption": "METHOD / LAB PROTOCOL" }
+  },
+  {
+    "id": "science-visuals-molecule-build",
+    "title": "Molecule Build",
+    "category": "explainers-education",
+    "tags": ["science", "molecule", "chemistry", "atoms", "build"],
+    "description": "Atoms and bonds assemble one by one into a configurable molecule-like structure for chemistry explainers.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": { "variant": "molecule-build", "title": "Build the connection.", "subtitle": "Reveal structure through atoms, bonds, labels, and sequence.", "paletteName": "sunset", "labels": ["C", "O", "H", "N", "S"], "caption": "CHEMISTRY / MOLECULE MODEL" }
+  },
+  {
+    "id": "science-visuals-energy-transfer",
+    "title": "Energy Transfer",
+    "category": "explainers-education",
+    "tags": ["science", "energy", "stages", "transfer", "data"],
+    "description": "A stepped bar system moves energy from stage to stage with pulsing markers and directional handoffs.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": { "variant": "energy-transfer", "title": "Follow the energy.", "subtitle": "Show where a system gains, stores, and passes momentum forward.", "paletteName": "sunset", "values": [22, 45, 68, 88], "labels": ["input", "store", "convert", "output"], "caption": "ENERGY / TRANSFER MODEL" }
+  },
+  {
+    "id": "science-visuals-rock-cycle",
+    "title": "Rock Cycle",
+    "category": "explainers-education",
+    "tags": ["science", "geology", "cycle", "earth", "process"],
+    "description": "Four labeled geological states connect in a looping process diagram with animated directional paths.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "rock-cycle", "title": "Change takes time.", "subtitle": "Make a long geological process feel immediate and understandable.", "paletteName": "forest", "labels": ["magma", "igneous", "sediment", "metamorphic"], "caption": "GEOLOGY / ROCK CYCLE" }
+  },
+  {
+    "id": "science-visuals-weather-cycle",
+    "title": "Weather Cycle",
+    "category": "explainers-education",
+    "tags": ["science", "weather", "climate", "cycle", "systems"],
+    "description": "A central weather driver connects animated sun, cloud, rain, wind, and vapor states in a rotating system.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "weather-cycle", "title": "A changing atmosphere.", "subtitle": "Visualize linked conditions as a system rather than isolated facts.", "paletteName": "ocean", "labels": ["sun", "cloud", "rain", "wind", "heat", "storm", "runoff", "vapor"], "speed": 0.7, "caption": "ATMOSPHERE / WEATHER CYCLE" }
+  }
+]

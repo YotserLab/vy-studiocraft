@@ -1,0 +1,122 @@
+[
+  {
+    "id": "app-install-ads-pain-to-app",
+    "title": "Pain To App",
+    "category": "marketing-social",
+    "tags": ["mobile", "app", "install", "pain-point", "conversion"],
+    "description": "Pain To App — turns a familiar mobile pain point into a crisp app reveal and install story.",
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "durationInFrames": 120,
+    "defaultProps": { "variant": "pain-to-app", "appName": "Orbit", "headline": "Make room for better days.", "subline": "One calm place for the things that matter.", "painPoint": "Too many tabs. Too many reminders. Not enough focus.", "cta": "Try it free", "rating": "4.9", "reviewCount": "12K", "paletteName": "ocean", "screenUrls": [], "features": ["Plan in seconds", "Smart reminders", "Works everywhere", "Made for focus"], "storeLinks": ["App Store", "Google Play"], "device": "phone", "privacyLabel": "Your data stays yours" }
+  },
+  {
+    "id": "app-install-ads-screen-swipe",
+    "title": "Screen Swipe",
+    "category": "marketing-social",
+    "tags": ["mobile", "app", "screens", "swipe", "install"],
+    "description": "Screen Swipe — cycles through three app moments with a tactile device carousel and benefit labels.",
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "durationInFrames": 135,
+    "defaultProps": { "variant": "screen-swipe", "appName": "Orbit", "headline": "One app. Every moment.", "subline": "Your day, organized around what matters.", "painPoint": "The busywork", "cta": "Explore the app", "rating": "4.9", "reviewCount": "12K", "paletteName": "midnight", "screenUrls": [], "features": ["Plan in seconds", "Smart reminders", "Works everywhere", "Made for focus"], "storeLinks": ["App Store", "Google Play"], "device": "both", "privacyLabel": "Private by design" }
+  },
+  {
+    "id": "app-install-ads-feature-stack",
+    "title": "Feature Stack",
+    "category": "marketing-social",
+    "tags": ["mobile", "app", "features", "benefits", "product"],
+    "description": "Feature Stack — staggers four concrete app benefits into a conversion-ready feature proof panel.",
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "durationInFrames": 120,
+    "defaultProps": { "variant": "feature-stack", "appName": "Orbit", "headline": "Built around you.", "subline": "The small features that make a big difference.", "painPoint": "Scattered tools", "cta": "See what is inside", "rating": "4.9", "reviewCount": "12K", "paletteName": "forest", "screenUrls": [], "features": ["Plan in seconds", "Smart reminders", "Works everywhere", "Made for focus"], "storeLinks": ["App Store", "Google Play"], "device": "phone", "privacyLabel": "No tracking by default" }
+  },
+  {
+    "id": "app-install-ads-rating-proof",
+    "title": "Rating Proof",
+    "category": "marketing-social",
+    "tags": ["mobile", "app", "rating", "review", "social-proof"],
+    "description": "Rating Proof — pairs an app screen with rating, review volume, and a human-scale proof statement.",
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "durationInFrames": 120,
+    "defaultProps": { "variant": "rating-proof", "appName": "Orbit", "headline": "Loved by people.", "subline": "Finally, an app that gives my brain some breathing room.", "painPoint": "Decision fatigue", "cta": "Join thousands", "rating": "4.9", "reviewCount": "12K", "paletteName": "candy", "screenUrls": [], "features": ["Plan in seconds", "Smart reminders", "Works everywhere", "Made for focus"], "storeLinks": ["App Store", "Google Play"], "device": "phone", "privacyLabel": "Made for real life" }
+  },
+  {
+    "id": "app-install-ads-store-badges",
+    "title": "Store Badges",
+    "category": "marketing-social",
+    "tags": ["mobile", "app", "store", "badges", "download"],
+    "description": "Store Badges — a centered app identity and dual-store download moment for end cards and paid creative.",
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "durationInFrames": 105,
+    "defaultProps": { "variant": "store-badges", "appName": "Orbit", "headline": "Download free.", "subline": "A calmer way to get things done.", "painPoint": "Too much friction", "cta": "Download now", "rating": "4.9", "reviewCount": "12K", "paletteName": "sunset", "screenUrls": [], "features": ["Plan in seconds", "Smart reminders", "Works everywhere", "Made for focus"], "storeLinks": ["App Store", "Google Play"], "device": "both", "privacyLabel": "No credit card required" }
+  },
+  {
+    "id": "app-install-ads-notification-value",
+    "title": "Notification Value",
+    "category": "marketing-social",
+    "tags": ["mobile", "app", "notification", "value", "retention"],
+    "description": "Notification Value — shows helpful, non-noisy reminders emerging from a polished app screen.",
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "durationInFrames": 130,
+    "defaultProps": { "variant": "notification-value", "appName": "Orbit", "headline": "The right nudge.", "subline": "Quietly helpful. Never noisy.", "painPoint": "Missed moments", "cta": "Keep on track", "rating": "4.9", "reviewCount": "12K", "paletteName": "ocean", "screenUrls": [], "features": ["Plan in seconds", "Smart reminders", "Works everywhere", "Made for focus"], "storeLinks": ["App Store", "Google Play"], "device": "phone", "privacyLabel": "Notifications on your terms" }
+  },
+  {
+    "id": "app-install-ads-one-tap-demo",
+    "title": "One Tap Demo",
+    "category": "marketing-social",
+    "tags": ["mobile", "app", "tap", "demo", "interaction"],
+    "description": "One Tap Demo — animates a single decisive tap through the app interface and into a focused CTA.",
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "durationInFrames": 115,
+    "defaultProps": { "variant": "one-tap-demo", "appName": "Orbit", "headline": "One tap is all it takes.", "subline": "Turn an intention into momentum instantly.", "painPoint": "A complicated flow", "cta": "Start now", "rating": "4.9", "reviewCount": "12K", "paletteName": "midnight", "screenUrls": [], "features": ["Plan in seconds", "Smart reminders", "Works everywhere", "Made for focus"], "storeLinks": ["App Store", "Google Play"], "device": "phone", "privacyLabel": "Simple by design" }
+  },
+  {
+    "id": "app-install-ads-offline-mode",
+    "title": "Offline Mode",
+    "category": "marketing-social",
+    "tags": ["mobile", "app", "offline", "reliability", "travel"],
+    "description": "Offline Mode — makes reliable offline access the hero with an airplane-safe mobile product reveal.",
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "durationInFrames": 125,
+    "defaultProps": { "variant": "offline-mode", "appName": "Orbit", "headline": "Works wherever you go.", "subline": "Your plans stay with you, even when the signal does not.", "painPoint": "No signal", "cta": "Take it anywhere", "rating": "4.9", "reviewCount": "12K", "paletteName": "forest", "screenUrls": [], "features": ["Plan in seconds", "Smart reminders", "Works everywhere", "Made for focus"], "storeLinks": ["App Store", "Google Play"], "device": "phone", "privacyLabel": "Available offline" }
+  },
+  {
+    "id": "app-install-ads-privacy-proof",
+    "title": "Privacy Proof",
+    "category": "marketing-social",
+    "tags": ["mobile", "app", "privacy", "trust", "security"],
+    "description": "Privacy Proof — turns privacy promises into an elegant sequence of concrete trust signals.",
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "durationInFrames": 125,
+    "defaultProps": { "variant": "privacy-proof", "appName": "Orbit", "headline": "Privacy is a feature.", "subline": "A better app experience starts with trust.", "painPoint": "Data anxiety", "cta": "Use it privately", "rating": "4.9", "reviewCount": "12K", "paletteName": "paper", "screenUrls": [], "features": ["Plan in seconds", "Smart reminders", "Works everywhere", "Made for focus"], "storeLinks": ["App Store", "Google Play"], "device": "phone", "privacyLabel": "Your data stays yours" }
+  },
+  {
+    "id": "app-install-ads-install-cta",
+    "title": "Install CTA",
+    "category": "marketing-social",
+    "tags": ["mobile", "app", "install", "cta", "end-card"],
+    "description": "Install CTA — a celebratory app icon, message, and conversion button for the final beat of an install ad.",
+    "fps": 30,
+    "width": 1080,
+    "height": 1920,
+    "durationInFrames": 105,
+    "defaultProps": { "variant": "install-cta", "appName": "Orbit", "headline": "Ready when you are.", "subline": "Make today feel a little lighter.", "painPoint": "The old routine", "cta": "Install Orbit", "rating": "4.9", "reviewCount": "12K", "paletteName": "candy", "screenUrls": [], "features": ["Plan in seconds", "Smart reminders", "Works everywhere", "Made for focus"], "storeLinks": ["App Store", "Google Play"], "device": "both", "privacyLabel": "Private by design" }
+  }
+]

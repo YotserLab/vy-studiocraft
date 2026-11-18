@@ -1,0 +1,194 @@
+[
+  {
+    "id": "music-visualizers-radial-spectrum",
+    "title": "Radial Spectrum",
+    "category": "audio-music",
+    "tags": ["music", "audio", "spectrum", "radial", "album"],
+    "description": "A circular frequency burst that turns amplitude bands into a luminous radial instrument around the track identity.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "radial-spectrum",
+      "title": "Midnight Frequency",
+      "artist": "Synthetic Sessions",
+      "paletteName": "midnight",
+      "sensitivity": 1,
+      "seed": 11,
+      "beatMarkers": [36, 84, 132]
+    }
+  },
+  {
+    "id": "music-visualizers-mirror-bars",
+    "title": "Mirror Bars",
+    "category": "audio-music",
+    "tags": ["music", "audio", "equalizer", "bars", "mirror"],
+    "description": "A centered mirrored bar wall with a strong horizontal axis, built for energetic intros, hooks, and beat-led transitions.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "mirror-bars",
+      "title": "Afterglow",
+      "artist": "Neon District",
+      "paletteName": "sunset",
+      "sensitivity": 1,
+      "seed": 17
+    }
+  },
+  {
+    "id": "music-visualizers-wave-ring",
+    "title": "Wave Ring",
+    "category": "audio-music",
+    "tags": ["music", "audio", "waveform", "ring", "ambient"],
+    "description": "A sculptural closed waveform ring that expands and contracts around a central title lockup.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "wave-ring",
+      "title": "Tidal Memory",
+      "artist": "Low Current",
+      "paletteName": "ocean",
+      "sensitivity": 1,
+      "seed": 23
+    }
+  },
+  {
+    "id": "music-visualizers-frequency-mountains",
+    "title": "Frequency Mountains",
+    "category": "audio-music",
+    "tags": ["music", "audio", "mountains", "spectrum", "landscape"],
+    "description": "Layered frequency mountains create a depth-rich audio landscape for cinematic music, scores, and long-form mixes.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "frequency-mountains",
+      "title": "Altitude",
+      "artist": "Field Notes",
+      "paletteName": "forest",
+      "sensitivity": 1,
+      "seed": 29
+    }
+  },
+  {
+    "id": "music-visualizers-oscilloscope",
+    "title": "Oscilloscope",
+    "category": "audio-music",
+    "tags": ["music", "audio", "oscilloscope", "waveform", "technical"],
+    "description": "A technical dual-trace oscilloscope presentation with live-looking waveform motion and generous title-safe framing.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "oscilloscope",
+      "title": "Signal / Noise",
+      "artist": "Room Tone",
+      "paletteName": "mono",
+      "sensitivity": 1,
+      "seed": 31
+    }
+  },
+  {
+    "id": "music-visualizers-particle-spectrum",
+    "title": "Particle Spectrum",
+    "category": "audio-music",
+    "tags": ["music", "audio", "particles", "spectrum", "motion"],
+    "description": "A field of deterministic particles whose density and motion respond to frequency bands for atmospheric music visuals.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "particle-spectrum",
+      "title": "Dust In The Mix",
+      "artist": "Parallel Bloom",
+      "paletteName": "candy",
+      "sensitivity": 1.1,
+      "seed": 37
+    }
+  },
+  {
+    "id": "music-visualizers-vinyl-spectrum",
+    "title": "Vinyl Spectrum",
+    "category": "audio-music",
+    "tags": ["music", "audio", "vinyl", "record", "retro"],
+    "description": "A rotating vinyl record with frequency spokes and center label treatment for releases, playlists, and artist cards.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "vinyl-spectrum",
+      "title": "Side A",
+      "artist": "The Turntable Club",
+      "paletteName": "sunset",
+      "sensitivity": 1,
+      "seed": 41
+    }
+  },
+  {
+    "id": "music-visualizers-equalizer-wall",
+    "title": "Equalizer Wall",
+    "category": "audio-music",
+    "tags": ["music", "audio", "equalizer", "grid", "club"],
+    "description": "A dense segmented equalizer wall that gives every frequency column a graphic, modular rhythm.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "equalizer-wall",
+      "title": "Peak Hours",
+      "artist": "Night Shift",
+      "paletteName": "midnight",
+      "sensitivity": 1.2,
+      "seed": 43
+    }
+  },
+  {
+    "id": "music-visualizers-stereo-field",
+    "title": "Stereo Field",
+    "category": "audio-music",
+    "tags": ["music", "audio", "stereo", "waveform", "channels"],
+    "description": "Two opposing channel traces make stereo width visible while keeping the track title and metadata readable.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "stereo-field",
+      "title": "Wide Open",
+      "artist": "L/R Studies",
+      "paletteName": "ocean",
+      "sensitivity": 1,
+      "seed": 47
+    }
+  },
+  {
+    "id": "music-visualizers-spectrum-tunnel",
+    "title": "Spectrum Tunnel",
+    "category": "audio-music",
+    "tags": ["music", "audio", "tunnel", "perspective", "spectrum"],
+    "description": "Nested perspective frames pulse toward a luminous vanishing point for high-energy intros, drops, and loopable visuals.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "spectrum-tunnel",
+      "title": "Into The Drop",
+      "artist": "Vector Pulse",
+      "paletteName": "candy",
+      "sensitivity": 1.15,
+      "seed": 53,
+      "beatMarkers": [30, 75, 120]
+    }
+  }
+]

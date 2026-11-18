@@ -1,0 +1,122 @@
+[
+  {
+    "id": "tables-rankings-rank-reveal",
+    "title": "Rank Reveal",
+    "category": "data-infographic",
+    "tags": ["table", "ranking", "data", "leaderboard"],
+    "description": "A ranked data table reveals position, entity, and performance bars in a confident editorial sequence.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": { "variant": "rank-reveal", "title": "Who is moving fastest?", "subtitle": "Ranked performance across the current reporting window.", "paletteName": "midnight", "columns": ["Revenue", "Growth", "Score"], "rows": [{"label":"Northstar","values":{"Revenue":94,"Growth":28,"Score":92},"value":94,"delta":8},{"label":"Atlas","values":{"Revenue":81,"Growth":19,"Score":86},"value":81,"delta":5},{"label":"Daybreak","values":{"Revenue":73,"Growth":14,"Score":79},"value":73,"delta":-2},{"label":"Juniper","values":{"Revenue":62,"Growth":9,"Score":71},"value":62,"delta":4},{"label":"Meridian","values":{"Revenue":51,"Growth":6,"Score":64},"value":51,"delta":-5}], "prefix":"$", "suffix":"k", "footer":"Source: weekly operating review" }
+  },
+  {
+    "id": "tables-rankings-table-sort",
+    "title": "Table Sort",
+    "category": "data-infographic",
+    "tags": ["table", "sort", "data", "transition"],
+    "description": "Rows re-order around a chosen metric so a static table becomes a clear sorting interaction rendered for video.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": { "variant": "table-sort", "title": "Sort by what matters.", "subtitle": "The same dataset, a sharper question.", "paletteName": "ocean", "columns": ["Score", "Growth", "Revenue"], "sortKey":"Score", "rows":[{"label":"Atlas","values":{"Score":86,"Growth":19,"Revenue":81},"value":86},{"label":"Northstar","values":{"Score":92,"Growth":28,"Revenue":94},"value":92},{"label":"Juniper","values":{"Score":71,"Growth":9,"Revenue":62},"value":71},{"label":"Daybreak","values":{"Score":79,"Growth":14,"Revenue":73},"value":79},{"label":"Meridian","values":{"Score":64,"Growth":6,"Revenue":51},"value":64}], "suffix":" pts" }
+  },
+  {
+    "id": "tables-rankings-row-highlight",
+    "title": "Row Highlight",
+    "category": "data-infographic",
+    "tags": ["table", "highlight", "focus", "annotation"],
+    "description": "A single row receives a luminous focus treatment while the surrounding table remains legible context.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": { "variant": "row-highlight", "title": "Find the signal in the list.", "subtitle": "Focus one record without losing the surrounding context.", "paletteName": "sunset", "columns":["Current","Change","Score"], "highlightRow":"Daybreak", "highlights":["Daybreak"], "rows":[{"label":"Northstar","values":{"Current":94,"Change":8,"Score":92},"value":94,"delta":8},{"label":"Atlas","values":{"Current":81,"Change":5,"Score":86},"value":81,"delta":5},{"label":"Daybreak","values":{"Current":73,"Change":14,"Score":79},"value":73,"delta":14},{"label":"Juniper","values":{"Current":62,"Change":4,"Score":71},"value":62,"delta":4},{"label":"Meridian","values":{"Current":51,"Change":-5,"Score":64},"value":51,"delta":-5}], "suffix":"%" }
+  },
+  {
+    "id": "tables-rankings-leaderboard",
+    "title": "Leaderboard",
+    "category": "data-infographic",
+    "tags": ["leaderboard", "podium", "ranking", "competition"],
+    "description": "A podium-first leaderboard gives the top three a strong visual stage before returning to the complete ranked list.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant":"leaderboard", "title":"The teams setting the pace.", "subtitle":"A podium moment followed by the full field.", "paletteName":"forest", "columns":["Points","Wins","Form"], "rows":[{"label":"Northstar","values":{"Points":94,"Wins":12,"Form":92},"value":94},{"label":"Atlas","values":{"Points":81,"Wins":10,"Form":86},"value":81},{"label":"Daybreak","values":{"Points":73,"Wins":8,"Form":79},"value":73},{"label":"Juniper","values":{"Points":62,"Wins":7,"Form":71},"value":62},{"label":"Meridian","values":{"Points":51,"Wins":5,"Form":64},"value":51}], "suffix":" pts" }
+  },
+  {
+    "id": "tables-rankings-price-table",
+    "title": "Price Table",
+    "category": "data-infographic",
+    "tags": ["pricing", "table", "plans", "comparison"],
+    "description": "A plan comparison table presents pricing, limits, and value with animated column and row reveals.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": { "variant":"price-table", "title":"Choose the right plan.", "subtitle":"Make the differences between tiers easy to scan.", "paletteName":"paper", "columns":["Starter","Growth","Scale"], "rows":[{"label":"Monthly price","values":{"Starter":19,"Growth":49,"Scale":99}},{"label":"Seats","values":{"Starter":3,"Growth":10,"Scale":50}},{"label":"Projects","values":{"Starter":5,"Growth":25,"Scale":-1}},{"label":"Priority support","values":{"Starter":false,"Growth":true,"Scale":true}}], "prefix":"$", "footer":"All plans include a 14-day trial." }
+  },
+  {
+    "id": "tables-rankings-feature-matrix",
+    "title": "Feature Matrix",
+    "category": "data-infographic",
+    "tags": ["matrix", "features", "comparison", "product"],
+    "description": "A crisp feature matrix animates checkmarks and gaps so product differences read at a glance.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": { "variant":"feature-matrix", "title":"Every feature, side by side.", "subtitle":"Turn a long capability list into a confident comparison.", "paletteName":"midnight", "columns":["Core","Pro","Enterprise"], "rows":[{"label":"Unlimited projects","values":{"Core":false,"Pro":true,"Enterprise":true}},{"label":"Team permissions","values":{"Core":false,"Pro":true,"Enterprise":true}},{"label":"Audit history","values":{"Core":false,"Pro":false,"Enterprise":true}},{"label":"Dedicated support","values":{"Core":false,"Pro":false,"Enterprise":true}},{"label":"Custom domains","values":{"Core":true,"Pro":true,"Enterprise":true}}], "footer":"Feature availability may vary by contract." }
+  },
+  {
+    "id": "tables-rankings-scorecard",
+    "title": "Scorecard",
+    "category": "data-infographic",
+    "tags": ["scorecard", "kpi", "bars", "performance"],
+    "description": "A scorecard turns a list of metrics into a visual set of progress bars and benchmark values.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": { "variant":"scorecard", "title":"How healthy is the system?", "subtitle":"Five signals, one operating view.", "paletteName":"ocean", "columns":["Score","Target"], "rows":[{"label":"Activation","values":{"Score":86,"Target":80},"value":86},{"label":"Retention","values":{"Score":72,"Target":75},"value":72},{"label":"Reliability","values":{"Score":94,"Target":90},"value":94},{"label":"Satisfaction","values":{"Score":81,"Target":85},"value":81},{"label":"Expansion","values":{"Score":66,"Target":70},"value":66}], "suffix":"%", "maxValue":100 }
+  },
+  {
+    "id": "tables-rankings-delta-table",
+    "title": "Delta Table",
+    "category": "data-infographic",
+    "tags": ["delta", "change", "table", "performance"],
+    "description": "Current values and directional changes share a compact table with positive and negative deltas made explicit.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 155,
+    "defaultProps": { "variant":"delta-table", "title":"What changed this week?", "subtitle":"Separate movement from the current total.", "paletteName":"candy", "columns":["Current","Change","Prior"], "rows":[{"label":"New revenue","values":{"Current":94,"Change":12,"Prior":82},"value":94,"delta":12,"previous":82},{"label":"Qualified leads","values":{"Current":81,"Change":-7,"Prior":88},"value":81,"delta":-7,"previous":88},{"label":"Activation","values":{"Current":73,"Change":9,"Prior":64},"value":73,"delta":9,"previous":64},{"label":"Retention","values":{"Current":62,"Change":-2,"Prior":64},"value":62,"delta":-2,"previous":64}], "suffix":"%" }
+  },
+  {
+    "id": "tables-rankings-top-bottom-split",
+    "title": "Top Bottom Split",
+    "category": "data-infographic",
+    "tags": ["top", "bottom", "split", "analysis"],
+    "description": "The strongest and weakest records split into two contrasting panels for an immediate performance read.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 160,
+    "defaultProps": { "variant":"top-bottom-split", "title":"Celebrate the wins. Fix the drag.", "subtitle":"A balanced view of the leaders and the gaps.", "paletteName":"sunset", "columns":["Score","Change"], "rows":[{"label":"Northstar","values":{"Score":94,"Change":8},"value":94,"delta":8},{"label":"Atlas","values":{"Score":81,"Change":5},"value":81,"delta":5},{"label":"Daybreak","values":{"Score":73,"Change":-2},"value":73,"delta":-2},{"label":"Juniper","values":{"Score":62,"Change":4},"value":62,"delta":4},{"label":"Meridian","values":{"Score":51,"Change":-5},"value":51,"delta":-5}], "suffix":" pts" }
+  },
+  {
+    "id": "tables-rankings-table-to-chart",
+    "title": "Table To Chart",
+    "category": "data-infographic",
+    "tags": ["table", "chart", "transform", "visualization"],
+    "description": "A tabular snapshot transforms into proportional bars, showing how the same data gains visual momentum.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 170,
+    "defaultProps": { "variant":"table-to-chart", "title":"Same data, clearer shape.", "subtitle":"Move from exact values to an instantly legible pattern.", "paletteName":"ocean", "columns":["Revenue","Growth"], "rows":[{"label":"Northstar","values":{"Revenue":94,"Growth":28},"value":94},{"label":"Atlas","values":{"Revenue":81,"Growth":19},"value":81},{"label":"Daybreak","values":{"Revenue":73,"Growth":14},"value":73},{"label":"Juniper","values":{"Revenue":62,"Growth":9},"value":62},{"label":"Meridian","values":{"Revenue":51,"Growth":6},"value":51}], "prefix":"$", "suffix":"k" }
+  }
+]

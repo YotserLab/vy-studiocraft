@@ -1,0 +1,122 @@
+[
+  {
+    "id": "abstract-geometry-orbital-rings",
+    "category": "motion-3d-physical",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "orbital-rings", "headline": "Orbit the impossible", "subline": "Concentric motion study", "paletteName": "ocean", "seed": 17, "density": 8, "speed": 1 },
+    "title": "Orbital Rings",
+    "tags": ["geometry", "orbital", "rings", "abstract", "motion"],
+    "description": "Orbital Rings — layered concentric ellipses, satellites, and a glowing center for title beds and brand interstitials."
+  },
+  {
+    "id": "abstract-geometry-folding-cube",
+    "category": "motion-3d-physical",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 160,
+    "defaultProps": { "variant": "folding-cube", "headline": "Fold the frame", "subline": "Planes become possibility", "paletteName": "midnight", "seed": 23, "density": 7, "speed": 1 },
+    "title": "Folding Cube",
+    "tags": ["geometry", "cube", "fold", "3d", "abstract"],
+    "description": "Folding Cube — an isometric three-plane construction with a measured spin and folding silhouette."
+  },
+  {
+    "id": "abstract-geometry-parametric-knot",
+    "category": "motion-3d-physical",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "parametric-knot", "headline": "Tie the loop", "subline": "A continuous path through space", "paletteName": "candy", "seed": 41, "density": 8, "speed": 1 },
+    "title": "Parametric Knot",
+    "tags": ["geometry", "knot", "parametric", "line", "abstract"],
+    "description": "Parametric Knot — a luminous deterministic closed curve that continuously changes its phase and depth."
+  },
+  {
+    "id": "abstract-geometry-crystal-growth",
+    "category": "motion-3d-physical",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 170,
+    "defaultProps": { "variant": "crystal-growth", "headline": "Grow a signal", "subline": "Form follows time", "paletteName": "sunset", "seed": 61, "density": 8, "speed": 1 },
+    "title": "Crystal Growth",
+    "tags": ["geometry", "crystal", "growth", "facets", "abstract"],
+    "description": "Crystal Growth — staggered translucent facets rise from a baseline to create an elegant build sequence."
+  },
+  {
+    "id": "abstract-geometry-tunnel-passage",
+    "category": "motion-3d-physical",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "tunnel-passage", "headline": "Enter the depth", "subline": "Depth is a rhythm", "paletteName": "neon", "seed": 83, "density": 12, "speed": 1 },
+    "title": "Tunnel Passage",
+    "tags": ["geometry", "tunnel", "depth", "perspective", "abstract"],
+    "description": "Tunnel Passage — nested rotating frames travel toward a vanishing point for a clean perspective journey."
+  },
+  {
+    "id": "abstract-geometry-ribbon-knot",
+    "category": "motion-3d-physical",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 160,
+    "defaultProps": { "variant": "ribbon-knot", "headline": "Make a line move", "subline": "A line can become a volume", "paletteName": "aurora", "seed": 107, "density": 7, "speed": 1 },
+    "title": "Ribbon Knot",
+    "tags": ["geometry", "ribbon", "knot", "flow", "abstract"],
+    "description": "Ribbon Knot — multiple flowing strokes weave through a shared path, creating a soft volumetric title backdrop."
+  },
+  {
+    "id": "abstract-geometry-stacked-prisms",
+    "category": "motion-3d-physical",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 170,
+    "defaultProps": { "variant": "stacked-prisms", "headline": "Layer the idea", "subline": "Lift, align, repeat", "paletteName": "forest", "seed": 131, "density": 8, "speed": 1 },
+    "title": "Stacked Prisms",
+    "tags": ["geometry", "prisms", "layers", "isometric", "abstract"],
+    "description": "Stacked Prisms — a staggered isometric stack assembles from translucent top planes and side faces."
+  },
+  {
+    "id": "abstract-geometry-magnetic-spheres",
+    "category": "motion-3d-physical",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "magnetic-spheres", "headline": "Find the pull", "subline": "Attraction, distance, force", "paletteName": "ocean", "seed": 151, "density": 8, "speed": 1 },
+    "title": "Magnetic Spheres",
+    "tags": ["geometry", "spheres", "magnetic", "network", "abstract"],
+    "description": "Magnetic Spheres — orbiting colored nodes form a dynamic attraction field with deterministic connector lines."
+  },
+  {
+    "id": "abstract-geometry-wireframe-bloom",
+    "category": "motion-3d-physical",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 170,
+    "defaultProps": { "variant": "wireframe-bloom", "headline": "Light the wireframe", "subline": "Wireframe, light, space", "paletteName": "midnight", "seed": 173, "density": 7, "speed": 1 },
+    "title": "Wireframe Bloom",
+    "tags": ["geometry", "wireframe", "bloom", "light", "abstract"],
+    "description": "Wireframe Bloom — nested rotating diamonds expand and overlap into a restrained geometric light bloom."
+  },
+  {
+    "id": "abstract-geometry-geometry-morph",
+    "category": "motion-3d-physical",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "geometry-morph", "headline": "Change the shape", "subline": "Circle to polygon to form", "paletteName": "candy", "seed": 191, "density": 8, "speed": 1 },
+    "title": "Geometry Morph",
+    "tags": ["geometry", "morph", "polygon", "shape", "abstract"],
+    "description": "Geometry Morph — a glowing polygon breathes between circular and angular silhouettes with vertex markers."
+  }
+]

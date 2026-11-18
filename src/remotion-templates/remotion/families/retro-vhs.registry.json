@@ -1,0 +1,162 @@
+[
+  {
+    "id": "retro-vhs-tape-label",
+    "title": "VHS Tape Label",
+    "category": "retro-vhs",
+    "tags": ["vhs", "cassette", "label"],
+    "description": "A dimensional VHS cassette drops in with spinning reels, a handwritten-era paper label, tape markings, and deterministic analog wear.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 130,
+    "defaultProps": {
+      "variant": "tape-label",
+      "headline": "Summer Mixtape",
+      "paletteName": "sunset"
+    }
+  },
+  {
+    "id": "retro-tracking-title",
+    "title": "Tracking Wobble Title",
+    "category": "retro-vhs",
+    "tags": ["scanlines", "tracking", "glitch"],
+    "description": "Oversized title type splits into chromatic channels while deterministic tracking slips, scanlines, timecode, and tape noise pass over frame.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 110,
+    "defaultProps": {
+      "variant": "tracking-title",
+      "headline": "No Signal",
+      "paletteName": "candy"
+    }
+  },
+  {
+    "id": "retro-chrome-sunset",
+    "title": "Chrome Sunset",
+    "category": "retro-vhs",
+    "tags": ["1980s", "chrome", "sun-grid"],
+    "description": "Chrome-gradient display lettering rises over a striped neon sun and advancing perspective grid for a polished 1980s title card.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 140,
+    "defaultProps": {
+      "variant": "chrome-sun",
+      "headline": "After Hours",
+      "paletteName": "candy"
+    }
+  },
+  {
+    "id": "retro-arcade-high-score",
+    "title": "Arcade High Score",
+    "category": "retro-vhs",
+    "tags": ["arcade", "pixel", "game"],
+    "description": "A pixel-styled title types into an arcade playfield with blinking stars, a live score bar, stage counter, and press-start prompt.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 120,
+    "defaultProps": {
+      "variant": "arcade-score",
+      "headline": "Bonus Round",
+      "paletteName": "candy"
+    }
+  },
+  {
+    "id": "retro-polaroid-memory",
+    "title": "Polaroid Memory",
+    "category": "retro-vhs",
+    "tags": ["polaroid", "timestamp", "memory"],
+    "description": "An instant-photo card falls onto a textured surface, develops from white, and reveals a warm faux landscape with period timestamp.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "polaroid-memory",
+      "headline": "Wish You Were Here",
+      "paletteName": "sunset"
+    }
+  },
+  {
+    "id": "retro-crt-channel-flip",
+    "title": "CRT Channel Flip",
+    "category": "retro-vhs",
+    "tags": ["crt", "television", "channel"],
+    "description": "A woodgrain CRT set cycles channels as its physical dial turns, screen content rolls, collapses, and returns beneath curved-glass scanlines.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 135,
+    "defaultProps": {
+      "variant": "crt-channel",
+      "headline": "Late Night TV",
+      "paletteName": "ocean"
+    }
+  },
+  {
+    "id": "retro-computer-boot",
+    "title": "Retro Computer Boot",
+    "category": "retro-vhs",
+    "tags": ["computer", "terminal", "boot"],
+    "description": "A green-phosphor computer performs memory checks, mounts a tape, types a title command, and settles on a blinking DOS-style prompt.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": {
+      "variant": "computer-boot",
+      "headline": "Future Loading",
+      "paletteName": "forest"
+    }
+  },
+  {
+    "id": "retro-synthwave-drive",
+    "title": "Synthwave Horizon Drive",
+    "category": "retro-vhs",
+    "tags": ["synthwave", "drive", "neon"],
+    "description": "A neon highway races toward a striped sunset through a procedural skyline, moving grid, glowing lane markers, and bold outrun title type.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 160,
+    "defaultProps": {
+      "variant": "horizon-drive",
+      "headline": "Midnight Run",
+      "paletteName": "candy"
+    }
+  },
+  {
+    "id": "retro-broadcast-test-card",
+    "title": "Broadcast Test Card",
+    "category": "retro-vhs",
+    "tags": ["broadcast", "test-card", "standby"],
+    "description": "A period broadcast test card combines SMPTE-inspired bars, calibration geometry, a rotating clock hand, recording stamp, and analog interference.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 125,
+    "defaultProps": {
+      "variant": "broadcast-card",
+      "headline": "Stand By",
+      "paletteName": "mono"
+    }
+  },
+  {
+    "id": "retro-film-leader-countdown",
+    "title": "Film Leader Countdown",
+    "category": "retro-vhs",
+    "tags": ["film", "countdown", "leader"],
+    "description": "A vintage academy-style leader counts down inside concentric calibration rings with rotating sweep, gate jitter, scratches, and end flash.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 120,
+    "defaultProps": {
+      "variant": "film-leader",
+      "headline": "Picture Start",
+      "paletteName": "paper"
+    }
+  }
+]

@@ -1,0 +1,172 @@
+[
+  {
+    "id": "particles-confetti-cannon",
+    "title": "Confetti Cannon",
+    "category": "particle-systems",
+    "tags": ["celebration", "confetti", "launch", "colorful"],
+    "description": "Twin confetti cannons fire layered ribbons across a bold centered announcement.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 120,
+    "defaultProps": {
+      "headline": "LET'S CELEBRATE",
+      "paletteName": "candy",
+      "count": 180,
+      "intensity": 1
+    }
+  },
+  {
+    "id": "particles-ember-rise",
+    "title": "Ember Rise",
+    "category": "particle-systems",
+    "tags": ["embers", "fire", "atmospheric", "cinematic"],
+    "description": "Glowing embers drift upward through a warm afterglow around a cinematic headline.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 140,
+    "defaultProps": {
+      "headline": "KEEP THE FIRE",
+      "paletteName": "sunset",
+      "count": 170,
+      "intensity": 0.9
+    }
+  },
+  {
+    "id": "particles-snowfall",
+    "title": "Soft Snowfall",
+    "category": "particle-systems",
+    "tags": ["snow", "winter", "seasonal", "calm"],
+    "description": "Depth-layered snow falls with gentle lateral drift over a quiet winter title.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "headline": "WINTER QUIET",
+      "paletteName": "ocean",
+      "count": 200,
+      "intensity": 0.8
+    }
+  },
+  {
+    "id": "particles-orbiting-sparks",
+    "title": "Orbiting Sparks",
+    "category": "particle-systems",
+    "tags": ["orbit", "sparks", "energy", "futuristic"],
+    "description": "Luminous sparks travel in opposing elliptical orbits around a high-impact title.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 130,
+    "defaultProps": {
+      "headline": "PULL OF IDEAS",
+      "paletteName": "midnight",
+      "count": 150,
+      "intensity": 1
+    }
+  },
+  {
+    "id": "particles-bubble-columns",
+    "title": "Bubble Columns",
+    "category": "particle-systems",
+    "tags": ["bubbles", "underwater", "playful", "floating"],
+    "description": "Seven buoyant bubble columns rise and shimmer around a clean aquatic headline.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "headline": "RISE ABOVE",
+      "paletteName": "ocean",
+      "count": 140,
+      "intensity": 0.9
+    }
+  },
+  {
+    "id": "particles-star-warp-streaks",
+    "title": "Star Warp Streaks",
+    "category": "particle-systems",
+    "tags": ["space", "warp", "speed", "sci-fi"],
+    "description": "Perspective star streaks accelerate from a central vanishing point for a light-speed reveal.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 110,
+    "defaultProps": {
+      "headline": "BEYOND LIMITS",
+      "paletteName": "midnight",
+      "count": 180,
+      "intensity": 1.2
+    }
+  },
+  {
+    "id": "particles-dust-motes-light-shaft",
+    "title": "Dust Motes in Light",
+    "category": "particle-systems",
+    "tags": ["dust", "light", "ambient", "editorial"],
+    "description": "Fine dust motes shimmer slowly inside a sculpted shaft of light for an atmospheric title.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 160,
+    "defaultProps": {
+      "headline": "FOUND IN LIGHT",
+      "paletteName": "paper",
+      "count": 150,
+      "intensity": 0.65
+    }
+  },
+  {
+    "id": "particles-firework-burst-gravity",
+    "title": "Firework Gravity Burst",
+    "category": "particle-systems",
+    "tags": ["fireworks", "burst", "celebration", "night"],
+    "description": "Three timed firework blooms arc outward and fall under gravity around a night-sky headline.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "headline": "LIGHT UP THE NIGHT",
+      "paletteName": "candy",
+      "count": 210,
+      "intensity": 1
+    }
+  },
+  {
+    "id": "particles-magnetic-swarm-text",
+    "title": "Magnetic Text Swarm",
+    "category": "particle-systems",
+    "tags": ["swarm", "magnetic", "convergence", "technology"],
+    "description": "A curling field of particles converges into luminous bands around the central message.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 120,
+    "defaultProps": {
+      "headline": "IDEAS ATTRACT",
+      "paletteName": "forest",
+      "count": 220,
+      "intensity": 1
+    }
+  },
+  {
+    "id": "particles-rain-splash-ripples",
+    "title": "Rain and Splash Ripples",
+    "category": "particle-systems",
+    "tags": ["rain", "ripples", "weather", "moody"],
+    "description": "Slanted rain resolves into expanding surface ripples beneath a moody centered headline.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 130,
+    "defaultProps": {
+      "headline": "AFTER THE STORM",
+      "paletteName": "ocean",
+      "count": 130,
+      "intensity": 1.1
+    }
+  }
+]

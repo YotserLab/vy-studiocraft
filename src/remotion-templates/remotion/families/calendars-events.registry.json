@@ -1,0 +1,192 @@
+[
+  {
+    "id": "event-tear-off-page-flip",
+    "title": "Tear-Off Calendar Page Flip",
+    "category": "calendars-events",
+    "tags": ["calendar", "page-flip", "announcement"],
+    "description": "A bound paper calendar tears forward in 3D to reveal the event date, title, time, and venue.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 130,
+    "defaultProps": {
+      "variant": "page-flip",
+      "title": "Spring Design Social",
+      "date": "APRIL 24 2027",
+      "time": "7:00 PM",
+      "venue": "The Garden Room",
+      "paletteName": "paper"
+    }
+  },
+  {
+    "id": "event-giant-date-numeral",
+    "title": "Giant Date Numeral",
+    "category": "calendars-events",
+    "tags": ["date", "numeral", "bold"],
+    "description": "An oversized day numeral anchors the frame while a vivid month band and event details slide into place.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 110,
+    "defaultProps": {
+      "variant": "date-numeral",
+      "title": "The Future of Making",
+      "date": "SEPTEMBER 18 2026",
+      "time": "6:30 PM",
+      "venue": "Foundry Hall",
+      "paletteName": "mono"
+    }
+  },
+  {
+    "id": "event-venue-time-card",
+    "title": "Venue and Time Event Card",
+    "category": "calendars-events",
+    "tags": ["invitation", "event-card", "details"],
+    "description": "A polished invitation card enters from the side with clearly structured date, time, and venue rows.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 120,
+    "defaultProps": {
+      "variant": "event-card",
+      "title": "Creative Leaders Dinner",
+      "date": "NOVEMBER 06 2026",
+      "time": "8:00 PM",
+      "venue": "North Atrium",
+      "paletteName": "ocean"
+    }
+  },
+  {
+    "id": "event-save-the-date-serif",
+    "title": "Elegant Save the Date",
+    "category": "calendars-events",
+    "tags": ["save-the-date", "serif", "elegant"],
+    "description": "Fine rules, ornamental corners, and refined serif typography create a timeless save-the-date announcement.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 140,
+    "defaultProps": {
+      "variant": "save-the-date",
+      "title": "Amelia & Julian",
+      "date": "JUNE 12 2027",
+      "time": "FOUR IN THE AFTERNOON",
+      "venue": "Rosewood Estate",
+      "paletteName": "paper"
+    }
+  },
+  {
+    "id": "event-conference-badge-reveal",
+    "title": "Conference Badge Reveal",
+    "category": "calendars-events",
+    "tags": ["conference", "badge", "lanyard"],
+    "description": "A conference credential drops from its lanyard and settles to reveal access, schedule, and location details.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 135,
+    "defaultProps": {
+      "variant": "conference-badge",
+      "title": "Signal / Product Summit",
+      "date": "OCTOBER 08 2026",
+      "time": "9:00 AM",
+      "venue": "Pier 27 Campus",
+      "paletteName": "midnight"
+    }
+  },
+  {
+    "id": "event-webinar-date-chip",
+    "title": "Webinar Date Chip Banner",
+    "category": "calendars-events",
+    "tags": ["webinar", "live", "banner"],
+    "description": "A crisp webinar banner pairs live-session details with a springing, high-contrast month-and-day chip.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 110,
+    "defaultProps": {
+      "variant": "webinar-banner",
+      "title": "Build Better AI Workflows",
+      "date": "MARCH 16 2027",
+      "time": "11:00 AM PT",
+      "venue": "Live Online",
+      "paletteName": "forest"
+    }
+  },
+  {
+    "id": "event-festival-lineup-stack",
+    "title": "Festival Lineup Stack",
+    "category": "calendars-events",
+    "tags": ["festival", "lineup", "music"],
+    "description": "Festival acts cascade into a poster-like stacked lineup with alternating solid and outlined names.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "festival-lineup",
+      "title": "LUNA / VELA / NORTHSTAR / STATIC BLOOM",
+      "date": "AUGUST 22 2026",
+      "time": "GATES 4:00 PM",
+      "venue": "Riverside Park",
+      "paletteName": "candy"
+    }
+  },
+  {
+    "id": "event-countdown-hybrid",
+    "title": "Countdown Event Hybrid",
+    "category": "calendars-events",
+    "tags": ["countdown", "event", "reveal"],
+    "description": "A circular three-count transitions into a complete event announcement card for launch-day urgency.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 120,
+    "defaultProps": {
+      "variant": "countdown",
+      "title": "Doors Are Open",
+      "date": "DECEMBER 03 2026",
+      "time": "7:30 PM",
+      "venue": "Atlas Theatre",
+      "paletteName": "sunset"
+    }
+  },
+  {
+    "id": "event-ticket-stub-perforated",
+    "title": "Perforated Ticket Stub",
+    "category": "calendars-events",
+    "tags": ["ticket", "perforation", "admit-one"],
+    "description": "A tactile admit-one ticket rises into view with punched edges, dashed tear line, barcode, and date stub.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 125,
+    "defaultProps": {
+      "variant": "ticket-stub",
+      "title": "Midnight Cinema Club",
+      "date": "OCTOBER 31 2026",
+      "time": "11:45 PM",
+      "venue": "The Grand Screen",
+      "paletteName": "mono"
+    }
+  },
+  {
+    "id": "event-week-grid-highlight",
+    "title": "Week Grid Highlight",
+    "category": "calendars-events",
+    "tags": ["week", "schedule", "calendar-grid"],
+    "description": "A seven-day planning grid builds column by column before one event cell fills and reveals its details.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 140,
+    "defaultProps": {
+      "variant": "week-grid",
+      "title": "Studio Open House",
+      "date": "AUGUST 18–24 2026",
+      "time": "5:30 PM",
+      "venue": "Workshop 04",
+      "paletteName": "ocean"
+    }
+  }
+]

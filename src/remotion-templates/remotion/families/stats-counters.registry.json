@@ -1,0 +1,174 @@
+[
+  {
+    "id": "stats-hero-single-kpi",
+    "title": "Hero Single KPI",
+    "category": "stats-counters",
+    "tags": ["kpi", "hero", "count-up"],
+    "description": "One oversized comma-formatted KPI with an accent rule and restrained live-status detail.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 110,
+    "defaultProps": {
+      "variant": "hero",
+      "label": "Total customers",
+      "value": 248760,
+      "paletteName": "midnight"
+    }
+  },
+  {
+    "id": "stats-staggered-grid",
+    "title": "Staggered KPI Grid",
+    "category": "stats-counters",
+    "tags": ["dashboard", "grid", "stagger"],
+    "description": "A 2x2 dashboard grid whose four compact metrics count and rise in sequentially.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 120,
+    "defaultProps": {
+      "variant": "grid",
+      "label": "Monthly reach",
+      "value": 86400,
+      "paletteName": "ocean"
+    }
+  },
+  {
+    "id": "stats-ticker-tape-row",
+    "title": "Ticker Tape Metrics",
+    "category": "stats-counters",
+    "tags": ["ticker", "realtime", "row"],
+    "description": "A continuously drifting tape of live metrics with compact k/M notation and a progress rail.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 100,
+    "defaultProps": {
+      "variant": "ticker",
+      "label": "Live visitors",
+      "value": 32480,
+      "paletteName": "forest"
+    }
+  },
+  {
+    "id": "stats-odometer-rolling",
+    "title": "Rolling Odometer",
+    "category": "stats-counters",
+    "tags": ["odometer", "digits", "mechanical"],
+    "description": "Tabular number drums roll independently through several turns before resolving on the final total.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 125,
+    "defaultProps": {
+      "variant": "odometer",
+      "label": "Miles together",
+      "value": 128745,
+      "paletteName": "mono"
+    }
+  },
+  {
+    "id": "stats-percentage-ring-trio",
+    "title": "Percentage Ring Trio",
+    "category": "stats-counters",
+    "tags": ["percentage", "rings", "progress"],
+    "description": "Three staggered radial progress counters for a balanced performance or completion breakdown.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 120,
+    "defaultProps": {
+      "variant": "rings",
+      "label": "Satisfaction",
+      "value": 94,
+      "paletteName": "candy"
+    }
+  },
+  {
+    "id": "stats-milestone-timeline",
+    "title": "Milestone Timeline Counters",
+    "category": "stats-counters",
+    "tags": ["timeline", "milestones", "growth"],
+    "description": "Quarterly counters populate along an animated horizontal milestone line to the current total.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 135,
+    "defaultProps": {
+      "variant": "timeline",
+      "label": "Annual revenue",
+      "value": 2400000,
+      "paletteName": "sunset"
+    }
+  },
+  {
+    "id": "stats-number-unit-delta",
+    "title": "Number Unit and Delta",
+    "category": "stats-counters",
+    "tags": ["delta", "unit", "comparison"],
+    "description": "A large compact-form number pairs with a unit and positive period-over-period delta chip.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 110,
+    "defaultProps": {
+      "variant": "delta",
+      "label": "Audience size",
+      "value": 1284000,
+      "paletteName": "paper",
+      "unit": "people",
+      "delta": 18.4
+    }
+  },
+  {
+    "id": "stats-vertical-leaderboard",
+    "title": "Vertical Leaderboard",
+    "category": "stats-counters",
+    "tags": ["leaderboard", "ranking", "bars"],
+    "description": "Five ranked regions count up beside proportional horizontal bars in a vertical leaderboard.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 140,
+    "defaultProps": {
+      "variant": "leaderboard",
+      "label": "New accounts",
+      "value": 48200,
+      "paletteName": "forest"
+    }
+  },
+  {
+    "id": "stats-glass-cards-row",
+    "title": "Glass Metric Cards",
+    "category": "stats-counters",
+    "tags": ["glass", "cards", "premium"],
+    "description": "Three translucent glass cards float over colored light fields and reveal staggered growth metrics.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 130,
+    "defaultProps": {
+      "variant": "glass",
+      "label": "Total members",
+      "value": 760000,
+      "paletteName": "midnight"
+    }
+  },
+  {
+    "id": "stats-parallax-single-metric",
+    "title": "Parallax Single Metric",
+    "category": "stats-counters",
+    "tags": ["parallax", "fullscreen", "ambient"],
+    "description": "A full-screen compact KPI sits above deterministic multi-depth geometric background motion.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "parallax",
+      "label": "Views worldwide",
+      "value": 12800000,
+      "paletteName": "ocean"
+    }
+  }
+]

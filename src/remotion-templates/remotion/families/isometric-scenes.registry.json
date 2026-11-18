@@ -1,0 +1,122 @@
+[
+  {
+    "id": "isometric-scenes-city-block",
+    "title": "City Block",
+    "category": "motion-3d-physical",
+    "tags": ["isometric", "city", "architecture", "systems"],
+    "description": "A living isometric city block builds from a grid of connected buildings, ideal for communicating platforms, territories and urban-scale systems.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": { "variant": "city-block", "sceneName": "A city in motion.", "tagline": "See the system behind every street, block, and signal.", "paletteName": "ocean", "highlightNode": "node-4", "grid": true, "speed": 1 }
+  },
+  {
+    "id": "isometric-scenes-cloud-stack",
+    "title": "Cloud Stack",
+    "category": "motion-3d-physical",
+    "tags": ["isometric", "cloud", "infrastructure", "stack"],
+    "description": "Layered cloud nodes rise through an isometric infrastructure map with animated routes and a highlighted service handoff.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": { "variant": "cloud-stack", "sceneName": "Everything, connected.", "tagline": "Turn invisible infrastructure into a story people can see.", "paletteName": "midnight", "highlightNode": "node-5", "grid": true, "density": 8, "speed": 0.8 }
+  },
+  {
+    "id": "isometric-scenes-workflow-room",
+    "title": "Workflow Room",
+    "category": "motion-3d-physical",
+    "tags": ["isometric", "workflow", "process", "room"],
+    "description": "A room-by-room workflow map reveals stages, owners and handoffs as a calm isometric operations walkthrough.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "workflow-room", "sceneName": "Work, in the open.", "tagline": "Make every handoff visible from first brief to final result.", "paletteName": "forest", "highlightNode": "node-6", "grid": true, "speed": 0.7 }
+  },
+  {
+    "id": "isometric-scenes-data-center",
+    "title": "Data Center",
+    "category": "motion-3d-physical",
+    "tags": ["isometric", "data", "servers", "operations"],
+    "description": "Server towers pulse across a technical isometric data center while routed connections explain resilient infrastructure.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": { "variant": "data-center", "sceneName": "Built for the load.", "tagline": "A clear view of the machinery that keeps the product moving.", "paletteName": "mono", "highlightNode": "node-2", "grid": true, "density": 9, "speed": 1.2 }
+  },
+  {
+    "id": "isometric-scenes-app-ecosystem",
+    "title": "App Ecosystem",
+    "category": "motion-3d-physical",
+    "tags": ["isometric", "app", "ecosystem", "product"],
+    "description": "A central product node connects companion apps and capabilities in a tactile isometric ecosystem diagram.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": { "variant": "app-ecosystem", "sceneName": "One product. More possibility.", "tagline": "Show how every feature becomes part of a bigger whole.", "paletteName": "candy", "highlightNode": "node-1", "grid": true, "speed": 0.9 }
+  },
+  {
+    "id": "isometric-scenes-factory-line",
+    "title": "Factory Line",
+    "category": "motion-3d-physical",
+    "tags": ["isometric", "factory", "pipeline", "throughput"],
+    "description": "A production line moves from station to station with animated routes, pulsing checkpoints and clear throughput labels.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "factory-line", "sceneName": "From input to impact.", "tagline": "Make the journey from raw material to finished work impossible to miss.", "paletteName": "sunset", "highlightNode": "node-7", "grid": true, "density": 10, "speed": 1.1 }
+  },
+  {
+    "id": "isometric-scenes-team-desk",
+    "title": "Team Desk",
+    "category": "motion-3d-physical",
+    "tags": ["isometric", "team", "collaboration", "people"],
+    "description": "A collaborative team desk scene uses small workstations and a connected path to visualize roles, context and shared momentum.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": { "variant": "team-desk", "sceneName": "Better together.", "tagline": "Give every contributor a place in the story and the system.", "paletteName": "forest", "highlightNode": "node-3", "grid": true, "speed": 0.65 }
+  },
+  {
+    "id": "isometric-scenes-warehouse-flow",
+    "title": "Warehouse Flow",
+    "category": "motion-3d-physical",
+    "tags": ["isometric", "warehouse", "logistics", "flow"],
+    "description": "A warehouse flow sends packages across a clear isometric route from intake to dispatch with active checkpoints.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "warehouse-flow", "sceneName": "Keep things moving.", "tagline": "Turn logistics into an understandable, memorable sequence.", "paletteName": "ocean", "highlightNode": "node-8", "grid": true, "density": 10, "speed": 1.15 }
+  },
+  {
+    "id": "isometric-scenes-isometric-map",
+    "title": "Isometric Map",
+    "category": "motion-3d-physical",
+    "tags": ["isometric", "map", "territory", "locations"],
+    "description": "A terrain-like isometric map reveals routes and highlighted locations as a flexible geographic or territory explainer.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 165,
+    "defaultProps": { "variant": "isometric-map", "sceneName": "The bigger picture.", "tagline": "Place every milestone in context with a map that moves with the story.", "paletteName": "forest", "highlightNode": "node-9", "grid": true, "speed": 0.55 }
+  },
+  {
+    "id": "isometric-scenes-service-network",
+    "title": "Service Network",
+    "category": "motion-3d-physical",
+    "tags": ["isometric", "network", "services", "nodes"],
+    "description": "A service network brings nodes online one by one, making dependencies and the active path legible at a glance.",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 180,
+    "defaultProps": { "variant": "service-network", "sceneName": "A system you can understand.", "tagline": "Trace the signal from one critical service to the next.", "paletteName": "midnight", "highlightNode": "node-10", "grid": true, "density": 10, "speed": 0.95 }
+  }
+]

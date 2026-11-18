@@ -1,0 +1,513 @@
+[
+  {
+    "id": "sports-scoreboard-bug",
+    "description": "Broadcast lower-third scoreboard with team colors, scores, and a running match clock.",
+    "category": "sports-highlights",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 120,
+    "defaultProps": {
+      "variant": "scoreboard-bug",
+      "homeTeam": {
+        "name": "Northbridge FC",
+        "color": "#0756d8",
+        "score": 2
+      },
+      "awayTeam": {
+        "name": "Redwood United",
+        "color": "#c81e3a",
+        "score": 1
+      },
+      "stats": [
+        {
+          "label": "Possession",
+          "home": 57,
+          "away": 43
+        },
+        {
+          "label": "Shots",
+          "home": 12,
+          "away": 8
+        }
+      ],
+      "title": "Championship Matchday 18",
+      "subtitle": "Northbridge Stadium"
+    },
+    "title": "Live Scoreboard Bug",
+    "tags": [
+      "sports",
+      "score",
+      "broadcast",
+      "highlights"
+    ]
+  },
+  {
+    "id": "sports-final-score",
+    "description": "Full-screen final result reveal driven by both teams' signature colors.",
+    "category": "sports-highlights",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 130,
+    "defaultProps": {
+      "variant": "final-score",
+      "homeTeam": {
+        "name": "Coastal City",
+        "color": "#006d77",
+        "score": 4
+      },
+      "awayTeam": {
+        "name": "Metro Athletic",
+        "color": "#e85d04",
+        "score": 2
+      },
+      "stats": [
+        {
+          "label": "Shots on target",
+          "home": 9,
+          "away": 5
+        },
+        {
+          "label": "Corners",
+          "home": 7,
+          "away": 4
+        }
+      ],
+      "title": "Final Score",
+      "subtitle": "National Cup \u2022 Quarterfinal"
+    },
+    "title": "Final Score Full Screen",
+    "tags": [
+      "sports",
+      "score",
+      "broadcast",
+      "highlights"
+    ]
+  },
+  {
+    "id": "sports-player-stat-card",
+    "description": "Player-of-the-match card with four animated performance statistics.",
+    "category": "sports-highlights",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 140,
+    "defaultProps": {
+      "variant": "player-stat-card",
+      "homeTeam": {
+        "name": "Harbor Hoops",
+        "color": "#7c3aed",
+        "score": 112
+      },
+      "awayTeam": {
+        "name": "Capital Kings",
+        "color": "#dc2626",
+        "score": 106
+      },
+      "stats": [
+        {
+          "label": "Points",
+          "value": 38
+        },
+        {
+          "label": "Assists",
+          "value": 11
+        },
+        {
+          "label": "Rebounds",
+          "value": 9
+        },
+        {
+          "label": "Field Goal %",
+          "value": 62
+        }
+      ],
+      "title": "Marcus Reed",
+      "subtitle": "Guard \u2022 #7"
+    },
+    "title": "Player Stat Count-Up",
+    "tags": [
+      "sports",
+      "score",
+      "broadcast",
+      "highlights"
+    ]
+  },
+  {
+    "id": "sports-matchup-versus",
+    "description": "High-energy head-to-head matchup with a diagonal team-color split.",
+    "category": "sports-highlights",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 110,
+    "defaultProps": {
+      "variant": "matchup-versus",
+      "homeTeam": {
+        "name": "Brooklyn Blaze",
+        "color": "#ea580c",
+        "score": 0
+      },
+      "awayTeam": {
+        "name": "Seattle Stormers",
+        "color": "#0369a1",
+        "score": 0
+      },
+      "stats": [
+        {
+          "label": "Season record",
+          "home": 12,
+          "away": 11
+        },
+        {
+          "label": "Last five wins",
+          "home": 4,
+          "away": 3
+        }
+      ],
+      "title": "Saturday Night Football",
+      "subtitle": "Conference Semifinal \u2022 8 PM ET"
+    },
+    "title": "Matchup Versus Split",
+    "tags": [
+      "sports",
+      "score",
+      "broadcast",
+      "highlights"
+    ]
+  },
+  {
+    "id": "sports-replay-tag",
+    "description": "Instant-replay bumper with a tactile stamp hit and scanning broadcast treatment.",
+    "category": "sports-highlights",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 100,
+    "defaultProps": {
+      "variant": "replay-tag",
+      "homeTeam": {
+        "name": "Westside Wolves",
+        "color": "#4f46e5",
+        "score": 3
+      },
+      "awayTeam": {
+        "name": "Golden State SC",
+        "color": "#ca8a04",
+        "score": 2
+      },
+      "stats": [
+        {
+          "label": "Minute",
+          "value": 87
+        },
+        {
+          "label": "Shot speed",
+          "value": "112 km/h"
+        }
+      ],
+      "title": "Unbelievable top-corner finish",
+      "subtitle": "Goal \u2022 87th minute"
+    },
+    "title": "Highlight Replay Stamp",
+    "tags": [
+      "sports",
+      "score",
+      "broadcast",
+      "highlights"
+    ]
+  },
+  {
+    "id": "sports-tournament-bracket",
+    "description": "Animated eight-team bracket resolving toward the championship matchup.",
+    "category": "sports-highlights",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 160,
+    "defaultProps": {
+      "variant": "tournament-bracket",
+      "homeTeam": {
+        "name": "Falcons",
+        "color": "#2563eb",
+        "score": 3
+      },
+      "awayTeam": {
+        "name": "Titans",
+        "color": "#e11d48",
+        "score": 2
+      },
+      "stats": [
+        {
+          "label": "Seed 1",
+          "team": "Falcons"
+        },
+        {
+          "label": "Seed 8",
+          "team": "Comets"
+        },
+        {
+          "label": "Seed 4",
+          "team": "Rovers"
+        },
+        {
+          "label": "Seed 5",
+          "team": "Pioneers"
+        },
+        {
+          "label": "Seed 2",
+          "team": "Titans"
+        },
+        {
+          "label": "Seed 7",
+          "team": "Cyclones"
+        },
+        {
+          "label": "Seed 3",
+          "team": "Royals"
+        },
+        {
+          "label": "Seed 6",
+          "team": "Wanderers"
+        }
+      ],
+      "title": "Continental Cup",
+      "subtitle": "Road to the Final \u2022 2026"
+    },
+    "title": "Tournament Bracket Reveal",
+    "tags": [
+      "sports",
+      "score",
+      "broadcast",
+      "highlights"
+    ]
+  },
+  {
+    "id": "sports-league-standings",
+    "description": "Clean broadcast standings table with an emphasized featured club.",
+    "category": "sports-highlights",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 150,
+    "defaultProps": {
+      "variant": "league-standings",
+      "homeTeam": {
+        "name": "Northbridge FC",
+        "color": "#2563eb",
+        "score": 48
+      },
+      "awayTeam": {
+        "name": "Redwood United",
+        "color": "#dc2626",
+        "score": 44
+      },
+      "stats": [
+        {
+          "label": "Northbridge FC",
+          "team": "Northbridge FC",
+          "played": 22,
+          "wins": 15,
+          "points": 48
+        },
+        {
+          "label": "Coastal City",
+          "team": "Coastal City",
+          "played": 22,
+          "wins": 14,
+          "points": 46
+        },
+        {
+          "label": "Redwood United",
+          "team": "Redwood United",
+          "played": 22,
+          "wins": 13,
+          "points": 44
+        },
+        {
+          "label": "Metro Athletic",
+          "team": "Metro Athletic",
+          "played": 22,
+          "wins": 12,
+          "points": 41
+        },
+        {
+          "label": "River Plateaux",
+          "team": "River Plateaux",
+          "played": 22,
+          "wins": 10,
+          "points": 36
+        },
+        {
+          "label": "Easton Rovers",
+          "team": "Easton Rovers",
+          "played": 22,
+          "wins": 9,
+          "points": 33
+        },
+        {
+          "label": "Union Harbor",
+          "team": "Union Harbor",
+          "played": 22,
+          "wins": 8,
+          "points": 29
+        }
+      ],
+      "title": "Premier Division",
+      "subtitle": "After Matchday 22"
+    },
+    "title": "League Standings Table",
+    "tags": [
+      "sports",
+      "score",
+      "broadcast",
+      "highlights"
+    ]
+  },
+  {
+    "id": "sports-record-breaker",
+    "description": "Celebratory record announcement with a deterministic seeded confetti explosion.",
+    "category": "sports-highlights",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 120,
+    "defaultProps": {
+      "variant": "record-breaker",
+      "homeTeam": {
+        "name": "Velocity Track Club",
+        "color": "#db2777",
+        "score": 1
+      },
+      "awayTeam": {
+        "name": "World Select",
+        "color": "#0891b2",
+        "score": 2
+      },
+      "stats": [
+        {
+          "label": "New record",
+          "value": "9.71s"
+        },
+        {
+          "label": "Previous record",
+          "value": "9.74s"
+        }
+      ],
+      "title": "9.71 Seconds",
+      "subtitle": "Jalen Price \u2022 New 100m World Record"
+    },
+    "title": "Record Breaker Burst",
+    "tags": [
+      "sports",
+      "score",
+      "broadcast",
+      "highlights"
+    ]
+  },
+  {
+    "id": "sports-halftime-stats",
+    "description": "Side-by-side halftime comparison with animated proportional stat bars.",
+    "category": "sports-highlights",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 140,
+    "defaultProps": {
+      "variant": "halftime-stats",
+      "homeTeam": {
+        "name": "London Lions",
+        "color": "#2563eb",
+        "score": 1
+      },
+      "awayTeam": {
+        "name": "Madrid Stars",
+        "color": "#ef4444",
+        "score": 1
+      },
+      "stats": [
+        {
+          "label": "Possession %",
+          "home": 54,
+          "away": 46
+        },
+        {
+          "label": "Total shots",
+          "home": 8,
+          "away": 6
+        },
+        {
+          "label": "Shots on target",
+          "home": 4,
+          "away": 3
+        },
+        {
+          "label": "Pass accuracy %",
+          "home": 88,
+          "away": 84
+        },
+        {
+          "label": "Corners",
+          "home": 5,
+          "away": 2
+        },
+        {
+          "label": "Fouls",
+          "home": 7,
+          "away": 9
+        }
+      ],
+      "title": "Halftime Analysis",
+      "subtitle": "Champions League \u2022 Group A"
+    },
+    "title": "Halftime Stats Panel",
+    "tags": [
+      "sports",
+      "score",
+      "broadcast",
+      "highlights"
+    ]
+  },
+  {
+    "id": "sports-next-fixture",
+    "description": "Premium upcoming-fixture card with team marks, kickoff time, venue, and date.",
+    "category": "sports-highlights",
+    "fps": 30,
+    "width": 1920,
+    "height": 1080,
+    "durationInFrames": 130,
+    "defaultProps": {
+      "variant": "next-fixture",
+      "homeTeam": {
+        "name": "Alpine Racing",
+        "color": "#0f766e",
+        "score": 0
+      },
+      "awayTeam": {
+        "name": "Crown City",
+        "color": "#9333ea",
+        "score": 0
+      },
+      "stats": [
+        {
+          "label": "Home form",
+          "value": "W W D W W"
+        },
+        {
+          "label": "Away form",
+          "value": "W D L W D"
+        }
+      ],
+      "title": "Summit Arena \u2022 Denver",
+      "subtitle": "Sunday, August 30 \u2022 Round 12"
+    },
+    "title": "Next Fixture Card",
+    "tags": [
+      "sports",
+      "score",
+      "broadcast",
+      "highlights"
+    ]
+  }
+]
