@@ -93,7 +93,7 @@
 - `RAD-R04` sinais recebe o sinal inicial informado ou o texto padrão de registro manual
 - `RAD-R05` A lista de perfis se atualiza em tempo real via SSE na coleção radar_perfis
 - `RAD-R06` Perfis ficam em usuarios/{uid}/radar_perfis — isolados por usuário (PLA-R04)
-- `RAD-R07` Normalização de clusters agrupa sinais e tópicos chamando ai.action (ver P01)
+- `RAD-R07` Normalização de clusters agrupa sinais e tópicos chamando POST /api/v1/ai/action
 - `RAD-R08` Busca filtra perfis por nome ou nicho contendo o termo, sem diferenciar maiúsculas
 - `RAD-R09` Perfil pode virar origem de projeto via origemRadarId no wizard (ver PRJ-R07)
 
@@ -120,7 +120,7 @@
 - `ROT-R03` Roteiro gerado abre com o capítulo de gancho '00 — Gancho (00:00 – 00:30)'
 - `ROT-R04` Perfis de redator ficam em usuarios/{uid}/config/roteirista_perfis
 - `ROT-R05` Roteiros salvos ficam em usuarios/{uid}/roteiros — isolados por usuário
-- `ROT-R06` Geração usa POST /api/v1/ai/script — contrato alvo ainda não servido pelo Go (P01)
+- `ROT-R06` Geração usa POST /api/v1/ai/script no backend Go, que chama Gemini (gemini-2.5-flash)
 - `ROT-R07` profilePrompt e knowledgeBase opcionais personalizam a saída do modelo
 - `ROT-R08` partsCount e ppm controlam divisão em partes e ritmo (palavras por minuto)
 
@@ -129,7 +129,7 @@
 - `CMP-R01` Comparação exige titleA, hookA, visualCutsA, titleB, hookB, visualCutsB e niche
 - `CMP-R02` Resultado declara winner e edge, cada um ∈ {A, B, empate}
 - `CMP-R03` Comparações salvas ficam em usuarios/{uid}/comparacoes — isoladas por usuário
-- `CMP-R04` Comparação usa POST /api/v1/ai/compare-30s — contrato alvo ainda não servido pelo Go (P01)
+- `CMP-R04` Comparação usa POST /api/v1/ai/compare-30s no backend Go, que chama Gemini (gemini-2.5-flash)
 
 ## noticias (NOT) - Leitura de feeds RSS/Atom, tradução de artigos via IA e conversão em pautas.
 - **FeedItem**: title, link, publishedAt, summary
@@ -137,7 +137,7 @@
 - `NOT-R01` Feed é buscado via GET /api/feed?url= no proxy do backend, não direto pelo cliente (TRN-R04)
 - `NOT-R02` Parser aceita itens RSS <item> e entradas Atom <entry>; título ausente vira 'Sem título'
 - `NOT-R03` Resumo vem de description ou content:encoded do item do feed
-- `NOT-R04` Tradução de artigo usa ai.action 'translate:article' — contrato alvo ainda não servido (P01)
+- `NOT-R04` Tradução de artigo usa POST /api/v1/ai/action 'translate:article'
 - `NOT-R05` Converter notícia em pauta cria doc em usuarios/{uid}/ideias com título 'Pauta Notícia: <título>' (IDE-R03)
 - `NOT-R06` Feed maior que 2MB é rejeitado com 413 e URL sem http/https com 400 (TRN-R04)
 
@@ -150,7 +150,7 @@
 - `MID-R04` DELETE /api/v1/files/{path} remove o metadado e apaga o arquivo do disco
 - `MID-R05` GET /api/v1/files?prefix= lista items e prefixes; prefixo vazio assume usuarios/{uid}
 - `MID-R06` Vídeo salvo exige titulo não vazio; canal em branco assume 'Referência'
-- `MID-R07` Tradução em lote grava tituloPt nos vídeos salvos via IA — contrato alvo (P01)
+- `MID-R07` Tradução em lote grava tituloPt nos vídeos salvos via ai.action 'translate:titles'
 
 ## biblioteca (BIB) - Navegador de arquivos do usuário: pastas, upload, download e organização da mídia.
 - **Pasta**: prefix
@@ -165,7 +165,7 @@
 - `CAN-R01` Canal tem tipo 'proprio' ou 'referencia'; /meus-canais filtra tipo diferente de 'referencia'
 - `CAN-R02` Canais ficam em usuarios/{uid}/canais — isolados por usuário (PLA-R04)
 - `CAN-R03` Métricas do canal: inscritos, views30d, ctrMedio, retencaoMedia e frequenciaSemanal
-- `CAN-R04` Análise estratégica usa ai.action 'channel:analyze' e grava o resultado em analiseIa (P01)
+- `CAN-R04` Análise estratégica usa POST /api/v1/ai/action 'channel:analyze' e grava o resultado em analiseIa
 - `CAN-R05` /canais lista todos os canais do usuário; /canais/{id} abre o detalhe (NAV-R07)
 
 ## ideias (IDE) - Banco de ideias de vídeo alimentado por notícias, assistente IA e registro manual (/explorar).
@@ -214,7 +214,7 @@
 - `CFG-R02` Tema só é aplicado se existir no registro TEMAS; valor inválido cai para 'claro'
 - `CFG-R03` Sem login ou sem doc, o tema vem do localStorage 'vysc_tema' com fallback 'claro'
 - `CFG-R04` Ao logar, o tema do doc remoto sobrescreve o localStorage
-- `CFG-R05` Config de runtime vem de GET /api/v1/auth/config — ainda não servido pelo Go (P01)
+- `CFG-R05` Config de runtime vem de GET /api/v1/auth/config — público; adminEmailHint só em DEV_MODE
 
 ## dashboard (DSH) - Visão geral (/visao-geral): agregações de canais, projetos, publicidade e radar.
 - **Overview**: canais, projetos, publicidade, radar_perfis
@@ -254,7 +254,7 @@
 - `NF09` Erros de API respondem JSON {error: mensagem} com código HTTP semântico
 
 ## Premissas (assumidas, não confirmadas)
-- `P01` Endpoints /api/v1/ai/*, /api/v1/admin/audit, /api/v1/dev/seed, /api/v1/auth/config e /api/v1/auth/profile chamados pelo front ainda não existem no backend Go; spec descreve o contrato alvo
+- `P01` Endpoints de IA exigem GEMINI_API_KEY no backend; sem a chave respondem 503
 - `P02` Instância single-user ou poucos usuários (SIGNUP_OPEN=false por padrão; primeiro cadastro vira admin)
 - `P03` LGPD aplicável apenas a e-mail/nome de conta; app não coleta dados sensíveis nem é voltado a menores
 - `P04` Gemini chamado via @google/genai com GEMINI_API_KEY de ambiente; modelo gemini-2.5-flash

@@ -13,7 +13,7 @@ regras:
   CFG-R02: "Tema só é aplicado se existir no registro TEMAS; valor inválido cai para 'claro'"
   CFG-R03: "Sem login ou sem doc, o tema vem do localStorage 'vysc_tema' com fallback 'claro'"
   CFG-R04: "Ao logar, o tema do doc remoto sobrescreve o localStorage"
-  CFG-R05: "Config de runtime vem de GET /api/v1/auth/config — ainda não servido pelo Go (P01)"
+  CFG-R05: "Config de runtime vem de GET /api/v1/auth/config — público; adminEmailHint só em DEV_MODE"
 casos_de_uso:
   CU01: "Criador troca o tema -> CFG-R01, CFG-R02"
 bordas:

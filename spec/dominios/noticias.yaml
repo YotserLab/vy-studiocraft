@@ -12,7 +12,7 @@ regras:
   NOT-R01: "Feed é buscado via GET /api/feed?url= no proxy do backend, não direto pelo cliente (TRN-R04)"
   NOT-R02: "Parser aceita itens RSS <item> e entradas Atom <entry>; título ausente vira 'Sem título'"
   NOT-R03: "Resumo vem de description ou content:encoded do item do feed"
-  NOT-R04: "Tradução de artigo usa ai.action 'translate:article' — contrato alvo ainda não servido (P01)"
+  NOT-R04: "Tradução de artigo usa POST /api/v1/ai/action 'translate:article'"
   NOT-R05: "Converter notícia em pauta cria doc em usuarios/{uid}/ideias com título 'Pauta Notícia: <título>' (IDE-R03)"
   NOT-R06: "Feed maior que 2MB é rejeitado com 413 e URL sem http/https com 400 (TRN-R04)"
 casos_de_uso:

@@ -14,7 +14,7 @@ regras:
   RAD-R04: "sinais recebe o sinal inicial informado ou o texto padrão de registro manual"
   RAD-R05: "A lista de perfis se atualiza em tempo real via SSE na coleção radar_perfis"
   RAD-R06: "Perfis ficam em usuarios/{uid}/radar_perfis — isolados por usuário (PLA-R04)"
-  RAD-R07: "Normalização de clusters agrupa sinais e tópicos chamando ai.action (ver P01)"
+  RAD-R07: "Normalização de clusters agrupa sinais e tópicos chamando POST /api/v1/ai/action"
   RAD-R08: "Busca filtra perfis por nome ou nicho contendo o termo, sem diferenciar maiúsculas"
   RAD-R09: "Perfil pode virar origem de projeto via origemRadarId no wizard (ver PRJ-R07)"
 casos_de_uso:

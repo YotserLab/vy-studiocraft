@@ -14,7 +14,7 @@ regras:
   ROT-R03: "Roteiro gerado abre com o capítulo de gancho '00 — Gancho (00:00 – 00:30)'"
   ROT-R04: "Perfis de redator ficam em usuarios/{uid}/config/roteirista_perfis"
   ROT-R05: "Roteiros salvos ficam em usuarios/{uid}/roteiros — isolados por usuário"
-  ROT-R06: "Geração usa POST /api/v1/ai/script — contrato alvo ainda não servido pelo Go (P01)"
+  ROT-R06: "Geração usa POST /api/v1/ai/script no backend Go, que chama Gemini (gemini-2.5-flash)"
   ROT-R07: "profilePrompt e knowledgeBase opcionais personalizam a saída do modelo"
   ROT-R08: "partsCount e ppm controlam divisão em partes e ritmo (palavras por minuto)"
 casos_de_uso:
@@ -22,4 +22,4 @@ casos_de_uso:
   CU02: "Criador salva roteiro gerado -> ROT-R05"
 bordas:
   - "formato fora de long/shorts -> ROT-R02"
-  - "endpoint ausente retorna 404 até implementação (P01) -> ROT-R06"
+  - "sem GEMINI_API_KEY retorna 503; falha da IA retorna 502 -> ROT-R06"

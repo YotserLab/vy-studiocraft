@@ -19,7 +19,7 @@ nao_funcionais:             # NF01: requisito mensurável (desempenho, disponibi
   NF08: "Consultas ao banco usam SQL parametrizado; respostas da API são JSON"
   NF09: "Erros de API respondem JSON {error: mensagem} com código HTTP semântico"
 premissas:                  # P01: o que você assumiu sem confirmar com o usuário
-  P01: "Endpoints /api/v1/ai/*, /api/v1/admin/audit, /api/v1/dev/seed, /api/v1/auth/config e /api/v1/auth/profile chamados pelo front ainda não existem no backend Go; spec descreve o contrato alvo"
+  P01: "Endpoints de IA exigem GEMINI_API_KEY no backend; sem a chave respondem 503"
   P02: "Instância single-user ou poucos usuários (SIGNUP_OPEN=false por padrão; primeiro cadastro vira admin)"
   P03: "LGPD aplicável apenas a e-mail/nome de conta; app não coleta dados sensíveis nem é voltado a menores"
   P04: "Gemini chamado via @google/genai com GEMINI_API_KEY de ambiente; modelo gemini-2.5-flash"

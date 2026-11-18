@@ -11,10 +11,10 @@ regras:
   CAN-R01: "Canal tem tipo 'proprio' ou 'referencia'; /meus-canais filtra tipo diferente de 'referencia'"
   CAN-R02: "Canais ficam em usuarios/{uid}/canais — isolados por usuário (PLA-R04)"
   CAN-R03: "Métricas do canal: inscritos, views30d, ctrMedio, retencaoMedia e frequenciaSemanal"
-  CAN-R04: "Análise estratégica usa ai.action 'channel:analyze' e grava o resultado em analiseIa (P01)"
+  CAN-R04: "Análise estratégica usa POST /api/v1/ai/action 'channel:analyze' e grava o resultado em analiseIa"
   CAN-R05: "/canais lista todos os canais do usuário; /canais/{id} abre o detalhe (NAV-R07)"
 casos_de_uso:
   CU01: "Criador cadastra canal próprio -> CAN-R01, CAN-R02, CAN-R03"
   CU02: "Criador gera análise do canal -> CAN-R04"
 bordas:
-  - "análise sem endpoint implementado retorna erro (P01) -> CAN-R04"
+  - "sem GEMINI_API_KEY retorna 503 -> CAN-R04"
