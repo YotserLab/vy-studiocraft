@@ -76,7 +76,7 @@
 ## navegacao (NAV) - Rotas da SPA, guards de sessão, deep links, returnTo e fallback 404.
 - **Rota**: path, view, privada
 - `NAV-R01` Rota privada sem sessão redireciona para /entrar?returnTo=<path atual>
-- `NAV-R02` returnTo só é aceito se começa com '/' e não contém '//' nem '://' (anti open redirect)
+- `NAV-R02` returnTo exige começar com '/', não começar com '//' e não conter '://' (anti open redirect)
 - `NAV-R03` Navegação interna usa history.pushState; voltar/avançar sincronizam tela e URL
 - `NAV-R04` '/' exibe LandingView pública; usuário logado é redirecionado para /visao-geral
 - `NAV-R05` /templates, /templates/ai-studio e /templates/motion-library são públicas (sem PrivateRoute)
