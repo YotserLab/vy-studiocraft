@@ -1,0 +1,16 @@
+node_modules/
+build/
+dist/
+bin/
+coverage/
+# Mídia pesada da feature remotion-templates (copiada localmente, não vai pro git)
+public/rendered/
+public/thumbnails/
+public/previews/
+public/rendercomp-thumbs/
+public/cache/
+data/
+.DS_Store
+*.log
+.env*
+!.env.example

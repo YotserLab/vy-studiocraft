@@ -1,0 +1,6 @@
+{
+  "name": "VYStudioCraft",
+  "description": "Sistema de gestão e produção de canais YouTube: Radar de nichos, projetos Kanban, Roteirista IA, comparador de 30s, notícias RSS, biblioteca de mídia e publicidade.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
