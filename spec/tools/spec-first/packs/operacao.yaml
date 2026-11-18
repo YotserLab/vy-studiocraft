@@ -1,0 +1,13 @@
+pack: operacao
+quando: app que vai para produção
+decisao_obrigatoria:
+- M
+- G
+itens:
+  operacao.01: Logs estruturados com request id e níveis definidos?
+  operacao.02: Métricas, alertas e health check?
+  operacao.03: 'Jobs agendados/filas: retry, dead-letter, idempotência e concorrência?'
+  operacao.04: 'Deploy e rollback: como migrações rodam e qual a estratégia?'
+  operacao.05: Ambientes (dev/staging/prod) e dados de teste/seed?
+  operacao.06: Limites de recursos e comportamento sob carga?
+  operacao.07: Rastreamento de erros e quem é avisado?

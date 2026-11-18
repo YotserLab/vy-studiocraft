@@ -1,3 +1,4 @@
+// T22 — Regras de ideias: IDE-R01, IDE-R02, // NOT-R05: mesma conversão notícia->ideias
 // T22 — Regras de ideias: IDE-R01, IDE-R02, IDE-R03, IDE-R05.
 import { act, createElement, type ReactElement } from 'react';
 import { createRoot, type Root } from 'react-dom/client';

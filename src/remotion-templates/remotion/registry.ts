@@ -1,3 +1,4 @@
+// REN-R11: biblioteca de templates — ~100 famílias em src/remotion-templates/remotion/families
 import React from 'react';
 import { COMPONENT_MAP } from './components';
 import { TornDocumentClip } from './compositions/TornDocumentClip';

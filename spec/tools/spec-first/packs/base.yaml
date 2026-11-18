@@ -1,0 +1,17 @@
+pack: base
+quando: sempre (todo app)
+decisao_obrigatoria:
+- P
+- M
+- G
+itens:
+  base.01: Quem são os atores/papéis e o que cada um pode fazer?
+  base.02: Qual o fluxo principal ponta a ponta (caminho feliz)?
+  base.03: Quais entidades têm ciclo de vida e quais transições são proibidas?
+  base.04: Quais dados são obrigatórios, únicos ou validados (formato, limites)?
+  base.05: O que acontece em falhas (validação, rede, serviço externo) e o que o usuário vê?
+  base.06: Há operações destrutivas? Exclusão lógica ou física, e há confirmação?
+  base.07: Há cálculos ou valores sensíveis (dinheiro, datas, arredondamento, moeda)?
+  base.08: Como se comporta o primeiro acesso / estado sem dados?
+  base.09: Como o app é configurado e implantado (variáveis, segredos, ambientes)?
+  base.10: Qual o critério de pronto do MVP (o que precisa funcionar para entregar)?

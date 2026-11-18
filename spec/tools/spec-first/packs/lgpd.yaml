@@ -1,0 +1,15 @@
+pack: lgpd
+quando: dados pessoais de pessoas no Brasil
+decisao_obrigatoria:
+- M
+- G
+itens:
+  lgpd.01: Quais dados pessoais são coletados e para que finalidade (inventário)?
+  lgpd.02: 'Base legal ou consentimento: como é pedido e registrado?'
+  lgpd.03: Titular pode acessar/exportar seus dados?
+  lgpd.04: Titular pode corrigir e excluir/anonimizar seus dados? Efeitos em registros ligados?
+  lgpd.05: Prazo de retenção por tipo de dado?
+  lgpd.06: Compartilhamento com terceiros/operadores e onde ficam os dados?
+  lgpd.07: Logs e analytics sem dados pessoais desnecessários?
+  lgpd.08: 'Menores de idade: o público inclui? Regras de consentimento?'
+  lgpd.09: Canal do titular e procedimento para incidente de segurança?

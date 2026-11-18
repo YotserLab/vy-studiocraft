@@ -180,6 +180,7 @@ describe('PES-R03 — filtro case-insensitive', () => {
   });
 });
 
+// NAV-R09: ?q= sincroniza busca com URL
 describe('PES-R04 — sincronização com ?q=', () => {
   it('PES-R04: termo inicial vem da query string ?q=', () => {
     expect(queryFromSearchParams(new URLSearchParams('?q=video'))).toBe('video');

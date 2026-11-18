@@ -1,0 +1,13 @@
+pack: arquivos
+quando: upload, download ou geração de arquivos
+decisao_obrigatoria:
+- M
+- G
+itens:
+  arquivos.01: Tipos, extensões e tamanho máximo aceitos?
+  arquivos.02: Onde são armazenados e como o acesso é protegido (URL assinada, permissão)?
+  arquivos.03: Validação do conteúdo real (não só a extensão) e varredura de malware?
+  arquivos.04: 'Processamento assíncrono (miniaturas, OCR, conversão): estados e falhas?'
+  arquivos.05: Limites por usuário/plano e o que acontece ao exceder?
+  arquivos.06: 'Remoção: arquivos órfãos e quando o registro é apagado?'
+  arquivos.07: Nome, colisão e caracteres especiais?

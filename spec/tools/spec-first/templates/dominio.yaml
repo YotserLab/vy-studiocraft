@@ -1,0 +1,16 @@
+# Domínio coeso do negócio. Máx. 15 regras; acima disso, divida o domínio.
+# Regras: 1 linha, <= 140 caracteres, testável, 1 fato por regra, sem repetir outra.
+dominio: {{nome}}
+prefixo: {{PREFIXO}}
+resumo: TODO uma frase
+entidades:                  # Entidade: [campos]
+  TODO: [id, TODO]
+estados:                    # Entidade: "a -> b -> c | d"  ou  "na: motivo"
+  TODO: "TODO"
+permissoes:                 # ator (de spec.usuarios): [ações]  ou  "na: motivo"
+  TODO: [TODO]
+regras:
+  {{PREFIXO}}-R01: TODO regra em uma linha (quem, quando, o que acontece)
+casos_de_uso:               # cada um cita as regras que exercita
+  CU01: "TODO Ator faz X -> {{PREFIXO}}-R01"
+bordas: []                  # "situação -> {{PREFIXO}}-R01" (cada uma aponta uma regra)

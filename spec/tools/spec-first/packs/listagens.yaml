@@ -1,0 +1,13 @@
+pack: listagens
+quando: telas ou endpoints que listam, buscam ou filtram dados
+decisao_obrigatoria:
+- M
+- G
+itens:
+  listagens.01: Paginação (cursor ou página), tamanho padrão e máximo?
+  listagens.02: Ordenação padrão estável e quais campos são ordenáveis?
+  listagens.03: Filtros disponíveis e combinação entre eles?
+  listagens.04: 'Busca textual: campos, acentos, maiúsculas/minúsculas, mínimo de caracteres?'
+  listagens.05: Estado vazio e estado sem resultados da busca?
+  listagens.06: 'Exportação (CSV/PDF): limites e permissões?'
+  listagens.07: Desempenho com volume alto (índices, limites)?

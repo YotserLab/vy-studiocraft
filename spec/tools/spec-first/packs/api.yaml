@@ -1,0 +1,13 @@
+pack: api
+quando: backend expõe API (REST/GraphQL) para clientes
+decisao_obrigatoria:
+- M
+- G
+itens:
+  api.01: Versionamento e política de mudanças incompatíveis?
+  api.02: Formato padrão de erro (código, mensagem, campos inválidos) e códigos HTTP?
+  api.03: Autenticação e escopos por endpoint?
+  api.04: Paginação, filtros e limites máximos padronizados?
+  api.05: Rate limit e cabeçalhos informativos?
+  api.06: Idempotency-Key em operações de criação/pagamento?
+  api.07: Documentação (OpenAPI) mantida junto do código?

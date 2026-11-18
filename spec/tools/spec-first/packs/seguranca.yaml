@@ -1,0 +1,15 @@
+pack: seguranca
+quando: sempre (todo app)
+decisao_obrigatoria:
+- P
+- M
+- G
+itens:
+  seguranca.01: Toda entrada externa é validada no servidor (tipo, tamanho, formato)?
+  seguranca.02: Autorização é checada por recurso/ação no backend, e não só escondida na UI?
+  seguranca.03: Segredos e chaves ficam fora do código e do repositório?
+  seguranca.04: Proteção contra injeção (SQL/comando) e XSS nas saídas renderizadas?
+  seguranca.05: CSRF/CORS/cookies (HttpOnly, Secure, SameSite) definidos para a forma de sessão usada?
+  seguranca.06: Rate limit ou proteção contra abuso nos endpoints sensíveis?
+  seguranca.07: Dados sensíveis são mascarados em logs e respostas de erro?
+  seguranca.08: Dependências são fixadas e há plano para atualizar vulnerabilidades?

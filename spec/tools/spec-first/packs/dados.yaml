@@ -1,0 +1,15 @@
+pack: dados
+quando: app que persiste dados
+decisao_obrigatoria:
+- M
+- G
+itens:
+  dados.01: 'Edição simultânea: como evitar sobrescrita (versão/lock otimista)?'
+  dados.02: Criações idempotentes (duplo clique, retry) e chaves de idempotência?
+  dados.03: Operações que alteram várias entidades são atômicas (transação)? E se falhar no meio?
+  dados.04: Datas guardadas em UTC e exibidas no fuso do usuário? Datas só de dia vs. instante?
+  dados.05: 'Exclusão lógica: efeito em unicidade, listagens, relações e restauração?'
+  dados.06: 'Migrações e backfill: ordem, reversão e dados existentes?'
+  dados.07: Retenção, backup e restauração?
+  dados.08: Identificadores (uuid/sequencial) e o que é exposto ao cliente?
+  dados.09: 'Integridade: chaves estrangeiras, cascata e restrições de unicidade?'

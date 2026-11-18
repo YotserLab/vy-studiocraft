@@ -1,0 +1,13 @@
+# Spec raiz. Uma frase por item. Texto com ": " precisa de aspas.
+porte: {{porte}}            # P (até 2 domínios) | M (até 6) | G (sem limite)
+visao: TODO uma frase - para quem e qual problema resolve
+usuarios:                   # papel: descrição curta
+  TODO: descrição do papel
+escopo: [TODO]              # o que entra
+fora_de_escopo: [TODO]      # o que NÃO entra (obrigatório: evita invenção)
+dominios: []                # preenchido por: check.py dominio <nome> <PREFIXO>
+nao_funcionais:             # NF01: requisito mensurável (desempenho, disponibilidade...)
+  NF01: TODO
+premissas: {}               # P01: o que você assumiu sem confirmar com o usuário
+duvidas: []                 # perguntas ainda abertas; precisa estar vazio para passar
+packs_descartados: {}       # pack: motivo (>= 5 caracteres) - packs não aplicáveis

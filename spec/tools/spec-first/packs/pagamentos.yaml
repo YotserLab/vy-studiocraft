@@ -1,0 +1,15 @@
+pack: pagamentos
+quando: cobrança, assinatura, Pix, cartão ou carteira
+decisao_obrigatoria:
+- M
+- G
+itens:
+  pagamentos.01: Provedor de pagamento e métodos aceitos (Pix, cartão, boleto)?
+  pagamentos.02: Estados da cobrança e transições válidas (pendente, pago, falhou, estornado)?
+  pagamentos.03: 'Webhooks: assinatura validada, idempotência e reprocessamento?'
+  pagamentos.04: 'Falha, expiração e retentativa de pagamento: o que muda no pedido/acesso?'
+  pagamentos.05: 'Estorno e reembolso (total/parcial): quem pode e quais efeitos colaterais?'
+  pagamentos.06: 'Assinaturas: trial, upgrade/downgrade, proporcional, cancelamento, inadimplência?'
+  pagamentos.07: 'Valores: moeda, arredondamento, impostos, descontos/cupons e ordem de aplicação?'
+  pagamentos.08: Nota fiscal/recibo e conciliação com o provedor?
+  pagamentos.09: Dados de cartão nunca tocam o sistema (tokenização pelo provedor)?

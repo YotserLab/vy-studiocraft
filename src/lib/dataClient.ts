@@ -389,6 +389,7 @@ export const feedApi = {
       throw new Error(err.error || `Erro ao carregar feed (${res.status})`);
     }
     const xmlText = await res.text();
+    // NOT-R01, NOT-R02, NOT-R03: proxy + parse RSS/Atom
     const doc = new DOMParser().parseFromString(xmlText, 'text/xml');
     const channelTitle =
       doc.querySelector('channel > title, feed > title')?.textContent?.trim() || new URL(url).hostname;

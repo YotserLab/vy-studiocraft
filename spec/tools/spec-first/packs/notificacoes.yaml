@@ -1,0 +1,13 @@
+pack: notificacoes
+quando: e-mail, push, SMS, WhatsApp ou avisos in-app
+decisao_obrigatoria:
+- M
+- G
+itens:
+  notificacoes.01: Quais eventos disparam notificação e para quem?
+  notificacoes.02: Canais por evento e preferências/opt-out do usuário?
+  notificacoes.03: Conteúdo/templates, idioma e variáveis obrigatórias?
+  notificacoes.04: 'Falha de envio: retentativa, limite e registro?'
+  notificacoes.05: Duplicidade e agrupamento (digest, rate limit por usuário)?
+  notificacoes.06: Horário e fuso do destinatário (janela silenciosa)?
+  notificacoes.07: Notificações obrigatórias (transacionais) vs. opcionais (marketing)?

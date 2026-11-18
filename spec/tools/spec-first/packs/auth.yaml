@@ -1,0 +1,15 @@
+pack: auth
+quando: app com login, contas ou usuários identificados
+decisao_obrigatoria:
+- M
+- G
+itens:
+  auth.01: Como o usuário se cadastra e autentica (e-mail/senha, SSO, magic link)?
+  auth.02: Como funciona recuperação de senha/acesso e qual a validade do link?
+  auth.03: 'Sessão: duração, renovação, logout e revogação (todos os dispositivos)?'
+  auth.04: 'Papéis e permissões: onde são definidos e como são verificados por recurso?'
+  auth.05: Proteção contra força bruta e bloqueio de conta?
+  auth.06: E-mail precisa ser verificado antes de usar? O que o usuário não verificado pode fazer?
+  auth.07: 'Convites e onboarding: quem convida, expiração, reenvio?'
+  auth.08: 'Conta desativada/removida: o que acontece com sessões e dados?'
+  auth.09: Há MFA ou tokens de API? Como são emitidos e revogados?

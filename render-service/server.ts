@@ -27,6 +27,7 @@ for (const dir of [RENDERED_DIR, CACHE_DIR, THUMBNAILS_DIR, PREVIEWS_DIR, RENDER
 const app = express();
 app.use(express.json({ limit: '2mb' }));
 
+// REN-R04: saída renderizada servida estaticamente
 app.use('/rendered', express.static(RENDERED_DIR));
 app.use('/cache', express.static(CACHE_DIR));
 app.use('/thumbnails', express.static(THUMBNAILS_DIR));
@@ -91,11 +92,13 @@ const COMPOSITION_MAP: Record<string, string> = {
   'SaaSMockup': 'SaaSMockup',
 };
 
+// REN-R01: render Remotion -> MP4 (codec/escala por resolução)
 app.post('/api/render', async (req, res) => {
   const startTime = Date.now();
   try {
     const { templateId, compositionId, props, resolution, codec = 'h264' } = req.body;
 
+    // REN-R03: templateId vazio cai no fallback final
     const compToRender =
       compositionId ||
       COMPOSITION_MAP[templateId] ||
@@ -110,6 +113,7 @@ app.post('/api/render', async (req, res) => {
     const renderProps = props && typeof props === 'object' ? props : {};
     fs.writeFileSync(tempPropsPath, JSON.stringify(renderProps));
 
+    // REN-R02: escala por resolução alvo
     let scaleFlag = '';
     if (resolution === '720p') scaleFlag = '--scale=0.6666666666666666';
     else if (resolution === '4K') scaleFlag = '--scale=2';
@@ -119,7 +123,7 @@ app.post('/api/render', async (req, res) => {
 
     const { stderr } = await execAsync(command, {
       cwd: PROJECT_ROOT,
-      timeout: 600000,
+      timeout: 600000, // REN-R10: bunx @remotion/cli, 600s, concurrency=8
       maxBuffer: 1024 * 1024 * 50,
     });
 
@@ -128,6 +132,7 @@ app.post('/api/render', async (req, res) => {
     } catch { /* noop */ }
 
     if (!fs.existsSync(outputPath)) {
+      // REN-R05: stderr embutido na mensagem de erro
       throw new Error(`Output file not generated. Stderr: ${stderr}`);
     }
 
@@ -154,6 +159,7 @@ app.post('/api/render', async (req, res) => {
   }
 });
 
+// REN-R06: lista renders .mp4 prontos
 app.get('/api/rendered', (_req, res) => {
   try {
     const files = fs.readdirSync(RENDERED_DIR).filter((f) => f.endsWith('.mp4'));
@@ -175,6 +181,7 @@ app.get('/api/rendered', (_req, res) => {
   }
 });
 
+// REN-R07: geração via Gemini; sem chave retorna fallback local
 app.post('/api/gemini/generate-script', async (req, res) => {
   try {
     const { topic, templateTitle, videoType, tone, duration, preferredTemplates } = req.body;

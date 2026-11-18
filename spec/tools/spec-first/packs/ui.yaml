@@ -1,0 +1,14 @@
+pack: ui
+quando: app com interface de usuário
+decisao_obrigatoria:
+- M
+- G
+itens:
+  ui.01: Todas as telas têm estados de carregando, vazio, erro e sucesso?
+  ui.02: 'Validação de formulários: quando ocorre e mensagens por campo?'
+  ui.03: Ações destrutivas pedem confirmação e permitem desfazer quando possível?
+  ui.04: Duplo clique/reenvio é bloqueado durante a requisição?
+  ui.05: Rotas protegidas, redirecionamento pós-login e página 404?
+  ui.06: Responsividade (mobile) e acessibilidade básica (teclado, contraste, rótulos)?
+  ui.07: Idioma e formatos (pt-BR, data, moeda); há previsão de i18n?
+  ui.08: 'Sessão expirada no meio de uma ação: o que acontece com o que o usuário digitou?'

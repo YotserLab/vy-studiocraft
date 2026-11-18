@@ -41,6 +41,7 @@ func pbkdf2SHA256(password, salt []byte, iter, keyLen int) []byte {
 	return dk[:keyLen]
 }
 
+// CON-R15: PBKDF2-SHA256, 100k iterações
 func HashPassword(password string) (string, error) {
 	salt := make([]byte, 16)
 	if _, err := rand.Read(salt); err != nil {

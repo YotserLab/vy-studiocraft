@@ -151,6 +151,7 @@ func (d *DB) Migrate() error {
 	return nil
 }
 
+// PLA-R21
 func (d *DB) Subscribe() (<-chan string, func()) {
 	ch := make(chan string, 32)
 	d.subMu.Lock()
@@ -175,6 +176,7 @@ func (d *DB) emit(docPath string) {
 	}
 }
 
+// PLA-R02: paths alternam coleção/doc
 func NormalizePath(raw string) string {
 	parts := strings.Split(raw, "/")
 	out := make([]string, 0, len(parts))
@@ -490,6 +492,7 @@ func applyDotPatch(current map[string]any, patch map[string]any, now int64) map[
 	return next
 }
 
+// PLA-R18
 func (d *DB) GetDoc(rawPath string) (*Doc, error) {
 	docPath := NormalizePath(rawPath)
 	id, coll, parent, uid := splitPath(docPath)
@@ -510,6 +513,7 @@ func (d *DB) GetDoc(rawPath string) (*Doc, error) {
 	return &Doc{Exists: true, ID: id, Path: docPath, Coll: coll, Parent: parent, UID: uid, Data: parsed, CreatedAt: createdAt, UpdatedAt: updatedAt}, nil
 }
 
+// PLA-R16, PLA-R21
 func (d *DB) SetDoc(rawPath string, data map[string]any, merge bool) (*Doc, error) {
 	docPath := NormalizePath(rawPath)
 	id, coll, parent, uid := splitPath(docPath)
@@ -565,6 +569,7 @@ func (d *DB) SetDoc(rawPath string, data map[string]any, merge bool) (*Doc, erro
 	return &Doc{Exists: true, ID: id, Path: docPath, Coll: coll, Parent: parent, UID: uid, Data: out, CreatedAt: createdAt, UpdatedAt: now}, nil
 }
 
+// PLA-R19, PLA-R21
 func (d *DB) CreateDoc(rawColl string, data map[string]any) (*Doc, error) {
 	coll := NormalizePath(rawColl)
 	id, err := authx.Token(8)
@@ -574,6 +579,7 @@ func (d *DB) CreateDoc(rawColl string, data map[string]any) (*Doc, error) {
 	return d.SetDoc(coll+"/"+id, data, false)
 }
 
+// PLA-R17, PLA-R21
 func (d *DB) PatchDoc(rawPath string, patch map[string]any) (*Doc, error) {
 	docPath := NormalizePath(rawPath)
 	now := time.Now().UnixMilli()
@@ -633,6 +639,7 @@ func (d *DB) DeleteDoc(rawPath string) (bool, error) {
 	return false, nil
 }
 
+// PLA-R11
 func (d *DB) ListDocs(rawColl string, opts ListOptions) ([]Doc, error) {
 	coll := NormalizePath(rawColl)
 	rows, err := d.sql.Query(`SELECT path, coll, parent, uid, data, created_at, updated_at FROM docs WHERE coll = ?`, coll)
@@ -888,6 +895,7 @@ func (d *DB) ListAudit(limit int) ([]AuditEvent, error) {
 	return out, nil
 }
 
+// PLA-R03, PLA-R04, PLA-R06, PLA-R20
 func CanReadDoc(u *User, rawPath string) bool {
 	if u == nil {
 		return false
@@ -910,6 +918,7 @@ func CanReadDoc(u *User, rawPath string) bool {
 	}
 }
 
+// PLA-R03, PLA-R04, PLA-R20
 func CanWriteDoc(u *User, rawPath string, isCreate bool) bool {
 	if u == nil {
 		return false

@@ -53,6 +53,7 @@ func signupCookies(t *testing.T, srv *Server, email string) []*http.Cookie {
 }
 
 func TestAIAction_TRN(t *testing.T) {
+	// CAN-R04, RAD-R07, NOT-R04, MID-R07: ações tipadas via ai/action
 	srv, _ := newTestServer(t, true)
 	cookies := signupCookies(t, srv, "u@vystudiocraft.local")
 

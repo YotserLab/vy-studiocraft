@@ -1,0 +1,14 @@
+pack: multi-tenant
+quando: vários clientes/organizações no mesmo sistema
+decisao_obrigatoria:
+- M
+- G
+itens:
+  multi-tenant.01: Toda consulta e escrita é filtrada por tenant (e há teste provando o isolamento)?
+  multi-tenant.02: Um usuário pode pertencer a mais de um tenant? Como troca de contexto?
+  multi-tenant.03: Papéis são por tenant ou globais? Quem administra o tenant?
+  multi-tenant.04: Como membros entram, saem e são removidos (e o que acontece com o que criaram)?
+  multi-tenant.05: Limites por plano/tenant (usuários, armazenamento, uso) e o que ocorre ao exceder?
+  multi-tenant.06: Identificação do tenant (subdomínio, slug, id na sessão) e colisões?
+  multi-tenant.07: Exportação e exclusão completa dos dados de um tenant?
+  multi-tenant.08: Existe superadmin/suporte com acesso cruzado? Como é auditado?

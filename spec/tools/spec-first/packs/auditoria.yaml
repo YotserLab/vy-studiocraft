@@ -1,0 +1,10 @@
+pack: auditoria
+quando: ações sensíveis, administrativas ou financeiras
+decisao_obrigatoria:
+- M
+- G
+itens:
+  auditoria.01: Quais ações são registradas (quem, o quê, quando, antes/depois)?
+  auditoria.02: O registro é imutável e quem pode consultá-lo?
+  auditoria.03: Retenção do histórico e exportação?
+  auditoria.04: Correlação entre registro de auditoria e request/trace id?

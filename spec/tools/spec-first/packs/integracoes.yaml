@@ -1,0 +1,14 @@
+pack: integracoes
+quando: APIs, webhooks ou serviços externos
+decisao_obrigatoria:
+- M
+- G
+itens:
+  integracoes.01: Quais sistemas externos e para que cada um é usado?
+  integracoes.02: Autenticação, limites de uso e rotação de credenciais?
+  integracoes.03: Timeout, retry com backoff e idempotência nas chamadas?
+  integracoes.04: Comportamento quando o serviço externo está fora (fallback/degradação)?
+  integracoes.05: 'Webhooks de entrada: assinatura, ordem e duplicidade de eventos?'
+  integracoes.06: 'Webhooks de saída: retentativas, falhas permanentes e visibilidade ao usuário?'
+  integracoes.07: Sandbox/mocks para desenvolvimento e testes?
+  integracoes.08: Versão e mudança de contrato do terceiro?
