@@ -1,36 +1,36 @@
-# Plano: fatias verticais. Toda regra pertence a uma tarefa (check --plan).
-# P1 = implementação de gaps (atualizar a spec junto: mudança de comportamento)
-# P2 = verificação/testes de comportamento já implementado (retrofit)
-  # ---------- P1: segurança ----------
-T01: {prioridade: P1, titulo: "Exigir sessão no proxy /api/feed (SSRF)", regras: [TRN-R08]}
-T02: {prioridade: P1, titulo: "Exigir sessão nos proxies render/gemini e mídia /cache/", regras: [TRN-R09, TRN-R10, TRN-R11]}
-  # ---------- P1: endpoints ausentes (P01) ----------
-T03: {prioridade: P1, titulo: "Implementar POST /api/v1/ai/script", regras: [ROT-R06]}
-T04: {prioridade: P1, titulo: "Implementar POST /api/v1/ai/compare-30s", regras: [CMP-R04]}
-T05: {prioridade: P1, titulo: "Implementar POST /api/v1/ai/action e /api/v1/ai/chat", regras: [CAN-R04, RAD-R07, NOT-R04, MID-R07, IDE-R04]}
-T06: {prioridade: P1, titulo: "Implementar GET /api/v1/auth/config e auth/profile", regras: [CFG-R05]}
-T07: {prioridade: P1, titulo: "Implementar GET /api/v1/admin/audit e /api/v1/dev/seed", regras: [PLA-R05]}
-  # ---------- P2: verificação backend ----------
-T08: {prioridade: P2, titulo: "Testes de signup, login e sessão", regras: [CON-R01, CON-R02, CON-R03, CON-R04, CON-R05, CON-R08, CON-R15, CON-R17]}
-T09: {prioridade: P2, titulo: "Testes de reset, logout, verify-email e membros", regras: [CON-R10, CON-R11, CON-R12, CON-R13, CON-R14, CON-R18]}
-T10: {prioridade: P2, titulo: "Testes de MFA TOTP e tickets", regras: [MFA-R01, MFA-R02, MFA-R03, MFA-R04, MFA-R05, MFA-R06, MFA-R07]}
-T11: {prioridade: P2, titulo: "Testes do doc-store: paths, merge, sentinels, permissões", regras: [PLA-R02, PLA-R03, PLA-R04, PLA-R06, PLA-R11, PLA-R16, PLA-R17, PLA-R18, PLA-R19, PLA-R20, PLA-R21]}
-T12: {prioridade: P2, titulo: "Testes de transporte: sessão, upload, SSE, 404", regras: [TRN-R01, TRN-R02, TRN-R03, TRN-R04, TRN-R05, TRN-R06, TRN-R07]}
-T13: {prioridade: P2, titulo: "Testes do feed RSS: proxy, parser, dedupe", regras: [NOT-R01, NOT-R02, NOT-R03, NOT-R05, NOT-R06]}
-T14: {prioridade: P2, titulo: "Testes da API de arquivos", regras: [MID-R01, MID-R02, MID-R03, MID-R04, MID-R05, MID-R08]}
-T15: {prioridade: P2, titulo: "Testes do render service Remotion", regras: [REN-R01, REN-R02, REN-R03, REN-R04, REN-R05, REN-R06, REN-R07, REN-R08, REN-R09, REN-R10, REN-R11]}
-  # ---------- P2: verificação frontend ----------
-T16: {prioridade: P2, titulo: "Testes de navegação: guards, returnTo, 404, deep links", regras: [NAV-R01, NAV-R02, NAV-R03, NAV-R04, NAV-R05, NAV-R06, NAV-R07, NAV-R08, NAV-R09]}
-T17: {prioridade: P2, titulo: "Testes do radar de nichos", regras: [RAD-R01, RAD-R02, RAD-R03, RAD-R04, RAD-R05, RAD-R06, RAD-R08, RAD-R09]}
-T18: {prioridade: P2, titulo: "Testes de projetos: wizard, Kanban, versões", regras: [PRJ-R01, PRJ-R02, PRJ-R03, PRJ-R04, PRJ-R05, PRJ-R06, PRJ-R07, PRJ-R08, PRJ-R09]}
-T19: {prioridade: P2, titulo: "Testes do roteirista: editor, seções, versões", regras: [ROT-R01, ROT-R02, ROT-R03, ROT-R04, ROT-R05, ROT-R07, ROT-R08]}
-T20: {prioridade: P2, titulo: "Testes do comparador 30s: UI e parsing", regras: [CMP-R01, CMP-R02, CMP-R03]}
-T21: {prioridade: P2, titulo: "Testes de canais próprios e referência", regras: [CAN-R01, CAN-R02, CAN-R03, CAN-R05]}
-T22: {prioridade: P2, titulo: "Testes de ideias e promoção de pauta", regras: [IDE-R01, IDE-R02, IDE-R03, IDE-R05]}
-T23: {prioridade: P2, titulo: "Testes de notas: CRUD e fixada", regras: [NTA-R01, NTA-R02, NTA-R03, NTA-R04]}
-T24: {prioridade: P2, titulo: "Testes do playbook editorial", regras: [PLY-R01, PLY-R02, PLY-R03, PLY-R04]}
-T25: {prioridade: P2, titulo: "Testes da biblioteca de arquivos e vídeos salvos", regras: [BIB-R01, BIB-R02, BIB-R03, BIB-R04, MID-R06]}
-T26: {prioridade: P2, titulo: "Testes da busca global", regras: [PES-R01, PES-R02, PES-R03, PES-R04, PES-R05]}
-T27: {prioridade: P2, titulo: "Testes de publicidade: campanhas e estados", regras: [PUB-R01, PUB-R02, PUB-R03, PUB-R04, PUB-R05, PUB-R06]}
-T28: {prioridade: P2, titulo: "Testes de configurações e tema", regras: [CFG-R01, CFG-R02, CFG-R03, CFG-R04]}
-T29: {prioridade: P2, titulo: "Testes da visão geral: agregações", regras: [DSH-R01, DSH-R02, DSH-R03, DSH-R04, DSH-R05, DSH-R06]}
+# Plan: vertical slices. Every rule belongs to a task (check --plan).
+# P1 = gap implementation (update the spec together: behavior change)
+# P2 = verification/tests of already-implemented behavior (retrofit)
+  # ---------- P1: security ----------
+T01: {prioridade: P1, titulo: "Require session on /api/feed proxy (SSRF)", regras: [TRN-R08]}
+T02: {prioridade: P1, titulo: "Require session on render/gemini proxies and /cache/ media", regras: [TRN-R09, TRN-R10, TRN-R11]}
+  # ---------- P1: missing endpoints (P01) ----------
+T03: {prioridade: P1, titulo: "Implement POST /api/v1/ai/script", regras: [ROT-R06]}
+T04: {prioridade: P1, titulo: "Implement POST /api/v1/ai/compare-30s", regras: [CMP-R04]}
+T05: {prioridade: P1, titulo: "Implement POST /api/v1/ai/action and /api/v1/ai/chat", regras: [CAN-R04, RAD-R07, NOT-R04, MID-R07, IDE-R04]}
+T06: {prioridade: P1, titulo: "Implement GET /api/v1/auth/config and auth/profile", regras: [CFG-R05]}
+T07: {prioridade: P1, titulo: "Implement GET /api/v1/admin/audit and /api/v1/dev/seed", regras: [PLA-R05]}
+  # ---------- P2: backend verification ----------
+T08: {prioridade: P2, titulo: "Signup, login and session tests", regras: [CON-R01, CON-R02, CON-R03, CON-R04, CON-R05, CON-R08, CON-R15, CON-R17]}
+T09: {prioridade: P2, titulo: "Reset, logout, verify-email and members tests", regras: [CON-R10, CON-R11, CON-R12, CON-R13, CON-R14, CON-R18]}
+T10: {prioridade: P2, titulo: "TOTP MFA and tickets tests", regras: [MFA-R01, MFA-R02, MFA-R03, MFA-R04, MFA-R05, MFA-R06, MFA-R07]}
+T11: {prioridade: P2, titulo: "Doc-store tests: paths, merge, sentinels, permissions", regras: [PLA-R02, PLA-R03, PLA-R04, PLA-R06, PLA-R11, PLA-R16, PLA-R17, PLA-R18, PLA-R19, PLA-R20, PLA-R21]}
+T12: {prioridade: P2, titulo: "Transport tests: session, upload, SSE, 404", regras: [TRN-R01, TRN-R02, TRN-R03, TRN-R04, TRN-R05, TRN-R06, TRN-R07]}
+T13: {prioridade: P2, titulo: "RSS feed tests: proxy, parser, dedupe", regras: [NOT-R01, NOT-R02, NOT-R03, NOT-R05, NOT-R06]}
+T14: {prioridade: P2, titulo: "Files API tests", regras: [MID-R01, MID-R02, MID-R03, MID-R04, MID-R05, MID-R08]}
+T15: {prioridade: P2, titulo: "Remotion render service tests", regras: [REN-R01, REN-R02, REN-R03, REN-R04, REN-R05, REN-R06, REN-R07, REN-R08, REN-R09, REN-R10, REN-R11]}
+  # ---------- P2: frontend verification ----------
+T16: {prioridade: P2, titulo: "Navigation tests: guards, returnTo, 404, deep links", regras: [NAV-R01, NAV-R02, NAV-R03, NAV-R04, NAV-R05, NAV-R06, NAV-R07, NAV-R08, NAV-R09]}
+T17: {prioridade: P2, titulo: "Niche radar tests", regras: [RAD-R01, RAD-R02, RAD-R03, RAD-R04, RAD-R05, RAD-R06, RAD-R08, RAD-R09]}
+T18: {prioridade: P2, titulo: "Projects tests: wizard, Kanban, versions", regras: [PRJ-R01, PRJ-R02, PRJ-R03, PRJ-R04, PRJ-R05, PRJ-R06, PRJ-R07, PRJ-R08, PRJ-R09]}
+T19: {prioridade: P2, titulo: "Scriptwriter tests: editor, sections, versions", regras: [ROT-R01, ROT-R02, ROT-R03, ROT-R04, ROT-R05, ROT-R07, ROT-R08]}
+T20: {prioridade: P2, titulo: "30s comparator tests: UI and parsing", regras: [CMP-R01, CMP-R02, CMP-R03]}
+T21: {prioridade: P2, titulo: "Own and reference channels tests", regras: [CAN-R01, CAN-R02, CAN-R03, CAN-R05]}
+T22: {prioridade: P2, titulo: "Ideas and story-promotion tests", regras: [IDE-R01, IDE-R02, IDE-R03, IDE-R05]}
+T23: {prioridade: P2, titulo: "Notes tests: CRUD and pinned", regras: [NTA-R01, NTA-R02, NTA-R03, NTA-R04]}
+T24: {prioridade: P2, titulo: "Editorial playbook tests", regras: [PLY-R01, PLY-R02, PLY-R03, PLY-R04]}
+T25: {prioridade: P2, titulo: "File library and saved videos tests", regras: [BIB-R01, BIB-R02, BIB-R03, BIB-R04, MID-R06]}
+T26: {prioridade: P2, titulo: "Global search tests", regras: [PES-R01, PES-R02, PES-R03, PES-R04, PES-R05]}
+T27: {prioridade: P2, titulo: "Advertising tests: campaigns and states", regras: [PUB-R01, PUB-R02, PUB-R03, PUB-R04, PUB-R05, PUB-R06]}
+T28: {prioridade: P2, titulo: "Settings and theme tests", regras: [CFG-R01, CFG-R02, CFG-R03, CFG-R04]}
+T29: {prioridade: P2, titulo: "Overview tests: aggregations", regras: [DSH-R01, DSH-R02, DSH-R03, DSH-R04, DSH-R05, DSH-R06]}

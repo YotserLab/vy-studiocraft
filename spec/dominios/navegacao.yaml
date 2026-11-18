@@ -1,26 +1,26 @@
 dominio: navegacao
 prefixo: NAV
-resumo: "Rotas da SPA, guards de sessão, deep links, returnTo e fallback 404."
+resumo: "SPA routes, session guards, deep links, returnTo and 404 fallback."
 entidades:
   Rota: [path, view, privada]
-estados: "na: rota é conhecida ou 404; sem ciclo de vida"
+estados: "na: route is known or 404; no lifecycle"
 permissoes:
   visitante: ["/, /entrar, /cadastro, /recuperar-senha, /templates*"]
-  criador: ["todas as rotas privadas"]
-  admin: ["todas as rotas privadas + /admin*"]
+  criador: ["all private routes"]
+  admin: ["all private routes + /admin*"]
 regras:
-  NAV-R01: "Rota privada sem sessão redireciona para /entrar?returnTo=<path atual>"
-  NAV-R02: "returnTo exige começar com '/', não começar com '//' e não conter '://' (anti open redirect)"
-  NAV-R03: "Navegação interna usa history.pushState; voltar/avançar sincronizam tela e URL"
-  NAV-R04: "'/' exibe LandingView pública; usuário logado é redirecionado para /visao-geral"
-  NAV-R05: "/templates, /templates/ai-studio e /templates/motion-library são públicas (sem PrivateRoute)"
-  NAV-R06: "Rota desconhecida renderiza NotFoundView; backend serve index.html com status 404 (TRN-R07)"
-  NAV-R07: "Deep links /projetos/{id}, /canais/{id}, /radar/perfis/{id} e /templates/{id} abrem o recurso direto"
-  NAV-R08: "/admin/{tab} sincroniza a tab do painel com a URL (membros, aulas, planos, erros)"
-  NAV-R09: "Troca de rota lê query string; /pesquisa?q=<termo> sincroniza o campo de busca"
+  NAV-R01: "Private route without a session redirects to /entrar?returnTo=<current path>"
+  NAV-R02: "returnTo must start with '/', not start with '//' and not contain '://' (anti open redirect)"
+  NAV-R03: "Internal navigation uses history.pushState; back/forward sync screen and URL"
+  NAV-R04: "'/' shows the public LandingView; a logged-in user is redirected to /visao-geral"
+  NAV-R05: "/templates, /templates/ai-studio and /templates/motion-library are public (no PrivateRoute)"
+  NAV-R06: "Unknown route renders NotFoundView; backend serves index.html with 404 status (TRN-R07)"
+  NAV-R07: "Deep links /projetos/{id}, /canais/{id}, /radar/perfis/{id} and /templates/{id} open the resource directly"
+  NAV-R08: "/admin/{tab} syncs the panel tab with the URL (membros, aulas, planos, erros)"
+  NAV-R09: "Route change reads the query string; /pesquisa?q=<term> syncs the search field"
 casos_de_uso:
-  CU01: "Visitante abre rota privada e volta após login -> NAV-R01, NAV-R02"
-  CU02: "Criador cola deep link de projeto -> NAV-R07"
+  CU01: "Visitor opens a private route and returns after login -> NAV-R01, NAV-R02"
+  CU02: "Creator pastes a project deep link -> NAV-R07"
 bordas:
-  - "returnTo externo (//evil.com) é rejeitado -> NAV-R02"
-  - "refresh em deep link devolve index.html -> NAV-R06, TRN-R07"
+  - "external returnTo (//evil.com) is rejected -> NAV-R02"
+  - "refresh on a deep link returns index.html -> NAV-R06, TRN-R07"

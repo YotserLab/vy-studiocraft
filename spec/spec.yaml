@@ -1,37 +1,37 @@
-# Spec raiz. Uma frase por item. Texto com ": " precisa de aspas.
-porte: G            # P (até 2 domínios) | M (até 6) | G (sem limite)
-visao: "Estúdio de produção para canais YouTube: radar de nichos, projetos Kanban, roteirista IA, comparador 30s, notícias RSS, biblioteca de mídia, publicidade e engine de templates Remotion."
-usuarios:                   # papel: descrição curta
-  visitante: "não autenticado; acessa apenas login, cadastro (se aberto) e recuperação de senha"
-  criador: "usuário autenticado dono dos próprios dados sob usuarios/{uid}"
-  admin: "usuário com is_admin=true; lê/escreve tudo e acessa /admin e auditoria"
-escopo: ["autenticação com MFA", "documentos por usuário via API fs", "upload de arquivos", "radar de nichos", "projetos com wizard e versões", "roteirista e comparador via Gemini", "notícias RSS", "biblioteca de mídia", "campanhas de publicidade", "templates Remotion e renderização", "painel admin com auditoria"]
-fora_de_escopo: ["pagamento/cobrança de assinatura", "multi-tenant por organização", "upload direto ao YouTube", "notificações por e-mail/push", "comentários/colaboração em tempo real multiusuário", "app mobile nativo"]
+# Root spec. One sentence per item. Text containing ": " needs quotes.
+porte: G            # P (up to 2 domains) | M (up to 6) | G (no limit)
+visao: "Production studio for YouTube channels: niche radar, Kanban projects, AI scriptwriter, 30s comparator, RSS news, media library, advertising and Remotion template engine."
+usuarios:                   # role: short description
+  visitante: "unauthenticated; accesses only login, signup (if open) and password recovery"
+  criador: "authenticated user who owns their own data under usuarios/{uid}"
+  admin: "user with is_admin=true; reads/writes everything and accesses /admin and audit"
+escopo: ["authentication with MFA", "per-user documents via fs API", "file upload", "niche radar", "projects with wizard and versions", "scriptwriter and comparator via Gemini", "RSS news", "media library", "advertising campaigns", "Remotion templates and rendering", "admin panel with audit"]
+fora_de_escopo: ["subscription payment/billing", "organization multi-tenancy", "direct upload to YouTube", "e-mail/push notifications", "real-time multiuser comments/collaboration", "native mobile app"]
 dominios: [contas, mfa, plataforma, transporte, navegacao, radar, projetos, roteirista, comparador, noticias, midia, biblioteca, canais, ideias, notas, playbook, pesquisa, publicidade, configuracoes, dashboard, render]
-nao_funcionais:             # NF01: requisito mensurável (desempenho, disponibilidade...)
-  NF01: "Backend Go serve API + SPA num único binário; banco SQLite local via DATABASE_URL"
-  NF02: "Feed RSS: timeout 8s, corpo máx 2MB, cache em memória por 5min"
-  NF03: "Upload de arquivo limitado a UPLOAD_MAX_MB MB (padrão 512)"
-  NF04: "Render Remotion executado por serviço separado (:8090), timeout 600s, saída mp4 em MEDIA_DIR/rendered"
-  NF05: "SSE keepalive a cada 25s; eventos de mudança em docs propagados por path"
-  NF06: "Sessão via cookie HttpOnly + Bearer; token de sessão de 32 bytes, SESSION_DAYS dias (padrão 30)"
-  NF07: "Backend Go testado com `go test ./...` em backend-go antes de cada entrega"
-  NF08: "Consultas ao banco usam SQL parametrizado; respostas da API são JSON"
-  NF09: "Erros de API respondem JSON {error: mensagem} com código HTTP semântico"
-premissas:                  # P01: o que você assumiu sem confirmar com o usuário
-  P01: "Endpoints de IA exigem GEMINI_API_KEY no backend; sem a chave respondem 503"
-  P02: "Instância single-user ou poucos usuários (SIGNUP_OPEN=false por padrão; primeiro cadastro vira admin)"
-  P03: "LGPD aplicável apenas a e-mail/nome de conta; app não coleta dados sensíveis nem é voltado a menores"
-  P04: "Gemini chamado via @google/genai com GEMINI_API_KEY de ambiente; modelo gemini-2.5-flash"
-  P05: "Datas persistidas como epoch ms UTC; exibição formatada no cliente"
-  P06: "Migrações SQL embutidas rodam no boot do binário Go (migrations/ embed)"
-  P07: "FKs com ON DELETE CASCADE ligam sessões, tickets MFA e resets ao usuário"
-  P08: "UI em pt-BR sem i18n; formatos localizados no cliente"
-  P09: "DEV_MODE/USE_MOCK_DATA semeia dados demo no boot (seed.go), incluindo admin"
-  P10: "Índices em docs(coll), docs(parent), docs(uid) e files(uid) para listagens"
-  P11: "Pastas públicas de mídia misturam assets do catálogo e renders de usuário; separação por uid fica como dívida"
-duvidas: []                 # perguntas ainda abertas; precisa estar vazio para passar
-packs_descartados:          # pack: motivo (>= 5 caracteres) - packs não aplicáveis
-  pagamentos: "não há cobrança, assinatura ou Pix"
-  multi-tenant: "dados isolados por usuário, não por organização"
-  notificacoes: "não há envio de e-mail, push, SMS ou avisos in-app"
+nao_funcionais:             # NF01: measurable requirement (performance, availability...)
+  NF01: "Go backend serves API + SPA in a single binary; local SQLite database via DATABASE_URL"
+  NF02: "RSS feed: 8s timeout, max 2MB body, in-memory cache for 5min"
+  NF03: "File upload limited to UPLOAD_MAX_MB MB (default 512)"
+  NF04: "Remotion render executed by a separate service (:8090), 600s timeout, mp4 output in MEDIA_DIR/rendered"
+  NF05: "SSE keepalive every 25s; doc change events propagated by path"
+  NF06: "Session via HttpOnly cookie + Bearer; 32-byte session token, SESSION_DAYS days (default 30)"
+  NF07: "Go backend tested with `go test ./...` in backend-go before each delivery"
+  NF08: "Database queries use parameterized SQL; API responses are JSON"
+  NF09: "API errors respond with JSON {error: message} and a semantic HTTP code"
+premissas:                  # P01: what you assumed without confirming with the user
+  P01: "AI endpoints require GEMINI_API_KEY in the backend; without the key they respond 503"
+  P02: "Single-user or few-user instance (SIGNUP_OPEN=false by default; first signup becomes admin)"
+  P03: "LGPD applies only to account e-mail/name; app collects no sensitive data nor targets minors"
+  P04: "Gemini called via @google/genai with GEMINI_API_KEY from the environment; model gemini-2.5-flash"
+  P05: "Dates persisted as epoch ms UTC; formatted display on the client"
+  P06: "Embedded SQL migrations run at Go binary boot (migrations/ embed)"
+  P07: "FKs with ON DELETE CASCADE tie sessions, MFA tickets and resets to the user"
+  P08: "UI in pt-BR without i18n; localized formats on the client"
+  P09: "DEV_MODE/USE_MOCK_DATA seeds demo data at boot (seed.go), including admin"
+  P10: "Indexes on docs(coll), docs(parent), docs(uid) and files(uid) for listings"
+  P11: "Public media folders mix catalog assets and user renders; per-uid separation left as debt"
+duvidas: []                 # still-open questions; must be empty to pass
+packs_descartados:          # pack: reason (>= 5 characters) - non-applicable packs
+  pagamentos: "no billing, subscription or Pix"
+  multi-tenant: "data isolated per user, not per organization"
+  notificacoes: "no e-mail, push, SMS or in-app notifications sent"

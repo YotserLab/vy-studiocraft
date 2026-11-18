@@ -1,20 +1,20 @@
 dominio: dashboard
 prefixo: DSH
-resumo: "Visão geral (/visao-geral): agregações de canais, projetos, publicidade e radar."
+resumo: "Overview (/visao-geral): aggregations of channels, projects, advertising and radar."
 entidades:
   Overview: [canais, projetos, publicidade, radar_perfis]
-estados: "na: painel derivado das coleções"
+estados: "na: panel derived from collections"
 permissoes:
-  criador: ["ver a própria visão geral"]
-  admin: ["acesso total via PLA-R03"]
+  criador: ["view own overview"]
+  admin: ["full access via PLA-R03"]
 regras:
-  DSH-R01: "Visão geral agrega as coleções canais, projetos, publicidade e radar_perfis do usuário"
-  DSH-R02: "meusCanais exclui canais com tipo 'referencia' das somas"
-  DSH-R03: "totalInscritos e totalViews30d somam os campos dos canais próprios"
-  DSH-R04: "projetosAtivos são projetos com estagio diferente de 'publicado'"
-  DSH-R05: "publisPendentes são campanhas com status diferente de 'concluida'"
-  DSH-R06: "A visão geral abre o wizard de criação de projeto (PRJ-R02)"
+  DSH-R01: "Overview aggregates the user's canais, projetos, publicidade and radar_perfis collections"
+  DSH-R02: "meusCanais excludes channels with type 'referencia' from the sums"
+  DSH-R03: "totalInscritos and totalViews30d sum the fields of own channels"
+  DSH-R04: "projetosAtivos are projects with estagio other than 'publicado'"
+  DSH-R05: "publisPendentes are campaigns with status other than 'concluida'"
+  DSH-R06: "The overview opens the project creation wizard (PRJ-R02)"
 casos_de_uso:
-  CU01: "Criador abre /visao-geral -> DSH-R01, DSH-R02, DSH-R03, DSH-R04, DSH-R05"
+  CU01: "Creator opens /visao-geral -> DSH-R01, DSH-R02, DSH-R03, DSH-R04, DSH-R05"
 bordas:
-  - "sem canais próprios soma zero -> DSH-R02"
+  - "no own channels sums zero -> DSH-R02"

@@ -1,18 +1,18 @@
 dominio: playbook
 prefixo: PLY
-resumo: "Playbook editorial: regras de retenção extraídas de comparações 30s e organizadas por categoria."
+resumo: "Editorial playbook: retention rules extracted from 30s comparisons, organized by category."
 entidades:
   Regra: [categoria, titulo, regra, impacto]
-estados: "na: regra é acúmulo editorial"
+estados: "na: rule is editorial accumulation"
 permissoes:
-  criador: ["listar e salvar regras no próprio playbook"]
-  admin: ["acesso total via PLA-R03"]
+  criador: ["list and save rules in own playbook"]
+  admin: ["full access via PLA-R03"]
 regras:
-  PLY-R01: "Cada linha '[categoria] regra' do checklist de uma comparação 30s vira um doc de playbook"
-  PLY-R02: "Linha sem prefixo '[categoria]' é classificada como 'retencao'"
-  PLY-R03: "Regra salva guarda titulo '<CATEGORIA> — Comparativo 30s (<nicho>)' e impacto citando os lados A e B"
-  PLY-R04: "Regras ficam em usuarios/{uid}/playbook — isoladas por usuário (PLA-R04)"
+  PLY-R01: "Each '[category] rule' line of a 30s comparison checklist becomes a playbook doc"
+  PLY-R02: "A line without a '[category]' prefix is classified as 'retencao'"
+  PLY-R03: "Saved rule stores titulo '<CATEGORY> — 30s Comparison (<niche>)' and impacto citing sides A and B"
+  PLY-R04: "Rules live in usuarios/{uid}/playbook — isolated per user (PLA-R04)"
 casos_de_uso:
-  CU01: "Criador salva checklist da comparação no playbook -> PLY-R01, PLY-R02, PLY-R03"
+  CU01: "Creator saves a comparison checklist to the playbook -> PLY-R01, PLY-R02, PLY-R03"
 bordas:
-  - "linha do checklist sem categoria -> PLY-R02"
+  - "checklist line without category -> PLY-R02"

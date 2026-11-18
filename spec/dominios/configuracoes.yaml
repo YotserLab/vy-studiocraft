@@ -1,20 +1,20 @@
 dominio: configuracoes
 prefixo: CFG
-resumo: "Preferências do usuário (tema visual) e configuração de runtime da aplicação."
+resumo: "User preferences (visual theme) and application runtime configuration."
 entidades:
   PrefDoc: [tema]
-  RuntimeConfig: [campos expostos por /api/v1/auth/config]
-estados: "na: preferência sobrescreve a anterior"
+  RuntimeConfig: [fields exposed by /api/v1/auth/config]
+estados: "na: preference overwrites the previous one"
 permissoes:
-  criador: ["ler e gravar o próprio config/app"]
-  admin: ["acesso total via PLA-R03"]
+  criador: ["read and write own config/app"]
+  admin: ["full access via PLA-R03"]
 regras:
-  CFG-R01: "Tema do usuário é gravado em usuarios/{uid}/config/app no campo tema"
-  CFG-R02: "Tema só é aplicado se existir no registro TEMAS; valor inválido cai para 'claro'"
-  CFG-R03: "Sem login ou sem doc, o tema vem do localStorage 'vysc_tema' com fallback 'claro'"
-  CFG-R04: "Ao logar, o tema do doc remoto sobrescreve o localStorage"
-  CFG-R05: "Config de runtime vem de GET /api/v1/auth/config — público; adminEmailHint só em DEV_MODE"
+  CFG-R01: "User theme is stored in usuarios/{uid}/config/app in the tema field"
+  CFG-R02: "Theme is only applied if it exists in the TEMAS registry; invalid value falls back to 'claro'"
+  CFG-R03: "Without login or doc, theme comes from localStorage 'vysc_tema' with 'claro' fallback"
+  CFG-R04: "On login, the remote doc theme overwrites localStorage"
+  CFG-R05: "Runtime config comes from GET /api/v1/auth/config — public; adminEmailHint only in DEV_MODE"
 casos_de_uso:
-  CU01: "Criador troca o tema -> CFG-R01, CFG-R02"
+  CU01: "Creator switches theme -> CFG-R01, CFG-R02"
 bordas:
-  - "doc config inexistente mantém tema local -> CFG-R03"
+  - "missing config doc keeps local theme -> CFG-R03"

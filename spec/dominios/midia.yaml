@@ -1,26 +1,26 @@
 dominio: midia
 prefixo: MID
-resumo: "Biblioteca de mídia: upload/listagem/download/exclusão de arquivos e vídeos salvos de referência."
+resumo: "Media library: upload/list/download/delete of files and saved reference videos."
 entidades:
   FileMeta: [path, uid, name, content_type, size, disk, created_at]
   VideoSalvo: [titulo, tituloPt, canal, url, duracao, motivoSalvo, categoria]
-estados: "na: arquivo existe ou foi removido (exclusão física)"
+estados: "na: file exists or was removed (physical deletion)"
 permissoes:
-  criador: ["upload/download/excluir sob usuarios/{seu-uid}/", "listar próprio prefixo", "gerenciar vídeos salvos"]
-  admin: ["acesso total via PLA-R03, TRN-R02"]
+  criador: ["upload/download/delete under usuarios/{your-uid}/", "list own prefix", "manage saved videos"]
+  admin: ["full access via PLA-R03, TRN-R02"]
 regras:
-  MID-R01: "Upload é PUT /api/v1/files/{path} somente sob usuarios/{uid}/ (TRN-R02)"
-  MID-R02: "content_type usa ?ct=, depois Content-Type do request, senão 'application/octet-stream'"
-  MID-R03: "GET /api/v1/files/{path} retorna metadados; ?download=1 ou sufixo /download serve o binário"
-  MID-R04: "DELETE /api/v1/files/{path} remove o metadado e apaga o arquivo do disco"
-  MID-R05: "GET /api/v1/files?prefix= lista items e prefixes; prefixo vazio assume usuarios/{uid}"
-  MID-R06: "Vídeo salvo exige titulo não vazio; canal em branco assume 'Referência'"
-  MID-R07: "Tradução em lote grava tituloPt nos vídeos salvos via ai.action 'translate:titles'"
-  MID-R08: "Paths de arquivo são normalizados; '..' e '.' são removidos sem escapar do prefixo do usuário"
+  MID-R01: "Upload is PUT /api/v1/files/{path} only under usuarios/{uid}/ (TRN-R02)"
+  MID-R02: "content_type uses ?ct=, then the request Content-Type, otherwise 'application/octet-stream'"
+  MID-R03: "GET /api/v1/files/{path} returns metadata; ?download=1 or /download suffix serves the binary"
+  MID-R04: "DELETE /api/v1/files/{path} removes the metadata and deletes the file from disk"
+  MID-R05: "GET /api/v1/files?prefix= lists items and prefixes; empty prefix defaults to usuarios/{uid}"
+  MID-R06: "Saved video requires non-empty titulo; blank canal defaults to 'Referência'"
+  MID-R07: "Batch translation writes tituloPt on saved videos via ai.action 'translate:titles'"
+  MID-R08: "File paths are normalized; '..' and '.' are removed without escaping the user's prefix"
 casos_de_uso:
-  CU01: "Criador envia mídia -> MID-R01, MID-R02"
-  CU02: "Criador baixa arquivo -> MID-R03"
-  CU03: "Criador salva referência de vídeo -> MID-R06"
+  CU01: "Creator uploads media -> MID-R01, MID-R02"
+  CU02: "Creator downloads a file -> MID-R03"
+  CU03: "Creator saves a video reference -> MID-R06"
 bordas:
-  - "upload acima de 512MB -> TRN-R03"
-  - "nome vazio usa último segmento do path -> MID-R02"
+  - "upload above 512MB -> TRN-R03"
+  - "empty name uses the last path segment -> MID-R02"

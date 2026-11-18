@@ -1,30 +1,30 @@
 dominio: render
 prefixo: REN
-resumo: "Serviço de renderização Remotion + Gemini: templates parametrizados viram mp4 e mídia."
+resumo: "Remotion + Gemini render service: parameterized templates become mp4 and media."
 entidades:
   RenderJob: [templateId, compositionId, props, resolution, codec]
   RenderedVideo: [filename, videoUrl, sizeBytes, createdAt]
   TemplateFamily: [id, registry, componente]
 estados:
-  RenderJob: "recebido -> renderizando -> concluido | falho"
+  RenderJob: "received -> rendering -> completed | failed"
 permissoes:
-  criador: ["renderizar template", "listar vídeos renderizados", "gerar script/prompt via gemini"]
-  admin: ["acesso total via PLA-R03"]
+  criador: ["render template", "list rendered videos", "generate script/prompt via gemini"]
+  admin: ["full access via PLA-R03"]
 regras:
-  REN-R01: "POST /api/render aceita templateId ou compositionId, props, resolution e codec (default h264)"
-  REN-R02: "resolution '720p' usa --scale=0.6666666666666666, '4K' usa --scale=2, demais sem escala"
-  REN-R03: "templateId vazio usa StepProcessInfographic; desconhecido é usado literalmente"
-  REN-R04: "Saída é render_<compositionId>_<timestamp>.mp4 em MEDIA_DIR/rendered, servida em /rendered/"
-  REN-R05: "Sem arquivo de saída, retorna 500 com o stderr embutido na mensagem de erro"
-  REN-R06: "GET /api/rendered lista os mp4 ordenados por createdAt decrescente"
-  REN-R07: "/api/gemini/generate-script exige topic e produz JSON de cenas com gemini-2.5-flash"
-  REN-R08: "Backend Go proxifica /api/render, /api/rendered e /api/gemini/* para RENDER_SERVICE_URL"
-  REN-R09: "Go serve mídia de MEDIA_DIR nos prefixos /rendered/ /thumbnails/ /previews/ /rendercomp-thumbs/ /cache/"
-  REN-R10: "Render invoca bunx @remotion/cli com timeout de 600s e concurrency=8"
-  REN-R11: "Biblioteca tem ~100 famílias de templates em src/remotion-templates/remotion/families"
+  REN-R01: "POST /api/render accepts templateId or compositionId, props, resolution and codec (default h264)"
+  REN-R02: "resolution '720p' uses --scale=0.6666666666666666, '4K' uses --scale=2, others no scale"
+  REN-R03: "Empty templateId uses StepProcessInfographic; an unknown one is used literally"
+  REN-R04: "Output is render_<compositionId>_<timestamp>.mp4 in MEDIA_DIR/rendered, served at /rendered/"
+  REN-R05: "Without an output file, returns 500 with stderr embedded in the error message"
+  REN-R06: "GET /api/rendered lists mp4 files ordered by createdAt descending"
+  REN-R07: "/api/gemini/generate-script requires topic and produces scene JSON with gemini-2.5-flash"
+  REN-R08: "Go backend proxies /api/render, /api/rendered and /api/gemini/* to RENDER_SERVICE_URL"
+  REN-R09: "Go serves MEDIA_DIR media at prefixes /rendered/ /thumbnails/ /previews/ /rendercomp-thumbs/ /cache/"
+  REN-R10: "Render invokes bunx @remotion/cli with a 600s timeout and concurrency=8"
+  REN-R11: "Library has ~100 template families in src/remotion-templates/remotion/families"
 casos_de_uso:
-  CU01: "Criador renderiza template -> REN-R01, REN-R02, REN-R04"
-  CU02: "Criador gera script de cenas -> REN-R07"
+  CU01: "Creator renders a template -> REN-R01, REN-R02, REN-R04"
+  CU02: "Creator generates a scene script -> REN-R07"
 bordas:
-  - "templateId inexistente -> REN-R03"
-  - "render falha sem saída -> REN-R05"
+  - "nonexistent templateId -> REN-R03"
+  - "render fails without output -> REN-R05"

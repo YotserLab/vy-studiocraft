@@ -1,23 +1,23 @@
 dominio: noticias
 prefixo: NOT
-resumo: "Leitura de feeds RSS/Atom, tradução de artigos via IA e conversão em pautas."
+resumo: "RSS/Atom feed reading, AI article translation and conversion into assignments."
 entidades:
   FeedItem: [title, link, publishedAt, summary]
   Nota: [titulo, texto, origem]
-estados: "na: nota é registro livre"
+estados: "na: note is a free-form record"
 permissoes:
-  criador: ["ler feeds", "traduzir artigos", "criar pautas a partir de notícias"]
-  admin: ["acesso total via PLA-R03"]
+  criador: ["read feeds", "translate articles", "create assignments from news"]
+  admin: ["full access via PLA-R03"]
 regras:
-  NOT-R01: "Feed é buscado via GET /api/feed?url= no proxy do backend, não direto pelo cliente (TRN-R04)"
-  NOT-R02: "Parser aceita itens RSS <item> e entradas Atom <entry>; título ausente vira 'Sem título'"
-  NOT-R03: "Resumo vem de description ou content:encoded do item do feed"
-  NOT-R04: "Tradução de artigo usa POST /api/v1/ai/action 'translate:article'"
-  NOT-R05: "Converter notícia em pauta cria doc em usuarios/{uid}/ideias com título 'Pauta Notícia: <título>' (IDE-R03)"
-  NOT-R06: "Feed maior que 2MB é rejeitado com 413 e URL sem http/https com 400 (TRN-R04)"
+  NOT-R01: "Feed is fetched via GET /api/feed?url= on the backend proxy, not directly by the client (TRN-R04)"
+  NOT-R02: "Parser accepts RSS <item> items and Atom <entry> entries; missing title becomes 'Sem título'"
+  NOT-R03: "Summary comes from the feed item's description or content:encoded"
+  NOT-R04: "Article translation uses POST /api/v1/ai/action 'translate:article'"
+  NOT-R05: "Converting news into an assignment creates a doc in usuarios/{uid}/ideias titled 'Pauta Notícia: <título>' (IDE-R03)"
+  NOT-R06: "Feed larger than 2MB is rejected with 413 and a URL without http/https with 400 (TRN-R04)"
 casos_de_uso:
-  CU01: "Criador lê feed de nicho -> NOT-R01, NOT-R02, NOT-R03"
-  CU02: "Criador vira notícia em pauta -> NOT-R05"
+  CU01: "Creator reads a niche feed -> NOT-R01, NOT-R02, NOT-R03"
+  CU02: "Creator turns news into an assignment -> NOT-R05"
 bordas:
-  - "URL inválida -> NOT-R06"
-  - "item sem título -> NOT-R02"
+  - "invalid URL -> NOT-R06"
+  - "item without title -> NOT-R02"

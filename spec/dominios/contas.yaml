@@ -1,40 +1,40 @@
 dominio: contas
 prefixo: CON
-resumo: "Cadastro, login, sessões, MFA TOTP, reautenticação e recuperação de senha."
+resumo: "Signup, login, sessions, TOTP MFA, reauthentication and password recovery."
 entidades:
   User: [id, email, pass_hash, display_name, email_verified, is_admin, mfa_secret]
   Session: [token, user_id, expires_at, reauth_at]
   PendingLogin: [ticket, user_id, purpose, expires_at]
   PasswordReset: [token, user_id, expires_at]
 estados:
-  User: "nao_verificado -> verificado"
-  PendingLogin: "emitido -> consumido | expirado"
+  User: "unverified -> verified"
+  PendingLogin: "issued -> consumed | expired"
 permissoes:
-  visitante: ["signup (se aberto)", "login", "mfa/login", "reset e reset/confirm"]
+  visitante: ["signup (if open)", "login", "mfa/login", "reset and reset/confirm"]
   criador: ["logout", "me", "token", "verify-email", "reauth", "mfa/*", "reset"]
-  admin: ["todas as ações de criador"]
+  admin: ["all creator actions"]
 regras:
-  CON-R01: "Signup só é permitido se SIGNUP_OPEN=true ou se não existir nenhum usuário (bootstrap)"
-  CON-R02: "Cadastro exige e-mail não vazio e senha com mínimo de 6 caracteres"
-  CON-R03: "E-mail é normalizado (lowercase, trim) e único; duplicado retorna 409"
-  CON-R04: "Recebe is_admin o bootstrap (1º usuário) ou quem se cadastra com o e-mail de ADMIN_EMAIL"
-  CON-R05: "Login retorna 401 'Credenciais inválidas' para e-mail inexistente ou senha errada, sem distinguir"
-  CON-R08: "Sessão dura SESSION_DAYS dias (padrão 30); aceita cookie vysc_sess, Bearer ou ?token="
-  CON-R10: "Reset de senha cria token de 1h e responde mensagem genérica mesmo se o e-mail não existir"
-  CON-R11: "Confirmar reset consome o token, atualiza a senha e apaga todas as sessões do usuário"
-  CON-R12: "Logout apaga a sessão atual no banco e expira o cookie vysc_sess"
-  CON-R13: "verify-email marca email_verified=true; link de debug só aparece com DEV_MODE=true"
-  CON-R14: "Cookie de sessão usa Secure apenas em HTTPS e SameSite=None em HTTPS, Lax em HTTP"
-  CON-R15: "Senha é persistida como PBKDF2-SHA256, 100k iterações, formato pbkdf2_sha256$iter$salt$hash"
-  CON-R17: "A identidade vem da sessão validada; uid enviado pelo cliente é ignorado"
-  CON-R18: "Cada usuário tem doc membros/{uid} com papel, plano e status gerenciados pelo admin"
+  CON-R01: "Signup is only allowed if SIGNUP_OPEN=true or if no user exists yet (bootstrap)"
+  CON-R02: "Signup requires non-empty e-mail and password with a minimum of 6 characters"
+  CON-R03: "E-mail is normalized (lowercase, trim) and unique; duplicate returns 409"
+  CON-R04: "is_admin goes to the bootstrap (1st user) or whoever signs up with the ADMIN_EMAIL e-mail"
+  CON-R05: "Login returns 401 'Credenciais inválidas' for unknown e-mail or wrong password, without distinguishing"
+  CON-R08: "Session lasts SESSION_DAYS days (default 30); accepts vysc_sess cookie, Bearer or ?token="
+  CON-R10: "Password reset creates a 1h token and replies with a generic message even if the e-mail does not exist"
+  CON-R11: "Confirming reset consumes the token, updates the password and deletes all user sessions"
+  CON-R12: "Logout deletes the current session in the database and expires the vysc_sess cookie"
+  CON-R13: "verify-email sets email_verified=true; debug link only appears with DEV_MODE=true"
+  CON-R14: "Session cookie uses Secure only on HTTPS and SameSite=None on HTTPS, Lax on HTTP"
+  CON-R15: "Password is persisted as PBKDF2-SHA256, 100k iterations, format pbkdf2_sha256$iter$salt$hash"
+  CON-R17: "Identity comes from the validated session; a uid sent by the client is ignored"
+  CON-R18: "Each user has a membros/{uid} doc with role, plan and status managed by admin"
 casos_de_uso:
-  CU01: "Visitante faz primeiro cadastro -> CON-R01, CON-R02, CON-R03, CON-R04"
-  CU02: "Criador com MFA faz login -> CON-R05, MFA-R01, MFA-R02, CON-R08"
-  CU03: "Criador ativa MFA -> MFA-R03, MFA-R05, MFA-R06"
-  CU04: "Visitante recupera senha -> CON-R10, CON-R11"
-  CU05: "Admin gerencia papel/status de membro -> CON-R18, PLA-R06"
+  CU01: "Visitor makes the first signup -> CON-R01, CON-R02, CON-R03, CON-R04"
+  CU02: "Creator with MFA logs in -> CON-R05, MFA-R01, MFA-R02, CON-R08"
+  CU03: "Creator enables MFA -> MFA-R03, MFA-R05, MFA-R06"
+  CU04: "Visitor recovers password -> CON-R10, CON-R11"
+  CU05: "Admin manages member role/status -> CON-R18, PLA-R06"
 bordas:
-  - "login com MFA em ticket expirado -> MFA-R02"
-  - "reauth com senha errada -> CON-R05"
-  - "signup fechado após bootstrap -> CON-R01"
+  - "login with MFA on expired ticket -> MFA-R02"
+  - "reauth with wrong password -> CON-R05"
+  - "signup closed after bootstrap -> CON-R01"

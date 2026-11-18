@@ -416,10 +416,10 @@ def cmd_report(a):
     d = Path(a.dir)
     E, W, st = run_check(d)
     spec = yaml.safe_load((d / "spec.yaml").read_text(encoding="utf-8"))
-    L = [f"# Spec (gerado; não edite)\n", f"**{spec.get('visao')}**  (porte {spec.get('porte')})\n"]
-    L.append("**Usuários:** " + "; ".join(f"{k}: {v}" for k, v in (spec.get("usuarios") or {}).items()))
-    L.append("\n**Escopo:** " + "; ".join(spec.get("escopo") or []))
-    L.append("\n**Fora de escopo:** " + "; ".join(spec.get("fora_de_escopo") or []))
+    L = [f"# Spec (generated; do not edit)\n", f"**{spec.get('visao')}**  (size {spec.get('porte')})\n"]
+    L.append("**Users:** " + "; ".join(f"{k}: {v}" for k, v in (spec.get("usuarios") or {}).items()))
+    L.append("\n**Scope:** " + "; ".join(spec.get("escopo") or []))
+    L.append("\n**Out of scope:** " + "; ".join(spec.get("fora_de_escopo") or []))
     for name in spec.get("dominios") or []:
         f = d / "dominios" / f"{name}.yaml"
         if not f.exists():
@@ -430,16 +430,16 @@ def cmd_report(a):
             L.append(f"- **{en}**: {', '.join(map(str, c))}")
         if isinstance(dom.get("estados"), dict):
             for en, fl in dom["estados"].items():
-                L.append(f"- Estados {en}: {fl}")
+                L.append(f"- States {en}: {fl}")
         for rid, t in (dom.get("regras") or {}).items():
             L.append(f"- `{rid}` {t}")
     if spec.get("nao_funcionais"):
-        L.append("\n## Não funcionais")
+        L.append("\n## Non-functional")
         L += [f"- `{k}` {v}" for k, v in spec["nao_funcionais"].items()]
     if spec.get("premissas"):
-        L.append("\n## Premissas (assumidas, não confirmadas)")
+        L.append("\n## Assumptions (assumed, unconfirmed)")
         L += [f"- `{k}` {v}" for k, v in spec["premissas"].items()]
-    L.append(f"\n---\nStatus do portão: {'OK' if not E else f'{len(E)} problema(s) abertos'}")
+    L.append(f"\n---\nGate status: {'OK' if not E else f'{len(E)} open issue(s)'}")
     (d / "SPEC.md").write_text("\n".join(L) + "\n", encoding="utf-8")
     print(f"gerado {d}/SPEC.md")
 

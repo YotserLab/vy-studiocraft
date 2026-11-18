@@ -1,19 +1,19 @@
 dominio: biblioteca
 prefixo: BIB
-resumo: "Navegador de arquivos do usuário: pastas, upload, download e organização da mídia."
+resumo: "User file browser: folders, upload, download and media organization."
 entidades:
   Pasta: [prefix]
   FileItem: [path, name, contentType, size]
-estados: "na: navegação de pastas sobre a API de arquivos"
+estados: "na: folder navigation over the files API"
 permissoes:
-  criador: ["navegar suas pastas", "upload em subpastas", "download/excluir seus arquivos"]
-  admin: ["acesso total via TRN-R02"]
+  criador: ["browse own folders", "upload into subfolders", "download/delete own files"]
+  admin: ["full access via TRN-R02"]
 regras:
-  BIB-R01: "Biblioteca navega o prefixo usuarios/{uid} via /api/v1/files?prefix= (MID-R05)"
-  BIB-R02: "Subpastas são criadas implicitamente pelo path do upload"
-  BIB-R03: "Upload na pasta atual usa PUT /api/v1/files/{prefix}/{nome} (MID-R01)"
-  BIB-R04: "Listagem separa arquivos (items) de subpastas (prefixes)"
+  BIB-R01: "Library browses the usuarios/{uid} prefix via /api/v1/files?prefix= (MID-R05)"
+  BIB-R02: "Subfolders are created implicitly by the upload path"
+  BIB-R03: "Upload into the current folder uses PUT /api/v1/files/{prefix}/{nome} (MID-R01)"
+  BIB-R04: "Listing separates files (items) from subfolders (prefixes)"
 casos_de_uso:
-  CU01: "Criador organiza mídia em subpasta -> BIB-R01, BIB-R02, BIB-R03"
+  CU01: "Creator organizes media into a subfolder -> BIB-R01, BIB-R02, BIB-R03"
 bordas:
-  - "listar prefixo de outro usuário -> TRN-R02"
+  - "listing another user's prefix -> TRN-R02"

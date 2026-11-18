@@ -1,26 +1,26 @@
 dominio: mfa
 prefixo: MFA
-resumo: "Autenticação de dois fatores TOTP: enrollment, tickets de uso único e reautenticação."
+resumo: "TOTP two-factor authentication: enrollment, single-use tickets and reauthentication."
 entidades:
   TotpSecret: [secret, owner]
   PendingLogin: [ticket, user_id, purpose, expires_at]
 estados:
-  PendingLogin: "emitido -> consumido | expirado"
+  PendingLogin: "issued -> consumed | expired"
 permissoes:
-  visitante: ["mfa/login com ticket válido"]
+  visitante: ["mfa/login with a valid ticket"]
   criador: ["mfa/start, enroll, unenroll, reauth"]
-  admin: ["idem criador"]
+  admin: ["same as creator"]
 regras:
-  MFA-R01: "Com MFA ativo, login retorna mfaRequired e ticket de 5 minutos em vez de criar sessão"
-  MFA-R02: "Ticket MFA é de uso único, expira em 5 minutos e tem purpose 'login' ou 'reauth'"
-  MFA-R03: "mfa/start, mfa/enroll e mfa/unenroll exigem reautenticação feita nos últimos 10 minutos"
-  MFA-R04: "Código TOTP errado retorna 401 sem consumir o ticket; só código válido o consome"
-  MFA-R05: "mfa/enroll só grava o secret no usuário após validar um código TOTP correto"
-  MFA-R06: "mfa/start emite secret TOTP novo sem persistir; persistência ocorre só no enroll"
-  MFA-R07: "mfa/reauth com ticket e código válidos atualiza o reauth_at da sessão"
+  MFA-R01: "With MFA enabled, login returns mfaRequired and a 5-minute ticket instead of creating a session"
+  MFA-R02: "MFA ticket is single-use, expires in 5 minutes and has purpose 'login' or 'reauth'"
+  MFA-R03: "mfa/start, mfa/enroll and mfa/unenroll require reauthentication within the last 10 minutes"
+  MFA-R04: "A wrong TOTP code returns 401 without consuming the ticket; only a valid code consumes it"
+  MFA-R05: "mfa/enroll only stores the secret on the user after validating a correct TOTP code"
+  MFA-R06: "mfa/start issues a new TOTP secret without persisting; persistence happens only on enroll"
+  MFA-R07: "mfa/reauth with a valid ticket and code updates the session's reauth_at"
 casos_de_uso:
-  CU01: "Criador com MFA faz login -> MFA-R01, MFA-R02, MFA-R04, CON-R08"
-  CU02: "Criador ativa MFA -> MFA-R03, MFA-R05, MFA-R06"
+  CU01: "Creator with MFA logs in -> MFA-R01, MFA-R02, MFA-R04, CON-R08"
+  CU02: "Creator enables MFA -> MFA-R03, MFA-R05, MFA-R06"
 bordas:
-  - "ticket expirado ou consumido -> MFA-R02"
-  - "TOTP errado repetido -> MFA-R04"
+  - "expired or consumed ticket -> MFA-R02"
+  - "repeated wrong TOTP -> MFA-R04"

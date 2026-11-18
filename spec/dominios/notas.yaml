@@ -1,18 +1,18 @@
 dominio: notas
 prefixo: NTA
-resumo: "Notas livres do estúdio com categoria e marcação de fixada."
+resumo: "Free-form studio notes with category and pinned flag."
 entidades:
   Nota: [titulo, categoria, conteudo, fixada]
-estados: "na: nota é registro livre"
+estados: "na: note is a free-form record"
 permissoes:
-  criador: ["CRUD nas próprias notas"]
-  admin: ["acesso total via PLA-R03"]
+  criador: ["CRUD on own notes"]
+  admin: ["full access via PLA-R03"]
 regras:
-  NTA-R01: "Nota exige titulo não vazio para ser salva"
-  NTA-R02: "Nota nasce com fixada=false"
-  NTA-R03: "Notas ficam em usuarios/{uid}/notas — isoladas por usuário (PLA-R04)"
-  NTA-R04: "Exclusão de nota é física (DELETE do documento), sem lixeira"
+  NTA-R01: "Note requires non-empty titulo to be saved"
+  NTA-R02: "Note is created with fixada=false"
+  NTA-R03: "Notes live in usuarios/{uid}/notas — isolated per user (PLA-R04)"
+  NTA-R04: "Note deletion is physical (document DELETE), no trash"
 casos_de_uso:
-  CU01: "Criador registra nota -> NTA-R01, NTA-R02"
+  CU01: "Creator records a note -> NTA-R01, NTA-R02"
 bordas:
-  - "titulo vazio não cria nota -> NTA-R01"
+  - "empty titulo does not create a note -> NTA-R01"

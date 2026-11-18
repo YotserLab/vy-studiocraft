@@ -1,33 +1,33 @@
 dominio: transporte
 prefixo: TRN
-resumo: "Camada HTTP da API: sessão, upload, proxy RSS, SSE, fallback SPA e endpoints públicos."
+resumo: "API HTTP layer: session, upload, RSS proxy, SSE, SPA fallback and public endpoints."
 entidades:
   Request: [method, path, sessao]
-estados: "na: transporte sem estado"
+estados: "na: stateless transport"
 permissoes:
-  visitante: ["mídia pública do catálogo de templates (TRN-R10)"]
-  criador: ["rotas autenticadas de dados e arquivos"]
-  admin: ["acesso total via PLA-R03"]
+  visitante: ["public media of the template catalog (TRN-R10)"]
+  criador: ["authenticated data and file routes"]
+  admin: ["full access via PLA-R03"]
 regras:
-  TRN-R01: "Toda rota /api/v1/* de dados exige sessão válida; sem sessão retorna 401"
-  TRN-R02: "Arquivos existem apenas sob usuarios/{uid}/; acesso ao próprio uid ou admin"
-  TRN-R03: "Upload excedente a UPLOAD_MAX_MB (padrão 512MB) retorna 413"
-  TRN-R04: "GET /api/feed faz proxy de URL http(s) arbitrária: timeout 8s, corpo máx 2MB, cache 5min"
-  TRN-R05: "SSE /api/v1/fs/events exige permissão de leitura no path e envia keepalive a cada 25s"
-  TRN-R06: "Sessão pode vir do cookie vysc_sess, header Bearer ou query ?token (usado pelo SSE)"
-  TRN-R07: "Rota /api/* desconhecida retorna 404 JSON; rotas SPA desconhecidas servem index.html com 404"
-  TRN-R08: "GET /api/feed e /feed exigem sessão válida; sem sessão retorna 401"
-  TRN-R09: "Proxy /api/render, /api/rendered e /api/gemini/* exigem sessão; anônimo retorna 401"
-  TRN-R10: "Mídia /rendered/, /thumbnails/, /previews/, /rendercomp-thumbs/ é pública (catálogo /templates, P11)"
-  TRN-R11: "Mídia /cache/ exige sessão; anônimo retorna 401"
+  TRN-R01: "Every /api/v1/* data route requires a valid session; without a session returns 401"
+  TRN-R02: "Files exist only under usuarios/{uid}/; access limited to own uid or admin"
+  TRN-R03: "Upload exceeding UPLOAD_MAX_MB (default 512MB) returns 413"
+  TRN-R04: "GET /api/feed proxies an arbitrary http(s) URL: 8s timeout, max 2MB body, 5min cache"
+  TRN-R05: "SSE /api/v1/fs/events requires read permission on the path and sends keepalive every 25s"
+  TRN-R06: "Session can come from vysc_sess cookie, Bearer header or ?token query (used by SSE)"
+  TRN-R07: "Unknown /api/* route returns JSON 404; unknown SPA routes serve index.html with 404"
+  TRN-R08: "GET /api/feed and /feed require a valid session; without a session returns 401"
+  TRN-R09: "Proxy /api/render, /api/rendered and /api/gemini/* require session; anonymous returns 401"
+  TRN-R10: "Media /rendered/, /thumbnails/, /previews/, /rendercomp-thumbs/ is public (catalog /templates, P11)"
+  TRN-R11: "Media /cache/ requires session; anonymous returns 401"
 casos_de_uso:
-  CU01: "Frontend assina mudanças em tempo real -> TRN-R05, TRN-R06"
-  CU02: "Criador sobe arquivo grande -> TRN-R02, TRN-R03"
-  CU03: "Visitante navega o catálogo público de templates -> TRN-R10"
-  CU05: "Anônimo chama proxy de render ou gemini -> TRN-R09"
-  CU04: "Criador consome feed RSS -> TRN-R08, TRN-R04"
+  CU01: "Frontend subscribes to real-time changes -> TRN-R05, TRN-R06"
+  CU02: "Creator uploads a large file -> TRN-R02, TRN-R03"
+  CU03: "Visitor browses the public template catalog -> TRN-R10"
+  CU05: "Anonymous calls the render or gemini proxy -> TRN-R09"
+  CU04: "Creator consumes an RSS feed -> TRN-R08, TRN-R04"
 bordas:
-  - "feed com URL sem scheme http/https -> TRN-R04"
-  - "request anônimo ao feed retorna 401 -> TRN-R08"
-  - "request anônimo a /api/gemini/* retorna 401 -> TRN-R09"
-  - "mídia de usuário em pasta pública fica exposta -> TRN-R10, P11"
+  - "feed URL without http/https scheme -> TRN-R04"
+  - "anonymous request to the feed returns 401 -> TRN-R08"
+  - "anonymous request to /api/gemini/* returns 401 -> TRN-R09"
+  - "user media in a public folder is exposed -> TRN-R10, P11"

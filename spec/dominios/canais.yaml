@@ -1,20 +1,20 @@
 dominio: canais
 prefixo: CAN
-resumo: "Canais próprios e de referência com métricas e análise estratégica via IA."
+resumo: "Own and reference channels with metrics and AI strategic analysis."
 entidades:
   Canal: [nome, handle, nicho, tipo, inscritos, views30d, ctrMedio, retencaoMedia, frequenciaSemanal, descricao, analiseIa]
-estados: "na: canal é cadastro contínuo; tipo é classificação, não estágio"
+estados: "na: channel is an ongoing record; tipo is a classification, not a stage"
 permissoes:
-  criador: ["CRUD nos próprios canais", "gerar análise IA"]
-  admin: ["acesso total via PLA-R03"]
+  criador: ["CRUD on own channels", "generate AI analysis"]
+  admin: ["full access via PLA-R03"]
 regras:
-  CAN-R01: "Canal tem tipo 'proprio' ou 'referencia'; /meus-canais filtra tipo diferente de 'referencia'"
-  CAN-R02: "Canais ficam em usuarios/{uid}/canais — isolados por usuário (PLA-R04)"
-  CAN-R03: "Métricas do canal: inscritos, views30d, ctrMedio, retencaoMedia e frequenciaSemanal"
-  CAN-R04: "Análise estratégica usa POST /api/v1/ai/action 'channel:analyze' e grava o resultado em analiseIa"
-  CAN-R05: "/canais lista todos os canais do usuário; /canais/{id} abre o detalhe (NAV-R07)"
+  CAN-R01: "Channel has type 'proprio' or 'referencia'; /meus-canais filters type other than 'referencia'"
+  CAN-R02: "Channels live in usuarios/{uid}/canais — isolated per user (PLA-R04)"
+  CAN-R03: "Channel metrics: inscritos, views30d, ctrMedio, retencaoMedia and frequenciaSemanal"
+  CAN-R04: "Strategic analysis uses POST /api/v1/ai/action 'channel:analyze' and stores the result in analiseIa"
+  CAN-R05: "/canais lists all user channels; /canais/{id} opens the detail (NAV-R07)"
 casos_de_uso:
-  CU01: "Criador cadastra canal próprio -> CAN-R01, CAN-R02, CAN-R03"
-  CU02: "Criador gera análise do canal -> CAN-R04"
+  CU01: "Creator registers an own channel -> CAN-R01, CAN-R02, CAN-R03"
+  CU02: "Creator generates channel analysis -> CAN-R04"
 bordas:
-  - "sem GEMINI_API_KEY retorna 503 -> CAN-R04"
+  - "without GEMINI_API_KEY returns 503 -> CAN-R04"

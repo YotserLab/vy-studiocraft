@@ -1,19 +1,19 @@
 dominio: comparador
 prefixo: CMP
-resumo: "Comparação A/B de ganchos de 30 segundos via Gemini, com resultado salvo."
+resumo: "A/B comparison of 30-second hooks via Gemini, with saved result."
 entidades:
   Comparacao: [titleA, hookA, visualCutsA, titleB, hookB, visualCutsB, niche, winner, edge, analise]
-estados: "na: resultado pontual, sem ciclo de vida"
+estados: "na: one-off result, no lifecycle"
 permissoes:
-  criador: ["comparar", "salvar e consultar comparações"]
-  admin: ["acesso total via PLA-R03"]
+  criador: ["compare", "save and query comparisons"]
+  admin: ["full access via PLA-R03"]
 regras:
-  CMP-R01: "Comparação exige titleA, hookA, visualCutsA, titleB, hookB, visualCutsB e niche"
-  CMP-R02: "Resultado declara winner e edge, cada um ∈ {A, B, empate}"
-  CMP-R03: "Comparações salvas ficam em usuarios/{uid}/comparacoes — isoladas por usuário"
-  CMP-R04: "Comparação usa POST /api/v1/ai/compare-30s no backend Go, que chama Gemini (gemini-2.5-flash)"
+  CMP-R01: "Comparison requires titleA, hookA, visualCutsA, titleB, hookB, visualCutsB and niche"
+  CMP-R02: "Result declares winner and edge, each one ∈ {A, B, empate}"
+  CMP-R03: "Saved comparisons live in usuarios/{uid}/comparacoes — isolated per user"
+  CMP-R04: "Comparison uses POST /api/v1/ai/compare-30s on the Go backend, which calls Gemini (gemini-2.5-flash)"
 casos_de_uso:
-  CU01: "Criador compara duas aberturas -> CMP-R01, CMP-R02, CMP-R04"
+  CU01: "Creator compares two openings -> CMP-R01, CMP-R02, CMP-R04"
 bordas:
-  - "campos de A ou B vazios -> CMP-R01"
-  - "sem GEMINI_API_KEY retorna 503; falha da IA retorna 502 -> CMP-R04"
+  - "empty A or B fields -> CMP-R01"
+  - "without GEMINI_API_KEY returns 503; AI failure returns 502 -> CMP-R04"

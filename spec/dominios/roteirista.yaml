@@ -1,25 +1,25 @@
 dominio: roteirista
 prefixo: ROT
-resumo: "Geração de roteiros via Gemini com perfis de redator, capítulos e salvamento."
+resumo: "Script generation via Gemini with writer profiles, chapters and saving."
 entidades:
   Roteiro: [title, summary, formato, canal, categoria, chapters, geradoEm]
   WriterProfile: [nome, tom, estilo, audiencia, prompt]
-estados: "na: documento salvo, sem ciclo de vida formal"
+estados: "na: saved document, no formal lifecycle"
 permissoes:
-  criador: ["gerar roteiro", "salvar/excluir roteiros", "gerenciar perfis de redator"]
-  admin: ["acesso total via PLA-R03"]
+  criador: ["generate script", "save/delete scripts", "manage writer profiles"]
+  admin: ["full access via PLA-R03"]
 regras:
-  ROT-R01: "Geração exige topic, channelName, niche, audience, format, tone, durationMinutes e hookStyle"
-  ROT-R02: "O campo format aceita apenas 'long' ou 'shorts'"
-  ROT-R03: "Roteiro gerado abre com o capítulo de gancho '00 — Gancho (00:00 – 00:30)'"
-  ROT-R04: "Perfis de redator ficam em usuarios/{uid}/config/roteirista_perfis"
-  ROT-R05: "Roteiros salvos ficam em usuarios/{uid}/roteiros — isolados por usuário"
-  ROT-R06: "Geração usa POST /api/v1/ai/script no backend Go, que chama Gemini (gemini-2.5-flash)"
-  ROT-R07: "profilePrompt e knowledgeBase opcionais personalizam a saída do modelo"
-  ROT-R08: "partsCount e ppm controlam divisão em partes e ritmo (palavras por minuto)"
+  ROT-R01: "Generation requires topic, channelName, niche, audience, format, tone, durationMinutes and hookStyle"
+  ROT-R02: "The format field only accepts 'long' or 'shorts'"
+  ROT-R03: "Generated script opens with the hook chapter '00 — Hook (00:00 – 00:30)'"
+  ROT-R04: "Writer profiles live in usuarios/{uid}/config/roteirista_perfis"
+  ROT-R05: "Saved scripts live in usuarios/{uid}/roteiros — isolated per user"
+  ROT-R06: "Generation uses POST /api/v1/ai/script on the Go backend, which calls Gemini (gemini-2.5-flash)"
+  ROT-R07: "Optional profilePrompt and knowledgeBase customize the model output"
+  ROT-R08: "partsCount and ppm control splitting into parts and pacing (words per minute)"
 casos_de_uso:
-  CU01: "Criador gera roteiro com perfil -> ROT-R01, ROT-R02, ROT-R06, ROT-R07"
-  CU02: "Criador salva roteiro gerado -> ROT-R05"
+  CU01: "Creator generates a script with a profile -> ROT-R01, ROT-R02, ROT-R06, ROT-R07"
+  CU02: "Creator saves a generated script -> ROT-R05"
 bordas:
-  - "formato fora de long/shorts -> ROT-R02"
-  - "sem GEMINI_API_KEY retorna 503; falha da IA retorna 502 -> ROT-R06"
+  - "format outside long/shorts -> ROT-R02"
+  - "without GEMINI_API_KEY returns 503; AI failure returns 502 -> ROT-R06"

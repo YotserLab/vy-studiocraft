@@ -1,20 +1,20 @@
 dominio: publicidade
 prefixo: PUB
-resumo: "Registro de campanhas de publicidade e patrocínio por canal, com status de negociação."
+resumo: "Registry of advertising and sponsorship campaigns per channel, with negotiation status."
 entidades:
   Campanha: [marca, canalNome, status, formato, valorAcordado, prazoEntrega, entregaveis]
-estados: "na: status livre; campanha nasce em 'negociacao' (PUB-R02, PUB-R04)"
+estados: "na: free-form status; campaign starts at 'negociacao' (PUB-R02, PUB-R04)"
 permissoes:
-  criador: ["criar, listar e atualizar status das próprias campanhas"]
-  admin: ["acesso total via PLA-R03"]
+  criador: ["create, list and update status of own campaigns"]
+  admin: ["full access via PLA-R03"]
 regras:
-  PUB-R01: "Campanha exige marca não vazia para ser registrada"
-  PUB-R02: "Toda campanha nova nasce com status 'negociacao'"
-  PUB-R03: "valorAcordado em branco assume 'A definir'"
-  PUB-R04: "Status da campanha é atualizado via PATCH no documento"
-  PUB-R05: "Campanhas ficam em usuarios/{uid}/publicidade — isoladas por usuário (PLA-R04)"
-  PUB-R06: "Lista vazia exibe estado 'Nenhuma campanha de publicidade cadastrada'"
+  PUB-R01: "Campaign requires non-empty marca to be registered"
+  PUB-R02: "Every new campaign starts with status 'negociacao'"
+  PUB-R03: "Blank valorAcordado defaults to 'A definir'"
+  PUB-R04: "Campaign status is updated via PATCH on the document"
+  PUB-R05: "Campaigns live in usuarios/{uid}/publicidade — isolated per user (PLA-R04)"
+  PUB-R06: "Empty list shows the 'No advertising campaigns registered' state"
 casos_de_uso:
-  CU01: "Criador registra patrocínio -> PUB-R01, PUB-R02, PUB-R03"
+  CU01: "Creator registers a sponsorship -> PUB-R01, PUB-R02, PUB-R03"
 bordas:
-  - "marca vazia não cria campanha -> PUB-R01"
+  - "empty marca does not create a campaign -> PUB-R01"

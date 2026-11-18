@@ -1,19 +1,19 @@
 dominio: pesquisa
 prefixo: PES
-resumo: "Busca global client-side sobre projetos, canais, notas e perfis do radar (/pesquisa)."
+resumo: "Client-side global search over projects, channels, notes and radar profiles (/pesquisa)."
 entidades:
   Resultado: [tipo, titulo, subtitulo, to]
-estados: "na: busca é consulta sem estado"
+estados: "na: search is a stateless query"
 permissoes:
-  criador: ["buscar nos próprios dados"]
-  admin: ["acesso total via PLA-R03"]
+  criador: ["search own data"]
+  admin: ["full access via PLA-R03"]
 regras:
-  PES-R01: "Busca cobre 4 coleções: projetos, canais, notas e radar_perfis do usuário"
-  PES-R02: "Cada resultado leva tipo (Projeto|Canal|Nota|Radar), titulo, subtitulo e link para a rota da entidade"
-  PES-R03: "Filtro é case-insensitive e casa titulo, subtitulo ou tipo"
-  PES-R04: "Query string ?q= sincroniza o termo da busca com a URL (NAV-R09)"
-  PES-R05: "Busca vazia lista todos os itens das 4 coleções"
+  PES-R01: "Search covers 4 collections: the user's projetos, canais, notas and radar_perfis"
+  PES-R02: "Each result carries tipo (Projeto|Canal|Nota|Radar), titulo, subtitulo and a link to the entity route"
+  PES-R03: "Filter is case-insensitive and matches titulo, subtitulo or tipo"
+  PES-R04: "Query string ?q= syncs the search term with the URL (NAV-R09)"
+  PES-R05: "Empty search lists all items from the 4 collections"
 casos_de_uso:
-  CU01: "Criador busca projeto pelo nome -> PES-R01, PES-R03"
+  CU01: "Creator searches a project by name -> PES-R01, PES-R03"
 bordas:
-  - "sem termo exibe tudo -> PES-R05"
+  - "no term shows everything -> PES-R05"
