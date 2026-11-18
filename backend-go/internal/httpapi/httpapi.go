@@ -785,6 +785,11 @@ func (s *Server) handleFileGet(w http.ResponseWriter, r *http.Request) {
 		return
 	}
 	clean := store.NormalizePath(r.PathValue("path"))
+	if clean == "" {
+		// /api/v1/files/ com trailing slash equivale à listagem
+		s.handleFilesList(w, r)
+		return
+	}
 	mode := "meta"
 	if r.URL.Query().Get("download") == "1" {
 		mode = "download"
