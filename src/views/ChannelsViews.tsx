@@ -4,6 +4,10 @@ import { AppShell } from '../components/AppShell';
 import { MarkdownRenderer } from '../components/MarkdownRenderer';
 import { useApp } from '../contexts/AppContext';
 import { aiApi, fsApi, type FsDoc } from '../lib/dataClient';
+import { buildCanalDoc, canalDetailRoute, canalDocPath, canaisCollectionPath, filterCanaisVisiveis } from '../lib/canaisLogic';
+import { buildIdeiaDoc, ideiaDocPath, ideiasCollectionPath, isIdeiaTituloValido } from '../lib/ideiasLogic';
+import { buildResultadosPesquisa, filterResultadosPesquisa, pesquisaCollectionPaths, queryFromSearchParams } from '../lib/pesquisaLogic';
+import { playbookCollectionPath } from '../lib/playbookLogic';
 import { Link, navigate, useLocationPath } from '../lib/router';
 
 export interface CanalDoc {
@@ -36,7 +40,7 @@ export function ChannelsListView({ mode }: { mode: 'proprios' | 'todos' }) {
     if (!user) return;
     setLoading(true);
     try {
-      const docs = await fsApi.listDocs<CanalDoc>(`usuarios/${user.id}/canais`);
+      const docs = await fsApi.listDocs<CanalDoc>(canaisCollectionPath(user.id));
       setCanais(Array.isArray(docs) ? docs : []);
     } catch (err) {
       setCanais([]);
@@ -53,18 +57,7 @@ export function ChannelsListView({ mode }: { mode: 'proprios' | 'todos' }) {
   const handleCreate = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!user || !nome.trim()) return;
-    await fsApi.createDoc(`usuarios/${user.id}/canais`, {
-      nome: nome.trim(),
-      handle: handle.trim() || `@${nome.trim().toLowerCase().replace(/\s+/g, '')}`,
-      nicho: nicho.trim() || 'Geral',
-      tipo: mode === 'proprios' ? 'proprio' : tipo,
-      inscritos: Number.parseInt(inscritos, 10) || 0,
-      views30d: 0,
-      ctrMedio: 6.5,
-      retencaoMedia: 50.0,
-      frequenciaSemanal: 1,
-      descricao: '',
-    });
+    await fsApi.createDoc(canaisCollectionPath(user.id), buildCanalDoc({ nome, handle, nicho, tipo, inscritos, modoLista: mode }));
     setNome('');
     setHandle('');
     setNicho('');
@@ -74,7 +67,7 @@ export function ChannelsListView({ mode }: { mode: 'proprios' | 'todos' }) {
   };
 
   const safeCanais = Array.isArray(canais) ? canais : [];
-  const visible = mode === 'proprios' ? safeCanais.filter((c) => c?.data?.tipo !== 'referencia') : safeCanais;
+  const visible = filterCanaisVisiveis(safeCanais, mode);
 
   return (
     <AppShell
@@ -164,7 +157,7 @@ export function ChannelsListView({ mode }: { mode: 'proprios' | 'todos' }) {
                 <div className="space-y-1.5">
                   <div className="flex items-center justify-between gap-2">
                     <Link
-                      to={`/canais/${c.id}`}
+                      to={canalDetailRoute(c.id)}
                       className="font-display font-semibold text-base hover:underline truncate"
                       style={{ color: 'var(--text-primary)' }}
                     >
@@ -224,7 +217,7 @@ export function ChannelDetailView({ id }: { id: string }) {
     if (!user) return;
     setLoading(true);
     fsApi
-      .getDoc<CanalDoc>(`usuarios/${user.id}/canais/${id}`)
+      .getDoc<CanalDoc>(canalDocPath(user.id, id))
       .then((res) => {
         setCanal(res.exists ? res : null);
         if (res.exists && res.data.analiseIa) {
@@ -244,7 +237,7 @@ export function ChannelDetailView({ id }: { id: string }) {
       });
       const text = res.text || '';
       setAnalysisText(text);
-      await fsApi.patchDoc(`usuarios/${user.id}/canais/${id}`, { analiseIa: text });
+      await fsApi.patchDoc(canalDocPath(user.id, id), { analiseIa: text });
       notify('Análise estratégica do canal gerada.', 'ok');
     } catch (err) {
       notify(err instanceof Error ? err.message : 'Erro ao analisar canal.', 'err');
@@ -255,7 +248,7 @@ export function ChannelDetailView({ id }: { id: string }) {
 
   const handleDelete = async () => {
     if (!user) return;
-    await fsApi.deleteDoc(`usuarios/${user.id}/canais/${id}`);
+    await fsApi.deleteDoc(canalDocPath(user.id, id));
     notify('Canal removido.', 'info');
     navigate('/canais');
   };
@@ -408,7 +401,7 @@ export function ChannelDetailView({ id }: { id: string }) {
                           type="button"
                           onClick={async () => {
                             if (!user) return;
-                            await fsApi.createDoc(`usuarios/${user.id}/playbook`, {
+                            await fsApi.createDoc(playbookCollectionPath(user.id), {
                               categoria: 'estrategia',
                               titulo: `Canal ${canal.data.nome} — Recomendação`,
                               regra: clean,
@@ -447,7 +440,7 @@ export function ExploreView() {
     setLoading(true);
     try {
       const docs = await fsApi.listDocs<{ titulo: string; nicho: string; potencial: string; origem: string; notas: string }>(
-        `usuarios/${user.id}/ideias`
+        ideiasCollectionPath(user.id)
       );
       setIdeias(Array.isArray(docs) ? docs : []);
     } catch (err) {
@@ -464,14 +457,8 @@ export function ExploreView() {
 
   const handleAddIdea = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!user || !titulo.trim()) return;
-    await fsApi.createDoc(`usuarios/${user.id}/ideias`, {
-      titulo: titulo.trim(),
-      nicho: nicho.trim() || 'Geral',
-      potencial: 'alto',
-      origem: 'Explorar',
-      notas: notas.trim(),
-    });
+    if (!user || !isIdeiaTituloValido(titulo)) return;
+    await fsApi.createDoc(ideiasCollectionPath(user.id), buildIdeiaDoc({ titulo, nicho, notas }));
     setTitulo('');
     setNicho('');
     setNotas('');
@@ -569,7 +556,7 @@ export function ExploreView() {
                   <button
                     type="button"
                     onClick={async () => {
-                      await fsApi.deleteDoc(`usuarios/${user!.id}/ideias/${idea.id}`);
+                      await fsApi.deleteDoc(ideiaDocPath(user!.id, idea.id));
                       void load();
                     }}
                     className="text-xs opacity-75 hover:opacity-100"
@@ -590,41 +577,32 @@ export function ExploreView() {
 export function GlobalSearchView() {
   const { user } = useApp();
   const { searchParams } = useLocationPath();
-  const [query, setQuery] = useState(searchParams.get('q') || '');
+  const [query, setQuery] = useState(queryFromSearchParams(searchParams));
   const [loading, setLoading] = useState(true);
   const [results, setResults] = useState<Array<{ tipo: string; titulo: string; subtitulo: string; to: string }>>([]);
 
   useEffect(() => {
-    setQuery(searchParams.get('q') || '');
+    setQuery(queryFromSearchParams(searchParams));
   }, [searchParams.get('q')]);
 
   useEffect(() => {
     if (!user) return;
     setLoading(true);
+    const paths = pesquisaCollectionPaths(user.id);
     Promise.all([
-      fsApi.listDocs<{ titulo: string; canalNome: string; estagio: string }>(`usuarios/${user.id}/projetos`),
-      fsApi.listDocs<{ nome: string; nicho: string }>(`usuarios/${user.id}/canais`),
-      fsApi.listDocs<{ titulo: string; categoria: string }>(`usuarios/${user.id}/notas`),
-      fsApi.listDocs<{ nome: string; nicho: string }>(`usuarios/${user.id}/radar_perfis`),
+      fsApi.listDocs<{ titulo: string; canalNome: string; estagio: string }>(paths.projetos),
+      fsApi.listDocs<{ nome: string; nicho: string }>(paths.canais),
+      fsApi.listDocs<{ titulo: string; categoria: string }>(paths.notas),
+      fsApi.listDocs<{ nome: string; nicho: string }>(paths.radar),
     ])
       .then(([projs, canais, notas, radar]) => {
-        const all = [
-          ...(Array.isArray(projs) ? projs : []).map((d) => ({ tipo: 'Projeto', titulo: d.data?.titulo || '', subtitulo: `${d.data?.canalNome || ''} · ${d.data?.estagio || ''}`, to: `/projetos/${d.id}` })),
-          ...(Array.isArray(canais) ? canais : []).map((d) => ({ tipo: 'Canal', titulo: d.data?.nome || '', subtitulo: d.data?.nicho || '', to: `/canais/${d.id}` })),
-          ...(Array.isArray(notas) ? notas : []).map((d) => ({ tipo: 'Nota', titulo: d.data?.titulo || '', subtitulo: d.data?.categoria || '', to: '/notas' })),
-          ...(Array.isArray(radar) ? radar : []).map((d) => ({ tipo: 'Radar', titulo: d.data?.nome || '', subtitulo: d.data?.nicho || '', to: `/radar/perfis/${d.id}` })),
-        ];
-        setResults(all);
+        setResults(buildResultadosPesquisa({ projetos: projs, canais, notas, radar }));
       })
       .catch(() => setResults([]))
       .finally(() => setLoading(false));
   }, [user?.id]);
 
-  const filtered = (Array.isArray(results) ? results : []).filter((r) => {
-    if (!query.trim()) return true;
-    const q = query.toLowerCase();
-    return r.titulo?.toLowerCase().includes(q) || r.subtitulo?.toLowerCase().includes(q) || r.tipo.toLowerCase().includes(q);
-  });
+  const filtered = filterResultadosPesquisa(results, query);
 
   return (
     <AppShell title="Pesquisa no Estúdio" breadcrumb="Inteligência">

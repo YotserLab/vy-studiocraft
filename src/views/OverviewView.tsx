@@ -4,6 +4,15 @@ import { AppShell } from '../components/AppShell';
 import { ProjectWizardModal } from '../components/ProjectWizardModal';
 import { useApp } from '../contexts/AppContext';
 import { fsApi, type FsDoc } from '../lib/dataClient';
+import {
+  dashboardCollectionPaths,
+  meusCanais as filterMeusCanais,
+  projetosAtivos as filterProjetosAtivos,
+  publisPendentes as filterPublisPendentes,
+  sinaisFortesRadar,
+  somaInscritos,
+  somaViews30d,
+} from '../lib/dashboardLogic';
 import { Link } from '../lib/router';
 
 interface CanalData {
@@ -65,11 +74,12 @@ export function OverviewView() {
     setLoading(true);
     setError(null);
     try {
+      const paths = dashboardCollectionPaths(user.id);
       const [c, p, pb, r] = await Promise.all([
-        fsApi.listDocs<CanalData>(`usuarios/${user.id}/canais`),
-        fsApi.listDocs<ProjetoData>(`usuarios/${user.id}/projetos`),
-        fsApi.listDocs<PubliData>(`usuarios/${user.id}/publicidade`),
-        fsApi.listDocs<RadarData>(`usuarios/${user.id}/radar_perfis`),
+        fsApi.listDocs<CanalData>(paths.canais),
+        fsApi.listDocs<ProjetoData>(paths.projetos),
+        fsApi.listDocs<PubliData>(paths.publicidade),
+        fsApi.listDocs<RadarData>(paths.radar),
       ]);
       setCanais(Array.isArray(c) ? c : []);
       setProjetos(Array.isArray(p) ? p : []);
@@ -86,17 +96,18 @@ export function OverviewView() {
     void loadAll();
   }, [user?.id]);
 
-  const meusCanais = (Array.isArray(canais) ? canais : []).filter((c) => c?.data?.tipo !== 'referencia');
-  const totalInscritos = meusCanais.reduce((acc, c) => acc + (Number(c?.data?.inscritos) || 0), 0);
-  const totalViews30d = meusCanais.reduce((acc, c) => acc + (Number(c?.data?.views30d) || 0), 0);
-  const projetosAtivos = (Array.isArray(projetos) ? projetos : []).filter((p) => p?.data?.estagio !== 'publicado');
-  const publisPendentes = (Array.isArray(publis) ? publis : []).filter((p) => p?.data?.status !== 'concluida');
+  const meusCanais = filterMeusCanais(Array.isArray(canais) ? canais : []);
+  const totalInscritos = somaInscritos(meusCanais);
+  const totalViews30d = somaViews30d(meusCanais);
+  const projetosAtivos = filterProjetosAtivos(Array.isArray(projetos) ? projetos : []);
+  const publisPendentes = filterPublisPendentes(Array.isArray(publis) ? publis : []);
 
   return (
     <AppShell
       title="Visão Geral"
       breadcrumb="Operação"
       primaryAction={
+        // DSH-R06 — a visão geral abre o wizard de criação de projeto (PRJ-R02).
         <button
           type="button"
           onClick={() => setWizardOpen(true)}
@@ -167,7 +178,7 @@ export function OverviewView() {
             {loading ? '—' : publisPendentes.length}
           </div>
           <div className="text-xs" style={{ color: 'var(--text-muted)' }}>
-            {radar.filter((r) => r.data.aceleracao === 'alta').length} sinais fortes no Radar
+            {sinaisFortesRadar(radar).length} sinais fortes no Radar
           </div>
         </div>
       </section>

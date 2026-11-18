@@ -5,17 +5,18 @@ import {
   type AuthRuntimeConfig,
   type UserProfile,
 } from '../lib/dataClient';
+import {
+  configAppDocPath,
+  resolveRemoteTema,
+  TEMA_STORAGE_KEY,
+  temaFromLocalStorage,
+} from '../lib/configuracoesLogic';
 
-export type TemaId = 'claro' | 'azul' | 'escuro' | 'roxo' | 'tecnologico' | 'youtube';
-
-export const TEMAS: Array<{ id: TemaId; label: string; desc: string; swatch: string; accent: string }> = [
-  { id: 'claro', label: 'Claro (Adminator)', desc: 'Painel editorial claro padrão', swatch: '#f0f4f8', accent: '#2563eb' },
-  { id: 'azul', label: 'Azul Clássico', desc: 'Ardósia azulada noturna', swatch: '#0b1324', accent: '#3b82f6' },
-  { id: 'escuro', label: 'Escuro', desc: 'Grafite neutro de alto foco', swatch: '#0f1115', accent: '#3b82f6' },
-  { id: 'roxo', label: 'Roxo', desc: 'Estúdio violeta noturno', swatch: '#120f1d', accent: '#8b5cf6' },
-  { id: 'tecnologico', label: 'Tecnológico', desc: 'Ardósia fria com ciano', swatch: '#091318', accent: '#0891b2' },
-  { id: 'youtube', label: 'YouTube', desc: 'Preto editorial com acento vermelho', swatch: '#0f0f0f', accent: '#dc2626' },
-];
+// TEMAS e TemaId vivem em lib/configuracoesLogic (regras CFG) e são re-exportados
+// aqui para manter compatibilidade com os imports existentes nas views.
+export { TEMAS } from '../lib/configuracoesLogic';
+export type { TemaId } from '../lib/configuracoesLogic';
+import type { TemaId } from '../lib/configuracoesLogic';
 
 export interface ToastItem {
   id: number;
@@ -45,7 +46,7 @@ function applyTemaDom(t: TemaId) {
     document.documentElement.classList.add('dark');
   }
   try {
-    localStorage.setItem('vysc_tema', t);
+    localStorage.setItem(TEMA_STORAGE_KEY, t);
   } catch {
     // ignore storage quota errors
   }
@@ -55,14 +56,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
   const [user, setUser] = useState<UserProfile | null>(null);
   const [authLoading, setAuthLoading] = useState(true);
   const [runtimeConfig, setRuntimeConfig] = useState<AuthRuntimeConfig | null>(null);
-  const [tema, setTemaState] = useState<TemaId>(() => {
-    try {
-      const saved = localStorage.getItem('vysc_tema') as TemaId | null;
-      return saved && TEMAS.some((x) => x.id === saved) ? saved : 'claro';
-    } catch {
-      return 'claro';
-    }
-  });
+  const [tema, setTemaState] = useState<TemaId>(() => temaFromLocalStorage());
   const [toasts, setToasts] = useState<ToastItem[]>([]);
 
   const notify = useCallback((message: string, tone: 'ok' | 'err' | 'info' = 'info') => {
@@ -82,10 +76,11 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
         const me = await authApi.me();
         setUser(me.user);
         try {
-          const pref = await fsApi.getDoc<{ tema?: TemaId }>(`usuarios/${me.user.id}/config/app`);
-          if (pref.exists && pref.data.tema && TEMAS.some((x) => x.id === pref.data.tema)) {
-            setTemaState(pref.data.tema);
-            applyTemaDom(pref.data.tema);
+          const pref = await fsApi.getDoc<{ tema?: TemaId }>(configAppDocPath(me.user.id));
+          const remoteTema = pref.exists ? resolveRemoteTema(pref.data.tema) : null;
+          if (remoteTema) {
+            setTemaState(remoteTema);
+            applyTemaDom(remoteTema);
           }
         } catch {
           // keep localStorage theme
@@ -112,7 +107,7 @@ export function AppProvider({ children }: { children: React.ReactNode }) {
       applyTemaDom(next);
       if (user) {
         try {
-          await fsApi.setDoc(`usuarios/${user.id}/config/app`, { tema: next }, true);
+          await fsApi.setDoc(configAppDocPath(user.id), { tema: next }, true);
         } catch {
           // localStorage still persisted
         }

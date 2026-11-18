@@ -15,6 +15,7 @@ import {
 } from 'lucide-react';
 import { AppShell } from '../components/AppShell';
 import { TEMAS, useApp, type TemaId } from '../contexts/AppContext';
+import { buildNoticiaIdeiaDoc, ideiasCollectionPath } from '../lib/ideiasLogic';
 import {
   adminApi,
   aiApi,
@@ -133,13 +134,15 @@ export function NewsView() {
   const handleTurnIntoIdea = async (item: RssFeedItem, idx: number) => {
     if (!user) return;
     const display = translatedMap[idx] || { title: item.title, summary: item.summary };
-    await fsApi.createDoc(`usuarios/${user.id}/ideias`, {
-      titulo: `Pauta Notícia: ${display.title}`,
-      nicho: channelTitle || 'Mercado',
-      potencial: 'alto',
-      origem: 'Notícias RSS',
-      notas: `${display.summary}\nFonte: ${item.link}`,
-    });
+    await fsApi.createDoc(
+      ideiasCollectionPath(user.id),
+      buildNoticiaIdeiaDoc({
+        title: display.title,
+        summary: display.summary,
+        link: item.link,
+        channelTitle,
+      })
+    );
     notify('Notícia salva em Explorar Ideias.', 'ok');
   };
 

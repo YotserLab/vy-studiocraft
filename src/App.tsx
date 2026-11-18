@@ -1,6 +1,8 @@
 import React, { Suspense, lazy, useEffect } from 'react';
 import { AppProvider, useApp } from './contexts/AppContext';
 import { navigate, useLocationPath, validateReturnTo } from './lib/router';
+import { CANAIS_ROUTE } from './lib/canaisLogic';
+import { IDEIAS_ROUTE } from './lib/ideiasLogic';
 import {
   LandingView,
   LoginView,
@@ -103,8 +105,8 @@ function AppRoutes() {
   if (clean === '/videos-salvos') return <PrivateRoute><SavedVideosView /></PrivateRoute>;
   if (clean === '/aulas') return <PrivateRoute><LessonsView /></PrivateRoute>;
   if (clean === '/meus-canais') return <PrivateRoute><ChannelsListView mode="proprios" /></PrivateRoute>;
-  if (clean === '/canais') return <PrivateRoute><ChannelsListView mode="todos" /></PrivateRoute>;
-  if (clean === '/explorar') return <PrivateRoute><ExploreView /></PrivateRoute>;
+  if (clean === CANAIS_ROUTE) return <PrivateRoute><ChannelsListView mode="todos" /></PrivateRoute>;
+  if (clean === IDEIAS_ROUTE) return <PrivateRoute><ExploreView /></PrivateRoute>;
   if (clean === '/pesquisa') return <PrivateRoute><GlobalSearchView /></PrivateRoute>;
   if (clean === '/biblioteca') return <PrivateRoute><LibraryView /></PrivateRoute>;
   if (clean === '/notas') return <PrivateRoute><NotesView /></PrivateRoute>;
@@ -122,8 +124,8 @@ function AppRoutes() {
     const id = decodeURIComponent(clean.slice('/projetos/'.length));
     if (id) return <PrivateRoute><ProjectDetailView id={id} /></PrivateRoute>;
   }
-  if (clean.startsWith('/canais/')) {
-    const id = decodeURIComponent(clean.slice('/canais/'.length));
+  if (clean.startsWith(`${CANAIS_ROUTE}/`)) {
+    const id = decodeURIComponent(clean.slice(CANAIS_ROUTE.length + 1));
     if (id) return <PrivateRoute><ChannelDetailView id={id} /></PrivateRoute>;
   }
   if (clean.startsWith('/radar/perfis/')) {

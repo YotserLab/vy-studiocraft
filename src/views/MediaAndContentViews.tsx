@@ -19,10 +19,15 @@ import {
 import { AppShell } from '../components/AppShell';
 import { useApp } from '../contexts/AppContext';
 import { aiApi, filesApi, fsApi, type FileItem, type FsDoc } from '../lib/dataClient';
+import { folderDisplayName, libraryBasePrefix, relativePrefixSegments, uploadTargetPath } from '../lib/bibliotecaLogic';
+import { buildVideoSalvoDoc, isVideoSalvoTituloValido, videoSalvoDocPath, videosSalvosCollectionPath } from '../lib/midiaLogic';
+import { buildNotaDoc, deleteNota, isNotaTituloValido, notasCollectionPath } from '../lib/notasLogic';
+import { buildPlaybookDoc, playbookCollectionPath, playbookDocPath } from '../lib/playbookLogic';
+import { buildCampanhaDoc, isMarcaValida, PUBLICIDADE_EMPTY_MESSAGE, publicidadeCollectionPath, updateCampanhaStatus } from '../lib/publicidadeLogic';
 
 export function LibraryView() {
   const { user, notify } = useApp();
-  const basePrefix = user ? `usuarios/${user.id}` : '';
+  const basePrefix = user ? libraryBasePrefix(user.id) : '';
   const [prefix, setPrefix] = useState(basePrefix);
   const [items, setItems] = useState<FileItem[]>([]);
   const [folders, setFolders] = useState<string[]>([]);
@@ -31,7 +36,7 @@ export function LibraryView() {
   const [subFolderInput, setSubFolderInput] = useState('');
 
   useEffect(() => {
-    if (user && !prefix) setPrefix(`usuarios/${user.id}`);
+    if (user && !prefix) setPrefix(libraryBasePrefix(user.id));
   }, [user?.id]);
 
   const load = async (targetPrefix = prefix) => {
@@ -57,9 +62,7 @@ export function LibraryView() {
     if (!file || !user) return;
     setUploading(true);
     try {
-      const cleanFolder = subFolderInput.trim().replace(/^\/+|\/+$/g, '');
-      const targetDir = cleanFolder ? `${prefix}/${cleanFolder}` : prefix;
-      const targetPath = `${targetDir}/${file.name}`;
+      const targetPath = uploadTargetPath(prefix, subFolderInput, file.name);
       await filesApi.upload(targetPath, file);
       notify(`Arquivo "${file.name}" enviado.`, 'ok');
       setSubFolderInput('');
@@ -78,7 +81,7 @@ export function LibraryView() {
     void load(prefix);
   };
 
-  const relativeSegments = prefix.replace(basePrefix, '').split('/').filter(Boolean);
+  const relativeSegments = relativePrefixSegments(prefix, basePrefix);
 
   return (
     <AppShell
@@ -143,7 +146,7 @@ export function LibraryView() {
             {folders.length > 0 && (
               <div className="grid sm:grid-cols-3 lg:grid-cols-4 gap-3">
                 {folders.map((f) => {
-                  const name = f.split('/').pop() || f;
+                  const name = folderDisplayName(f);
                   return (
                     <button
                       key={f}
@@ -239,7 +242,7 @@ export function SavedVideosView() {
         duracao: string;
         motivoSalvo: string;
         categoria: string;
-      }>(`usuarios/${user.id}/videos_salvos`);
+      }>(videosSalvosCollectionPath(user.id));
       setVideos(Array.isArray(docs) ? docs : []);
     } catch (err) {
       setVideos([]);
@@ -255,15 +258,8 @@ export function SavedVideosView() {
 
   const handleAdd = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!user || !titulo.trim()) return;
-    await fsApi.createDoc(`usuarios/${user.id}/videos_salvos`, {
-      titulo: titulo.trim(),
-      canal: canal.trim() || 'Referência',
-      url: url.trim() || 'https://www.youtube.com',
-      duracao: '10:00',
-      motivoSalvo: motivoSalvo.trim(),
-      categoria: 'Referência',
-    });
+    if (!user || !isVideoSalvoTituloValido(titulo)) return;
+    await fsApi.createDoc(videosSalvosCollectionPath(user.id), buildVideoSalvoDoc({ titulo, canal, url, motivoSalvo }));
     setTitulo('');
     setCanal('');
     setUrl('');
@@ -283,7 +279,7 @@ export function SavedVideosView() {
       const list = Array.isArray(res.data) ? res.data : [];
       for (const item of list) {
         if (item.id && item.pt) {
-          await fsApi.patchDoc(`usuarios/${user.id}/videos_salvos/${item.id}`, { tituloPt: item.pt });
+          await fsApi.patchDoc(videoSalvoDocPath(user.id, item.id), { tituloPt: item.pt });
         }
       }
       notify(`${list.length} título(s) traduzido(s) para PT-BR.`, 'ok');
@@ -357,7 +353,7 @@ export function SavedVideosView() {
                   <button
                     type="button"
                     onClick={async () => {
-                      await fsApi.deleteDoc(`usuarios/${user!.id}/videos_salvos/${v.id}`);
+                      await fsApi.deleteDoc(videoSalvoDocPath(user!.id, v.id));
                       void load();
                     }}
                     style={{ color: 'var(--status-err)' }}
@@ -391,7 +387,7 @@ export function NotesView() {
         categoria: string;
         conteudo: string;
         fixada?: boolean;
-      }>(`usuarios/${user.id}/notas`);
+      }>(notasCollectionPath(user.id));
       setNotas(Array.isArray(docs) ? docs : []);
     } catch (err) {
       setNotas([]);
@@ -407,13 +403,8 @@ export function NotesView() {
 
   const handleCreate = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!user || !titulo.trim()) return;
-    await fsApi.createDoc(`usuarios/${user.id}/notas`, {
-      titulo: titulo.trim(),
-      categoria,
-      conteudo: conteudo.trim(),
-      fixada: false,
-    });
+    if (!user || !isNotaTituloValido(titulo)) return;
+    await fsApi.createDoc(notasCollectionPath(user.id), buildNotaDoc({ titulo, categoria, conteudo }));
     setTitulo('');
     setConteudo('');
     notify('Nota salva.', 'ok');
@@ -454,7 +445,7 @@ export function NotesView() {
                     <button
                       type="button"
                       onClick={async () => {
-                        await fsApi.deleteDoc(`usuarios/${user!.id}/notas/${n.id}`);
+                        await deleteNota(user!.id, n.id);
                         void load();
                       }}
                       className="text-xs"
@@ -491,7 +482,7 @@ export function PlaybookView() {
         titulo: string;
         regra: string;
         impacto: string;
-      }>(`usuarios/${user.id}/playbook`);
+      }>(playbookCollectionPath(user.id));
       setRules(Array.isArray(docs) ? docs : []);
     } catch (err) {
       setRules([]);
@@ -508,12 +499,7 @@ export function PlaybookView() {
   const handleAdd = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!user || !titulo.trim()) return;
-    await fsApi.createDoc(`usuarios/${user.id}/playbook`, {
-      titulo: titulo.trim(),
-      categoria,
-      regra: regra.trim(),
-      impacto: impacto.trim() || 'Consistência editorial',
-    });
+    await fsApi.createDoc(playbookCollectionPath(user.id), buildPlaybookDoc({ titulo, categoria, regra, impacto }));
     setTitulo('');
     setRegra('');
     setImpacto('');
@@ -552,7 +538,7 @@ export function PlaybookView() {
                 <button
                   type="button"
                   onClick={async () => {
-                    await fsApi.deleteDoc(`usuarios/${user!.id}/playbook/${r.id}`);
+                    await fsApi.deleteDoc(playbookDocPath(user!.id, r.id));
                     void load();
                   }}
                   className="text-xs shrink-0"
@@ -679,7 +665,7 @@ export function AdvertisingView() {
         valorAcordado: string;
         prazoEntrega: string;
         entregaveis: string;
-      }>(`usuarios/${user.id}/publicidade`);
+      }>(publicidadeCollectionPath(user.id));
       setPublis(Array.isArray(docs) ? docs : []);
     } catch (err) {
       setPublis([]);
@@ -695,16 +681,11 @@ export function AdvertisingView() {
 
   const handleCreate = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!user || !marca.trim()) return;
-    await fsApi.createDoc(`usuarios/${user.id}/publicidade`, {
-      marca: marca.trim(),
-      canalNome,
-      status: 'negociacao',
-      formato,
-      valorAcordado: valorAcordado.trim() || 'A definir',
-      prazoEntrega,
-      entregaveis: entregaveis.trim(),
-    });
+    if (!user || !isMarcaValida(marca)) return;
+    await fsApi.createDoc(
+      publicidadeCollectionPath(user.id),
+      buildCampanhaDoc({ marca, canalNome, formato, valorAcordado, prazoEntrega, entregaveis })
+    );
     setMarca('');
     setValorAcordado('');
     setEntregaveis('');
@@ -752,7 +733,7 @@ export function AdvertisingView() {
         ) : publis.length === 0 ? (
           <div className="vy-card p-10 text-center space-y-2">
             <Megaphone className="w-8 h-8 mx-auto" style={{ color: 'var(--text-muted)' }} />
-            <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>Nenhuma campanha de publicidade cadastrada.</p>
+            <p className="text-sm" style={{ color: 'var(--text-secondary)' }}>{PUBLICIDADE_EMPTY_MESSAGE}</p>
           </div>
         ) : (
           <div className="vy-card overflow-x-auto">
@@ -780,7 +761,7 @@ export function AdvertisingView() {
                       <select
                         value={p.data.status}
                         onChange={async (e) => {
-                          await fsApi.patchDoc(`usuarios/${user!.id}/publicidade/${p.id}`, { status: e.target.value });
+                          await updateCampanhaStatus(user!.id, p.id, e.target.value);
                           void load();
                         }}
                         className="vy-input px-2 py-1 text-xs"
