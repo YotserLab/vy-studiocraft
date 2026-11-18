@@ -7,9 +7,9 @@ entidades:
 estados: "na: arquivo existe ou foi removido (exclusão física)"
 permissoes:
   criador: ["upload/download/excluir sob usuarios/{seu-uid}/", "listar próprio prefixo", "gerenciar vídeos salvos"]
-  admin: ["acesso total via PLA-R03, PLA-R07"]
+  admin: ["acesso total via PLA-R03, TRN-R02"]
 regras:
-  MID-R01: "Upload é PUT /api/v1/files/{path} somente sob usuarios/{uid}/ (PLA-R07)"
+  MID-R01: "Upload é PUT /api/v1/files/{path} somente sob usuarios/{uid}/ (TRN-R02)"
   MID-R02: "content_type usa ?ct=, depois Content-Type do request, senão 'application/octet-stream'"
   MID-R03: "GET /api/v1/files/{path} retorna metadados; ?download=1 ou sufixo /download serve o binário"
   MID-R04: "DELETE /api/v1/files/{path} remove o metadado e apaga o arquivo do disco"
@@ -21,5 +21,5 @@ casos_de_uso:
   CU02: "Criador baixa arquivo -> MID-R03"
   CU03: "Criador salva referência de vídeo -> MID-R06"
 bordas:
-  - "upload acima de 512MB -> PLA-R08"
+  - "upload acima de 512MB -> TRN-R03"
   - "nome vazio usa último segmento do path -> MID-R02"

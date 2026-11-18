@@ -1,0 +1,19 @@
+dominio: ideias
+prefixo: IDE
+resumo: "Banco de ideias de vídeo alimentado por notícias, assistente IA e registro manual (/explorar)."
+entidades:
+  Ideia: [titulo, nicho, potencial, origem, notas]
+estados: "na: ideia é registro livre, sem ciclo de vida"
+permissoes:
+  criador: ["criar, listar e promover ideias próprias"]
+  admin: ["acesso total via PLA-R03"]
+regras:
+  IDE-R01: "Ideia registra titulo, nicho, potencial, origem e notas"
+  IDE-R02: "Ideias ficam em usuarios/{uid}/ideias — isoladas por usuário (PLA-R04)"
+  IDE-R03: "Notícia convertida vira ideia com titulo 'Pauta Notícia: <título>', origem 'Notícias RSS', potencial 'alto'"
+  IDE-R04: "O assistente IA pode criar ideias via ação da conversa (AssistantIdeaAction)"
+  IDE-R05: "Tela /explorar é a visão de ideias do usuário"
+casos_de_uso:
+  CU01: "Criador transforma notícia em ideia -> IDE-R03, IDE-R05"
+bordas:
+  - "notícia sem título usa 'Sem título' do parser -> IDE-R03, NOT-R02"

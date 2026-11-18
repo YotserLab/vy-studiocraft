@@ -1,0 +1,19 @@
+dominio: pesquisa
+prefixo: PES
+resumo: "Busca global client-side sobre projetos, canais, notas e perfis do radar (/pesquisa)."
+entidades:
+  Resultado: [tipo, titulo, subtitulo, to]
+estados: "na: busca é consulta sem estado"
+permissoes:
+  criador: ["buscar nos próprios dados"]
+  admin: ["acesso total via PLA-R03"]
+regras:
+  PES-R01: "Busca cobre 4 coleções: projetos, canais, notas e radar_perfis do usuário"
+  PES-R02: "Cada resultado leva tipo (Projeto|Canal|Nota|Radar), titulo, subtitulo e link para a rota da entidade"
+  PES-R03: "Filtro é case-insensitive e casa titulo, subtitulo ou tipo"
+  PES-R04: "Query string ?q= sincroniza o termo da busca com a URL (NAV-R09)"
+  PES-R05: "Busca vazia lista todos os itens das 4 coleções"
+casos_de_uso:
+  CU01: "Criador busca projeto pelo nome -> PES-R01, PES-R03"
+bordas:
+  - "sem termo exibe tudo -> PES-R05"

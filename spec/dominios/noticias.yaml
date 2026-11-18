@@ -9,12 +9,12 @@ permissoes:
   criador: ["ler feeds", "traduzir artigos", "criar pautas a partir de notícias"]
   admin: ["acesso total via PLA-R03"]
 regras:
-  NOT-R01: "Feed é buscado via GET /api/feed?url= no proxy do backend, não direto pelo cliente (PLA-R09)"
+  NOT-R01: "Feed é buscado via GET /api/feed?url= no proxy do backend, não direto pelo cliente (TRN-R04)"
   NOT-R02: "Parser aceita itens RSS <item> e entradas Atom <entry>; título ausente vira 'Sem título'"
   NOT-R03: "Resumo vem de description ou content:encoded do item do feed"
   NOT-R04: "Tradução de artigo usa ai.action 'translate:article' — contrato alvo ainda não servido (P01)"
-  NOT-R05: "Converter notícia em pauta cria doc em usuarios/{uid}/notas com título 'Pauta Notícia: <título>'"
-  NOT-R06: "Feed maior que 2MB é rejeitado com 413 e URL sem http/https com 400 (PLA-R09)"
+  NOT-R05: "Converter notícia em pauta cria doc em usuarios/{uid}/ideias com título 'Pauta Notícia: <título>' (IDE-R03)"
+  NOT-R06: "Feed maior que 2MB é rejeitado com 413 e URL sem http/https com 400 (TRN-R04)"
 casos_de_uso:
   CU01: "Criador lê feed de nicho -> NOT-R01, NOT-R02, NOT-R03"
   CU02: "Criador vira notícia em pauta -> NOT-R05"

@@ -1,0 +1,18 @@
+dominio: playbook
+prefixo: PLY
+resumo: "Playbook editorial: regras de retenção extraídas de comparações 30s e organizadas por categoria."
+entidades:
+  Regra: [categoria, titulo, regra, impacto]
+estados: "na: regra é acúmulo editorial"
+permissoes:
+  criador: ["listar e salvar regras no próprio playbook"]
+  admin: ["acesso total via PLA-R03"]
+regras:
+  PLY-R01: "Cada linha '[categoria] regra' do checklist de uma comparação 30s vira um doc de playbook"
+  PLY-R02: "Linha sem prefixo '[categoria]' é classificada como 'retencao'"
+  PLY-R03: "Regra salva guarda titulo '<CATEGORIA> — Comparativo 30s (<nicho>)' e impacto citando os lados A e B"
+  PLY-R04: "Regras ficam em usuarios/{uid}/playbook — isoladas por usuário (PLA-R04)"
+casos_de_uso:
+  CU01: "Criador salva checklist da comparação no playbook -> PLY-R01, PLY-R02, PLY-R03"
+bordas:
+  - "linha do checklist sem categoria -> PLY-R02"

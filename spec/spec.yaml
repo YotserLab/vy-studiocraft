@@ -7,7 +7,7 @@ usuarios:                   # papel: descrição curta
   admin: "usuário com is_admin=true; lê/escreve tudo e acessa /admin e auditoria"
 escopo: ["autenticação com MFA", "documentos por usuário via API fs", "upload de arquivos", "radar de nichos", "projetos com wizard e versões", "roteirista e comparador via Gemini", "notícias RSS", "biblioteca de mídia", "campanhas de publicidade", "templates Remotion e renderização", "painel admin com auditoria"]
 fora_de_escopo: ["pagamento/cobrança de assinatura", "multi-tenant por organização", "upload direto ao YouTube", "notificações por e-mail/push", "comentários/colaboração em tempo real multiusuário", "app mobile nativo"]
-dominios: [contas, plataforma, radar, projetos, roteirista, comparador, noticias, midia, publicidade, render]
+dominios: [contas, mfa, plataforma, transporte, navegacao, radar, projetos, roteirista, comparador, noticias, midia, biblioteca, canais, ideias, notas, playbook, pesquisa, publicidade, configuracoes, dashboard, render]
 nao_funcionais:             # NF01: requisito mensurável (desempenho, disponibilidade...)
   NF01: "Backend Go serve API + SPA num único binário; banco SQLite local via DATABASE_URL"
   NF02: "Feed RSS: timeout 8s, corpo máx 2MB, cache em memória por 5min"
@@ -15,6 +15,9 @@ nao_funcionais:             # NF01: requisito mensurável (desempenho, disponibi
   NF04: "Render Remotion executado por serviço separado (:8090), timeout 600s, saída mp4 em MEDIA_DIR/rendered"
   NF05: "SSE keepalive a cada 25s; eventos de mudança em docs propagados por path"
   NF06: "Sessão via cookie HttpOnly + Bearer; token de sessão de 32 bytes, SESSION_DAYS dias (padrão 30)"
+  NF07: "Backend Go testado com `go test ./...` em backend-go antes de cada entrega"
+  NF08: "Consultas ao banco usam SQL parametrizado; respostas da API são JSON"
+  NF09: "Erros de API respondem JSON {error: mensagem} com código HTTP semântico"
 premissas:                  # P01: o que você assumiu sem confirmar com o usuário
   P01: "Endpoints /api/v1/ai/*, /api/v1/admin/audit, /api/v1/dev/seed, /api/v1/auth/config e /api/v1/auth/profile chamados pelo front ainda não existem no backend Go; spec descreve o contrato alvo"
   P02: "Instância single-user ou poucos usuários (SIGNUP_OPEN=false por padrão; primeiro cadastro vira admin)"

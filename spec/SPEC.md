@@ -20,35 +20,68 @@
 - `CON-R03` E-mail é normalizado (lowercase, trim) e único; duplicado retorna 409
 - `CON-R04` Recebe is_admin o bootstrap (1º usuário) ou quem se cadastra com o e-mail de ADMIN_EMAIL
 - `CON-R05` Login retorna 401 'Credenciais inválidas' para e-mail inexistente ou senha errada, sem distinguir
-- `CON-R06` Com MFA ativo, login retorna mfaRequired+ticket (5min) em vez de criar sessão
-- `CON-R07` Ticket de MFA é de uso único, expira em 5 minutos e tem purpose 'login' ou 'reauth'
 - `CON-R08` Sessão dura SESSION_DAYS dias (padrão 30); aceita cookie vysc_sess, Bearer ou ?token=
-- `CON-R09` mfa/start, mfa/enroll e mfa/unenroll exigem reautenticação feita nos últimos 10 minutos
 - `CON-R10` Reset de senha cria token de 1h e responde mensagem genérica mesmo se o e-mail não existir
 - `CON-R11` Confirmar reset consome o token, atualiza a senha e apaga todas as sessões do usuário
 - `CON-R12` Logout apaga a sessão atual no banco e expira o cookie vysc_sess
 - `CON-R13` verify-email marca email_verified=true; link de debug só aparece com DEV_MODE=true
 - `CON-R14` Cookie de sessão usa Secure apenas em HTTPS e SameSite=None em HTTPS, Lax em HTTP
+- `CON-R15` Senha é persistida como PBKDF2-SHA256, 100k iterações, formato pbkdf2_sha256$iter$salt$hash
+- `CON-R17` A identidade vem da sessão validada; uid enviado pelo cliente é ignorado
+- `CON-R18` Cada usuário tem doc membros/{uid} com papel, plano e status gerenciados pelo admin
 
-## plataforma (PLA) - Camada compartilhada: API de documentos fs, arquivos, feed RSS, SSE e serving do SPA.
+## mfa (MFA) - Autenticação de dois fatores TOTP: enrollment, tickets de uso único e reautenticação.
+- **TotpSecret**: secret, owner
+- **PendingLogin**: ticket, user_id, purpose, expires_at
+- Estados PendingLogin: emitido -> consumido | expirado
+- `MFA-R01` Com MFA ativo, login retorna mfaRequired e ticket de 5 minutos em vez de criar sessão
+- `MFA-R02` Ticket MFA é de uso único, expira em 5 minutos e tem purpose 'login' ou 'reauth'
+- `MFA-R03` mfa/start, mfa/enroll e mfa/unenroll exigem reautenticação feita nos últimos 10 minutos
+- `MFA-R04` Código TOTP errado retorna 401 sem consumir o ticket; só código válido o consome
+- `MFA-R05` mfa/enroll só grava o secret no usuário após validar um código TOTP correto
+- `MFA-R06` mfa/start emite secret TOTP novo sem persistir; persistência ocorre só no enroll
+- `MFA-R07` mfa/reauth com ticket e código válidos atualiza o reauth_at da sessão
+
+## plataforma (PLA) - Modelo de dados por path: coleções, documentos, permissões, merge, sentinels e eventos.
 - **Doc**: path, coll, parent, uid, data, created_at, updated_at
 - **FileMeta**: path, uid, name, content_type, size, disk
 - **AuditEvent**: id, user_id, action, detail, created_at
-- `PLA-R01` Toda rota /api/v1/* de dados exige sessão válida; sem sessão retorna 401
 - `PLA-R02` Path de documento alterna coleção/doc; segmentos ímpares endereçam coleções
 - `PLA-R03` Admin lê e escreve qualquer documento, coleção e arquivo do sistema
 - `PLA-R04` Não-admin só lê/escreve docs sob usuarios/{seu-uid}/; planos e aulas são leitura autenticada
 - `PLA-R05` Coleção erros aceita criação por qualquer autenticado, mas não leitura nem escrita posterior
 - `PLA-R06` Documento membros/{uid} só pode ser escrito pelo próprio usuário dono do uid
-- `PLA-R07` Arquivos existem apenas sob usuarios/{uid}/; acesso ao próprio uid ou admin
-- `PLA-R08` Upload excedente a UPLOAD_MAX_MB (padrão 512MB) retorna 413
-- `PLA-R09` GET /api/feed faz proxy de URL http(s) arbitrária: timeout 8s, corpo máx 2MB, cache 5min
-- `PLA-R10` SSE /api/v1/fs/events exige permissão de leitura no path e envia keepalive a cada 25s
 - `PLA-R11` Listagem de coleção aceita where campo|op|valor, orderBy campo[:desc] e limit>0
-- `PLA-R12` Sessão pode vir do cookie vysc_sess, header Bearer ou query ?token (usado pelo SSE)
-- `PLA-R13` Rota /api/* desconhecida retorna 404 JSON; rotas SPA desconhecidas servem index.html com 404
-- `PLA-R14` GET /api/feed e /feed não exigem sessão — proxy RSS público (gap de segurança, SSRF limitado)
-- `PLA-R15` Proxy /api/render, /api/rendered, /api/gemini/* e mídia de MEDIA_DIR não exigem sessão
+- `PLA-R16` setDoc com merge:true faz merge profundo; sem merge o documento é substituído
+- `PLA-R17` Sentinels: __del apaga o campo, __svts grava timestamp do servidor, __inc soma ao valor atual
+- `PLA-R18` GET em documento inexistente retorna o doc com exists:false e HTTP 200
+- `PLA-R19` IDs de documentos criados são tokens aleatórios gerados pelo backend (authx.Token(8))
+- `PLA-R20` Permissões são avaliadas pela raiz do path; subcoleções herdam a regra do nível superior
+- `PLA-R21` POST, PUT, PATCH e DELETE em docs publicam evento SSE com o path alterado
+
+## transporte (TRN) - Camada HTTP da API: sessão, upload, proxy RSS, SSE, fallback SPA e endpoints públicos.
+- **Request**: method, path, sessao
+- `TRN-R01` Toda rota /api/v1/* de dados exige sessão válida; sem sessão retorna 401
+- `TRN-R02` Arquivos existem apenas sob usuarios/{uid}/; acesso ao próprio uid ou admin
+- `TRN-R03` Upload excedente a UPLOAD_MAX_MB (padrão 512MB) retorna 413
+- `TRN-R04` GET /api/feed faz proxy de URL http(s) arbitrária: timeout 8s, corpo máx 2MB, cache 5min
+- `TRN-R05` SSE /api/v1/fs/events exige permissão de leitura no path e envia keepalive a cada 25s
+- `TRN-R06` Sessão pode vir do cookie vysc_sess, header Bearer ou query ?token (usado pelo SSE)
+- `TRN-R07` Rota /api/* desconhecida retorna 404 JSON; rotas SPA desconhecidas servem index.html com 404
+- `TRN-R08` GET /api/feed e /feed não exigem sessão — proxy RSS público (gap de segurança, SSRF limitado)
+- `TRN-R09` Proxy /api/render, /api/rendered, /api/gemini/* e mídia de MEDIA_DIR não exigem sessão
+
+## navegacao (NAV) - Rotas da SPA, guards de sessão, deep links, returnTo e fallback 404.
+- **Rota**: path, view, privada
+- `NAV-R01` Rota privada sem sessão redireciona para /entrar?returnTo=<path atual>
+- `NAV-R02` returnTo só é aceito se começa com '/' e não contém '//' nem '://' (anti open redirect)
+- `NAV-R03` Navegação interna usa history.pushState; voltar/avançar sincronizam tela e URL
+- `NAV-R04` '/' exibe LandingView pública; usuário logado é redirecionado para /visao-geral
+- `NAV-R05` /templates, /templates/ai-studio e /templates/motion-library são públicas (sem PrivateRoute)
+- `NAV-R06` Rota desconhecida renderiza NotFoundView; backend serve index.html com status 404 (TRN-R07)
+- `NAV-R07` Deep links /projetos/{id}, /canais/{id}, /radar/perfis/{id} e /templates/{id} abrem o recurso direto
+- `NAV-R08` /admin/{tab} sincroniza a tab do painel com a URL (membros, aulas, planos, erros)
+- `NAV-R09` Troca de rota lê query string; /pesquisa?q=<termo> sincroniza o campo de busca
 
 ## radar (RAD) - Perfis de monitoramento de nichos/temas com sinais, tópicos quentes e concorrência.
 - **RadarPerfil**: nome, nicho, formato, aceleracao, taxaOutliers, viewsMedias7d, concorrencia, sinais, topicosQuentes, ultimoSinalAt
@@ -99,23 +132,69 @@
 ## noticias (NOT) - Leitura de feeds RSS/Atom, tradução de artigos via IA e conversão em pautas.
 - **FeedItem**: title, link, publishedAt, summary
 - **Nota**: titulo, texto, origem
-- `NOT-R01` Feed é buscado via GET /api/feed?url= no proxy do backend, não direto pelo cliente (PLA-R09)
+- `NOT-R01` Feed é buscado via GET /api/feed?url= no proxy do backend, não direto pelo cliente (TRN-R04)
 - `NOT-R02` Parser aceita itens RSS <item> e entradas Atom <entry>; título ausente vira 'Sem título'
 - `NOT-R03` Resumo vem de description ou content:encoded do item do feed
 - `NOT-R04` Tradução de artigo usa ai.action 'translate:article' — contrato alvo ainda não servido (P01)
-- `NOT-R05` Converter notícia em pauta cria doc em usuarios/{uid}/notas com título 'Pauta Notícia: <título>'
-- `NOT-R06` Feed maior que 2MB é rejeitado com 413 e URL sem http/https com 400 (PLA-R09)
+- `NOT-R05` Converter notícia em pauta cria doc em usuarios/{uid}/ideias com título 'Pauta Notícia: <título>' (IDE-R03)
+- `NOT-R06` Feed maior que 2MB é rejeitado com 413 e URL sem http/https com 400 (TRN-R04)
 
 ## midia (MID) - Biblioteca de mídia: upload/listagem/download/exclusão de arquivos e vídeos salvos de referência.
 - **FileMeta**: path, uid, name, content_type, size, disk, created_at
 - **VideoSalvo**: titulo, tituloPt, canal, url, duracao, motivoSalvo, categoria
-- `MID-R01` Upload é PUT /api/v1/files/{path} somente sob usuarios/{uid}/ (PLA-R07)
+- `MID-R01` Upload é PUT /api/v1/files/{path} somente sob usuarios/{uid}/ (TRN-R02)
 - `MID-R02` content_type usa ?ct=, depois Content-Type do request, senão 'application/octet-stream'
 - `MID-R03` GET /api/v1/files/{path} retorna metadados; ?download=1 ou sufixo /download serve o binário
 - `MID-R04` DELETE /api/v1/files/{path} remove o metadado e apaga o arquivo do disco
 - `MID-R05` GET /api/v1/files?prefix= lista items e prefixes; prefixo vazio assume usuarios/{uid}
 - `MID-R06` Vídeo salvo exige titulo não vazio; canal em branco assume 'Referência'
 - `MID-R07` Tradução em lote grava tituloPt nos vídeos salvos via IA — contrato alvo (P01)
+
+## biblioteca (BIB) - Navegador de arquivos do usuário: pastas, upload, download e organização da mídia.
+- **Pasta**: prefix
+- **FileItem**: path, name, contentType, size
+- `BIB-R01` Biblioteca navega o prefixo usuarios/{uid} via /api/v1/files?prefix= (MID-R05)
+- `BIB-R02` Subpastas são criadas implicitamente pelo path do upload
+- `BIB-R03` Upload na pasta atual usa PUT /api/v1/files/{prefix}/{nome} (MID-R01)
+- `BIB-R04` Listagem separa arquivos (items) de subpastas (prefixes)
+
+## canais (CAN) - Canais próprios e de referência com métricas e análise estratégica via IA.
+- **Canal**: nome, handle, nicho, tipo, inscritos, views30d, ctrMedio, retencaoMedia, frequenciaSemanal, descricao, analiseIa
+- `CAN-R01` Canal tem tipo 'proprio' ou 'referencia'; /meus-canais filtra tipo diferente de 'referencia'
+- `CAN-R02` Canais ficam em usuarios/{uid}/canais — isolados por usuário (PLA-R04)
+- `CAN-R03` Métricas do canal: inscritos, views30d, ctrMedio, retencaoMedia e frequenciaSemanal
+- `CAN-R04` Análise estratégica usa ai.action 'channel:analyze' e grava o resultado em analiseIa (P01)
+- `CAN-R05` /canais lista todos os canais do usuário; /canais/{id} abre o detalhe (NAV-R07)
+
+## ideias (IDE) - Banco de ideias de vídeo alimentado por notícias, assistente IA e registro manual (/explorar).
+- **Ideia**: titulo, nicho, potencial, origem, notas
+- `IDE-R01` Ideia registra titulo, nicho, potencial, origem e notas
+- `IDE-R02` Ideias ficam em usuarios/{uid}/ideias — isoladas por usuário (PLA-R04)
+- `IDE-R03` Notícia convertida vira ideia com titulo 'Pauta Notícia: <título>', origem 'Notícias RSS', potencial 'alto'
+- `IDE-R04` O assistente IA pode criar ideias via ação da conversa (AssistantIdeaAction)
+- `IDE-R05` Tela /explorar é a visão de ideias do usuário
+
+## notas (NTA) - Notas livres do estúdio com categoria e marcação de fixada.
+- **Nota**: titulo, categoria, conteudo, fixada
+- `NTA-R01` Nota exige titulo não vazio para ser salva
+- `NTA-R02` Nota nasce com fixada=false
+- `NTA-R03` Notas ficam em usuarios/{uid}/notas — isoladas por usuário (PLA-R04)
+- `NTA-R04` Exclusão de nota é física (DELETE do documento), sem lixeira
+
+## playbook (PLY) - Playbook editorial: regras de retenção extraídas de comparações 30s e organizadas por categoria.
+- **Regra**: categoria, titulo, regra, impacto
+- `PLY-R01` Cada linha '[categoria] regra' do checklist de uma comparação 30s vira um doc de playbook
+- `PLY-R02` Linha sem prefixo '[categoria]' é classificada como 'retencao'
+- `PLY-R03` Regra salva guarda titulo '<CATEGORIA> — Comparativo 30s (<nicho>)' e impacto citando os lados A e B
+- `PLY-R04` Regras ficam em usuarios/{uid}/playbook — isoladas por usuário (PLA-R04)
+
+## pesquisa (PES) - Busca global client-side sobre projetos, canais, notas e perfis do radar (/pesquisa).
+- **Resultado**: tipo, titulo, subtitulo, to
+- `PES-R01` Busca cobre 4 coleções: projetos, canais, notas e radar_perfis do usuário
+- `PES-R02` Cada resultado leva tipo (Projeto|Canal|Nota|Radar), titulo, subtitulo e link para a rota da entidade
+- `PES-R03` Filtro é case-insensitive e casa titulo, subtitulo ou tipo
+- `PES-R04` Query string ?q= sincroniza o termo da busca com a URL (NAV-R09)
+- `PES-R05` Busca vazia lista todos os itens das 4 coleções
 
 ## publicidade (PUB) - Registro de campanhas de publicidade e patrocínio por canal, com status de negociação.
 - **Campanha**: marca, canalNome, status, formato, valorAcordado, prazoEntrega, entregaveis
@@ -125,6 +204,24 @@
 - `PUB-R04` Status da campanha é atualizado via PATCH no documento
 - `PUB-R05` Campanhas ficam em usuarios/{uid}/publicidade — isoladas por usuário (PLA-R04)
 - `PUB-R06` Lista vazia exibe estado 'Nenhuma campanha de publicidade cadastrada'
+
+## configuracoes (CFG) - Preferências do usuário (tema visual) e configuração de runtime da aplicação.
+- **PrefDoc**: tema
+- **RuntimeConfig**: campos expostos por /api/v1/auth/config
+- `CFG-R01` Tema do usuário é gravado em usuarios/{uid}/config/app no campo tema
+- `CFG-R02` Tema só é aplicado se existir no registro TEMAS; valor inválido cai para 'claro'
+- `CFG-R03` Sem login ou sem doc, o tema vem do localStorage 'vysc_tema' com fallback 'claro'
+- `CFG-R04` Ao logar, o tema do doc remoto sobrescreve o localStorage
+- `CFG-R05` Config de runtime vem de GET /api/v1/auth/config — ainda não servido pelo Go (P01)
+
+## dashboard (DSH) - Visão geral (/visao-geral): agregações de canais, projetos, publicidade e radar.
+- **Overview**: canais, projetos, publicidade, radar_perfis
+- `DSH-R01` Visão geral agrega as coleções canais, projetos, publicidade e radar_perfis do usuário
+- `DSH-R02` meusCanais exclui canais com tipo 'referencia' das somas
+- `DSH-R03` totalInscritos e totalViews30d somam os campos dos canais próprios
+- `DSH-R04` projetosAtivos são projetos com estagio diferente de 'publicado'
+- `DSH-R05` publisPendentes são campanhas com status diferente de 'concluida'
+- `DSH-R06` A visão geral abre o wizard de criação de projeto (PRJ-R02)
 
 ## render (REN) - Serviço de renderização Remotion + Gemini: templates parametrizados viram mp4 e mídia.
 - **RenderJob**: templateId, compositionId, props, resolution, codec
@@ -150,6 +247,9 @@
 - `NF04` Render Remotion executado por serviço separado (:8090), timeout 600s, saída mp4 em MEDIA_DIR/rendered
 - `NF05` SSE keepalive a cada 25s; eventos de mudança em docs propagados por path
 - `NF06` Sessão via cookie HttpOnly + Bearer; token de sessão de 32 bytes, SESSION_DAYS dias (padrão 30)
+- `NF07` Backend Go testado com `go test ./...` em backend-go antes de cada entrega
+- `NF08` Consultas ao banco usam SQL parametrizado; respostas da API são JSON
+- `NF09` Erros de API respondem JSON {error: mensagem} com código HTTP semântico
 
 ## Premissas (assumidas, não confirmadas)
 - `P01` Endpoints /api/v1/ai/*, /api/v1/admin/audit, /api/v1/dev/seed, /api/v1/auth/config e /api/v1/auth/profile chamados pelo front ainda não existem no backend Go; spec descreve o contrato alvo

@@ -1,38 +1,31 @@
 dominio: plataforma
 prefixo: PLA
-resumo: "Camada compartilhada: API de documentos fs, arquivos, feed RSS, SSE e serving do SPA."
+resumo: "Modelo de dados por path: coleções, documentos, permissões, merge, sentinels e eventos."
 entidades:
   Doc: [path, coll, parent, uid, data, created_at, updated_at]
   FileMeta: [path, uid, name, content_type, size, disk]
   AuditEvent: [id, user_id, action, detail, created_at]
 estados: "na: docs schemaless; estados de negócio vivem nos domínios"
 permissoes:
-  visitante: ["feed RSS público (PLA-R14)", "proxy render/gemini e mídia pública (PLA-R15)"]
+  visitante: ["feed RSS público (TRN-R08)", "proxy render/gemini e mídia pública (TRN-R09)"]
   criador: ["CRUD sob usuarios/{seu-uid}/", "criar docs em erros/", "ler planos e aulas", "files sob seu uid"]
   admin: ["ler/escrever qualquer doc, coleção e arquivo"]
 regras:
-  PLA-R01: "Toda rota /api/v1/* de dados exige sessão válida; sem sessão retorna 401"
   PLA-R02: "Path de documento alterna coleção/doc; segmentos ímpares endereçam coleções"
   PLA-R03: "Admin lê e escreve qualquer documento, coleção e arquivo do sistema"
   PLA-R04: "Não-admin só lê/escreve docs sob usuarios/{seu-uid}/; planos e aulas são leitura autenticada"
   PLA-R05: "Coleção erros aceita criação por qualquer autenticado, mas não leitura nem escrita posterior"
   PLA-R06: "Documento membros/{uid} só pode ser escrito pelo próprio usuário dono do uid"
-  PLA-R07: "Arquivos existem apenas sob usuarios/{uid}/; acesso ao próprio uid ou admin"
-  PLA-R08: "Upload excedente a UPLOAD_MAX_MB (padrão 512MB) retorna 413"
-  PLA-R09: "GET /api/feed faz proxy de URL http(s) arbitrária: timeout 8s, corpo máx 2MB, cache 5min"
-  PLA-R10: "SSE /api/v1/fs/events exige permissão de leitura no path e envia keepalive a cada 25s"
   PLA-R11: "Listagem de coleção aceita where campo|op|valor, orderBy campo[:desc] e limit>0"
-  PLA-R12: "Sessão pode vir do cookie vysc_sess, header Bearer ou query ?token (usado pelo SSE)"
-  PLA-R13: "Rota /api/* desconhecida retorna 404 JSON; rotas SPA desconhecidas servem index.html com 404"
-  PLA-R14: "GET /api/feed e /feed não exigem sessão — proxy RSS público (gap de segurança, SSRF limitado)"
-  PLA-R15: "Proxy /api/render, /api/rendered, /api/gemini/* e mídia de MEDIA_DIR não exigem sessão"
+  PLA-R16: "setDoc com merge:true faz merge profundo; sem merge o documento é substituído"
+  PLA-R17: "Sentinels: __del apaga o campo, __svts grava timestamp do servidor, __inc soma ao valor atual"
+  PLA-R18: "GET em documento inexistente retorna o doc com exists:false e HTTP 200"
+  PLA-R19: "IDs de documentos criados são tokens aleatórios gerados pelo backend (authx.Token(8))"
+  PLA-R20: "Permissões são avaliadas pela raiz do path; subcoleções herdam a regra do nível superior"
+  PLA-R21: "POST, PUT, PATCH e DELETE em docs publicam evento SSE com o path alterado"
 casos_de_uso:
-  CU01: "Criador lista seus projetos -> PLA-R01, PLA-R02, PLA-R04, PLA-R11"
-  CU04: "Visitante acessa feed e mídia -> PLA-R14, PLA-R15"
-  CU02: "Frontend assina mudanças em tempo real -> PLA-R10, PLA-R12"
-  CU03: "Criador sobe arquivo grande -> PLA-R07, PLA-R08"
+  CU01: "Criador lista seus projetos -> TRN-R01, PLA-R02, PLA-R04, PLA-R11"
+  CU02: "Visitante acessa feed e mídia -> TRN-R08, TRN-R09"
 bordas:
-  - "watch em coleção alheia -> PLA-R04, PLA-R10"
+  - "watch em coleção alheia -> PLA-R04, TRN-R05"
   - "path com segmentos pares em POST -> PLA-R02"
-  - "feed com URL sem scheme http/https -> PLA-R09"
-  - "acesso anônimo a /api/gemini/* consome cota da API key -> PLA-R15"

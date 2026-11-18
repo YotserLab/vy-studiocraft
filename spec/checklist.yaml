@@ -2,10 +2,10 @@
 
 # --- pack base: sempre (todo app)
 base.01: "sim CON-R04, PLA-R03, PLA-R04"   # Quem são os atores/papéis e o que cada um pode fazer?
-base.02: "sim PRJ-R02, ROT-R06, REN-R01"   # Qual o fluxo principal ponta a ponta (caminho feliz)?
+base.02: "sim PRJ-R02, ROT-R06, REN-R01, DSH-R01"   # Qual o fluxo principal ponta a ponta (caminho feliz)?
 base.03: "sim PRJ-R08"   # Quais entidades têm ciclo de vida e quais transições são proibidas?
 base.04: "sim CON-R02, CON-R03, PRJ-R01, RAD-R01, MID-R06, PUB-R01"   # Quais dados são obrigatórios, únicos ou validados (formato, limites)?
-base.05: "sim CON-R05, PLA-R13, REN-R05, NOT-R06"   # O que acontece em falhas (validação, rede, serviço externo) e o que o usuário vê?
+base.05: "sim CON-R05, TRN-R07, REN-R05, NOT-R06"   # O que acontece em falhas (validação, rede, serviço externo) e o que o usuário vê?
 base.06: "sim PRJ-R09, MID-R04, CON-R11, CON-R12"   # Há operações destrutivas? Exclusão lógica ou física, e há confirmação?
 base.07: "na: app não faz cálculos monetários; valorAcordado da campanha é texto livre"   # Há cálculos ou valores sensíveis (dinheiro, datas, arredondamento, moeda)?
 base.08: "sim CON-R01, RAD-R05, PUB-R06"   # Como se comporta o primeiro acesso / estado sem dados?
@@ -21,12 +21,12 @@ auth.05: "na: sem rate limit/bloqueio de login; mitigado por senha com hash e MF
 auth.06: "na: verify-email marca email_verified (CON-R13) mas nada é bloqueado para não verificado"   # E-mail precisa ser verificado antes de usar? O que o usuário não verificado pode fazer?
 auth.07: "na: sem fluxo de convites; cadastro fechado por padrão (CON-R01)"   # Convites e onboarding: quem convida, expiração, reenvio?
 auth.08: "na: sem desativação/exclusão de conta implementada"   # Conta desativada/removida: o que acontece com sessões e dados?
-auth.09: "sim CON-R06, CON-R07, CON-R09"   # Há MFA ou tokens de API? Como são emitidos e revogados?
+auth.09: "sim MFA-R01, MFA-R02, MFA-R03, MFA-R04"   # Há MFA ou tokens de API? Como são emitidos e revogados?
 
 # --- pack api: backend expõe API (REST/GraphQL) para clientes
 api.01: "na: versão única /api/v1 sem política formal de compatibilidade"   # Versionamento e política de mudanças incompatíveis?
-api.02: "sim PLA-R13, CON-R05"   # Formato padrão de erro (código, mensagem, campos inválidos) e códigos HTTP?
-api.03: "sim PLA-R01, PLA-R03, PLA-R04, PLA-R07"   # Autenticação e escopos por endpoint?
+api.02: "sim TRN-R07, CON-R05"   # Formato padrão de erro (código, mensagem, campos inválidos) e códigos HTTP?
+api.03: "sim TRN-R01, PLA-R03, PLA-R04, TRN-R02"   # Autenticação e escopos por endpoint?
 api.04: "sim PLA-R11"   # Paginação, filtros e limites máximos padronizados?
 api.05: "na: sem rate limit; feed tem cache 5min (NF02) e upload tem teto (NF03)"   # Rate limit e cabeçalhos informativos?
 api.06: "na: sem Idempotency-Key; criações de doc geram id novo por chamada"   # Idempotency-Key em operações de criação/pagamento?
@@ -48,13 +48,13 @@ ui.01: "sim RAD-R05, PUB-R06"   # Todas as telas têm estados de carregando, vaz
 ui.02: "sim CON-R02, PRJ-R01, RAD-R01, MID-R06, PUB-R01"   # Validação de formulários: quando ocorre e mensagens por campo?
 ui.03: "na: exclusões físicas sem diálogo de confirmação verificado (gap de UX)"   # Ações destrutivas pedem confirmação e permitem desfazer quando possível?
 ui.04: "sim PRJ-R02"   # Duplo clique/reenvio é bloqueado durante a requisição?
-ui.05: "sim PLA-R13"   # Rotas protegidas, redirecionamento pós-login e página 404?
+ui.05: "sim NAV-R01, NAV-R02, NAV-R06"   # Rotas protegidas, redirecionamento pós-login e página 404?
 ui.06: "na: sem requisito formal de a11y/mobile; uso desktop-first (P02)"   # Responsividade (mobile) e acessibilidade básica (teclado, contraste, rótulos)?
 ui.07: "sim P08"   # Idioma e formatos (pt-BR, data, moeda); há previsão de i18n?
 ui.08: "na: sem preservação de rascunho quando a sessão expira"   # Sessão expirada no meio de uma ação: o que acontece com o que o usuário digitou?
 
 # --- pack integracoes: APIs, webhooks ou serviços externos
-integracoes.01: "sim P04, PLA-R09, REN-R07"   # Quais sistemas externos e para que cada um é usado?
+integracoes.01: "sim P04, TRN-R04, REN-R07"   # Quais sistemas externos e para que cada um é usado?
 integracoes.02: "sim P04"   # Autenticação, limites de uso e rotação de credenciais?
 integracoes.03: "sim NF02, NF04, REN-R10"   # Timeout, retry com backoff e idempotência nas chamadas?
 integracoes.04: "sim REN-R03"   # Comportamento quando o serviço externo está fora (fallback/degradação)?
@@ -64,19 +64,19 @@ integracoes.07: "sim P09"   # Sandbox/mocks para desenvolvimento e testes?
 integracoes.08: "na: modelo gemini-2.5-flash fixo em código; RSS/Atom são formatos estáveis"   # Versão e mudança de contrato do terceiro?
 
 # --- pack arquivos: upload, download ou geração de arquivos
-arquivos.01: "sim PLA-R08, MID-R02"   # Tipos, extensões e tamanho máximo aceitos?
-arquivos.02: "sim PLA-R07, MID-R03"   # Onde são armazenados e como o acesso é protegido (URL assinada, permissão)?
+arquivos.01: "sim TRN-R03, MID-R02"   # Tipos, extensões e tamanho máximo aceitos?
+arquivos.02: "sim TRN-R02, MID-R03"   # Onde são armazenados e como o acesso é protegido (URL assinada, permissão)?
 arquivos.03: "na: sem validação de conteúdo real nem antivírus; content_type é declarativo"   # Validação do conteúdo real (não só a extensão) e varredura de malware?
 arquivos.04: "sim REN-R04, REN-R05, NF04"   # Processamento assíncrono (miniaturas, OCR, conversão): estados e falhas?
-arquivos.05: "sim PLA-R08"   # Limites por usuário/plano e o que acontece ao exceder?
+arquivos.05: "sim TRN-R03"   # Limites por usuário/plano e o que acontece ao exceder?
 arquivos.06: "sim MID-R04"   # Remoção: arquivos órfãos e quando o registro é apagado?
 arquivos.07: "sim MID-R02"   # Nome, colisão e caracteres especiais?
 
 # --- pack listagens: telas ou endpoints que listam, buscam ou filtram dados
 listagens.01: "sim PLA-R11"   # Paginação (cursor ou página), tamanho padrão e máximo?
 listagens.02: "sim PLA-R11"   # Ordenação padrão estável e quais campos são ordenáveis?
-listagens.03: "sim PLA-R11, RAD-R08"   # Filtros disponíveis e combinação entre eles?
-listagens.04: "sim RAD-R08"   # Busca textual: campos, acentos, maiúsculas/minúsculas, mínimo de caracteres?
+listagens.03: "sim PLA-R11, RAD-R08, PES-R03"   # Filtros disponíveis e combinação entre eles?
+listagens.04: "sim RAD-R08, PES-R03, PES-R04"   # Busca textual: campos, acentos, maiúsculas/minúsculas, mínimo de caracteres?
 listagens.05: "sim PUB-R06, RAD-R05"   # Estado vazio e estado sem resultados da busca?
 listagens.06: "na: sem exportação CSV/PDF"   # Exportação (CSV/PDF): limites e permissões?
 listagens.07: "sim P10"   # Desempenho com volume alto (índices, limites)?
@@ -118,8 +118,8 @@ seguranca.07: "?"   # Dados sensíveis são mascarados em logs e respostas de er
 seguranca.08: "?"   # Dependências são fixadas e há plano para atualizar vulnerabilidades?
 
 # --- pack seguranca: sempre (todo app)
-seguranca.01: "sim CON-R02, PLA-R08, PLA-R11, NOT-R06"   # Toda entrada externa é validada no servidor (tipo, tamanho, formato)?
-seguranca.02: "sim PLA-R03, PLA-R04, PLA-R07"   # Autorização é checada por recurso/ação no backend, e não só escondida na UI?
+seguranca.01: "sim CON-R02, TRN-R03, PLA-R11, NOT-R06"   # Toda entrada externa é validada no servidor (tipo, tamanho, formato)?
+seguranca.02: "sim PLA-R03, PLA-R04, TRN-R02"   # Autorização é checada por recurso/ação no backend, e não só escondida na UI?
 seguranca.03: "sim P04"   # Segredos e chaves ficam fora do código e do repositório?
 seguranca.04: "na: SQL via prepared statements do driver; Markdown renderizado no client sem sanitização explícita verificada"   # Proteção contra injeção (SQL/comando) e XSS nas saídas renderizadas?
 seguranca.05: "sim CON-R08, CON-R14"   # CSRF/CORS/cookies (HttpOnly, Secure, SameSite) definidos para a forma de sessão usada?
