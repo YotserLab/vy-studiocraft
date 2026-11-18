@@ -838,6 +838,11 @@ func (s *Server) handleFileDelete(w http.ResponseWriter, r *http.Request) {
 // ===================================
 
 func (s *Server) handleFeed(w http.ResponseWriter, r *http.Request) {
+	// TRN-R08: proxy RSS exige sessão (SSRF fechado)
+	if _, sess := s.currentSession(r); sess == nil {
+		writeJSON(w, http.StatusUnauthorized, map[string]any{"error": "Não autenticado."})
+		return
+	}
 	rawURL := strings.TrimSpace(r.URL.Query().Get("url"))
 	u, err := url.Parse(rawURL)
 	if err != nil || (u.Scheme != "http" && u.Scheme != "https") || u.Host == "" {

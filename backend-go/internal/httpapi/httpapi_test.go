@@ -181,3 +181,26 @@ func TestDocsRBACFilesAndNoBilling(t *testing.T) {
 		t.Fatalf("esperado 404 para rota de billing inexistente, obtido %d", bill.Code)
 	}
 }
+
+// TRN-R08: proxy RSS exige sessão válida
+func TestFeedRequiresSession_TRN_R08(t *testing.T) {
+	srv, _ := newTestServer(t, false)
+	rec := reqJSON(srv.Handler(), "POST", "/api/v1/auth/signup", map[string]any{
+		"email": "u@vystudiocraft.local", "password": "Password123", "name": "U",
+	}, nil)
+	cookies := rec.Result().Cookies()
+
+	anon := reqJSON(srv.Handler(), "GET", "/api/feed?url=https://example.com/rss", nil, nil)
+	if anon.Code != http.StatusUnauthorized {
+		t.Fatalf("esperado 401 sem sessão, obtido %d", anon.Code)
+	}
+	anon2 := reqJSON(srv.Handler(), "GET", "/feed?url=https://example.com/rss", nil, nil)
+	if anon2.Code != http.StatusUnauthorized {
+		t.Fatalf("esperado 401 sem sessão em /feed, obtido %d", anon2.Code)
+	}
+	// com sessão, a guarda passa e a validação de URL responde 400
+	authed := reqJSON(srv.Handler(), "GET", "/api/feed?url=ftp://invalido", nil, cookies)
+	if authed.Code != http.StatusBadRequest {
+		t.Fatalf("esperado 400 autenticado com scheme inválido, obtido %d", authed.Code)
+	}
+}
