@@ -23,7 +23,7 @@ func newTestServerProdLike(t *testing.T, signupOpen bool) (*Server, *store.DB) {
 		DataDir:     dir,
 		WebDir:      dir,
 		AdminEmail:  "admin@vystudiocraft.local",
-		AppOrigin:   "http://localhost:8080",
+		AppOrigin:   "http://localhost:34568",
 		SessionDays: 30,
 		UploadMaxMB: 10,
 		DevMode:     false,

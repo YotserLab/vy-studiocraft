@@ -11,7 +11,7 @@ Three services, orchestrated for dev and unified in production:
 | Service | Stack | Dev port | Role |
 |---|---|---|---|
 | Frontend | React 19 + Vite + Tailwind CSS 4 | `:34567` | SPA; proxies `/api` in dev |
-| Backend | Go (`backend-go/`) | `:8080` | REST API `/api/v1/*`, SQLite store, serves the built SPA in prod |
+| Backend | Go (`backend-go/`) | `:34568` | REST API `/api/v1/*`, SQLite store, serves the built SPA in prod |
 | Render service | Node/tsx + Express + Remotion + Gemini | `:8090` | Renders parameterized video templates, serves generated media |
 
 In production, a single Go binary serves the API and the static SPA.

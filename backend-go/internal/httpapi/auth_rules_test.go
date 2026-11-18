@@ -41,7 +41,7 @@ func newAuthRulesServer(t *testing.T, mutate func(*config.Config)) (*Server, *st
 		WebDir:      dir,
 		MediaDir:    dir,
 		AdminEmail:  "admin@vystudiocraft.local",
-		AppOrigin:   "http://localhost:8080",
+		AppOrigin:   "http://localhost:34568",
 		SessionDays: 30,
 		UploadMaxMB: 10,
 		DevMode:     true,

@@ -1,12 +1,12 @@
 # VYStudioCraft — FE (Vite/React) + BE (Go)
-# Dev:  Vite dev server :34567 com proxy /api -> Go :8080
+# Dev:  Vite dev server :34567 com proxy /api -> Go :34568
 # Prod: binário Go serve API + dist/ em :34567
 
 PM ?= bun
 
 .PHONY: dev dev-fe dev-be build build-fe build-be prod start clean lint
 
-## Sobe FE + BE em modo dev (FE :34567, BE :8080)
+## Sobe FE + BE em modo dev (FE :34567, BE :34568)
 dev:
 	$(PM) run dev
 
@@ -14,7 +14,7 @@ dev:
 dev-fe:
 	$(PM) run dev:fe
 
-## Somente backend (Go :8080)
+## Somente backend (Go :34568)
 dev-be:
 	$(PM) run dev:be
 

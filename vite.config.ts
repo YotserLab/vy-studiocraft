@@ -29,9 +29,9 @@ export default defineConfig(() => {
         '/previews': { target: 'http://localhost:8090', changeOrigin: true },
         '/rendercomp-thumbs': { target: 'http://localhost:8090', changeOrigin: true },
         '/cache': { target: 'http://localhost:8090', changeOrigin: true },
-        // API principal Go :8080
+        // API principal Go :34568
         '/api': {
-          target: process.env.API_PROXY_TARGET || 'http://localhost:8080',
+          target: process.env.API_PROXY_TARGET || 'http://localhost:34568',
           changeOrigin: true,
         },
       },

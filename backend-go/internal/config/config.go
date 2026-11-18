@@ -55,7 +55,7 @@ func Load() Config {
 				addr = ":" + port
 			}
 		} else {
-			addr = ":8080"
+			addr = ":34568"
 		}
 	}
 
@@ -105,7 +105,7 @@ func Load() Config {
 
 	appOrigin := strings.TrimRight(strings.TrimSpace(os.Getenv("APP_ORIGIN")), "/")
 	if appOrigin == "" {
-		appOrigin = "http://localhost:8080"
+		appOrigin = "http://localhost:34568"
 	}
 
 	devMode := envBool("DEV_MODE", true)
