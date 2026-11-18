@@ -1,0 +1,25 @@
+dominio: midia
+prefixo: MID
+resumo: "Biblioteca de mídia: upload/listagem/download/exclusão de arquivos e vídeos salvos de referência."
+entidades:
+  FileMeta: [path, uid, name, content_type, size, disk, created_at]
+  VideoSalvo: [titulo, tituloPt, canal, url, duracao, motivoSalvo, categoria]
+estados: "na: arquivo existe ou foi removido (exclusão física)"
+permissoes:
+  criador: ["upload/download/excluir sob usuarios/{seu-uid}/", "listar próprio prefixo", "gerenciar vídeos salvos"]
+  admin: ["acesso total via PLA-R03, PLA-R07"]
+regras:
+  MID-R01: "Upload é PUT /api/v1/files/{path} somente sob usuarios/{uid}/ (PLA-R07)"
+  MID-R02: "content_type usa ?ct=, depois Content-Type do request, senão 'application/octet-stream'"
+  MID-R03: "GET /api/v1/files/{path} retorna metadados; ?download=1 ou sufixo /download serve o binário"
+  MID-R04: "DELETE /api/v1/files/{path} remove o metadado e apaga o arquivo do disco"
+  MID-R05: "GET /api/v1/files?prefix= lista items e prefixes; prefixo vazio assume usuarios/{uid}"
+  MID-R06: "Vídeo salvo exige titulo não vazio; canal em branco assume 'Referência'"
+  MID-R07: "Tradução em lote grava tituloPt nos vídeos salvos via IA — contrato alvo (P01)"
+casos_de_uso:
+  CU01: "Criador envia mídia -> MID-R01, MID-R02"
+  CU02: "Criador baixa arquivo -> MID-R03"
+  CU03: "Criador salva referência de vídeo -> MID-R06"
+bordas:
+  - "upload acima de 512MB -> PLA-R08"
+  - "nome vazio usa último segmento do path -> MID-R02"

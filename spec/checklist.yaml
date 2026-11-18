@@ -1,0 +1,128 @@
+# Respostas: "sim ID[, ID]" (cita regra PED-R01, NF01 ou P01) | "na: motivo" | "?" (pendente)
+
+# --- pack base: sempre (todo app)
+base.01: "sim CON-R04, PLA-R03, PLA-R04"   # Quem são os atores/papéis e o que cada um pode fazer?
+base.02: "sim PRJ-R02, ROT-R06, REN-R01"   # Qual o fluxo principal ponta a ponta (caminho feliz)?
+base.03: "sim PRJ-R08"   # Quais entidades têm ciclo de vida e quais transições são proibidas?
+base.04: "sim CON-R02, CON-R03, PRJ-R01, RAD-R01, MID-R06, PUB-R01"   # Quais dados são obrigatórios, únicos ou validados (formato, limites)?
+base.05: "sim CON-R05, PLA-R13, REN-R05, NOT-R06"   # O que acontece em falhas (validação, rede, serviço externo) e o que o usuário vê?
+base.06: "sim PRJ-R09, MID-R04, CON-R11, CON-R12"   # Há operações destrutivas? Exclusão lógica ou física, e há confirmação?
+base.07: "na: app não faz cálculos monetários; valorAcordado da campanha é texto livre"   # Há cálculos ou valores sensíveis (dinheiro, datas, arredondamento, moeda)?
+base.08: "sim CON-R01, RAD-R05, PUB-R06"   # Como se comporta o primeiro acesso / estado sem dados?
+base.09: "sim NF01, NF03, NF04, CON-R01"   # Como o app é configurado e implantado (variáveis, segredos, ambientes)?
+base.10: "sim P02"   # Qual o critério de pronto do MVP (o que precisa funcionar para entregar)?
+
+# --- pack auth: app com login, contas ou usuários identificados
+auth.01: "sim CON-R01, CON-R02, CON-R05, CON-R08"   # Como o usuário se cadastra e autentica (e-mail/senha, SSO, magic link)?
+auth.02: "sim CON-R10, CON-R11"   # Como funciona recuperação de senha/acesso e qual a validade do link?
+auth.03: "sim CON-R08, CON-R12, NF06"   # Sessão: duração, renovação, logout e revogação (todos os dispositivos)?
+auth.04: "sim CON-R04, PLA-R03, PLA-R04"   # Papéis e permissões: onde são definidos e como são verificados por recurso?
+auth.05: "na: sem rate limit/bloqueio de login; mitigado por senha com hash e MFA opcional (gap registrado)"   # Proteção contra força bruta e bloqueio de conta?
+auth.06: "na: verify-email marca email_verified (CON-R13) mas nada é bloqueado para não verificado"   # E-mail precisa ser verificado antes de usar? O que o usuário não verificado pode fazer?
+auth.07: "na: sem fluxo de convites; cadastro fechado por padrão (CON-R01)"   # Convites e onboarding: quem convida, expiração, reenvio?
+auth.08: "na: sem desativação/exclusão de conta implementada"   # Conta desativada/removida: o que acontece com sessões e dados?
+auth.09: "sim CON-R06, CON-R07, CON-R09"   # Há MFA ou tokens de API? Como são emitidos e revogados?
+
+# --- pack api: backend expõe API (REST/GraphQL) para clientes
+api.01: "na: versão única /api/v1 sem política formal de compatibilidade"   # Versionamento e política de mudanças incompatíveis?
+api.02: "sim PLA-R13, CON-R05"   # Formato padrão de erro (código, mensagem, campos inválidos) e códigos HTTP?
+api.03: "sim PLA-R01, PLA-R03, PLA-R04, PLA-R07"   # Autenticação e escopos por endpoint?
+api.04: "sim PLA-R11"   # Paginação, filtros e limites máximos padronizados?
+api.05: "na: sem rate limit; feed tem cache 5min (NF02) e upload tem teto (NF03)"   # Rate limit e cabeçalhos informativos?
+api.06: "na: sem Idempotency-Key; criações de doc geram id novo por chamada"   # Idempotency-Key em operações de criação/pagamento?
+api.07: "na: sem OpenAPI; contrato descrito nesta spec e no código"   # Documentação (OpenAPI) mantida junto do código?
+
+# --- pack dados: app que persiste dados
+dados.01: "na: sem lock otimista/versão em docs; PATCH sobrescreve campos (P02 mitiga)"   # Edição simultânea: como evitar sobrescrita (versão/lock otimista)?
+dados.02: "na: sem chaves de idempotência; POST em coleção cria id novo a cada chamada"   # Criações idempotentes (duplo clique, retry) e chaves de idempotência?
+dados.03: "na: criação de projeto + versoes/v1 usa 2 chamadas do front, não transacional"   # Operações que alteram várias entidades são atômicas (transação)? E se falhar no meio?
+dados.04: "sim P05"   # Datas guardadas em UTC e exibidas no fuso do usuário? Datas só de dia vs. instante?
+dados.05: "sim PRJ-R09, MID-R04"   # Exclusão lógica: efeito em unicidade, listagens, relações e restauração?
+dados.06: "sim P06"   # Migrações e backfill: ordem, reversão e dados existentes?
+dados.07: "na: sem política de backup/retenção; SQLite local em DATA_DIR"   # Retenção, backup e restauração?
+dados.08: "sim PLA-R02"   # Identificadores (uuid/sequencial) e o que é exposto ao cliente?
+dados.09: "sim CON-R03, P07"   # Integridade: chaves estrangeiras, cascata e restrições de unicidade?
+
+# --- pack ui: app com interface de usuário
+ui.01: "sim RAD-R05, PUB-R06"   # Todas as telas têm estados de carregando, vazio, erro e sucesso?
+ui.02: "sim CON-R02, PRJ-R01, RAD-R01, MID-R06, PUB-R01"   # Validação de formulários: quando ocorre e mensagens por campo?
+ui.03: "na: exclusões físicas sem diálogo de confirmação verificado (gap de UX)"   # Ações destrutivas pedem confirmação e permitem desfazer quando possível?
+ui.04: "sim PRJ-R02"   # Duplo clique/reenvio é bloqueado durante a requisição?
+ui.05: "sim PLA-R13"   # Rotas protegidas, redirecionamento pós-login e página 404?
+ui.06: "na: sem requisito formal de a11y/mobile; uso desktop-first (P02)"   # Responsividade (mobile) e acessibilidade básica (teclado, contraste, rótulos)?
+ui.07: "sim P08"   # Idioma e formatos (pt-BR, data, moeda); há previsão de i18n?
+ui.08: "na: sem preservação de rascunho quando a sessão expira"   # Sessão expirada no meio de uma ação: o que acontece com o que o usuário digitou?
+
+# --- pack integracoes: APIs, webhooks ou serviços externos
+integracoes.01: "sim P04, PLA-R09, REN-R07"   # Quais sistemas externos e para que cada um é usado?
+integracoes.02: "sim P04"   # Autenticação, limites de uso e rotação de credenciais?
+integracoes.03: "sim NF02, NF04, REN-R10"   # Timeout, retry com backoff e idempotência nas chamadas?
+integracoes.04: "sim REN-R03"   # Comportamento quando o serviço externo está fora (fallback/degradação)?
+integracoes.05: "na: sem webhooks de entrada"   # Webhooks de entrada: assinatura, ordem e duplicidade de eventos?
+integracoes.06: "na: sem webhooks de saída"   # Webhooks de saída: retentativas, falhas permanentes e visibilidade ao usuário?
+integracoes.07: "sim P09"   # Sandbox/mocks para desenvolvimento e testes?
+integracoes.08: "na: modelo gemini-2.5-flash fixo em código; RSS/Atom são formatos estáveis"   # Versão e mudança de contrato do terceiro?
+
+# --- pack arquivos: upload, download ou geração de arquivos
+arquivos.01: "sim PLA-R08, MID-R02"   # Tipos, extensões e tamanho máximo aceitos?
+arquivos.02: "sim PLA-R07, MID-R03"   # Onde são armazenados e como o acesso é protegido (URL assinada, permissão)?
+arquivos.03: "na: sem validação de conteúdo real nem antivírus; content_type é declarativo"   # Validação do conteúdo real (não só a extensão) e varredura de malware?
+arquivos.04: "sim REN-R04, REN-R05, NF04"   # Processamento assíncrono (miniaturas, OCR, conversão): estados e falhas?
+arquivos.05: "sim PLA-R08"   # Limites por usuário/plano e o que acontece ao exceder?
+arquivos.06: "sim MID-R04"   # Remoção: arquivos órfãos e quando o registro é apagado?
+arquivos.07: "sim MID-R02"   # Nome, colisão e caracteres especiais?
+
+# --- pack listagens: telas ou endpoints que listam, buscam ou filtram dados
+listagens.01: "sim PLA-R11"   # Paginação (cursor ou página), tamanho padrão e máximo?
+listagens.02: "sim PLA-R11"   # Ordenação padrão estável e quais campos são ordenáveis?
+listagens.03: "sim PLA-R11, RAD-R08"   # Filtros disponíveis e combinação entre eles?
+listagens.04: "sim RAD-R08"   # Busca textual: campos, acentos, maiúsculas/minúsculas, mínimo de caracteres?
+listagens.05: "sim PUB-R06, RAD-R05"   # Estado vazio e estado sem resultados da busca?
+listagens.06: "na: sem exportação CSV/PDF"   # Exportação (CSV/PDF): limites e permissões?
+listagens.07: "sim P10"   # Desempenho com volume alto (índices, limites)?
+
+# --- pack operacao: app que vai para produção
+operacao.01: "na: logs de console simples no render-service, sem request id estruturado"   # Logs estruturados com request id e níveis definidos?
+operacao.02: "na: sem endpoint /health nem métricas"   # Métricas, alertas e health check?
+operacao.03: "na: render é síncrono via HTTP com timeout 600s (REN-R10), sem fila"   # Jobs agendados/filas: retry, dead-letter, idempotência e concorrência?
+operacao.04: "sim NF01, P06"   # Deploy e rollback: como migrações rodam e qual a estratégia?
+operacao.05: "sim P09"   # Ambientes (dev/staging/prod) e dados de teste/seed?
+operacao.06: "sim NF03, NF04, REN-R10"   # Limites de recursos e comportamento sob carga?
+operacao.07: "sim PLA-R05"   # Rastreamento de erros e quem é avisado?
+
+# --- pack lgpd: dados pessoais de pessoas no Brasil
+lgpd.01: "sim P03"   # Quais dados pessoais são coletados e para que finalidade (inventário)?
+lgpd.02: "na: cadastro fechado por padrão; base é execução do serviço pelo próprio titular"   # Base legal ou consentimento: como é pedido e registrado?
+lgpd.03: "na: sem endpoint de exportação; titular acessa os dados pelas próprias APIs"   # Titular pode acessar/exportar seus dados?
+lgpd.04: "sim PLA-R04, MID-R04, PRJ-R09"   # Titular pode corrigir e excluir/anonimizar seus dados? Efeitos em registros ligados?
+lgpd.05: "na: sem política de retenção; dados persistem até exclusão manual"   # Prazo de retenção por tipo de dado?
+lgpd.06: "sim P04"   # Compartilhamento com terceiros/operadores e onde ficam os dados?
+lgpd.07: "na: logs mínimos sem dados pessoais por desenho (P03)"   # Logs e analytics sem dados pessoais desnecessários?
+lgpd.08: "na: app não é voltado a menores (P03)"   # Menores de idade: o público inclui? Regras de consentimento?
+lgpd.09: "na: uso individual; titular é o próprio operador da instância (P02)"   # Canal do titular e procedimento para incidente de segurança?
+
+# --- pack auditoria: ações sensíveis, administrativas ou financeiras
+auditoria.01: "na: tabela audit_events existe mas só o seed grava; sem endpoint (P01)"   # Quais ações são registradas (quem, o quê, quando, antes/depois)?
+auditoria.02: "na: sem endpoint de consulta implementado; front chama /api/v1/admin/audit (P01)"   # O registro é imutável e quem pode consultá-lo?
+auditoria.03: "na: sem política de retenção/exportação implementada"   # Retenção do histórico e exportação?
+auditoria.04: "na: sem request id para correlação"   # Correlação entre registro de auditoria e request/trace id?
+
+# --- pack seguranca: sempre (todo app)
+seguranca.01: "?"   # Toda entrada externa é validada no servidor (tipo, tamanho, formato)?
+seguranca.02: "?"   # Autorização é checada por recurso/ação no backend, e não só escondida na UI?
+seguranca.03: "?"   # Segredos e chaves ficam fora do código e do repositório?
+seguranca.04: "?"   # Proteção contra injeção (SQL/comando) e XSS nas saídas renderizadas?
+seguranca.05: "?"   # CSRF/CORS/cookies (HttpOnly, Secure, SameSite) definidos para a forma de sessão usada?
+seguranca.06: "?"   # Rate limit ou proteção contra abuso nos endpoints sensíveis?
+seguranca.07: "?"   # Dados sensíveis são mascarados em logs e respostas de erro?
+seguranca.08: "?"   # Dependências são fixadas e há plano para atualizar vulnerabilidades?
+
+# --- pack seguranca: sempre (todo app)
+seguranca.01: "sim CON-R02, PLA-R08, PLA-R11, NOT-R06"   # Toda entrada externa é validada no servidor (tipo, tamanho, formato)?
+seguranca.02: "sim PLA-R03, PLA-R04, PLA-R07"   # Autorização é checada por recurso/ação no backend, e não só escondida na UI?
+seguranca.03: "sim P04"   # Segredos e chaves ficam fora do código e do repositório?
+seguranca.04: "na: SQL via prepared statements do driver; Markdown renderizado no client sem sanitização explícita verificada"   # Proteção contra injeção (SQL/comando) e XSS nas saídas renderizadas?
+seguranca.05: "sim CON-R08, CON-R14"   # CSRF/CORS/cookies (HttpOnly, Secure, SameSite) definidos para a forma de sessão usada?
+seguranca.06: "na: sem rate limit nos endpoints sensíveis (gap registrado em auth.05)"   # Rate limit ou proteção contra abuso nos endpoints sensíveis?
+seguranca.07: "na: respostas de erro não ecoam dados sensíveis; pass_hash/mfa_secret não são serializados no User (gap menor)"   # Dados sensíveis são mascarados em logs e respostas de erro?
+seguranca.08: "na: dependências com ranges semver em package.json; sem lockfile de segurança ou plano de update"   # Dependências são fixadas e há plano para atualizar vulnerabilidades?

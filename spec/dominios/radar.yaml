@@ -1,0 +1,25 @@
+dominio: radar
+prefixo: RAD
+resumo: "Perfis de monitoramento de nichos/temas com sinais, tópicos quentes e concorrência."
+entidades:
+  RadarPerfil: [nome, nicho, formato, aceleracao, taxaOutliers, viewsMedias7d, concorrencia, sinais, topicosQuentes, ultimoSinalAt]
+estados: "na: perfil é acumulador de sinais, sem ciclo de vida formal"
+permissoes:
+  criador: ["criar, listar, editar e excluir seus perfis", "normalizar clusters via IA"]
+  admin: ["acesso total via PLA-R03"]
+regras:
+  RAD-R01: "Perfil do radar exige nome não vazio; nicho em branco assume 'Geral'"
+  RAD-R02: "Ao criar, taxaOutliers assume 2.0 e viewsMedias7d assume 25000 se não informados"
+  RAD-R03: "Todo perfil novo nasce com concorrencia 'Média'"
+  RAD-R04: "sinais recebe o sinal inicial informado ou o texto padrão de registro manual"
+  RAD-R05: "A lista de perfis se atualiza em tempo real via SSE na coleção radar_perfis"
+  RAD-R06: "Perfis ficam em usuarios/{uid}/radar_perfis — isolados por usuário (PLA-R04)"
+  RAD-R07: "Normalização de clusters agrupa sinais e tópicos chamando ai.action (ver P01)"
+  RAD-R08: "Busca filtra perfis por nome ou nicho contendo o termo, sem diferenciar maiúsculas"
+  RAD-R09: "Perfil pode virar origem de projeto via origemRadarId no wizard (ver PRJ-R07)"
+casos_de_uso:
+  CU01: "Criador monitora novo nicho -> RAD-R01, RAD-R02, RAD-R03, RAD-R04"
+  CU02: "Criador normaliza clusters -> RAD-R07"
+bordas:
+  - "criar perfil sem nome -> RAD-R01"
+  - "lista vazia exibe estado vazio -> RAD-R05"

@@ -1,0 +1,29 @@
+dominio: projetos
+prefixo: PRJ
+resumo: "Projetos de vídeo em Kanban com wizard de 4 etapas, checklist e versionamento."
+entidades:
+  Projeto: [titulo, canalNome, estagio, formato, prioridade, dataPublicacaoAlvo, ctrAlvo, conceitoThumbnail, ganchoResumo, origemRadarId, checklist, versaoAtual]
+  ChecklistItem: [id, texto, feito]
+  Versao: [versao, autor, resumoMudanca, conteudo]
+estados:
+  Projeto: "ideacao -> roteiro -> gravacao -> edicao -> publicado"
+permissoes:
+  criador: ["CRUD nos próprios projetos", "mover estágio", "versionar", "usar wizard"]
+  admin: ["acesso total via PLA-R03"]
+regras:
+  PRJ-R01: "Projeto exige titulo não vazio; canalNome em branco assume 'Canal Principal'"
+  PRJ-R02: "Wizard de criação tem 4 etapas: Canal & Formato, Packaging & Gancho, Pipeline & Checklist, Revisão"
+  PRJ-R03: "ctrAlvo assume 8.0 quando vazio ou não numérico"
+  PRJ-R04: "Todo projeto nasce com versaoAtual=1 e doc versoes/v1 com autor e resumo da criação"
+  PRJ-R05: "Itens do checklist inicial viram chk_N sequenciais com feito=false"
+  PRJ-R06: "Projetos ficam em usuarios/{uid}/projetos — isolados por usuário (PLA-R04)"
+  PRJ-R07: "origemRadarId opcional vincula o projeto a um perfil do radar"
+  PRJ-R08: "estagio pertence a {ideacao, roteiro, gravacao, edicao, publicado} e muda via patch no Kanban"
+  PRJ-R09: "Exclusão de projeto é física (DELETE do documento), sem lixeira"
+casos_de_uso:
+  CU01: "Criador cria projeto pelo wizard -> PRJ-R01, PRJ-R02, PRJ-R03, PRJ-R04, PRJ-R05"
+  CU02: "Criador move card no Kanban -> PRJ-R08"
+  CU03: "Ideia do radar vira projeto -> PRJ-R07"
+bordas:
+  - "ctrAlvo inválido -> PRJ-R03"
+  - "excluir projeto remove o documento -> PRJ-R09"

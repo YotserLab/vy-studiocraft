@@ -1,0 +1,39 @@
+dominio: contas
+prefixo: CON
+resumo: "Cadastro, login, sessões, MFA TOTP, reautenticação e recuperação de senha."
+entidades:
+  User: [id, email, pass_hash, display_name, email_verified, is_admin, mfa_secret]
+  Session: [token, user_id, expires_at, reauth_at]
+  PendingLogin: [ticket, user_id, purpose, expires_at]
+  PasswordReset: [token, user_id, expires_at]
+estados:
+  User: "nao_verificado -> verificado"
+  PendingLogin: "emitido -> consumido | expirado"
+permissoes:
+  visitante: ["signup (se aberto)", "login", "mfa/login", "reset e reset/confirm"]
+  criador: ["logout", "me", "token", "verify-email", "reauth", "mfa/*", "reset"]
+  admin: ["todas as ações de criador"]
+regras:
+  CON-R01: "Signup só é permitido se SIGNUP_OPEN=true ou se não existir nenhum usuário (bootstrap)"
+  CON-R02: "Cadastro exige e-mail não vazio e senha com mínimo de 6 caracteres"
+  CON-R03: "E-mail é normalizado (lowercase, trim) e único; duplicado retorna 409"
+  CON-R04: "Recebe is_admin o bootstrap (1º usuário) ou quem se cadastra com o e-mail de ADMIN_EMAIL"
+  CON-R05: "Login retorna 401 'Credenciais inválidas' para e-mail inexistente ou senha errada, sem distinguir"
+  CON-R06: "Com MFA ativo, login retorna mfaRequired+ticket (5min) em vez de criar sessão"
+  CON-R07: "Ticket de MFA é de uso único, expira em 5 minutos e tem purpose 'login' ou 'reauth'"
+  CON-R08: "Sessão dura SESSION_DAYS dias (padrão 30); aceita cookie vysc_sess, Bearer ou ?token="
+  CON-R09: "mfa/start, mfa/enroll e mfa/unenroll exigem reautenticação feita nos últimos 10 minutos"
+  CON-R10: "Reset de senha cria token de 1h e responde mensagem genérica mesmo se o e-mail não existir"
+  CON-R11: "Confirmar reset consome o token, atualiza a senha e apaga todas as sessões do usuário"
+  CON-R12: "Logout apaga a sessão atual no banco e expira o cookie vysc_sess"
+  CON-R13: "verify-email marca email_verified=true; link de debug só aparece com DEV_MODE=true"
+  CON-R14: "Cookie de sessão usa Secure apenas em HTTPS e SameSite=None em HTTPS, Lax em HTTP"
+casos_de_uso:
+  CU01: "Visitante faz primeiro cadastro -> CON-R01, CON-R02, CON-R03, CON-R04"
+  CU02: "Criador com MFA faz login -> CON-R05, CON-R06, CON-R07, CON-R08"
+  CU03: "Criador ativa MFA -> CON-R09"
+  CU04: "Visitante recupera senha -> CON-R10, CON-R11"
+bordas:
+  - "login com MFA em ticket expirado -> CON-R07"
+  - "reauth com senha errada -> CON-R05"
+  - "signup fechado após bootstrap -> CON-R01"

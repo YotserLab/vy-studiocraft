@@ -1,0 +1,167 @@
+# Spec (gerado; não edite)
+
+**Estúdio de produção para canais YouTube: radar de nichos, projetos Kanban, roteirista IA, comparador 30s, notícias RSS, biblioteca de mídia, publicidade e engine de templates Remotion.**  (porte G)
+
+**Usuários:** visitante: não autenticado; acessa apenas login, cadastro (se aberto) e recuperação de senha; criador: usuário autenticado dono dos próprios dados sob usuarios/{uid}; admin: usuário com is_admin=true; lê/escreve tudo e acessa /admin e auditoria
+
+**Escopo:** autenticação com MFA; documentos por usuário via API fs; upload de arquivos; radar de nichos; projetos com wizard e versões; roteirista e comparador via Gemini; notícias RSS; biblioteca de mídia; campanhas de publicidade; templates Remotion e renderização; painel admin com auditoria
+
+**Fora de escopo:** pagamento/cobrança de assinatura; multi-tenant por organização; upload direto ao YouTube; notificações por e-mail/push; comentários/colaboração em tempo real multiusuário; app mobile nativo
+
+## contas (CON) - Cadastro, login, sessões, MFA TOTP, reautenticação e recuperação de senha.
+- **User**: id, email, pass_hash, display_name, email_verified, is_admin, mfa_secret
+- **Session**: token, user_id, expires_at, reauth_at
+- **PendingLogin**: ticket, user_id, purpose, expires_at
+- **PasswordReset**: token, user_id, expires_at
+- Estados User: nao_verificado -> verificado
+- Estados PendingLogin: emitido -> consumido | expirado
+- `CON-R01` Signup só é permitido se SIGNUP_OPEN=true ou se não existir nenhum usuário (bootstrap)
+- `CON-R02` Cadastro exige e-mail não vazio e senha com mínimo de 6 caracteres
+- `CON-R03` E-mail é normalizado (lowercase, trim) e único; duplicado retorna 409
+- `CON-R04` Recebe is_admin o bootstrap (1º usuário) ou quem se cadastra com o e-mail de ADMIN_EMAIL
+- `CON-R05` Login retorna 401 'Credenciais inválidas' para e-mail inexistente ou senha errada, sem distinguir
+- `CON-R06` Com MFA ativo, login retorna mfaRequired+ticket (5min) em vez de criar sessão
+- `CON-R07` Ticket de MFA é de uso único, expira em 5 minutos e tem purpose 'login' ou 'reauth'
+- `CON-R08` Sessão dura SESSION_DAYS dias (padrão 30); aceita cookie vysc_sess, Bearer ou ?token=
+- `CON-R09` mfa/start, mfa/enroll e mfa/unenroll exigem reautenticação feita nos últimos 10 minutos
+- `CON-R10` Reset de senha cria token de 1h e responde mensagem genérica mesmo se o e-mail não existir
+- `CON-R11` Confirmar reset consome o token, atualiza a senha e apaga todas as sessões do usuário
+- `CON-R12` Logout apaga a sessão atual no banco e expira o cookie vysc_sess
+- `CON-R13` verify-email marca email_verified=true; link de debug só aparece com DEV_MODE=true
+- `CON-R14` Cookie de sessão usa Secure apenas em HTTPS e SameSite=None em HTTPS, Lax em HTTP
+
+## plataforma (PLA) - Camada compartilhada: API de documentos fs, arquivos, feed RSS, SSE e serving do SPA.
+- **Doc**: path, coll, parent, uid, data, created_at, updated_at
+- **FileMeta**: path, uid, name, content_type, size, disk
+- **AuditEvent**: id, user_id, action, detail, created_at
+- `PLA-R01` Toda rota /api/v1/* de dados exige sessão válida; sem sessão retorna 401
+- `PLA-R02` Path de documento alterna coleção/doc; segmentos ímpares endereçam coleções
+- `PLA-R03` Admin lê e escreve qualquer documento, coleção e arquivo do sistema
+- `PLA-R04` Não-admin só lê/escreve docs sob usuarios/{seu-uid}/; planos e aulas são leitura autenticada
+- `PLA-R05` Coleção erros aceita criação por qualquer autenticado, mas não leitura nem escrita posterior
+- `PLA-R06` Documento membros/{uid} só pode ser escrito pelo próprio usuário dono do uid
+- `PLA-R07` Arquivos existem apenas sob usuarios/{uid}/; acesso ao próprio uid ou admin
+- `PLA-R08` Upload excedente a UPLOAD_MAX_MB (padrão 512MB) retorna 413
+- `PLA-R09` GET /api/feed faz proxy de URL http(s) arbitrária: timeout 8s, corpo máx 2MB, cache 5min
+- `PLA-R10` SSE /api/v1/fs/events exige permissão de leitura no path e envia keepalive a cada 25s
+- `PLA-R11` Listagem de coleção aceita where campo|op|valor, orderBy campo[:desc] e limit>0
+- `PLA-R12` Sessão pode vir do cookie vysc_sess, header Bearer ou query ?token (usado pelo SSE)
+- `PLA-R13` Rota /api/* desconhecida retorna 404 JSON; rotas SPA desconhecidas servem index.html com 404
+- `PLA-R14` GET /api/feed e /feed não exigem sessão — proxy RSS público (gap de segurança, SSRF limitado)
+- `PLA-R15` Proxy /api/render, /api/rendered, /api/gemini/* e mídia de MEDIA_DIR não exigem sessão
+
+## radar (RAD) - Perfis de monitoramento de nichos/temas com sinais, tópicos quentes e concorrência.
+- **RadarPerfil**: nome, nicho, formato, aceleracao, taxaOutliers, viewsMedias7d, concorrencia, sinais, topicosQuentes, ultimoSinalAt
+- `RAD-R01` Perfil do radar exige nome não vazio; nicho em branco assume 'Geral'
+- `RAD-R02` Ao criar, taxaOutliers assume 2.0 e viewsMedias7d assume 25000 se não informados
+- `RAD-R03` Todo perfil novo nasce com concorrencia 'Média'
+- `RAD-R04` sinais recebe o sinal inicial informado ou o texto padrão de registro manual
+- `RAD-R05` A lista de perfis se atualiza em tempo real via SSE na coleção radar_perfis
+- `RAD-R06` Perfis ficam em usuarios/{uid}/radar_perfis — isolados por usuário (PLA-R04)
+- `RAD-R07` Normalização de clusters agrupa sinais e tópicos chamando ai.action (ver P01)
+- `RAD-R08` Busca filtra perfis por nome ou nicho contendo o termo, sem diferenciar maiúsculas
+- `RAD-R09` Perfil pode virar origem de projeto via origemRadarId no wizard (ver PRJ-R07)
+
+## projetos (PRJ) - Projetos de vídeo em Kanban com wizard de 4 etapas, checklist e versionamento.
+- **Projeto**: titulo, canalNome, estagio, formato, prioridade, dataPublicacaoAlvo, ctrAlvo, conceitoThumbnail, ganchoResumo, origemRadarId, checklist, versaoAtual
+- **ChecklistItem**: id, texto, feito
+- **Versao**: versao, autor, resumoMudanca, conteudo
+- Estados Projeto: ideacao -> roteiro -> gravacao -> edicao -> publicado
+- `PRJ-R01` Projeto exige titulo não vazio; canalNome em branco assume 'Canal Principal'
+- `PRJ-R02` Wizard de criação tem 4 etapas: Canal & Formato, Packaging & Gancho, Pipeline & Checklist, Revisão
+- `PRJ-R03` ctrAlvo assume 8.0 quando vazio ou não numérico
+- `PRJ-R04` Todo projeto nasce com versaoAtual=1 e doc versoes/v1 com autor e resumo da criação
+- `PRJ-R05` Itens do checklist inicial viram chk_N sequenciais com feito=false
+- `PRJ-R06` Projetos ficam em usuarios/{uid}/projetos — isolados por usuário (PLA-R04)
+- `PRJ-R07` origemRadarId opcional vincula o projeto a um perfil do radar
+- `PRJ-R08` estagio pertence a {ideacao, roteiro, gravacao, edicao, publicado} e muda via patch no Kanban
+- `PRJ-R09` Exclusão de projeto é física (DELETE do documento), sem lixeira
+
+## roteirista (ROT) - Geração de roteiros via Gemini com perfis de redator, capítulos e salvamento.
+- **Roteiro**: title, summary, formato, canal, categoria, chapters, geradoEm
+- **WriterProfile**: nome, tom, estilo, audiencia, prompt
+- `ROT-R01` Geração exige topic, channelName, niche, audience, format, tone, durationMinutes e hookStyle
+- `ROT-R02` O campo format aceita apenas 'long' ou 'shorts'
+- `ROT-R03` Roteiro gerado abre com o capítulo de gancho '00 — Gancho (00:00 – 00:30)'
+- `ROT-R04` Perfis de redator ficam em usuarios/{uid}/config/roteirista_perfis
+- `ROT-R05` Roteiros salvos ficam em usuarios/{uid}/roteiros — isolados por usuário
+- `ROT-R06` Geração usa POST /api/v1/ai/script — contrato alvo ainda não servido pelo Go (P01)
+- `ROT-R07` profilePrompt e knowledgeBase opcionais personalizam a saída do modelo
+- `ROT-R08` partsCount e ppm controlam divisão em partes e ritmo (palavras por minuto)
+
+## comparador (CMP) - Comparação A/B de ganchos de 30 segundos via Gemini, com resultado salvo.
+- **Comparacao**: titleA, hookA, visualCutsA, titleB, hookB, visualCutsB, niche, winner, edge, analise
+- `CMP-R01` Comparação exige titleA, hookA, visualCutsA, titleB, hookB, visualCutsB e niche
+- `CMP-R02` Resultado declara winner e edge, cada um ∈ {A, B, empate}
+- `CMP-R03` Comparações salvas ficam em usuarios/{uid}/comparacoes — isoladas por usuário
+- `CMP-R04` Comparação usa POST /api/v1/ai/compare-30s — contrato alvo ainda não servido pelo Go (P01)
+
+## noticias (NOT) - Leitura de feeds RSS/Atom, tradução de artigos via IA e conversão em pautas.
+- **FeedItem**: title, link, publishedAt, summary
+- **Nota**: titulo, texto, origem
+- `NOT-R01` Feed é buscado via GET /api/feed?url= no proxy do backend, não direto pelo cliente (PLA-R09)
+- `NOT-R02` Parser aceita itens RSS <item> e entradas Atom <entry>; título ausente vira 'Sem título'
+- `NOT-R03` Resumo vem de description ou content:encoded do item do feed
+- `NOT-R04` Tradução de artigo usa ai.action 'translate:article' — contrato alvo ainda não servido (P01)
+- `NOT-R05` Converter notícia em pauta cria doc em usuarios/{uid}/notas com título 'Pauta Notícia: <título>'
+- `NOT-R06` Feed maior que 2MB é rejeitado com 413 e URL sem http/https com 400 (PLA-R09)
+
+## midia (MID) - Biblioteca de mídia: upload/listagem/download/exclusão de arquivos e vídeos salvos de referência.
+- **FileMeta**: path, uid, name, content_type, size, disk, created_at
+- **VideoSalvo**: titulo, tituloPt, canal, url, duracao, motivoSalvo, categoria
+- `MID-R01` Upload é PUT /api/v1/files/{path} somente sob usuarios/{uid}/ (PLA-R07)
+- `MID-R02` content_type usa ?ct=, depois Content-Type do request, senão 'application/octet-stream'
+- `MID-R03` GET /api/v1/files/{path} retorna metadados; ?download=1 ou sufixo /download serve o binário
+- `MID-R04` DELETE /api/v1/files/{path} remove o metadado e apaga o arquivo do disco
+- `MID-R05` GET /api/v1/files?prefix= lista items e prefixes; prefixo vazio assume usuarios/{uid}
+- `MID-R06` Vídeo salvo exige titulo não vazio; canal em branco assume 'Referência'
+- `MID-R07` Tradução em lote grava tituloPt nos vídeos salvos via IA — contrato alvo (P01)
+
+## publicidade (PUB) - Registro de campanhas de publicidade e patrocínio por canal, com status de negociação.
+- **Campanha**: marca, canalNome, status, formato, valorAcordado, prazoEntrega, entregaveis
+- `PUB-R01` Campanha exige marca não vazia para ser registrada
+- `PUB-R02` Toda campanha nova nasce com status 'negociacao'
+- `PUB-R03` valorAcordado em branco assume 'A definir'
+- `PUB-R04` Status da campanha é atualizado via PATCH no documento
+- `PUB-R05` Campanhas ficam em usuarios/{uid}/publicidade — isoladas por usuário (PLA-R04)
+- `PUB-R06` Lista vazia exibe estado 'Nenhuma campanha de publicidade cadastrada'
+
+## render (REN) - Serviço de renderização Remotion + Gemini: templates parametrizados viram mp4 e mídia.
+- **RenderJob**: templateId, compositionId, props, resolution, codec
+- **RenderedVideo**: filename, videoUrl, sizeBytes, createdAt
+- **TemplateFamily**: id, registry, componente
+- Estados RenderJob: recebido -> renderizando -> concluido | falho
+- `REN-R01` POST /api/render aceita templateId ou compositionId, props, resolution e codec (default h264)
+- `REN-R02` resolution '720p' usa --scale=0.6666666666666666, '4K' usa --scale=2, demais sem escala
+- `REN-R03` compositionId desconhecido cai em fallback: 'Shorts' -> TornDocumentClipShorts, senão StepProcessInfographic
+- `REN-R04` Saída é render_<compositionId>_<timestamp>.mp4 em MEDIA_DIR/rendered, servida em /rendered/
+- `REN-R05` Se o arquivo de saída não for gerado, retorna 500 com o stderr do render
+- `REN-R06` GET /api/rendered lista os mp4 ordenados por createdAt decrescente
+- `REN-R07` /api/gemini/generate-script exige topic e produz JSON de cenas com gemini-2.5-flash
+- `REN-R08` Backend Go proxifica /api/render, /api/rendered e /api/gemini/* para RENDER_SERVICE_URL
+- `REN-R09` Go serve mídia de MEDIA_DIR nos prefixos /rendered/ /thumbnails/ /previews/ /rendercomp-thumbs/ /cache/
+- `REN-R10` Render invoca bunx @remotion/cli com timeout de 600s e concurrency=8
+- `REN-R11` Biblioteca tem ~100 famílias de templates em src/remotion-templates/remotion/families
+
+## Não funcionais
+- `NF01` Backend Go serve API + SPA num único binário; banco SQLite local via DATABASE_URL
+- `NF02` Feed RSS: timeout 8s, corpo máx 2MB, cache em memória por 5min
+- `NF03` Upload de arquivo limitado a UPLOAD_MAX_MB MB (padrão 512)
+- `NF04` Render Remotion executado por serviço separado (:8090), timeout 600s, saída mp4 em MEDIA_DIR/rendered
+- `NF05` SSE keepalive a cada 25s; eventos de mudança em docs propagados por path
+- `NF06` Sessão via cookie HttpOnly + Bearer; token de sessão de 32 bytes, SESSION_DAYS dias (padrão 30)
+
+## Premissas (assumidas, não confirmadas)
+- `P01` Endpoints /api/v1/ai/*, /api/v1/admin/audit, /api/v1/dev/seed, /api/v1/auth/config e /api/v1/auth/profile chamados pelo front ainda não existem no backend Go; spec descreve o contrato alvo
+- `P02` Instância single-user ou poucos usuários (SIGNUP_OPEN=false por padrão; primeiro cadastro vira admin)
+- `P03` LGPD aplicável apenas a e-mail/nome de conta; app não coleta dados sensíveis nem é voltado a menores
+- `P04` Gemini chamado via @google/genai com GEMINI_API_KEY de ambiente; modelo gemini-2.5-flash
+- `P05` Datas persistidas como epoch ms UTC; exibição formatada no cliente
+- `P06` Migrações SQL embutidas rodam no boot do binário Go (migrations/ embed)
+- `P07` FKs com ON DELETE CASCADE ligam sessões, tickets MFA e resets ao usuário
+- `P08` UI em pt-BR sem i18n; formatos localizados no cliente
+- `P09` DEV_MODE/USE_MOCK_DATA semeia dados demo no boot (seed.go), incluindo admin
+- `P10` Índices em docs(coll), docs(parent), docs(uid) e files(uid) para listagens
+
+---
+Status do portão: OK

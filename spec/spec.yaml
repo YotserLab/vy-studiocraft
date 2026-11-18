@@ -1,0 +1,33 @@
+# Spec raiz. Uma frase por item. Texto com ": " precisa de aspas.
+porte: G            # P (até 2 domínios) | M (até 6) | G (sem limite)
+visao: "Estúdio de produção para canais YouTube: radar de nichos, projetos Kanban, roteirista IA, comparador 30s, notícias RSS, biblioteca de mídia, publicidade e engine de templates Remotion."
+usuarios:                   # papel: descrição curta
+  visitante: "não autenticado; acessa apenas login, cadastro (se aberto) e recuperação de senha"
+  criador: "usuário autenticado dono dos próprios dados sob usuarios/{uid}"
+  admin: "usuário com is_admin=true; lê/escreve tudo e acessa /admin e auditoria"
+escopo: ["autenticação com MFA", "documentos por usuário via API fs", "upload de arquivos", "radar de nichos", "projetos com wizard e versões", "roteirista e comparador via Gemini", "notícias RSS", "biblioteca de mídia", "campanhas de publicidade", "templates Remotion e renderização", "painel admin com auditoria"]
+fora_de_escopo: ["pagamento/cobrança de assinatura", "multi-tenant por organização", "upload direto ao YouTube", "notificações por e-mail/push", "comentários/colaboração em tempo real multiusuário", "app mobile nativo"]
+dominios: [contas, plataforma, radar, projetos, roteirista, comparador, noticias, midia, publicidade, render]
+nao_funcionais:             # NF01: requisito mensurável (desempenho, disponibilidade...)
+  NF01: "Backend Go serve API + SPA num único binário; banco SQLite local via DATABASE_URL"
+  NF02: "Feed RSS: timeout 8s, corpo máx 2MB, cache em memória por 5min"
+  NF03: "Upload de arquivo limitado a UPLOAD_MAX_MB MB (padrão 512)"
+  NF04: "Render Remotion executado por serviço separado (:8090), timeout 600s, saída mp4 em MEDIA_DIR/rendered"
+  NF05: "SSE keepalive a cada 25s; eventos de mudança em docs propagados por path"
+  NF06: "Sessão via cookie HttpOnly + Bearer; token de sessão de 32 bytes, SESSION_DAYS dias (padrão 30)"
+premissas:                  # P01: o que você assumiu sem confirmar com o usuário
+  P01: "Endpoints /api/v1/ai/*, /api/v1/admin/audit, /api/v1/dev/seed, /api/v1/auth/config e /api/v1/auth/profile chamados pelo front ainda não existem no backend Go; spec descreve o contrato alvo"
+  P02: "Instância single-user ou poucos usuários (SIGNUP_OPEN=false por padrão; primeiro cadastro vira admin)"
+  P03: "LGPD aplicável apenas a e-mail/nome de conta; app não coleta dados sensíveis nem é voltado a menores"
+  P04: "Gemini chamado via @google/genai com GEMINI_API_KEY de ambiente; modelo gemini-2.5-flash"
+  P05: "Datas persistidas como epoch ms UTC; exibição formatada no cliente"
+  P06: "Migrações SQL embutidas rodam no boot do binário Go (migrations/ embed)"
+  P07: "FKs com ON DELETE CASCADE ligam sessões, tickets MFA e resets ao usuário"
+  P08: "UI em pt-BR sem i18n; formatos localizados no cliente"
+  P09: "DEV_MODE/USE_MOCK_DATA semeia dados demo no boot (seed.go), incluindo admin"
+  P10: "Índices em docs(coll), docs(parent), docs(uid) e files(uid) para listagens"
+duvidas: []                 # perguntas ainda abertas; precisa estar vazio para passar
+packs_descartados:          # pack: motivo (>= 5 caracteres) - packs não aplicáveis
+  pagamentos: "não há cobrança, assinatura ou Pix"
+  multi-tenant: "dados isolados por usuário, não por organização"
+  notificacoes: "não há envio de e-mail, push, SMS ou avisos in-app"

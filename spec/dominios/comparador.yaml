@@ -1,0 +1,19 @@
+dominio: comparador
+prefixo: CMP
+resumo: "Comparação A/B de ganchos de 30 segundos via Gemini, com resultado salvo."
+entidades:
+  Comparacao: [titleA, hookA, visualCutsA, titleB, hookB, visualCutsB, niche, winner, edge, analise]
+estados: "na: resultado pontual, sem ciclo de vida"
+permissoes:
+  criador: ["comparar", "salvar e consultar comparações"]
+  admin: ["acesso total via PLA-R03"]
+regras:
+  CMP-R01: "Comparação exige titleA, hookA, visualCutsA, titleB, hookB, visualCutsB e niche"
+  CMP-R02: "Resultado declara winner e edge, cada um ∈ {A, B, empate}"
+  CMP-R03: "Comparações salvas ficam em usuarios/{uid}/comparacoes — isoladas por usuário"
+  CMP-R04: "Comparação usa POST /api/v1/ai/compare-30s — contrato alvo ainda não servido pelo Go (P01)"
+casos_de_uso:
+  CU01: "Criador compara duas aberturas -> CMP-R01, CMP-R02, CMP-R04"
+bordas:
+  - "campos de A ou B vazios -> CMP-R01"
+  - "endpoint ausente retorna 404 até implementação (P01) -> CMP-R04"
