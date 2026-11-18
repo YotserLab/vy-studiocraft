@@ -89,11 +89,11 @@ func (s *Server) routes() {
 	s.mux.HandleFunc("GET /api/feed", s.handleFeed)
 	s.mux.HandleFunc("GET /feed", s.handleFeed)
 
-	// Render service proxy (Remotion/Gemini) — endpoints da feature /templates
+	// Render service proxy (Remotion/Gemini) — TRN-R09: exige sessão
 	if rp := s.renderProxy(); rp != nil {
-		s.mux.Handle("/api/render", rp)
-		s.mux.Handle("/api/rendered", rp)
-		s.mux.Handle("/api/gemini/", rp)
+		s.mux.Handle("/api/render", s.requireSession(rp))
+		s.mux.Handle("/api/rendered", s.requireSession(rp))
+		s.mux.Handle("/api/gemini/", s.requireSession(rp))
 	}
 
 	// Guard unmatched /api/*
@@ -109,6 +109,17 @@ func writeJSON(w http.ResponseWriter, status int, payload any) {
 	w.Header().Set("Content-Type", "application/json; charset=utf-8")
 	w.WriteHeader(status)
 	_ = json.NewEncoder(w).Encode(payload)
+}
+
+// requireSession devolve 401 JSON antes de delegar ao handler (TRN-R09).
+func (s *Server) requireSession(next http.Handler) http.Handler {
+	return http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		if _, sess := s.currentSession(r); sess == nil {
+			writeJSON(w, http.StatusUnauthorized, map[string]any{"error": "Não autenticado."})
+			return
+		}
+		next.ServeHTTP(w, r)
+	})
 }
 
 func (s *Server) currentSession(r *http.Request) (*store.User, *store.Session) {
@@ -955,6 +966,13 @@ func isMediaPath(p string) bool {
 func (s *Server) handleSPA(w http.ResponseWriter, r *http.Request) {
 	// Mídia da feature remotion-templates vem de MEDIA_DIR (fora do dist/)
 	if isMediaPath(r.URL.Path) {
+		// TRN-R11: /cache/ guarda artefatos internos, exige sessão
+		if strings.HasPrefix(r.URL.Path, "/cache/") {
+			if _, sess := s.currentSession(r); sess == nil {
+				writeJSON(w, http.StatusUnauthorized, map[string]any{"error": "Não autenticado."})
+				return
+			}
+		}
 		mediaTarget := filepath.Join(s.cfg.MediaDir, filepath.Clean(strings.TrimPrefix(r.URL.Path, "/")))
 		if info, err := os.Stat(mediaTarget); err == nil && !info.IsDir() {
 			http.ServeFile(w, r, mediaTarget)

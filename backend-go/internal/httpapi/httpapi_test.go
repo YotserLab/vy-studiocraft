@@ -204,3 +204,14 @@ func TestFeedRequiresSession_TRN_R08(t *testing.T) {
 		t.Fatalf("esperado 400 autenticado com scheme inválido, obtido %d", authed.Code)
 	}
 }
+
+// TRN-R09/TRN-R11: proxies de render/gemini e mídia /cache/ exigem sessão
+func TestComputeProxiesRequireSession_TRN_R09(t *testing.T) {
+	srv, _ := newTestServer(t, false)
+	for _, p := range []string{"/api/render", "/api/rendered", "/api/gemini/generate-script", "/cache/x.tmp"} {
+		rec := reqJSON(srv.Handler(), "GET", p, nil, nil)
+		if rec.Code != http.StatusUnauthorized {
+			t.Fatalf("esperado 401 anônimo em %s, obtido %d", p, rec.Code)
+		}
+	}
+}
