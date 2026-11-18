@@ -302,6 +302,12 @@ func (d *DB) UpdateUserPassword(id, passHash string) error {
 	return err
 }
 
+func (d *DB) UpdateUserDisplayName(id string, displayName string) error {
+	_, err := d.sql.Exec(`UPDATE users SET display_name = ?, updated_at = ? WHERE id = ?`,
+		strings.TrimSpace(displayName), time.Now().UnixMilli(), id)
+	return err
+}
+
 func (d *DB) CreateSession(token, userID string, ttl time.Duration) (*Session, error) {
 	now := time.Now().UnixMilli()
 	exp := now + ttl.Milliseconds()
