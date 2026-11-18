@@ -70,6 +70,18 @@ func (s *Server) routes() {
 	s.mux.HandleFunc("POST /api/v1/auth/mfa/reauth", s.handleMFAReauth)
 	s.mux.HandleFunc("POST /api/v1/auth/reset", s.handleResetRequest)
 	s.mux.HandleFunc("POST /api/v1/auth/reset/confirm", s.handleResetConfirm)
+	s.mux.HandleFunc("GET /api/v1/auth/config", s.handleAuthConfig)
+	s.mux.HandleFunc("POST /api/v1/auth/profile", s.handleAuthProfile)
+
+	// AI endpoints (Gemini via render-service ou GEMINI_API_KEY)
+	s.mux.HandleFunc("POST /api/v1/ai/script", s.handleAIScript)
+	s.mux.HandleFunc("POST /api/v1/ai/compare-30s", s.handleAICompare30s)
+	s.mux.HandleFunc("POST /api/v1/ai/action", s.handleAIAction)
+	s.mux.HandleFunc("POST /api/v1/ai/chat", s.handleAIChat)
+
+	// Admin + Dev
+	s.mux.HandleFunc("GET /api/v1/admin/audit", s.handleAdminAudit)
+	s.mux.HandleFunc("POST /api/v1/dev/seed", s.handleDevSeed)
 
 	// Docs + SSE
 	s.mux.HandleFunc("GET /api/v1/fs/events", s.handleFSEvents)

@@ -21,6 +21,7 @@ type Config struct {
 	DevMode     bool
 	SignupOpen  bool
 	UseMockData bool
+	GeminiKey   string
 }
 
 func envBool(key string, fallback bool) bool {
@@ -130,5 +131,6 @@ func Load() Config {
 		DevMode:     devMode,
 		SignupOpen:  signupOpen,
 		UseMockData: useMock,
+		GeminiKey:   strings.TrimSpace(os.Getenv("GEMINI_API_KEY")),
 	}
 }
