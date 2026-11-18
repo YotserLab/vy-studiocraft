@@ -7,7 +7,7 @@ entidades:
   AuditEvent: [id, user_id, action, detail, created_at]
 estados: "na: docs schemaless; estados de negócio vivem nos domínios"
 permissoes:
-  visitante: ["proxy render/gemini e mídia pública (TRN-R09)"]
+  visitante: ["mídia pública do catálogo (TRN-R10)"]
   criador: ["CRUD sob usuarios/{seu-uid}/", "criar docs em erros/", "ler planos e aulas", "files sob seu uid"]
   admin: ["ler/escrever qualquer doc, coleção e arquivo"]
 regras:
@@ -25,7 +25,7 @@ regras:
   PLA-R21: "POST, PUT, PATCH e DELETE em docs publicam evento SSE com o path alterado"
 casos_de_uso:
   CU01: "Criador lista seus projetos -> TRN-R01, PLA-R02, PLA-R04, PLA-R11"
-  CU02: "Visitante acessa mídia pública -> TRN-R09"
+  CU02: "Visitante acessa mídia do catálogo -> TRN-R10"
 bordas:
   - "watch em coleção alheia -> PLA-R04, TRN-R05"
   - "path com segmentos pares em POST -> PLA-R02"

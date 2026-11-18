@@ -3,7 +3,7 @@
 # P2 = verificação/testes de comportamento já implementado (retrofit)
   # ---------- P1: segurança ----------
 T01: {prioridade: P1, titulo: "Exigir sessão no proxy /api/feed (SSRF)", regras: [TRN-R08]}
-T02: {prioridade: P1, titulo: "Exigir sessão nos proxies render/gemini e mídia", regras: [TRN-R09]}
+T02: {prioridade: P1, titulo: "Exigir sessão nos proxies render/gemini e mídia /cache/", regras: [TRN-R09, TRN-R10, TRN-R11]}
   # ---------- P1: endpoints ausentes (P01) ----------
 T03: {prioridade: P1, titulo: "Implementar POST /api/v1/ai/script", regras: [ROT-R06]}
 T04: {prioridade: P1, titulo: "Implementar POST /api/v1/ai/compare-30s", regras: [CMP-R04]}

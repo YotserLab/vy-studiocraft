@@ -29,6 +29,7 @@ premissas:                  # P01: o que você assumiu sem confirmar com o usuá
   P08: "UI em pt-BR sem i18n; formatos localizados no cliente"
   P09: "DEV_MODE/USE_MOCK_DATA semeia dados demo no boot (seed.go), incluindo admin"
   P10: "Índices em docs(coll), docs(parent), docs(uid) e files(uid) para listagens"
+  P11: "Pastas públicas de mídia misturam assets do catálogo e renders de usuário; separação por uid fica como dívida"
 duvidas: []                 # perguntas ainda abertas; precisa estar vazio para passar
 packs_descartados:          # pack: motivo (>= 5 caracteres) - packs não aplicáveis
   pagamentos: "não há cobrança, assinatura ou Pix"

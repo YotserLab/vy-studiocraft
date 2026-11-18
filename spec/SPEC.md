@@ -69,7 +69,9 @@
 - `TRN-R06` Sessão pode vir do cookie vysc_sess, header Bearer ou query ?token (usado pelo SSE)
 - `TRN-R07` Rota /api/* desconhecida retorna 404 JSON; rotas SPA desconhecidas servem index.html com 404
 - `TRN-R08` GET /api/feed e /feed exigem sessão válida; sem sessão retorna 401
-- `TRN-R09` Proxy /api/render, /api/rendered, /api/gemini/* e mídia de MEDIA_DIR não exigem sessão
+- `TRN-R09` Proxy /api/render, /api/rendered e /api/gemini/* exigem sessão; anônimo retorna 401
+- `TRN-R10` Mídia /rendered/, /thumbnails/, /previews/, /rendercomp-thumbs/ é pública (catálogo /templates, P11)
+- `TRN-R11` Mídia /cache/ exige sessão; anônimo retorna 401
 
 ## navegacao (NAV) - Rotas da SPA, guards de sessão, deep links, returnTo e fallback 404.
 - **Rota**: path, view, privada
@@ -262,6 +264,7 @@
 - `P08` UI em pt-BR sem i18n; formatos localizados no cliente
 - `P09` DEV_MODE/USE_MOCK_DATA semeia dados demo no boot (seed.go), incluindo admin
 - `P10` Índices em docs(coll), docs(parent), docs(uid) e files(uid) para listagens
+- `P11` Pastas públicas de mídia misturam assets do catálogo e renders de usuário; separação por uid fica como dívida
 
 ---
 Status do portão: OK
