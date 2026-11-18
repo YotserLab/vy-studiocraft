@@ -68,7 +68,7 @@
 - `TRN-R05` SSE /api/v1/fs/events exige permissão de leitura no path e envia keepalive a cada 25s
 - `TRN-R06` Sessão pode vir do cookie vysc_sess, header Bearer ou query ?token (usado pelo SSE)
 - `TRN-R07` Rota /api/* desconhecida retorna 404 JSON; rotas SPA desconhecidas servem index.html com 404
-- `TRN-R08` GET /api/feed e /feed não exigem sessão — proxy RSS público (gap de segurança, SSRF limitado)
+- `TRN-R08` GET /api/feed e /feed exigem sessão válida; sem sessão retorna 401
 - `TRN-R09` Proxy /api/render, /api/rendered, /api/gemini/* e mídia de MEDIA_DIR não exigem sessão
 
 ## navegacao (NAV) - Rotas da SPA, guards de sessão, deep links, returnTo e fallback 404.
