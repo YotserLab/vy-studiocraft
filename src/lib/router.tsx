@@ -1,5 +1,6 @@
-import React, { useEffect, useState } from 'react';
+import React, { useSyncExternalStore } from 'react';
 
+// NAV-R02: anti open redirect
 export function validateReturnTo(raw: string | null | undefined): string {
   if (!raw) return '/visao-geral';
   const trimmed = raw.trim();
@@ -9,6 +10,7 @@ export function validateReturnTo(raw: string | null | undefined): string {
   return trimmed;
 }
 
+// NAV-R03: history API + popstate
 export function navigate(to: string, replace = false): void {
   const target = to.startsWith('/') ? to : `/${to}`;
   if (replace) {
@@ -20,28 +22,25 @@ export function navigate(to: string, replace = false): void {
   window.scrollTo({ top: 0, behavior: 'instant' as ScrollBehavior });
 }
 
+// NAV-R03: lê window.location a cada render via useSyncExternalStore — evita
+// que instâncias-pai fiquem com pathname desatualizado quando um efeito-filho
+// navega antes do listener do pai ser registrado (causava redirect duplo para
+// /entrar?returnTo=/entrar?returnTo=...).
+function subscribeLocation(onStoreChange: () => void): () => void {
+  window.addEventListener('popstate', onStoreChange);
+  return () => window.removeEventListener('popstate', onStoreChange);
+}
+
+function getLocationSnapshot(): string {
+  return `${window.location.pathname}${window.location.search}`;
+}
+
 export function useLocationPath(): { pathname: string; search: string; searchParams: URLSearchParams } {
-  const [loc, setLoc] = useState(() => ({
-    pathname: window.location.pathname || '/',
-    search: window.location.search || '',
-  }));
-
-  useEffect(() => {
-    const onPop = () => {
-      setLoc({
-        pathname: window.location.pathname || '/',
-        search: window.location.search || '',
-      });
-    };
-    window.addEventListener('popstate', onPop);
-    return () => window.removeEventListener('popstate', onPop);
-  }, []);
-
-  return {
-    pathname: loc.pathname,
-    search: loc.search,
-    searchParams: new URLSearchParams(loc.search),
-  };
+  const snap = useSyncExternalStore(subscribeLocation, getLocationSnapshot);
+  const q = snap.indexOf('?');
+  const pathname = (q === -1 ? snap : snap.slice(0, q)) || '/';
+  const search = q === -1 ? '' : snap.slice(q);
+  return { pathname, search, searchParams: new URLSearchParams(search) };
 }
 
 export interface LinkProps extends React.AnchorHTMLAttributes<HTMLAnchorElement> {

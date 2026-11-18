@@ -8,6 +8,7 @@ export function LandingView() {
   const { user, authLoading, runtimeConfig, setUserDirect, notify } = useApp();
   const [demoBusy, setDemoBusy] = useState(false);
 
+  // NAV-R04: usuário logado em "/" é redirecionado para /visao-geral
   if (!authLoading && user) {
     navigate('/visao-geral', true);
     return null;

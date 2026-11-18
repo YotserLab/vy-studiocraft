@@ -49,6 +49,7 @@ const TemplatesMotionLibraryView = lazy(() =>
   import('./views/TemplatesViews').then((m) => ({ default: m.TemplatesMotionLibraryView }))
 );
 
+// NAV-R01: rota privada redireciona para /entrar?returnTo=
 function PrivateRoute({ children }: { children: React.ReactNode }) {
   const { user, authLoading } = useApp();
   const { pathname, search } = useLocationPath();
@@ -83,7 +84,7 @@ function AppRoutes() {
   if (clean === '/cadastro') return <SignupView />;
   if (clean === '/recuperar-senha') return <ResetPasswordView />;
 
-  // Public: galeria de templates Remotion (SEO-friendly via pré-render)
+  // NAV-R05: galeria de templates Remotion pública (SEO-friendly via pré-render)
   if (clean === '/templates') {
     return <Suspense fallback={null}><TemplatesGalleryView /></Suspense>;
   }
@@ -132,11 +133,13 @@ function AppRoutes() {
     const id = decodeURIComponent(clean.slice('/radar/perfis/'.length));
     if (id) return <PrivateRoute><RadarProfileDetailView id={id} /></PrivateRoute>;
   }
+  // NAV-R08: /admin/{tab} sincroniza a tab do painel com a URL
   if (clean.startsWith('/admin/')) {
     const sub = clean.slice('/admin/'.length);
     return <PrivateRoute><AdminView subPath={sub} /></PrivateRoute>;
   }
 
+  // NAV-R06: rota desconhecida -> NotFoundView
   return <NotFoundView />;
 }
 
