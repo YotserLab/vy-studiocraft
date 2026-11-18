@@ -14,3 +14,5 @@ data/
 *.log
 .env*
 !.env.example
+HANDOFF.md
+LOGWORK.md
