@@ -5,8 +5,10 @@ import (
 	"encoding/json"
 	"net/http"
 	"net/http/httptest"
+	"os"
 	"path/filepath"
 	"strings"
+	"sync/atomic"
 	"testing"
 	"time"
 
@@ -213,5 +215,54 @@ func TestComputeProxiesRequireSession_TRN_R09(t *testing.T) {
 		if rec.Code != http.StatusUnauthorized {
 			t.Fatalf("esperado 401 anônimo em %s, obtido %d", p, rec.Code)
 		}
+	}
+}
+
+// TRN-R10: mídia do catálogo público (/templates) não pode exigir sessão;
+// anon deve receber 404 (arquivo inexistente) e nunca 401.
+func TestCatalogMediaIsPublic_TRN_R10(t *testing.T) {
+	srv, _ := newTestServer(t, false)
+	for _, p := range []string{"/rendered/inexistente.png", "/thumbnails/x.png", "/previews/x.png", "/rendercomp-thumbs/x.png"} {
+		rec := reqJSON(srv.Handler(), "GET", p, nil, nil)
+		if rec.Code == http.StatusUnauthorized {
+			t.Fatalf("mídia de catálogo %s não pode exigir sessão", p)
+		}
+	}
+}
+
+// REN-R08: /api/render, /api/rendered e /api/gemini/* são proxificados para RENDER_SERVICE_URL.
+func TestRenderProxyUpstream_REN_R08(t *testing.T) {
+	var hit int32
+	upstream := httptest.NewServer(http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		atomic.AddInt32(&hit, 1)
+		w.WriteHeader(http.StatusOK)
+	}))
+	defer upstream.Close()
+
+	srv, _ := newTestServer(t, true)
+	srv.cfg.RenderURL = upstream.URL
+
+	_, cookies, _ := tfSignup(t, srv, "r08@x.local")
+	rec := reqJSON(srv.Handler(), "GET", "/api/render?x=1", nil, cookies)
+	if rec.Code != http.StatusOK || atomic.LoadInt32(&hit) == 0 {
+		t.Fatalf("esperado proxy ao upstream (200, hit>=1), obtido %d hits=%d", rec.Code, hit)
+	}
+}
+
+// REN-R09: Go serve mídia de MEDIA_DIR nos prefixos do catálogo.
+func TestMediaServedFromMediaDir_REN_R09(t *testing.T) {
+	srv, _ := newTestServer(t, false)
+	mediaDir := t.TempDir()
+	if err := os.MkdirAll(filepath.Join(mediaDir, "rendered"), 0o755); err != nil {
+		t.Fatal(err)
+	}
+	if err := os.WriteFile(filepath.Join(mediaDir, "rendered", "ok.txt"), []byte("midia-ok"), 0o644); err != nil {
+		t.Fatal(err)
+	}
+	srv.cfg.MediaDir = mediaDir
+
+	rec := reqJSON(srv.Handler(), "GET", "/rendered/ok.txt", nil, nil)
+	if rec.Code != http.StatusOK || rec.Body.String() != "midia-ok" {
+		t.Fatalf("esperado 200 servindo mídia de MEDIA_DIR, obtido %d %q", rec.Code, rec.Body.String())
 	}
 }

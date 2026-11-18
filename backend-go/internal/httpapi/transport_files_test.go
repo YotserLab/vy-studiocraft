@@ -159,7 +159,7 @@ func TestTrn_UploadLimit_TRN_R03(t *testing.T) {
 }
 
 // TRN-R04 (+TRN-R08): /api/feed exige sessão, rejeita scheme != http(s), limita corpo a 2MB (413) e cacheia 5min.
-func TestTrn_FeedProxy_TRN_R04(t *testing.T) {
+func TestTrn_FeedProxy_TRN_R04 /* e NOT-R06: limites do proxy */(t *testing.T) {
 	srv, _ := newTestServer(t, true)
 	_, cookies, _ := tfSignup(t, srv, "r04@x.local")
 	h := srv.Handler()
@@ -481,7 +481,7 @@ func TestMid_ListItemsAndPrefixes_MID_R05(t *testing.T) {
 	}
 }
 
-// MID-R06: paths de arquivos são normalizados; traversal ("..") nunca alcança o handler/disco.
+// MID-R08: paths de arquivos são normalizados; traversal ("..") nunca alcança o handler/disco.
 func TestMid_PathTraversalRejected_MID_R08(t *testing.T) {
 	srv, _ := newTestServer(t, true)
 	_, admCookies, _ := tfSignup(t, srv, "admin@vystudiocraft.local")

@@ -32,6 +32,10 @@ type Server struct {
 	mux       *http.ServeMux
 	feedMu    sync.RWMutex
 	feedCache map[string]cachedFeed
+	// REN-R08: proxy lazy por instância (não global) — permite RenderURL
+	// distinta por Server e falha limpa quando a URL está vazia.
+	renderProxyOnce sync.Once
+	renderProxyH    http.Handler
 }
 
 type cachedFeed struct {
@@ -83,6 +87,8 @@ func (s *Server) routes() {
 	s.mux.HandleFunc("GET /api/v1/admin/audit", s.handleAdminAudit)
 	s.mux.HandleFunc("POST /api/v1/dev/seed", s.handleDevSeed)
 
+	// TRN-R01: rotas de dados exigem sessão
+
 	// Docs + SSE
 	s.mux.HandleFunc("GET /api/v1/fs/events", s.handleFSEvents)
 	s.mux.HandleFunc("GET /api/v1/fs/{path...}", s.handleFSGet)
@@ -101,12 +107,21 @@ func (s *Server) routes() {
 	s.mux.HandleFunc("GET /api/feed", s.handleFeed)
 	s.mux.HandleFunc("GET /feed", s.handleFeed)
 
-	// Render service proxy (Remotion/Gemini) — TRN-R09: exige sessão
-	if rp := s.renderProxy(); rp != nil {
-		s.mux.Handle("/api/render", s.requireSession(rp))
-		s.mux.Handle("/api/rendered", s.requireSession(rp))
-		s.mux.Handle("/api/gemini/", s.requireSession(rp))
-	}
+	// REN-R08 + TRN-R09: proxies render/gemini exigem sessão; resolvem o
+	// upstream lazy por request, com 503 JSON quando RENDER_SERVICE_URL é inválida.
+	renderDispatch := http.HandlerFunc(func(w http.ResponseWriter, r *http.Request) {
+		proxy := s.renderProxy()
+		if proxy == nil {
+			writeJSON(w, http.StatusServiceUnavailable, map[string]any{"error": "Serviço de render indisponível."})
+			return
+		}
+		proxy.ServeHTTP(w, r)
+	})
+	s.mux.Handle("/api/render", s.requireSession(renderDispatch))
+	s.mux.Handle("/api/rendered", s.requireSession(renderDispatch))
+	s.mux.Handle("/api/gemini/", s.requireSession(renderDispatch))
+
+	// TRN-R07: 404 JSON em /api/*
 
 	// Guard unmatched /api/*
 	s.mux.HandleFunc("/api/", func(w http.ResponseWriter, r *http.Request) {
@@ -134,6 +149,7 @@ func (s *Server) requireSession(next http.Handler) http.Handler {
 	})
 }
 
+// CON-R08, CON-R17, TRN-R06
 func (s *Server) currentSession(r *http.Request) (*store.User, *store.Session) {
 	var token string
 	if c, err := r.Cookie(cookieName); err == nil && c.Value != "" {
@@ -165,6 +181,7 @@ func isHTTPSRequest(r *http.Request) bool {
 	return strings.Contains(xf, "https")
 }
 
+// CON-R14: cookie de sessão — Secure apenas em HTTPS; SameSite=None em HTTPS, Lax em HTTP.
 func (s *Server) setSessionCookie(w http.ResponseWriter, r *http.Request, token string) {
 	secure := isHTTPSRequest(r)
 	sameSite := http.SameSiteLaxMode
@@ -182,6 +199,7 @@ func (s *Server) setSessionCookie(w http.ResponseWriter, r *http.Request, token 
 	})
 }
 
+// CON-R01, CON-R02, CON-R03, CON-R04
 func (s *Server) handleSignup(w http.ResponseWriter, r *http.Request) {
 	var body struct {
 		Email    string `json:"email"`
@@ -224,6 +242,7 @@ func (s *Server) handleSignup(w http.ResponseWriter, r *http.Request) {
 	writeJSON(w, http.StatusCreated, map[string]any{"user": u, "token": tok})
 }
 
+// CON-R05, MFA-R01
 func (s *Server) handleLogin(w http.ResponseWriter, r *http.Request) {
 	var body struct {
 		Email    string `json:"email"`
@@ -254,6 +273,7 @@ func (s *Server) handleLogin(w http.ResponseWriter, r *http.Request) {
 	writeJSON(w, http.StatusOK, map[string]any{"user": u, "token": tok})
 }
 
+// CON-R12
 func (s *Server) handleLogout(w http.ResponseWriter, r *http.Request) {
 	if _, sess := s.currentSession(r); sess != nil {
 		_ = s.db.DeleteSession(sess.Token)
@@ -285,6 +305,7 @@ func (s *Server) handleToken(w http.ResponseWriter, r *http.Request) {
 	writeJSON(w, http.StatusOK, map[string]any{"token": sess.Token})
 }
 
+// CON-R13
 func (s *Server) handleVerifyEmail(w http.ResponseWriter, r *http.Request) {
 	u, _ := s.currentSession(r)
 	if u == nil {
@@ -327,6 +348,7 @@ func hasRecentReauth(sess *store.Session) bool {
 	return sess != nil && time.Now().UnixMilli()-sess.ReauthAt <= reauthWindow.Milliseconds()
 }
 
+// MFA-R03, MFA-R06
 func (s *Server) handleMFAStart(w http.ResponseWriter, r *http.Request) {
 	u, sess := s.currentSession(r)
 	if u == nil {
@@ -341,6 +363,7 @@ func (s *Server) handleMFAStart(w http.ResponseWriter, r *http.Request) {
 	writeJSON(w, http.StatusOK, map[string]any{"secret": sec})
 }
 
+// MFA-R03, MFA-R05
 func (s *Server) handleMFAEnroll(w http.ResponseWriter, r *http.Request) {
 	u, sess := s.currentSession(r)
 	if u == nil {
@@ -379,6 +402,7 @@ func (s *Server) handleMFAUnenroll(w http.ResponseWriter, r *http.Request) {
 	writeJSON(w, http.StatusOK, map[string]any{"ok": true, "user": updated})
 }
 
+// MFA-R02, MFA-R04
 func (s *Server) handleMFALogin(w http.ResponseWriter, r *http.Request) {
 	var body struct {
 		Ticket string `json:"ticket"`
@@ -405,6 +429,7 @@ func (s *Server) handleMFALogin(w http.ResponseWriter, r *http.Request) {
 	writeJSON(w, http.StatusOK, map[string]any{"user": u})
 }
 
+// MFA-R02, MFA-R07
 func (s *Server) handleMFAReauth(w http.ResponseWriter, r *http.Request) {
 	u, sess := s.currentSession(r)
 	if u == nil || sess == nil {
@@ -433,6 +458,7 @@ func (s *Server) handleMFAReauth(w http.ResponseWriter, r *http.Request) {
 	writeJSON(w, http.StatusOK, map[string]any{"ok": true})
 }
 
+// CON-R10
 func (s *Server) handleResetRequest(w http.ResponseWriter, r *http.Request) {
 	var body struct {
 		Email string `json:"email"`
@@ -452,6 +478,7 @@ func (s *Server) handleResetRequest(w http.ResponseWriter, r *http.Request) {
 	writeJSON(w, http.StatusOK, resp)
 }
 
+// CON-R11
 func (s *Server) handleResetConfirm(w http.ResponseWriter, r *http.Request) {
 	var body struct {
 		Token    string `json:"token"`
@@ -518,6 +545,7 @@ func canListCollection(u *store.User, coll string) bool {
 	}
 }
 
+// TRN-R05
 func (s *Server) handleFSEvents(w http.ResponseWriter, r *http.Request) {
 	u, _ := s.currentSession(r)
 	if u == nil {
@@ -570,6 +598,7 @@ func (s *Server) handleFSEvents(w http.ResponseWriter, r *http.Request) {
 	}
 }
 
+// PLA-R18
 func (s *Server) handleFSGet(w http.ResponseWriter, r *http.Request) {
 	u, _ := s.currentSession(r)
 	if u == nil {
@@ -610,6 +639,7 @@ func (s *Server) handleFSGet(w http.ResponseWriter, r *http.Request) {
 	writeJSON(w, http.StatusOK, doc)
 }
 
+// PLA-R19
 func (s *Server) handleFSCreate(w http.ResponseWriter, r *http.Request) {
 	u, _ := s.currentSession(r)
 	if u == nil {
@@ -640,6 +670,7 @@ func (s *Server) handleFSCreate(w http.ResponseWriter, r *http.Request) {
 	writeJSON(w, http.StatusCreated, doc)
 }
 
+// PLA-R16
 func (s *Server) handleFSSet(w http.ResponseWriter, r *http.Request) {
 	u, _ := s.currentSession(r)
 	if u == nil {
@@ -671,6 +702,7 @@ func (s *Server) handleFSSet(w http.ResponseWriter, r *http.Request) {
 	writeJSON(w, http.StatusOK, doc)
 }
 
+// PLA-R17
 func (s *Server) handleFSPatch(w http.ResponseWriter, r *http.Request) {
 	u, _ := s.currentSession(r)
 	if u == nil {
@@ -729,6 +761,7 @@ func (s *Server) handleFSDelete(w http.ResponseWriter, r *http.Request) {
 // Files (/api/v1/files*)
 // ===================================
 
+// TRN-R02, MID-R05
 func (s *Server) handleFilesList(w http.ResponseWriter, r *http.Request) {
 	u, _ := s.currentSession(r)
 	if u == nil {
@@ -751,6 +784,7 @@ func (s *Server) handleFilesList(w http.ResponseWriter, r *http.Request) {
 	writeJSON(w, http.StatusOK, map[string]any{"items": items, "prefixes": prefixes})
 }
 
+// MID-R01, MID-R02, TRN-R03
 func (s *Server) handleFileUpload(w http.ResponseWriter, r *http.Request) {
 	u, _ := s.currentSession(r)
 	if u == nil {
@@ -801,6 +835,7 @@ func (s *Server) handleFileUpload(w http.ResponseWriter, r *http.Request) {
 	writeJSON(w, http.StatusCreated, saved)
 }
 
+// MID-R03, MID-R08
 func (s *Server) handleFileGet(w http.ResponseWriter, r *http.Request) {
 	u, _ := s.currentSession(r)
 	if u == nil {
@@ -841,6 +876,7 @@ func (s *Server) handleFileGet(w http.ResponseWriter, r *http.Request) {
 	http.ServeFile(w, r, meta.Disk)
 }
 
+// MID-R04
 func (s *Server) handleFileDelete(w http.ResponseWriter, r *http.Request) {
 	u, _ := s.currentSession(r)
 	if u == nil {
@@ -866,7 +902,8 @@ func (s *Server) handleFileDelete(w http.ResponseWriter, r *http.Request) {
 // ===================================
 
 func (s *Server) handleFeed(w http.ResponseWriter, r *http.Request) {
-	// TRN-R08: proxy RSS exige sessão (SSRF fechado)
+	// TRN-R04, TRN-R08:
+// TRN-R08: proxy RSS exige sessão (SSRF fechado)
 	if _, sess := s.currentSession(r); sess == nil {
 		writeJSON(w, http.StatusUnauthorized, map[string]any{"error": "Não autenticado."})
 		return
@@ -898,6 +935,7 @@ func (s *Server) handleFeed(w http.ResponseWriter, r *http.Request) {
 		writeJSON(w, http.StatusBadGateway, map[string]any{"error": err.Error()})
 		return
 	}
+	// NOT-R06: feed maior que 2MB é rejeitado com 413
 	if len(body) > feedMaxBytes {
 		writeJSON(w, http.StatusRequestEntityTooLarge, map[string]any{"error": "Feed excede 2MB."})
 		return
@@ -948,22 +986,18 @@ func isKnownSPA(p string) bool {
 	return false
 }
 
-var renderProxyOnce struct {
-	once  sync.Once
-	proxy http.Handler
-}
-
 func (s *Server) renderProxy() http.Handler {
-	renderProxyOnce.once.Do(func() {
+	s.renderProxyOnce.Do(func() {
 		target, err := url.Parse(s.cfg.RenderURL)
-		if err != nil {
+		if err != nil || target.Scheme == "" {
 			return
 		}
-		renderProxyOnce.proxy = httputil.NewSingleHostReverseProxy(target)
+		s.renderProxyH = httputil.NewSingleHostReverseProxy(target)
 	})
-	return renderProxyOnce.proxy
+	return s.renderProxyH
 }
 
+// REN-R09, TRN-R10: catálogo de mídia público
 var mediaPrefixes = []string{"/rendered/", "/thumbnails/", "/previews/", "/rendercomp-thumbs/", "/cache/"}
 
 func isMediaPath(p string) bool {
