@@ -17,7 +17,7 @@ T10: {prioridade: P2, titulo: "Testes de MFA TOTP e tickets", regras: [MFA-R01, 
 T11: {prioridade: P2, titulo: "Testes do doc-store: paths, merge, sentinels, permissões", regras: [PLA-R02, PLA-R03, PLA-R04, PLA-R06, PLA-R11, PLA-R16, PLA-R17, PLA-R18, PLA-R19, PLA-R20, PLA-R21]}
 T12: {prioridade: P2, titulo: "Testes de transporte: sessão, upload, SSE, 404", regras: [TRN-R01, TRN-R02, TRN-R03, TRN-R04, TRN-R05, TRN-R06, TRN-R07]}
 T13: {prioridade: P2, titulo: "Testes do feed RSS: proxy, parser, dedupe", regras: [NOT-R01, NOT-R02, NOT-R03, NOT-R05, NOT-R06]}
-T14: {prioridade: P2, titulo: "Testes da API de arquivos", regras: [MID-R01, MID-R02, MID-R03, MID-R04, MID-R05, MID-R06]}
+T14: {prioridade: P2, titulo: "Testes da API de arquivos", regras: [MID-R01, MID-R02, MID-R03, MID-R04, MID-R05, MID-R08]}
 T15: {prioridade: P2, titulo: "Testes do render service Remotion", regras: [REN-R01, REN-R02, REN-R03, REN-R04, REN-R05, REN-R06, REN-R07, REN-R08, REN-R09, REN-R10, REN-R11]}
   # ---------- P2: verificação frontend ----------
 T16: {prioridade: P2, titulo: "Testes de navegação: guards, returnTo, 404, deep links", regras: [NAV-R01, NAV-R02, NAV-R03, NAV-R04, NAV-R05, NAV-R06, NAV-R07, NAV-R08, NAV-R09]}
@@ -29,7 +29,7 @@ T21: {prioridade: P2, titulo: "Testes de canais próprios e referência", regras
 T22: {prioridade: P2, titulo: "Testes de ideias e promoção de pauta", regras: [IDE-R01, IDE-R02, IDE-R03, IDE-R05]}
 T23: {prioridade: P2, titulo: "Testes de notas: CRUD e fixada", regras: [NTA-R01, NTA-R02, NTA-R03, NTA-R04]}
 T24: {prioridade: P2, titulo: "Testes do playbook editorial", regras: [PLY-R01, PLY-R02, PLY-R03, PLY-R04]}
-T25: {prioridade: P2, titulo: "Testes da biblioteca de arquivos", regras: [BIB-R01, BIB-R02, BIB-R03, BIB-R04]}
+T25: {prioridade: P2, titulo: "Testes da biblioteca de arquivos e vídeos salvos", regras: [BIB-R01, BIB-R02, BIB-R03, BIB-R04, MID-R06]}
 T26: {prioridade: P2, titulo: "Testes da busca global", regras: [PES-R01, PES-R02, PES-R03, PES-R04, PES-R05]}
 T27: {prioridade: P2, titulo: "Testes de publicidade: campanhas e estados", regras: [PUB-R01, PUB-R02, PUB-R03, PUB-R04, PUB-R05, PUB-R06]}
 T28: {prioridade: P2, titulo: "Testes de configurações e tema", regras: [CFG-R01, CFG-R02, CFG-R03, CFG-R04]}

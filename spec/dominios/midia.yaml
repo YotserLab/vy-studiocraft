@@ -16,6 +16,7 @@ regras:
   MID-R05: "GET /api/v1/files?prefix= lista items e prefixes; prefixo vazio assume usuarios/{uid}"
   MID-R06: "Vídeo salvo exige titulo não vazio; canal em branco assume 'Referência'"
   MID-R07: "Tradução em lote grava tituloPt nos vídeos salvos via ai.action 'translate:titles'"
+  MID-R08: "Paths de arquivo são normalizados; '..' e '.' são removidos sem escapar do prefixo do usuário"
 casos_de_uso:
   CU01: "Criador envia mídia -> MID-R01, MID-R02"
   CU02: "Criador baixa arquivo -> MID-R03"

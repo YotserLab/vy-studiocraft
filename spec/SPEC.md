@@ -151,6 +151,7 @@
 - `MID-R05` GET /api/v1/files?prefix= lista items e prefixes; prefixo vazio assume usuarios/{uid}
 - `MID-R06` Vídeo salvo exige titulo não vazio; canal em branco assume 'Referência'
 - `MID-R07` Tradução em lote grava tituloPt nos vídeos salvos via ai.action 'translate:titles'
+- `MID-R08` Paths de arquivo são normalizados; '..' e '.' são removidos sem escapar do prefixo do usuário
 
 ## biblioteca (BIB) - Navegador de arquivos do usuário: pastas, upload, download e organização da mídia.
 - **Pasta**: prefix
@@ -232,9 +233,9 @@
 - Estados RenderJob: recebido -> renderizando -> concluido | falho
 - `REN-R01` POST /api/render aceita templateId ou compositionId, props, resolution e codec (default h264)
 - `REN-R02` resolution '720p' usa --scale=0.6666666666666666, '4K' usa --scale=2, demais sem escala
-- `REN-R03` compositionId desconhecido cai em fallback: 'Shorts' -> TornDocumentClipShorts, senão StepProcessInfographic
+- `REN-R03` templateId vazio usa StepProcessInfographic; desconhecido é usado literalmente
 - `REN-R04` Saída é render_<compositionId>_<timestamp>.mp4 em MEDIA_DIR/rendered, servida em /rendered/
-- `REN-R05` Se o arquivo de saída não for gerado, retorna 500 com o stderr do render
+- `REN-R05` Sem arquivo de saída, retorna 500 com o stderr embutido na mensagem de erro
 - `REN-R06` GET /api/rendered lista os mp4 ordenados por createdAt decrescente
 - `REN-R07` /api/gemini/generate-script exige topic e produz JSON de cenas com gemini-2.5-flash
 - `REN-R08` Backend Go proxifica /api/render, /api/rendered e /api/gemini/* para RENDER_SERVICE_URL
