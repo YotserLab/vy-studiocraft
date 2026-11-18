@@ -3,20 +3,19 @@ import { ArrowLeft, Loader2, Plus, Radar, Sparkles, Trash2 } from 'lucide-react'
 import { AppShell } from '../components/AppShell';
 import { useApp } from '../contexts/AppContext';
 import { aiApi, fsApi, type FsDoc } from '../lib/dataClient';
+import { projetosCollectionPath } from '../lib/projetosLogic';
+import {
+  buildProjetoFromPauta,
+  buildProjetoFromRadarPerfil,
+  buildRadarPerfilPayload,
+  filterRadarPerfis,
+  radarPerfisCollectionPath,
+  subscribeRadarPerfis,
+} from '../lib/radarLogic';
 import { Link, navigate } from '../lib/router';
+import type { RadarPerfil } from '../lib/radarLogic';
 
-export interface RadarPerfil {
-  nome: string;
-  nicho: string;
-  formato: string;
-  aceleracao: 'alta' | 'media' | 'baixa';
-  taxaOutliers: number;
-  viewsMedias7d: number;
-  concorrencia: string;
-  sinais: string[];
-  topicosQuentes: string[];
-  ultimoSinalAt: number;
-}
+export type { RadarPerfil } from '../lib/radarLogic';
 
 interface RadarDnaResult {
   acontecendo?: string;
@@ -57,7 +56,7 @@ export function RadarListView() {
     if (!user) return;
     setLoading(true);
     try {
-      const docs = await fsApi.listDocs<RadarPerfil>(`usuarios/${user.id}/radar_perfis`);
+      const docs = await fsApi.listDocs<RadarPerfil>(radarPerfisCollectionPath(user.id)); // RAD-R06
       setItems(Array.isArray(docs) ? docs : []);
     } catch (err) {
       setItems([]);
@@ -70,27 +69,18 @@ export function RadarListView() {
   useEffect(() => {
     void load();
     if (!user) return;
-    return fsApi.subscribe(`usuarios/${user.id}/radar_perfis`, () => {
+    return subscribeRadarPerfis(user.id, () => {
       void load();
-    });
+    }); // RAD-R05
   }, [user?.id]);
 
   const handleCreate = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!user || !nome.trim()) return;
+    // RAD-R01..RAD-R04: validação e defaults extraídos para src/lib/radarLogic.ts
+    const payload = buildRadarPerfilPayload({ nome, nicho, formato, aceleracao, taxaOutliers, sinalInicial });
+    if (!user || !payload) return;
     try {
-      await fsApi.createDoc(`usuarios/${user.id}/radar_perfis`, {
-        nome: nome.trim(),
-        nicho: nicho.trim() || 'Geral',
-        formato,
-        aceleracao,
-        taxaOutliers: Number.parseFloat(taxaOutliers) || 2.0,
-        viewsMedias7d: 25000,
-        concorrencia: 'Média',
-        sinais: sinalInicial.trim() ? [sinalInicial.trim()] : ['Sinal inicial registrado manualmente.'],
-        topicosQuentes: [nicho.trim() || nome.trim()],
-        ultimoSinalAt: Date.now(),
-      });
+      await fsApi.createDoc(radarPerfisCollectionPath(user.id), payload);
       setNome('');
       setNicho('');
       setSinalInicial('');
@@ -129,19 +119,8 @@ export function RadarListView() {
     }
   };
 
-  const filtered = safeItems.filter((item) => {
-    const d = item?.data;
-    if (!d) return false;
-    if (filterAccel !== 'todos' && d.aceleracao !== filterAccel) return false;
-    if (search.trim()) {
-      const q = search.toLowerCase();
-      return (
-        d.nome?.toLowerCase().includes(q) ||
-        d.nicho?.toLowerCase().includes(q)
-      );
-    }
-    return true;
-  });
+  // RAD-R08: filtro por nome/nicho (case-insensitive) + aceleração
+  const filtered = filterRadarPerfis(safeItems, { search, aceleracao: filterAccel });
 
   return (
     <AppShell
@@ -418,46 +397,22 @@ export function RadarProfileDetailView({ id }: { id: string }) {
 
   const handleCreateFromPauta = async () => {
     if (!user || !doc || !pauta) return;
-    const capitulos = (pauta.estrutura || []).map((part, idx) => ({
-      id: `cap_${idx + 1}`,
-      titulo: `${String(idx + 1).padStart(2, '0')} — ${part}`,
-      texto: idx === 0 ? pauta.gancho : '',
-    }));
-    const created = await fsApi.createDoc(`usuarios/${user.id}/projetos`, {
-      titulo: pauta.titulo,
-      canalNome: 'Canal Principal',
-      estagio: 'ideacao',
-      formato: doc.data.formato?.toLowerCase().includes('short') ? 'shorts' : 'long',
-      prioridade: doc.data.aceleracao === 'alta' ? 'alta' : 'media',
-      dataPublicacaoAlvo: '',
-      ctrAlvo: 8.5,
-      ganchoResumo: pauta.gancho,
-      resumo: pauta.angulo,
-      thumbConceito: pauta.thumbnail,
-      capitulos,
-      checklist: [{ id: 'c1', texto: 'Revisar gancho e fontes da pauta', feito: false }],
-      origemRadarId: doc.id,
-      versaoAtual: 1,
-    });
+    // RAD-R09: projeto criado a partir da pauta mantém origemRadarId
+    const created = await fsApi.createDoc(
+      projetosCollectionPath(user.id),
+      buildProjetoFromPauta(doc, pauta)
+    );
     notify('Projeto criado com a pauta original.', 'ok');
     navigate(`/projetos/${created.id}`);
   };
 
   const handlePromoteToProject = async () => {
     if (!user || !doc) return;
-    const created = await fsApi.createDoc(`usuarios/${user.id}/projetos`, {
-      titulo: `Pauta Radar: ${doc.data.nome}`,
-      canalNome: 'Tech & Automação BR',
-      estagio: 'ideacao',
-      formato: doc.data.formato?.toLowerCase().includes('short') ? 'shorts' : 'long',
-      prioridade: doc.data.aceleracao === 'alta' ? 'alta' : 'media',
-      dataPublicacaoAlvo: '',
-      ctrAlvo: 8.0,
-      ganchoResumo: doc.data.sinais?.[0] || '',
-      checklist: [{ id: 'c1', texto: 'Definir título e conceito de thumbnail', feito: false }],
-      origemRadarId: doc.id,
-      versaoAtual: 1,
-    });
+    // RAD-R09: perfil do radar vira origem de projeto via origemRadarId
+    const created = await fsApi.createDoc(
+      projetosCollectionPath(user.id),
+      buildProjetoFromRadarPerfil(doc)
+    );
     notify('Pauta convertida em projeto Kanban.', 'ok');
     navigate(`/projetos/${created.id}`);
   };

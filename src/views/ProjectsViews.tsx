@@ -5,29 +5,19 @@ import { ProjectWizardModal } from '../components/ProjectWizardModal';
 import { ProjectWorkspaceTabs, type ProjetoExtendedDoc } from '../components/ProjectWorkspaceTabs';
 import { useApp } from '../contexts/AppContext';
 import { fsApi, type FsDoc } from '../lib/dataClient';
+import {
+  applyStageMove,
+  deleteProjectDoc,
+  KANBAN_STAGES,
+  patchProjectStage,
+  projetosCollectionPath,
+} from '../lib/projetosLogic';
+import type { KanbanStage, ProjetoDoc } from '../lib/projetosLogic';
 import { Link, navigate } from '../lib/router';
 
-export type KanbanStage = 'ideacao' | 'roteiro' | 'gravacao' | 'edicao' | 'publicado';
-
-export interface ChecklistItem {
-  id: string;
-  texto: string;
-  feito: boolean;
-}
-
-export interface ProjetoDoc {
-  titulo: string;
-  canalId?: string;
-  canalNome: string;
-  estagio: KanbanStage;
-  formato: 'long' | 'shorts';
-  prioridade: 'alta' | 'media' | 'baixa';
-  dataPublicacaoAlvo: string;
-  ctrAlvo: number;
-  ganchoResumo: string;
-  checklist: ChecklistItem[];
-  versaoAtual: number;
-}
+// Tipos de domínio movidos para src/lib/projetosLogic.ts; re-export mantém
+// compatibilidade com importadores existentes (ProjectWizardModal, ProjectWorkspaceTabs).
+export type { KanbanStage, ChecklistItem, ProjetoDoc } from '../lib/projetosLogic';
 
 interface VersaoDoc {
   versao: number;
@@ -36,13 +26,8 @@ interface VersaoDoc {
   conteudo: string;
 }
 
-const STAGES: Array<{ id: KanbanStage; label: string }> = [
-  { id: 'ideacao', label: 'Ideação' },
-  { id: 'roteiro', label: 'Roteiro' },
-  { id: 'gravacao', label: 'Gravação' },
-  { id: 'edicao', label: 'Edição' },
-  { id: 'publicado', label: 'Publicado' },
-];
+// PRJ-R08: estágios centralizados em src/lib/projetosLogic.ts
+const STAGES = KANBAN_STAGES;
 
 export function ProjectsKanbanView() {
   const { user, notify } = useApp();
@@ -55,7 +40,7 @@ export function ProjectsKanbanView() {
     if (!user) return;
     setLoading(true);
     try {
-      const docs = await fsApi.listDocs<ProjetoDoc>(`usuarios/${user.id}/projetos`);
+      const docs = await fsApi.listDocs<ProjetoDoc>(projetosCollectionPath(user.id)); // PRJ-R06
       setProjetos(Array.isArray(docs) ? docs : []);
     } catch (err) {
       setProjetos([]);
@@ -68,18 +53,17 @@ export function ProjectsKanbanView() {
   useEffect(() => {
     void load();
     if (!user) return;
-    return fsApi.subscribe(`usuarios/${user.id}/projetos`, () => {
+    return fsApi.subscribe(projetosCollectionPath(user.id), () => {
       void load();
     });
   }, [user?.id]);
 
+  // PRJ-R08: estágio muda via patch no Kanban (com atualização otimista)
   const moveStage = async (projId: string, targetStage: KanbanStage) => {
     if (!user) return;
-    setProjetos((prev) =>
-      prev.map((p) => (p.id === projId ? { ...p, data: { ...p.data, estagio: targetStage } } : p))
-    );
+    setProjetos((prev) => applyStageMove(prev, projId, targetStage));
     try {
-      await fsApi.patchDoc(`usuarios/${user.id}/projetos/${projId}`, { estagio: targetStage });
+      await patchProjectStage(user.id, projId, targetStage);
     } catch (err) {
       notify(err instanceof Error ? err.message : 'Erro ao mover projeto.', 'err');
       void load();
@@ -254,9 +238,10 @@ export function ProjectDetailView({ id }: { id: string }) {
     void load();
   }, [user?.id, id]);
 
+  // PRJ-R09: exclusão física do documento, sem lixeira
   const handleDelete = async () => {
     if (!user) return;
-    await fsApi.deleteDoc(`usuarios/${user.id}/projetos/${id}`);
+    await deleteProjectDoc(user.id, id);
     notify('Projeto removido.', 'info');
     navigate('/projetos');
   };

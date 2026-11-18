@@ -9,6 +9,10 @@ import {
   type FsDoc,
   type GeneratedScript,
 } from '../lib/dataClient';
+import { buildComparisonDoc, buildCompareRequest, comparacoesCollectionPath, comparisonWinnerLabel } from '../lib/comparadorLogic';
+import { buildPlaybookDocFromChecklist, playbookCollectionPath } from '../lib/playbookLogic';
+import { projetosCollectionPath } from '../lib/projetosLogic';
+import { buildCapitulosFromScript, buildGenerateScriptPayload, roteiristaPerfisPath, roteirosCollectionPath } from '../lib/roteiristaLogic';
 import { navigate } from '../lib/router';
 
 interface SavedScriptDoc extends GeneratedScript {
@@ -80,9 +84,9 @@ export function ScriptwriterView() {
     setLoadingList(true);
     try {
       const [docs, profDoc] = await Promise.all([
-        fsApi.listDocs<SavedScriptDoc>(`usuarios/${user.id}/roteiros`),
+        fsApi.listDocs<SavedScriptDoc>(roteirosCollectionPath(user.id)), // ROT-R05
         fsApi.getDoc<{ perfis?: WriterProfile[]; selectedId?: string }>(
-          `usuarios/${user.id}/config/roteirista_perfis`
+          roteiristaPerfisPath(user.id) // ROT-R04
         ),
       ]);
       const safeDocs = Array.isArray(docs) ? docs : [];
@@ -117,7 +121,7 @@ export function ScriptwriterView() {
       p.id === selectedProfileId ? { ...p, prompt: profilePromptDraft } : p
     );
     setProfiles(nextProfiles);
-    await fsApi.setDoc(`usuarios/${user.id}/config/roteirista_perfis`, {
+    await fsApi.setDoc(roteiristaPerfisPath(user.id), { // ROT-R04
       perfis: nextProfiles,
       selectedId: selectedProfileId,
     });
@@ -136,7 +140,7 @@ export function ScriptwriterView() {
     setProfiles(nextProfiles);
     setSelectedProfileId(created.id);
     setNewProfileName('');
-    await fsApi.setDoc(`usuarios/${user.id}/config/roteirista_perfis`, {
+    await fsApi.setDoc(roteiristaPerfisPath(user.id), { // ROT-R04
       perfis: nextProfiles,
       selectedId: created.id,
     });
@@ -145,25 +149,28 @@ export function ScriptwriterView() {
 
   const handleGenerate = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!topic.trim()) return;
+    // ROT-R01/R02/R07/R08: payload da geração extraído para src/lib/roteiristaLogic.ts
+    const payload = buildGenerateScriptPayload({
+      topic,
+      channelName,
+      niche,
+      audience,
+      format,
+      tone,
+      durationMinutes,
+      hookStyle,
+      notes,
+      profilePrompt: profilePromptDraft,
+      fallbackProfilePrompt: activeProfile.prompt,
+      partsCount,
+      ppm,
+      angle,
+      knowledgeBase,
+    });
+    if (!payload) return;
     setGenerating(true);
     try {
-      const res = await aiApi.generateScript({
-        topic,
-        channelName,
-        niche,
-        audience,
-        format,
-        tone,
-        durationMinutes,
-        hookStyle,
-        notes,
-        profilePrompt: profilePromptDraft || activeProfile.prompt,
-        partsCount,
-        ppm,
-        angle,
-        knowledgeBase,
-      });
+      const res = await aiApi.generateScript(payload);
       setCurrentScript(res.script);
       notify('Roteiro estruturado gerado via Gemini.', 'ok');
     } catch (err) {
@@ -175,7 +182,7 @@ export function ScriptwriterView() {
 
   const handleSaveScript = async () => {
     if (!user || !currentScript) return;
-    await fsApi.createDoc(`usuarios/${user.id}/roteiros`, {
+    await fsApi.createDoc(roteirosCollectionPath(user.id), { // ROT-R05
       ...currentScript,
       channelName,
       niche,
@@ -187,20 +194,10 @@ export function ScriptwriterView() {
 
   const handleSendToKanban = async () => {
     if (!user || !currentScript) return;
-    const capitulos = [
-      {
-        id: 'cap_hook',
-        titulo: '00 — Gancho (00:00 – 00:30)',
-        texto: currentScript.hook0to30,
-      },
-      ...currentScript.chapters.map((ch, idx) => ({
-        id: `cap_${idx + 1}`,
-        titulo: `${ch.heading} (${ch.durationHint})`,
-        texto: `${ch.scriptText}\n\n[Visual / B-roll: ${ch.visualCue}]`,
-      })),
-    ];
+    // ROT-R03: primeiro capítulo é sempre o gancho '00 — Gancho (00:00 – 00:30)'
+    const capitulos = buildCapitulosFromScript(currentScript);
 
-    const created = await fsApi.createDoc(`usuarios/${user.id}/projetos`, {
+    const created = await fsApi.createDoc(projetosCollectionPath(user.id), {
       titulo: currentScript.title,
       canalNome: channelName,
       estagio: 'roteiro',
@@ -633,8 +630,8 @@ export function Compare30sView() {
     if (!user) return;
     try {
       const [docs, projs] = await Promise.all([
-        fsApi.listDocs<SavedComparisonDoc>(`usuarios/${user.id}/comparacoes`),
-        fsApi.listDocs<ProjectQuickRef>(`usuarios/${user.id}/projetos`),
+        fsApi.listDocs<SavedComparisonDoc>(comparacoesCollectionPath(user.id)), // CMP-R03
+        fsApi.listDocs<ProjectQuickRef>(projetosCollectionPath(user.id)),
       ]);
       const safeDocs = Array.isArray(docs) ? docs : [];
       const safeProjs = Array.isArray(projs) ? projs : [];
@@ -676,30 +673,19 @@ export function Compare30sView() {
 
   const handleCompare = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!hookA.trim() || !hookB.trim()) return;
+    // CMP-R01: gate do submit exige os dois ganchos preenchidos
+    const payload = buildCompareRequest({ niche, titleA, hookA, visualCutsA, titleB, hookB, visualCutsB });
+    if (!payload) return;
     setRunning(true);
     try {
-      const res = await aiApi.compare30s({
-        niche,
-        titleA,
-        hookA,
-        visualCutsA,
-        titleB,
-        hookB,
-        visualCutsB,
-      });
+      const res = await aiApi.compare30s(payload);
       setResult(res.comparison);
       if (user) {
-        await fsApi.createDoc(`usuarios/${user.id}/comparacoes`, {
-          niche,
-          titleA,
-          hookA,
-          visualCutsA,
-          titleB,
-          hookB,
-          visualCutsB,
-          result: res.comparison,
-        });
+        // CMP-R03: resultado salvo em usuarios/{uid}/comparacoes
+        await fsApi.createDoc(
+          comparacoesCollectionPath(user.id),
+          buildComparisonDoc(payload, res.comparison)
+        );
         void loadData();
       }
       notify('Análise comparativa dos 30s concluída.', 'ok');
@@ -715,15 +701,10 @@ export function Compare30sView() {
     setSavingPlaybook(true);
     try {
       for (const rawLine of result.actionChecklist) {
-        const match = rawLine.trim().match(/^\[([^\]]+)\]\s*(.+)$/);
-        const categoria = match ? match[1].trim() : 'retencao';
-        const regra = match ? match[2].trim() : rawLine.trim();
-        await fsApi.createDoc(`usuarios/${user.id}/playbook`, {
-          categoria,
-          titulo: `${categoria.toUpperCase()} — Comparativo 30s (${niche})`,
-          regra,
-          impacto: `Extraído da comparação: ${titleA} vs ${titleB}`,
-        });
+        await fsApi.createDoc(
+          playbookCollectionPath(user.id),
+          buildPlaybookDocFromChecklist({ rawLine, niche, titleA, titleB })
+        );
       }
       notify(`${result.actionChecklist.length} regra(s) salva(s) no Playbook Editorial.`, 'ok');
     } catch (err) {
@@ -841,7 +822,7 @@ export function Compare30sView() {
           <div className="vy-card p-6 space-y-6">
             <div className="flex flex-wrap items-center justify-between gap-2 pb-4 border-b" style={{ borderColor: 'var(--border-hairline)' }}>
               <h3 className="font-display font-bold text-lg" style={{ color: 'var(--text-primary)' }}>
-                Diagnóstico: {result.winner === 'empate' ? 'Empate Técnico' : `Vantagem para Opção ${result.winner}`}
+                Diagnóstico: {comparisonWinnerLabel(result.winner)}{/* CMP-R02 */}
               </h3>
               <span className="text-xs font-medium" style={{ color: 'var(--accent)' }}>
                 Critérios qualitativos de retenção

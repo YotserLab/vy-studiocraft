@@ -2,8 +2,15 @@ import React, { useEffect, useState } from 'react';
 import { ArrowLeft, ArrowRight, Check, Plus, Trash2, X } from 'lucide-react';
 import { useApp } from '../contexts/AppContext';
 import { fsApi, type FsDoc } from '../lib/dataClient';
+import {
+  buildVersaoInicialPayload,
+  buildWizardProjectPayload,
+  KANBAN_STAGES,
+  projetosCollectionPath,
+  WIZARD_STEPS,
+} from '../lib/projetosLogic';
+import type { KanbanStage } from '../lib/projetosLogic';
 import { navigate } from '../lib/router';
-import type { KanbanStage } from '../views/ProjectsViews';
 
 interface CanalOption {
   nome: string;
@@ -37,13 +44,8 @@ const DEFAULT_CHECKLIST_SHORTS = [
   'Gravar vertical 9:16 com legenda dinâmica',
 ];
 
-const STAGES: Array<{ id: KanbanStage; label: string }> = [
-  { id: 'ideacao', label: 'Ideação' },
-  { id: 'roteiro', label: 'Roteiro' },
-  { id: 'gravacao', label: 'Gravação' },
-  { id: 'edicao', label: 'Edição' },
-  { id: 'publicado', label: 'Publicado' },
-];
+// PRJ-R08: estágios centralizados em src/lib/projetosLogic.ts
+const STAGES = KANBAN_STAGES;
 
 export function ProjectWizardModal({ open, onClose, onCreated }: ProjectWizardModalProps) {
   const { user, notify } = useApp();
@@ -130,34 +132,30 @@ export function ProjectWizardModal({ open, onClose, onCreated }: ProjectWizardMo
   };
 
   const handleFinish = async () => {
-    if (!user || !titulo.trim()) return;
+    // PRJ-R01/R03/R05/R07: payload do projeto extraído para src/lib/projetosLogic.ts
+    const payload = buildWizardProjectPayload({
+      titulo,
+      canalNome,
+      estagio,
+      formato,
+      prioridade,
+      dataPublicacaoAlvo,
+      ctrAlvo,
+      conceitoThumbnail: thumbConcept,
+      ganchoResumo,
+      origemRadarId,
+      checklistItems,
+    });
+    if (!user || !payload) return;
     setSaving(true);
     try {
-      const created = await fsApi.createDoc(`usuarios/${user.id}/projetos`, {
-        titulo: titulo.trim(),
-        canalNome: canalNome.trim() || 'Canal Principal',
-        estagio,
-        formato,
-        prioridade,
-        dataPublicacaoAlvo,
-        ctrAlvo: Number.parseFloat(ctrAlvo) || 8.0,
-        conceitoThumbnail: thumbConcept.trim(),
-        ganchoResumo: ganchoResumo.trim(),
-        origemRadarId: origemRadarId || undefined,
-        checklist: checklistItems.map((texto, idx) => ({
-          id: `chk_${idx + 1}`,
-          texto,
-          feito: false,
-        })),
-        versaoAtual: 1,
-      });
+      const created = await fsApi.createDoc(projetosCollectionPath(user.id), payload); // PRJ-R06
 
-      await fsApi.setDoc(`usuarios/${user.id}/projetos/${created.id}/versoes/v1`, {
-        versao: 1,
-        autor: user.displayName,
-        resumoMudanca: 'Projeto criado via Wizard',
-        conteudo: ganchoResumo.trim() || `Briefing inicial para "${titulo.trim()}".`,
-      });
+      // PRJ-R04: projeto nasce com versaoAtual=1 e doc versoes/v1
+      await fsApi.setDoc(
+        `usuarios/${user.id}/projetos/${created.id}/versoes/v1`,
+        buildVersaoInicialPayload({ autor: user.displayName, titulo, ganchoResumo })
+      );
 
       notify('Projeto criado com sucesso pelo assistente.', 'ok');
       onClose();
@@ -185,7 +183,7 @@ export function ProjectWizardModal({ open, onClose, onCreated }: ProjectWizardMo
               Assistente de Novo Projeto
             </h2>
             <p className="text-xs" style={{ color: 'var(--text-muted)' }}>
-              Passo {step} de 4 · {step === 1 ? 'Canal & Formato' : step === 2 ? 'Packaging & Gancho' : step === 3 ? 'Pipeline & Checklist' : 'Revisão Final'}
+              Passo {step} de 4 · {WIZARD_STEPS.find((s) => s.n === step)?.title}
             </p>
           </div>
           <button
@@ -201,12 +199,7 @@ export function ProjectWizardModal({ open, onClose, onCreated }: ProjectWizardMo
 
         {/* Step Indicator */}
         <div className="px-6 py-2.5 border-b grid grid-cols-4 gap-2 text-xs" style={{ borderColor: 'var(--border-hairline)', backgroundColor: 'var(--bg-subtle)' }}>
-          {[
-            { n: 1, label: '1. Canal' },
-            { n: 2, label: '2. Packaging' },
-            { n: 3, label: '3. Checklist' },
-            { n: 4, label: '4. Revisão' },
-          ].map((item) => (
+          {WIZARD_STEPS.map((item) => (
             <button
               key={item.n}
               type="button"
@@ -221,7 +214,7 @@ export function ProjectWizardModal({ open, onClose, onCreated }: ProjectWizardMo
                 color: step === item.n ? 'var(--accent)' : step > item.n ? 'var(--text-primary)' : 'var(--text-muted)',
               }}
             >
-              {item.label}
+              {item.shortLabel}
             </button>
           ))}
         </div>
